@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+Go to the link below to keep up with our weekly blog.
+https://sites.google.com/view/nighthawkfitness 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
