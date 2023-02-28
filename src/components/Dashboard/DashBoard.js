@@ -12,7 +12,7 @@ function Dashboard() {
 
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState('');
-    const [edit, setEdit]  = useState();
+
     const navigate = useNavigate();
 
     async function handleLogOut() {
@@ -58,7 +58,7 @@ function Dashboard() {
             <h1>Profile</h1>
             <div className="name">
                 <h3>Name</h3>
-                {edit}
+                {name}
             </div>
             <div className="email">
                 <h3>Email</h3>
