@@ -11,7 +11,8 @@ function Dashboard() {
     const {logout} = useAuth();
 
     const [user, loading, error] = useAuthState(auth);
-    const [name, setName] = useState("");
+    const [name, setName] = useState('');
+    const [edit, setEdit]  = useState();
     const navigate = useNavigate();
 
     async function handleLogOut() {
@@ -38,7 +39,9 @@ function Dashboard() {
             console.error(err);
             alert("An error occured while fetching user data");
         }
+        
     };
+    
 
     useEffect(() => {
         if (loading) return;
@@ -55,7 +58,7 @@ function Dashboard() {
             <h1>Profile</h1>
             <div className="name">
                 <h3>Name</h3>
-                {name}
+                {edit}
             </div>
             <div className="email">
                 <h3>Email</h3>
