@@ -10,6 +10,8 @@ function Dashboard() {
 
     const {logout} = useAuth();
 
+    const {currentUser} = useAuth();
+
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState('');
 
@@ -42,6 +44,7 @@ function Dashboard() {
         
     };
     
+    console.log(currentUser);
 
     useEffect(() => {
         if (loading) return;
@@ -58,11 +61,11 @@ function Dashboard() {
             <h1>Profile</h1>
             <div className="name">
                 <h3>Name</h3>
-                {name}
+                {currentUser.displayName}
             </div>
             <div className="email">
                 <h3>Email</h3>
-                {user.email}
+                {currentUser.email}
             </div>
             
             <button className="dashboard__btn" onClick={handleLogOut}>
