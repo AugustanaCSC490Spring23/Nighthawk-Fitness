@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import { auth, sendPasswordReset } from "../Firebase/firebase";
+import { auth } from "../Firebase/firebase";
 import "./reset.css";
 function Reset() {
     const {resetPassword}  =  useAuth()

@@ -2,8 +2,8 @@
 import './LogIn.css'
 import Logo from './logo-google.png'
 import React, { useEffect, useState } from "react";
-import { Link, redirect,useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../Firebase/firebase";
+import { Link,useNavigate } from "react-router-dom";
+import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
 

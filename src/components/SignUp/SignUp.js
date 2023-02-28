@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import './SignUp.css'
 import { Link, useNavigate } from "react-router-dom";
 import Logo from './logo-google.png'
-import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../Firebase/firebase";
+import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
 
