@@ -51,6 +51,9 @@ export default function LogIn() {
                                 <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter your password' />
                                 <button onClick={handleLogIn} type='submit'>Login</button>
                             </div>
+                            <div className="forget-password">
+                                <span><Link className='forget' to='/reset'>forgot password?</Link></span> 
+                            </div>
                             <div className="btn" onClick={signInWithGoogle}>
                                 <div className="google-logo">
                                     <img src={Logo} alt="" />
