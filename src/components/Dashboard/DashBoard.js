@@ -4,9 +4,11 @@ import { useNavigate, redirect} from "react-router-dom";
 import "./dashboard.css";
 import { auth, db, logout } from "../Firebase/firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
+import { useAuth } from "../contexts/AuthContext";
 
 function Dashboard() {
 
+    const {logout} = useAuth();
 
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState("");
