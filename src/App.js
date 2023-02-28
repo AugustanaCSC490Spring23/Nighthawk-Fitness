@@ -3,6 +3,7 @@ import SignUp from "./components/SignUp/SignUp";
 import LogIn from "./components/LogIn/LogIn"
 import Reset from "./components/Reset/Reset"
 import Dashboard from "./components/Dashboard/DashBoard";
+import HomePage from "./components/HomePage/HomePage";
 import ProtectedRoutes from "./ProtectedRoute";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div>
       <Router>
         <Routes>
+          <Route exact path="/" element={<HomePage/>} />
           <Route path="/login" element={<LogIn/>} />
           <Route path="/reset" element={<Reset/>} />
           <Route path="/signup" element={<SignUp/>} />
