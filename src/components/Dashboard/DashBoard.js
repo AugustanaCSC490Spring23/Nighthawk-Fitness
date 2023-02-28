@@ -44,7 +44,6 @@ function Dashboard() {
         
     };
     
-    console.log(currentUser);
 
     useEffect(() => {
         if (loading) return;

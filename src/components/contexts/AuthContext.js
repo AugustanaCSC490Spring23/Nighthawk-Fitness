@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, GoogleAuthProvider } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, GoogleAuthProvider, updateProfile } from 'firebase/auth';
 import React, { useContext, useEffect, useState } from 'react'
 import { auth, db, addDoc, collection, signInWithPopup, where, query, getDocs } from '../Firebase/firebase';
 
@@ -40,6 +40,7 @@ export function AuthProvider({children}) {
         try  {
             const res = await createUserWithEmailAndPassword(auth, email, password)
             const user = res.user;
+            await updateProfile(user, {displayName: name})
             await addDoc(collection(db, "users"), {
             uid: user.uid,
             name,
