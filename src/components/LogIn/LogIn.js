@@ -2,23 +2,27 @@
 import './LogIn.css'
 import Logo from './logo-google.png'
 import React, { useEffect, useState } from "react";
-import { Link, redirect,useNavigate } from "react-router-dom";
-import { auth, logInWithEmailAndPassword, signInWithGoogle } from "../Firebase/firebase";
+import { Link,useNavigate } from "react-router-dom";
+import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
-
+import { useAuth } from '../contexts/AuthContext';
 
 export default function LogIn() {
 
+    const {login, signInWithGoogle}  =  useAuth();  
+    
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [user, loading, error] = useAuthState(auth);
     const [err, setErr] = useState('')
     const navigate = useNavigate();
 
+
     async function handleLogIn() {
         try {
             setErr('')
-            await logInWithEmailAndPassword(email, password)
+            await login(email, password)
+            
         }catch {
             setErr('Your email or password is incorrect')
             
@@ -32,7 +36,7 @@ export default function LogIn() {
         }
         if (user) setTimeout(function() {
             navigate("/dashboard");
-        },700) 
+        },400) 
     }, [user, loading]);
     
     return (

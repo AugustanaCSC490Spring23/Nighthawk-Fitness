@@ -2,11 +2,14 @@ import React, {useState, useEffect} from 'react'
 import './SignUp.css'
 import { Link, useNavigate } from "react-router-dom";
 import Logo from './logo-google.png'
-import { auth, registerWithEmailAndPassword, signInWithGoogle } from "../Firebase/firebase";
+import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useAuth } from '../contexts/AuthContext';
 
 export default function SignUp() {
 
+    const {signup, signInWithGoogle}  = useAuth();
+    const [load, setLoad] =  useState(false)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [name, setName] = useState("");
@@ -26,22 +29,28 @@ export default function SignUp() {
     function containsSym(str) {
         return  /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/.test(str)
     }
-    const register = () => {
+    const register = async () => {
         if (!name) alert("Please enter name");
         if (!containsNumber(password) || !containsLetters(password) || !containsSym(password) || password.length < 8){
-            setErr('Password is too weak or invalid')
             setValid(false)
-        }else {
-            registerWithEmailAndPassword(name, email, password);
+            return setErr('Password is too weak or invalid')   
         }
-        
+
+        try {
+            setLoad(true)
+            await signup(name, email, password)
+
+        }catch(e) {
+            alert(e)
+        }
+        setLoad(false)
         
     };
     useEffect(() => {
         if (loading) return;
         if (user) setTimeout(function() {
             navigate("/dashboard", {replace:true});
-        },700)
+        },400)
     }, [user, loading]);
   return (
     
@@ -65,7 +74,7 @@ export default function SignUp() {
                                 <div className="Special"style={containsSym(password) ? {color: "green"} : {color: "red"}}>Must contain at least one special character</div>
                                 <div className="Length"style={password.length >= 8 ? {color: "green"} : {color: "red"}}>Minimum length of 8 characters</div>
                             </div>
-                            <button type='submit' onClick={register}>Sign Up</button>
+                            <button disabled={load} type='submit' onClick={register}>Sign Up</button>
                         </div>
                         <div className="btn" onClick={signInWithGoogle}>
                             <div className="google-logo">
