@@ -46,7 +46,7 @@ export default function LogIn() {
                 <Link to="/"><img src={Fitness} alt="" /></Link>
             </div>
             <div className="container-card">
-                <div className="container">
+                <div className="container left">
                     <div className="sign-up-container">
                         <div className="sign-up-content">
                             <h1>Welcome Back</h1>
@@ -75,7 +75,7 @@ export default function LogIn() {
                         <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
                     </div>
                 </div>
-                {/* <div className="container right"></div> */}
+                <div className="container right"></div>
             </div>
             
         </div>

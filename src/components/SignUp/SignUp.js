@@ -59,7 +59,7 @@ export default function SignUp() {
             <Link to="/"><img src={Fitness} alt="" /></Link>
         </div>
         <div className="container-card">
-            <div className="container">
+            <div className="container left">
                 <div className="sign-up-container">
                     <div className="sign-up-content">
                         <h1>Sign Up</h1>
@@ -93,7 +93,7 @@ export default function SignUp() {
                     <span>Already have an account? <span><Link className='to-log-in' to='/login'>Login</Link></span> </span>
                 </div>
             </div>
-            {/* <div className="container right"></div> */}
+            <div className="container right"></div>
         </div>
         
     </div>

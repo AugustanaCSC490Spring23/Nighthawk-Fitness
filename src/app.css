@@ -7,10 +7,10 @@
 
 body {
     font-family: 'Noto Sans Tagbanwa', sans-serif;
-    background: #ffffff;
+    /* background: #ffffff;
     background: linear-gradient(90deg,#ffffff 0%, #3e432e 90%);
     background: -webkit-linear-gradient(90deg,#ffffff 0%, #3e432e 90%);
-    background: -moz-linear-gradient(90deg,#ffffff 0%, #3e432e 90%);
+    background: -moz-linear-gradient(90deg,#ffffff 0%, #3e432e 90%); */
    
 }
 
@@ -26,6 +26,13 @@ img {
     --primary-variant: #616F39;
     --primary-light: #A7D129;
     --transition: all 400ms ease;
+
+    --md-width: 90vw;
+}
+
+.container-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .container {
@@ -34,21 +41,29 @@ img {
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    
 }
 
+.container.left {
+    background: var(--primary);
+    border-radius: 0px 41px 41px 0px;
+    -webkit-border-radius: 0px 41px 41px 0px;
+    -moz-border-radius: 0px 41px 41px 0px;
+}
 
 .sign-up-container {
     padding: 1rem;
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 41px;
     width: 100vw;
     max-width: 400px;
     margin-bottom: .75rem;
     box-shadow: -7px -8px 46px -15px rgba(0,0,0,0.5);
     -webkit-box-shadow: -7px -8px 46px -15px rgba(0,0,0,0.5);
     -moz-box-shadow: -7px -8px 46px -15px rgba(0,0,0,0.5);
-    background: rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.6);
     backdrop-filter: blur(15px);
+    
 }
 
 
@@ -82,7 +97,7 @@ input::placeholder {
 
 button {
     border: 1px solid transparent;
-    border-radius: 10px;
+    border-radius: 41px;
     width: 100%;
     padding: .75rem;
     background: var(--primary);
@@ -124,7 +139,7 @@ h1 {
     gap: .75rem;
     border: 1px solid var(--primary-variant);
     color: var(--primary-variant);
-    border-radius: 10px;
+    border-radius: 41px;
     margin-top: 1rem;
     transition: var(--transition);
 }

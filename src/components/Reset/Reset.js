@@ -43,7 +43,7 @@ function Reset() {
                 <Link to="/"><img src={Fitness} alt="" /></Link>
             </div>
             <div className="container-card">
-                <div className="container">
+                <div className="container left">
                     <div className="sign-up-container">
                         <div className="sign-up-content">
                             <h1>Password Reset</h1>
@@ -65,7 +65,7 @@ function Reset() {
                         <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
                     </div>
                 </div>
-                {/* <div className="container right"></div> */}
+                <div className="container right"></div>
             </div>
             
         </div>
