@@ -7,6 +7,8 @@ import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
 import  Fitness from '../SignUp/fitness-logo.svg'
+import Graphic from './graphic.svg'
+
 export default function LogIn() {
 
     const {login, signInWithGoogle}  =  useAuth();  
@@ -75,7 +77,9 @@ export default function LogIn() {
                         <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
                     </div>
                 </div>
-                <div className="container right"></div>
+                <div className="container right">
+                    <img src={Graphic} alt="" />
+                </div>
             </div>
             
         </div>
