@@ -5,7 +5,7 @@ import Logo from './logo-google.png'
 import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
-import Fitness from './My Fitness.png'
+import Fitness from './fitness-logo.svg'
 export default function SignUp() {
 
     const {signup, signInWithGoogle}  = useAuth();
@@ -58,41 +58,44 @@ export default function SignUp() {
         <div className="logo">
             <Link to="/"><img src={Fitness} alt="" /></Link>
         </div>
-        <div className="container">
-            
-            <div className="sign-up-container">
-                <div className="sign-up-content">
-                    <h1>Sign Up</h1>
-                    <div className="error" style={err === '' ? {display: "none"} : {display: "block"}}>{err}</div>
-                    <div className="sign-up-form">
-                        <div>
-                            <span className="email">Full Name</span>
-                            <input required type="text" placeholder='Enter your name' value={name} onChange={(e)=> setName(e.target.value)}/>
-                            <span className="email">Email</span>
-                            <input required type="email" placeholder='Enter your email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
-                            <span className="password">Password</span>
-                            <input required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" type="password" placeholder='Enter your password' value={password} onChange={(e)=> setPassword(e.target.value)}/>
-                            <div className="password-validation" style={valid === true ? {display: "none"} : {display: "block"}}>
-                                <div className="Letter"style={containsLetters(password) ? {color: "green"} : {color: "red"}}>Must contain at least one letter</div>
-                                <div className="Number"style={containsNumber(password) ? {color: "green"} : {color: "red"}}>Must contain at least one number</div>
-                                <div className="Special"style={containsSym(password) ? {color: "green"} : {color: "red"}}>Must contain at least one special character</div>
-                                <div className="Length"style={password.length >= 8 ? {color: "green"} : {color: "red"}}>Minimum length of 8 characters</div>
+        <div className="container-card">
+            <div className="container">
+                <div className="sign-up-container">
+                    <div className="sign-up-content">
+                        <h1>Sign Up</h1>
+                        <div className="error" style={err === '' ? {display: "none"} : {display: "block"}}>{err}</div>
+                        <div className="sign-up-form">
+                            <div>
+                                <span className="email">Full Name</span>
+                                <input required type="text" placeholder='Enter your name' value={name} onChange={(e)=> setName(e.target.value)}/>
+                                <span className="email">Email</span>
+                                <input required type="email" placeholder='Enter your email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                                <span className="password">Password</span>
+                                <input required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" type="password" placeholder='Enter your password' value={password} onChange={(e)=> setPassword(e.target.value)}/>
+                                <div className="password-validation" style={valid === true ? {display: "none"} : {display: "block"}}>
+                                    <div className="Letter"style={containsLetters(password) ? {color: "green"} : {color: "red"}}>Must contain at least one letter</div>
+                                    <div className="Number"style={containsNumber(password) ? {color: "green"} : {color: "red"}}>Must contain at least one number</div>
+                                    <div className="Special"style={containsSym(password) ? {color: "green"} : {color: "red"}}>Must contain at least one special character</div>
+                                    <div className="Length"style={password.length >= 8 ? {color: "green"} : {color: "red"}}>Minimum length of 8 characters</div>
+                                </div>
+                                <button disabled={load} type='submit' onClick={register}>Sign Up</button>
                             </div>
-                            <button disabled={load} type='submit' onClick={register}>Sign Up</button>
-                        </div>
-                        <div className="btn" onClick={signInWithGoogle}>
-                            <div className="google-logo">
-                                <img src={Logo} alt="" />
+                            <div className="btn" onClick={signInWithGoogle}>
+                                <div className="google-logo">
+                                    <img src={Logo} alt="" />
+                                </div>
+                                <span>Sign up with Google</span>
                             </div>
-                            <span>Sign up with Google</span>
                         </div>
                     </div>
                 </div>
+                <div className="log-in">
+                    <span>Already have an account? <span><Link className='to-log-in' to='/login'>Login</Link></span> </span>
+                </div>
             </div>
-            <div className="log-in">
-                <span>Already have an account? <span><Link className='to-log-in' to='/login'>Login</Link></span> </span>
-            </div>
+            {/* <div className="container right"></div> */}
         </div>
+        
     </div>
   )
 }

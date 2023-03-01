@@ -6,7 +6,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
-import  Fitness from '../SignUp/My Fitness.png'
+import  Fitness from '../SignUp/fitness-logo.svg'
 export default function LogIn() {
 
     const {login, signInWithGoogle}  =  useAuth();  
@@ -45,35 +45,39 @@ export default function LogIn() {
             <div className="logo">
                 <Link to="/"><img src={Fitness} alt="" /></Link>
             </div>
-            <div className="container">
-                <div className="sign-up-container">
-                    <div className="sign-up-content">
-                        <h1>Welcome Back</h1>
-                        <div className="error" style={err === '' ? {display: "none"} : {display: "block"}} >{err}</div>
-                        <div className="sign-up-form">
-                            <div>
-                                <span className="email">Email</span>
-                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' />
-                                <span className="email">Password</span>
-                                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter your password' />
-                                <button onClick={handleLogIn} type='submit'>Login</button>
-                            </div>
-                            <div className="forget-password">
-                                <span><Link className='forget' to='/reset'>forgot password?</Link></span> 
-                            </div>
-                            <div className="btn" onClick={signInWithGoogle}>
-                                <div className="google-logo">
-                                    <img src={Logo} alt="" />
+            <div className="container-card">
+                <div className="container">
+                    <div className="sign-up-container">
+                        <div className="sign-up-content">
+                            <h1>Welcome Back</h1>
+                            <div className="error" style={err === '' ? {display: "none"} : {display: "block"}} >{err}</div>
+                            <div className="sign-up-form">
+                                <div>
+                                    <span className="email">Email</span>
+                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' />
+                                    <span className="email">Password</span>
+                                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder='Enter your password' />
+                                    <button onClick={handleLogIn} type='submit'>Login</button>
                                 </div>
-                                <span>Login with Google</span>
+                                <div className="forget-password">
+                                    <span><Link className='forget' to='/reset'>forgot password?</Link></span> 
+                                </div>
+                                <div className="btn" onClick={signInWithGoogle}>
+                                    <div className="google-logo">
+                                        <img src={Logo} alt="" />
+                                    </div>
+                                    <span>Login with Google</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <div className="log-in">
+                        <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
+                    </div>
                 </div>
-                <div className="log-in">
-                    <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
-                </div>
+                {/* <div className="container right"></div> */}
             </div>
+            
         </div>
     )
 }

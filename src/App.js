@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
+import './app.css'
 function App() {
   return (
     
