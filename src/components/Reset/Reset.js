@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { auth } from "../Firebase/firebase";
 import "./reset.css";
+import Fitness from "../SignUp/My Fitness.png"
 function Reset() {
     const {resetPassword}  =  useAuth()
     const [email, setEmail] = useState("");
@@ -38,6 +39,9 @@ function Reset() {
 
     return (
         <div>
+            <div className="logo">
+                <Link to="/"><img src={Fitness} alt="" /></Link>
+            </div>
             <div className="container">
                 <div className="sign-up-container">
                     <div className="sign-up-content">

@@ -8,7 +8,7 @@ export default function HomePage() {
         <div className="header">
             <div className="header-container">
                 <nav>
-                    <div className="logo"></div>
+                    <div className="logo-main"></div>
                     <ul className="menu-item">
                         <li><Link to='/login'>Login</Link></li>
                         <li>About</li>

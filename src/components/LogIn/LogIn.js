@@ -6,7 +6,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
-
+import  Fitness from '../SignUp/My Fitness.png'
 export default function LogIn() {
 
     const {login, signInWithGoogle}  =  useAuth();  
@@ -41,7 +41,10 @@ export default function LogIn() {
     
     return (
         
-        <div>
+        <div className='wrapper'>
+            <div className="logo">
+                <Link to="/"><img src={Fitness} alt="" /></Link>
+            </div>
             <div className="container">
                 <div className="sign-up-container">
                     <div className="sign-up-content">
