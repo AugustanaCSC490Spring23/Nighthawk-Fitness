@@ -4,25 +4,40 @@
     box-sizing: border-box;
 }
 
-.dashboard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-image: url('./bg.jpg');
-    background-size: cover;
-    background-position: center;
+::-webkit-scrollbar {
+    scroll-behavior: smooth;
 }
 
-.dashboard__container {
-    border: 1px solid transparent;
-    border-radius: 2rem;
-    padding: 5rem;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.7);
+.dashboard {
+    background: black;
+}
+
+a {
+    text-decoration: none;
     color: white;
 }
 
-.name ,.email {
-    margin-bottom: 1rem;
+.log-out-btn {
+    color: white;
+}
+
+.dashboard-card {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    min-height: 100vh;
+    
+}
+
+.dashboard-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4rem 4rem;
+    background: rgba(255, 255,255,.1);
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }

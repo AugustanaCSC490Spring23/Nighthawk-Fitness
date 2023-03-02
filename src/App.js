@@ -4,6 +4,7 @@ import LogIn from "./components/LogIn/LogIn"
 import Reset from "./components/Reset/Reset"
 import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
+import Profile from "./components/Dashboard/Profile";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
@@ -19,7 +20,9 @@ function App() {
             <Route path="/reset" element={<Reset/>} />
             <Route path="/signup" element={<SignUp/>} />
             <Route element={<ProtectedRoutes/>}>
-              <Route path="/dashboard" element={<Dashboard/>} />
+              <Route path="/dashboard" element={<Dashboard/>}>
+                <Route path="profile" element={<Profile/>} />
+              </Route>
             </Route>  
           </Routes>
         </AuthProvider>
