@@ -38,34 +38,32 @@ function Reset() {
     }, [user, loading]);
 
     return (
-        <div>
-            <div className="logo">
-                <Link to="/"><img src={Fitness} alt="" /></Link>
-            </div>
-            <div className="container-card">
-                <div className="container left">
-                    <div className="sign-up-container">
-                        <div className="sign-up-content">
-                            <h1>Password Reset</h1>
-                            <div className="prompt">Dont' worry, happens to the best of us.</div>
-                            <div className="notice-alert error" style={notice ? {display:"block"}: {display:"none"}}>An email has been sent</div>
-                            <div className="error" style={err === '' ? {display: "none"} : {display: "block"}}>{err}</div>
-                            <div className="sign-up-form">
-                                <div>
-                                    <span className="email" style={notice ? {display:"none"}: {display:"block"}}>Email</span>
-                                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' style={notice ? {display:"none"}: {display:"block"}}/>
-                            
-                                    <button onClick={handleReset} type='submit' style={notice ? {display:"none"}: {display:"block"}} >Send reset email</button>
-                                </div>
-                            
+        <div>   
+            {/* <div className="container left"></div> */}
+            <div className="container right">
+                <div className="logo">
+                    <Link to="/"><img src={Fitness} alt="" /></Link>
+                </div>
+                <div className="sign-up-container">
+                    <div className="sign-up-content">
+                        <h1>Password Reset</h1>
+                        <div className="prompt">Dont' worry, happens to the best of us.</div>
+                        <div className="notice-alert error" style={notice ? {display:"block"}: {display:"none"}}>An email has been sent</div>
+                        <div className="error" style={err === '' ? {display: "none"} : {display: "block"}}>{err}</div>
+                        <div className="sign-up-form">
+                            <div>
+                                <span className="email" style={notice ? {display:"none"}: {display:"block"}}>Email</span>
+                                <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Enter your email' style={notice ? {display:"none"}: {display:"block"}}/>
+                        
+                                <button onClick={handleReset} type='submit' style={notice ? {display:"none"}: {display:"block"}} >Send reset email</button>
                             </div>
+                        
                         </div>
                     </div>
-                    <div className="log-in">
-                        <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
-                    </div>
                 </div>
-                <div className="container right"></div>
+                <div className="log-in">
+                    <span>Don't have an account? <span><Link className='to-sign-up' to='/signup'>Create now</Link></span> </span>
+                </div>
             </div>
             
         </div>

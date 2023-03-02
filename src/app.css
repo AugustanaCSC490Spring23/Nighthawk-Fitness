@@ -21,18 +21,18 @@ img {
 }
 
 :root {
-    --bg: #000000;
-    --primary: #3E432E;
-    --primary-variant: #616F39;
-    --primary-light: #A7D129;
-    --transition: all 400ms ease;
+    --bg: #F5EDDC;
+    --primary: #CFD2CF;
+    --primary-variant: #EB1D36;
+    --primary-light: #FA9494;
+    --transition: all 300ms ease;
 
-    --md-width: 90vw;
+    
 }
 
 .container-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 45% 55%;
 }
 
 .container {
@@ -41,37 +41,34 @@ img {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    
+    position: relative;
 }
 
 .container.left {
     background: var(--primary);
-    border-radius: 0px 41px 41px 0px;
+    /* border-radius: 0px 41px 41px 0px;
     -webkit-border-radius: 0px 41px 41px 0px;
-    -moz-border-radius: 0px 41px 41px 0px;
+    -moz-border-radius: 0px 41px 41px 0px; */
 }
 
 .sign-up-container {
     padding: 1rem;
     border: 1px solid transparent;
-    border-radius: 41px;
+    border-radius: 1rem;
     width: 100vw;
     max-width: 400px;
     margin-bottom: .75rem;
     box-shadow: -7px -8px 46px -15px rgba(0,0,0,0.5);
     -webkit-box-shadow: -7px -8px 46px -15px rgba(0,0,0,0.5);
     -moz-box-shadow: -7px -8px 46px -15px rgba(0,0,0,0.5);
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(15px);
+    
     
 }
 
 
 .logo {
-    width: 10%;
+    width: 150px;
     border: solid 1px transparent;
-    border-radius: 100%;
-    overflow: hidden;
     position: absolute;
     top: .25rem;
     left: .25rem;
@@ -82,10 +79,8 @@ input {
     margin-top: .25rem;
     margin-bottom: 1rem;
     padding: .75rem;
-    /* border: 1px solid grey;
-    border-radius: 10px; */
     border: transparent;
-    border-bottom: 1px solid var(--primary-variant);
+    border-bottom: 1px solid var(--primary);
     border-radius: 10px;
     width: 100%;
     background: transparent;
@@ -97,18 +92,18 @@ input::placeholder {
 
 button {
     border: 1px solid transparent;
-    border-radius: 41px;
+    border-radius: 1rem;
     width: 100%;
     padding: .75rem;
-    background: var(--primary);
+    background: var(--primary-variant);
     color: white;
     transition: var(--transition);
 }
 
 button:hover {
     background: transparent;
-    border-color: var(--primary);
-    color: var(--primary);
+    border-color: var(--primary-variant);
+    color: var(--primary-variant);
 }
 
 
@@ -137,15 +132,65 @@ h1 {
     align-items: center;
     justify-content: center;
     gap: .75rem;
-    border: 1px solid var(--primary-variant);
-    color: var(--primary-variant);
-    border-radius: 41px;
+    border: 1px solid transparent;
+    background: black;
+    color: white;
+    border-radius: 1rem;
     margin-top: 1rem;
     transition: var(--transition);
 }
 
 .btn:hover {
-    background: var(--primary-variant);
-    border-color: transparent;
-    color: white;
+    background: white;
+    border-color: black;
+    color: black;
+    
+}
+
+.or {
+    text-align: center;
+    margin-top: .6rem;
+    position: relative;
+    z-index: 5;
+    color: var(--primary);
+}
+
+.or::before {
+    content: "";
+    height: 1px;
+    width: 46%;
+    background: var(--primary);
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+.or::after {
+    content: "";
+    height: 1px;
+    width: 46%;
+    background: var(--primary);
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+.google-logo {
+    width: 2.5rem;
+}
+
+@media screen and (max-width: 1300px ) {
+    .container-card {
+        grid-template-columns: 1fr;
+    }
+
+    .container.left {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .sign-up-container {
+        width: 90vw;
+    }
 }

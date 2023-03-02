@@ -1,7 +1,14 @@
 .to-log-in {
-    color: white;
+    color: var(--primary-variant);
     text-decoration: none;
     font-weight: 400;
+}
+
+.container.left.sign-up {
+    background-image: url('./banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
 }
 
 .password-validation {

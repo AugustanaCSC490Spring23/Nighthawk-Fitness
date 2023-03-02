@@ -1,7 +1,13 @@
 .to-sign-up {
-    color: white;
+    color: var(--primary-variant);
     text-decoration: none;
     font-weight: 400;
+}
+
+.container.left.log-in {
+    background-image: url('./banner-login.jpg');
+    background-size: cover;
+    
 }
 
 .forget-password {
@@ -11,7 +17,7 @@
 
 .forget {
     font-size: .75rem;
-    color: var(--primary);
+    color: var(--primary-variant);
     text-decoration: none;
 }
 
