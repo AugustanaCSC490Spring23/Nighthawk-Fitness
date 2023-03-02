@@ -5,7 +5,7 @@ import "./dashboard.css";
 import { auth, db } from "../Firebase/firebase";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { useAuth } from "../contexts/AuthContext";
-
+import { Link } from "react-router-dom";
 function Dashboard() {
 
     const {logout} = useAuth();
@@ -57,13 +57,14 @@ function Dashboard() {
     return (
         <div className="dashboard">
         <div className="dashboard__container">
-            <h1>Profile</h1>
+            <Link to="/profile"><button className="profile_btn">Profile</button></Link>
+            <h3>Profile</h3>
             <div className="name">
-                <h3>Name</h3>
+                <h5>Name</h5>
                 {currentUser.displayName}
             </div>
             <div className="email">
-                <h3>Email</h3>
+                <h5>Email</h5>
                 {currentUser.email}
             </div>
             
