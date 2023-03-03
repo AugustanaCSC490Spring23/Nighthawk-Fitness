@@ -12,7 +12,7 @@
     background: black;
 }
 
-a {
+.nav-item {
     text-decoration: none;
     color: white;
 }

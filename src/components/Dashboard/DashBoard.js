@@ -42,9 +42,9 @@ function Dashboard() {
             <div className="dashboard-card">
                 <div className="dashboard-nav">
                     <div className="nav-content">
-                        <NavLink to="/dashboard">Overview</NavLink>
-                        <NavLink to="profile">Account</NavLink>
-                        <NavLink>Setting</NavLink>
+                        <NavLink className="nav-item" to="/dashboard">Overview</NavLink>
+                        <NavLink className="nav-item" to="profile">Account</NavLink>
+                        <NavLink className="nav-item">Setting</NavLink>
                     </div>
                     <div className="log-out-btn" onClick={handleLogOut}>
                         Logout
