@@ -1,0 +1,53 @@
+h2 {
+    color: white;
+    text-align: center;
+}
+
+.workout-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.workout-content {
+    background: var(--primary-light);
+    width: 100vw;
+    max-width: 500px;
+    padding: 2rem 1rem;
+    border: 1px solid transparent;
+    border-radius: 2rem;
+}
+
+.workout-input {
+    background: white;
+}
+
+.find-workout {
+    background: black;
+}
+
+li {
+    color: white;
+    list-style-type: none;
+}
+
+.instruction {
+    margin-bottom: 2rem;
+}
+.workout-list ul  {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.muscle {
+    position: relative;
+    z-index: 5;
+}
+
+.workout-list {
+    max-width: 400px;
+    margin-top: 2rem;
+}

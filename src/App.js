@@ -5,6 +5,7 @@ import Reset from "./components/Reset/Reset"
 import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
 import Profile from "./components/Dashboard/Profile";
+import Workout from "./components/Dashboard/Workout";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
@@ -22,6 +23,7 @@ function App() {
             <Route element={<ProtectedRoutes/>}>
               <Route path="/dashboard" element={<Dashboard/>}>
                 <Route path="profile" element={<Profile/>} />
+                <Route path="workout" element={<Workout/>} />
               </Route>
             </Route>  
           </Routes>

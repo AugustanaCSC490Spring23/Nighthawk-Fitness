@@ -44,6 +44,7 @@ function Dashboard() {
                     <div className="nav-content">
                         <NavLink className="nav-item" to="/dashboard">Overview</NavLink>
                         <NavLink className="nav-item" to="profile">Account</NavLink>
+                        <NavLink className="nav-item" to="workout">Workouts</NavLink>
                         <NavLink className="nav-item">Setting</NavLink>
                     </div>
                     <div className="log-out-btn" onClick={handleLogOut}>
@@ -51,6 +52,7 @@ function Dashboard() {
                     </div>
                 </div>
                 <div className="dashboard-content">
+                    
                     <Outlet />
                 </div>
             </div>

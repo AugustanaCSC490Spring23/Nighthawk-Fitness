@@ -16,8 +16,8 @@
     border: 1px solid transparent;
     border-radius: 2rem;
     padding: 5rem;
-    backdrop-filter: blur(12px);
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--primary-light);
+    
     color: white;
 }
 
