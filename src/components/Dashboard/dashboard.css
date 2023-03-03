@@ -6,12 +6,11 @@
 
 .dashboard {
     display: flex;
-    align-items: center;
     min-height: 100vh;
     background-image: url('./bg.jpg');
     background-size: cover;
     background-position: center;
-    padding: 3rem
+    padding: 2rem
 }
 
 .dashboard__container {
@@ -21,6 +20,8 @@
     backdrop-filter: blur(12px);
     background: rgba(0, 0, 0, 0.7);
     color: white;
+    align-self: first baseline
+
 }
 
 .name ,.email {
@@ -29,4 +30,15 @@
 
 .profile_btn{
     margin-bottom:1rem
+}
+
+
+.navBar1{
+    color: aliceblue;
+    align-self: first baseline;
+    padding: 2rem;
+}
+
+.profile_btn2, .workout_btn2{
+    margin-bottom: 2rem;
 }

@@ -6,8 +6,8 @@ import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
-import Profile from "./components/Dashboard/Dashboard_Widgets/Profile";
-import WorkoutLog from "./components/Dashboard/Dashboard_Widgets/WorkoutLog";
+import WorkoutLog from "./components/Dashboard/Dashboard_Widgets/workoutLog/WorkoutLog";
+import Profile from "./components/Dashboard/Dashboard_Widgets/profile/Profile";
 function App() {
   return (
     
