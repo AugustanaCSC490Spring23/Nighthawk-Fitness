@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import "../../dashboard.css";
-import React, {useState} from React
+import React, { useEffect, useState } from "react";
 
 function NavBar(){
     return (
