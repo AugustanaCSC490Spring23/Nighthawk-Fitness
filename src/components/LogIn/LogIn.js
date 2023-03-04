@@ -6,7 +6,7 @@ import { Link,useNavigate } from "react-router-dom";
 import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
-import  Fitness from '../SignUp/fitness-logo.svg'
+import  Fitness from '../SignUp/logo-fitness.svg'
 
 
 export default function LogIn() {

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { auth } from "../Firebase/firebase";
 import "./reset.css";
-import Fitness from "../SignUp/fitness-logo.svg"
+import Fitness from "../SignUp/logo-fitness.svg"
 function Reset() {
     const {resetPassword}  =  useAuth()
     const [email, setEmail] = useState("");

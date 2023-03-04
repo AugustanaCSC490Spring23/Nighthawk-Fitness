@@ -5,7 +5,7 @@ import Logo from './logo-google.png'
 import { auth } from "../Firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useAuth } from '../contexts/AuthContext';
-import Fitness from './fitness-logo.svg'
+import Fitness from './logo-fitness.svg'
 export default function SignUp() {
 
     const {signup, signInWithGoogle}  = useAuth();
