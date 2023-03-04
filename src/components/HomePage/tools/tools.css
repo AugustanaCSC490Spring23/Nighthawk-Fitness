@@ -1,0 +1,13 @@
+.tools-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tools-header * {
+    text-align: center;
+}
+
+.tools-header p{
+    width: 55%;
+}
