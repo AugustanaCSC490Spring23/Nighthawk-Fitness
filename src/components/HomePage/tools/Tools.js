@@ -22,9 +22,9 @@ export default function Tools() {
                     <div className="tool-descriptions">
                         <h3>Learn. Track. Improve</h3>
                         <p>Explore a variety of training 
-                        programs to enhance your fitness 
-                        knowledge and stay consistent with 
-                        the path you have chosen.</p>
+                        programs, enhance your fitness 
+                        knowledge, stay consistent with 
+                        your goals.</p>
                     </div>
                 </div>
                 <div className="tools-item">
