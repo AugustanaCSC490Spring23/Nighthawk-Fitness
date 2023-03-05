@@ -1,5 +1,8 @@
 import React from 'react'
 import './tools.css'
+import {GiNotebook} from  'react-icons/gi'
+import {ImCalculator} from 'react-icons/im'
+import {FaNutritionix} from 'react-icons/fa'
 
 export default function Tools() {
   return (
@@ -13,7 +16,9 @@ export default function Tools() {
             </div>
             <div className="tools-card">
                 <div className="tools-item">
-                    <div className="tools-img"></div>
+                    <div className="tools-img">
+                        <GiNotebook className='tool' />
+                    </div>
                     <div className="tool-descriptions">
                         <h3>Learn. Track. Improve</h3>
                         <p>Explore a variety of training 
@@ -22,8 +27,27 @@ export default function Tools() {
                         the path you have chosen.</p>
                     </div>
                 </div>
-                <div className="tools-item"></div>
-                <div className="tools-item"></div>
+                <div className="tools-item">
+                    <div className="tools-img">
+                        <ImCalculator className='tool' />
+                    </div>
+                    <div className="tool-descriptions">
+                        <h3>Compute Body Mass Index (BMI)</h3>
+                        <p>Assess your weight status and make
+                        informed decisions about your health.</p>
+                    </div>
+                </div>
+                <div className="tools-item">
+                    <div className="tools-img">
+                        <FaNutritionix className='tool' />
+                    </div>
+                    <div className="tool-descriptions">
+                        <h3>Tracking Nutrition</h3>
+                        <p>Achieve specific nutrition goals,
+                        and improve your overall health and
+                        well-being.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </div>

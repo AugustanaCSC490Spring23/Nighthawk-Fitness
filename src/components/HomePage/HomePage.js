@@ -5,6 +5,7 @@ import Fitness from '../SignUp/logo-fitness.svg'
 import FirstBanner from './first-banner/FirstBanner'
 import SecondBanner from './second-banner/SecondBanner'
 import Tools from './tools/Tools'
+import Footer from './footer/Footer'
 
 export default function HomePage() {
   return (
@@ -29,6 +30,7 @@ export default function HomePage() {
             <FirstBanner />
             <SecondBanner />
             <Tools />
+            <Footer />
         </main>
     </div>
   )

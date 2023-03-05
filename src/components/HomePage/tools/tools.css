@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .tools-header * {
@@ -10,4 +11,77 @@
 
 .tools-header p{
     width: 55%;
+}
+
+.tool {
+    font-size: 6rem;
+    
+    
+    color: var(--primary-variant);
+    transition: var(--transition);
+}
+
+.tools-img  {
+    border: 1px solid transparent;
+    border-radius: 100%;
+    padding: 2rem;
+    box-shadow: 1px 3px 50px -10px rgba(250,148,148,0.68);
+    -webkit-box-shadow: 1px 3px 50px -10px rgba(250,148,148,0.68);
+    -moz-box-shadow: 1px 3px 50px -10px rgba(250,148,148,0.68);
+    margin-bottom: 2rem;
+}
+
+.tools-img:hover .tool  {
+    font-size: 7rem;
+    transform: rotate(20deg);
+}
+
+.tools-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tools-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.tool-descriptions  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: .75rem;
+}
+
+.tool-descriptions p  {
+    font-size: 1.1rem;
+}
+
+@media screen  and (max-width: 1100px) {
+    .tools-item {
+        padding: 1rem;
+    }
+
+    .tool-descriptions p  {
+        font-size: 1rem;
+    }
+
+    .tool  {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tools-card {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-descriptions p {
+        text-align: center  !important;
+       font-size: .85rem; 
+    }
+    
 }

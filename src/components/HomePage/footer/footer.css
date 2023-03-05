@@ -1,0 +1,5 @@
+.footer-container {
+    margin-top: 5rem;
+    height: 400px;
+    background: var(--primary-variant);
+}

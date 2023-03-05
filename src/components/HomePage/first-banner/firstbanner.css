@@ -22,7 +22,7 @@
     color: white;
     text-decoration: none;
     transition: var(--transition);
-    
+    font-weight: 600;
 }
 
 .btn-first-banner:hover {
