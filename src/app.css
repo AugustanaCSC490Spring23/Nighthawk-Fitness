@@ -65,7 +65,7 @@ img {
 
 
 .logo {
-    width: 150px;
+    width: 120px;
     border: solid 1px transparent;
     position: absolute;
     top: .25rem;
@@ -198,5 +198,11 @@ h2 {
 @media screen and (max-width: 600px) {
     .sign-up-container {
         width: 90vw;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .logo {
+        width: 70px;
     }
 }
