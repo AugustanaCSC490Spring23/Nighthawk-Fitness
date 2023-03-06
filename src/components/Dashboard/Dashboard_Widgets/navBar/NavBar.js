@@ -1,3 +1,12 @@
+/***************************************************************************************
+*    Citation:
+*    Title: React Sidebar With Dropdown
+*    Author: Brian Design
+*    Date: 3/5/2023
+*    Code version: 1.0
+*    Availability: https://www.codavilla.com/posts/build-a-react-sidebar-with-dropdown-menu
+*    Youtube tutorial for NavBar logic, inserting/styling icons
+***************************************************************************************/
 import { Link } from "react-router-dom"
 import "../../dashboard.css";
 import React, { useEffect, useState } from "react";
