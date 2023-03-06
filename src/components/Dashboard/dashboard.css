@@ -10,10 +10,11 @@
     background-image: url('./bg.jpg');
     background-size: cover;
     background-position: center;
-    padding: 2rem
 }
 
 .dashboard__container {
+    margin-top: 2rem;
+    margin-left: 1rem;
     border: 1px solid transparent;
     border-radius: 2rem;
     padding: 3rem;
@@ -30,13 +31,6 @@
 
 .profile_btn{
     margin-bottom:1rem
-}
-
-
-.navBar1{
-    color: aliceblue;
-    align-self: first baseline;
-    padding: 2rem;
 }
 
 .profile_btn2, .workout_btn2{

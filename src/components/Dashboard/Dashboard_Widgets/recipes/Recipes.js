@@ -1,11 +1,11 @@
 import NavBar from "../navBar/NavBar"
-function Profile() {
+function Recipes() {
     return(
         <div>
             <NavBar/>
-    <h1>This is where we will display profile statistics</h1>
+    <h1>This is where we will display Recipes</h1>
     </div>
     )
 }
 
-export default Profile
+export default Recipes

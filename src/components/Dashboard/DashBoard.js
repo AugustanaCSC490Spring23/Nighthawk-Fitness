@@ -7,6 +7,8 @@ import { query, collection, getDocs, where } from "firebase/firestore";
 import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import NavBar from "./Dashboard_Widgets/navBar/NavBar";
+
+
 function Dashboard() {
 
     const {logout} = useAuth();
@@ -56,11 +58,13 @@ function Dashboard() {
     
 
     return (
-        <div className="dashboard">
             <div>
-                <NavBar/>
-            </div>
+        <div className="dashboard">
+            <div className="navBar1">
+        <NavBar/>
+        </div>
         <div className="dashboard__container">
+            
             <Link to="/profile"><button className="profile_btn">Profile</button></Link>
             <h3>Profile</h3>
             <div className="name">
@@ -71,10 +75,10 @@ function Dashboard() {
                 <h5>Email</h5>
                 {currentUser.email}
             </div>
-            
             <button className="dashboard__btn" onClick={handleLogOut}>
             Logout
             </button>
+        </div>
         </div>
         </div>
     );
