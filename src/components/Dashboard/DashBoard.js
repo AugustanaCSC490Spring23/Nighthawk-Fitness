@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, NavLink, Outlet} from "react-router-dom";
 import "./dashboard.css";
-import { auth, db } from "../Firebase/firebase";
-import { query, collection, getDocs, where } from "firebase/firestore";
+import { auth } from "../Firebase/firebase";
+import NavBar from "./navBar/NavBar";
+
 import { useAuth } from "../contexts/AuthContext";
 
 function Dashboard() {
@@ -38,27 +39,24 @@ function Dashboard() {
 
     return (
         <div className="dashboard">
-        <div className="dashboard__container">
-            <div className="dashboard-card">
-                <div className="dashboard-nav">
-                    <div className="nav-content">
-                        <NavLink className="nav-item" to="/dashboard">Overview</NavLink>
-                        <NavLink className="nav-item" to="profile">Account</NavLink>
-                        <NavLink className="nav-item" to="workout">Workouts</NavLink>
-                        <NavLink className="nav-item">Setting</NavLink>
+            <div className="dashboard__container">
+                <div className="dashboard-card">
+                    <div className="dashboard-nav">
+                        <div className="nav-content">
+                            <NavBar />
+                        </div>
+                        <div className="log-out-btn" onClick={handleLogOut}>
+                            Logout
+                        </div>
                     </div>
-                    <div className="log-out-btn" onClick={handleLogOut}>
-                        Logout
+                    <div className="dashboard-content">
+                        
+                        <Outlet />
                     </div>
                 </div>
-                <div className="dashboard-content">
-                    
-                    <Outlet />
-                </div>
+                
+
             </div>
-            
-            
-        </div>
         </div>
     );
 }

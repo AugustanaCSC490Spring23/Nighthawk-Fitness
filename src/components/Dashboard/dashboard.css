@@ -9,7 +9,7 @@
 }
 
 .dashboard {
-    background: black;
+    background: grey;
 }
 
 .nav-item {
@@ -32,8 +32,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4rem 4rem;
-    background: rgba(255, 255,255,.1);
+    
+    /* background: rgba(255, 255,255,.1); */
 }
 
 .nav-content {
