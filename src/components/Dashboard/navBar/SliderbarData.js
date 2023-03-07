@@ -19,7 +19,7 @@ import * as IoIcons from "react-icons/io"
         cName: "nav-text",
     },
     {
-        title: "Workout Log",
+        title: "Workouts",
         path: "workout",
         icons: <IoIcons.IoIosJournal />,
         cName: "nav-text"

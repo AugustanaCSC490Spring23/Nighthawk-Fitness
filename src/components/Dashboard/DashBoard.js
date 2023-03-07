@@ -5,28 +5,16 @@ import "./dashboard.css";
 import { auth } from "../Firebase/firebase";
 import NavBar from "./navBar/NavBar";
 
-import { useAuth } from "../contexts/AuthContext";
 
 function Dashboard() {
 
-    const {logout} = useAuth();
-
-    const {currentUser} = useAuth();
 
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState('');
 
     const navigate = useNavigate();
     
-    async function handleLogOut() {
-        try {
-            await logout()
-            navigate('/login')
-        }catch(err) {
-            console.log(err);
-        }   
-        
-    }
+    
 
     useEffect(() => {
         if (loading) return;
@@ -42,15 +30,9 @@ function Dashboard() {
             <div className="dashboard__container">
                 <div className="dashboard-card">
                     <div className="dashboard-nav">
-                        <div className="nav-content">
-                            <NavBar />
-                        </div>
-                        <div className="log-out-btn" onClick={handleLogOut}>
-                            Logout
-                        </div>
+                        <NavBar />
                     </div>
                     <div className="dashboard-content">
-                        
                         <Outlet />
                     </div>
                 </div>

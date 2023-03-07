@@ -9,7 +9,7 @@
 }
 
 .dashboard {
-    background: grey;
+    background: var(--bg);
 }
 
 .nav-item {
@@ -23,21 +23,7 @@
 
 .dashboard-card {
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: max-content 1fr;
     min-height: 100vh;
     
-}
-
-.dashboard-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    /* background: rgba(255, 255,255,.1); */
-}
-
-.nav-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
 }

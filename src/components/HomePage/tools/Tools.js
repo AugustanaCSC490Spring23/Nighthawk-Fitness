@@ -7,7 +7,7 @@ import {FaNutritionix} from 'react-icons/fa'
 export default function Tools() {
   return (
     <div>
-        <section className="home-container">
+        <section className="home-container tools-container">
             <div className="tools-header">
                 <h2>the tools for your goals</h2>
                 <p>Trying to lose weight, bulk up, or invest

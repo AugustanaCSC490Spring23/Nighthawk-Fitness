@@ -7,10 +7,13 @@
 }
 
 .banner-card {
-    margin-top: 7rem;
-    margin-bottom: 8rem;
+    margin-bottom: 15rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+}
+
+.first {
+    padding-top: 10rem;
 }
 
 .btn-first-banner {
@@ -19,7 +22,7 @@
     border: 1px solid transparent;
     border-radius: 1rem;
     background: var(--primary-variant);
-    color: white;
+    color: black;
     text-decoration: none;
     transition: var(--transition);
     font-weight: 600;
@@ -34,6 +37,7 @@ p {
     font-size: 1.3rem;
     font-weight: 300;
     margin-bottom: 1rem;
+    color: white;
 }
 
 .first-banner-img {

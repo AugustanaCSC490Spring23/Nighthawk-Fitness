@@ -1,3 +1,6 @@
+.tools-container {
+    padding-bottom: 5rem;
+}
 .tools-header {
     display: flex;
     flex-direction: column;
@@ -54,6 +57,7 @@
     align-items: center;
     text-align: center;
     gap: .75rem;
+    color: white;
 }
 
 .tool-descriptions p  {

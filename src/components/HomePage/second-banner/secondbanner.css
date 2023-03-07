@@ -1,8 +1,6 @@
 .right-banner {
     align-items:center;
-    position: relative;
-    
-    
+    position: relative; 
 }
 
 .stay-on-track li{
@@ -19,8 +17,12 @@
 }
 
 .check {
-    color: greenyellow;
+    color: var(--primary-variant);
     font-size: 1.5rem;
+}
+
+.check-item {
+    color: white;
 }
 
 

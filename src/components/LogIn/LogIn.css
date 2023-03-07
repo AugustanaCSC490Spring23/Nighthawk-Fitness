@@ -1,5 +1,5 @@
 .to-sign-up {
-    color: var(--primary-variant);
+    color: var(--primary);
     text-decoration: none;
     font-weight: 400;
 }
@@ -17,7 +17,7 @@
 
 .forget {
     font-size: .75rem;
-    color: var(--primary-variant);
+    color: var(--bg);
     text-decoration: none;
 }
 

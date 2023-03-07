@@ -7,7 +7,7 @@ export default function FirstBanner() {
   return (
     <div>
         <section className='home-container banner'>
-            <div className="banner-card">
+            <div className="banner-card first">
                 <div className="banner-content">
                     <h2>the body achieves what the mind believes.</h2>
                     <p>Want to train smarter? Track your progress,

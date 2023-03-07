@@ -9,7 +9,7 @@ import Footer from './footer/Footer'
 
 export default function HomePage() {
   return (
-    <div>
+    <div className='main-page'>
         <header>
             <div className="header">
                 <div className="header-container">

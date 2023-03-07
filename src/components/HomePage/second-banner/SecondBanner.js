@@ -21,10 +21,10 @@ export default function SecondBanner() {
                     our tools and tips. Stay motivated and on track 
                     with us</p>
                     <ul className="stay-on-track">
-                        <li><AiFillCheckCircle className='check'/>Over ...+ workouts</li>
-                        <li><AiFillCheckCircle className='check'/>Flexible workout planning</li>
-                        <li><AiFillCheckCircle className='check'/>Log training</li>
-                        <li><AiFillCheckCircle className='check'/>Track workout time</li>
+                        <li><AiFillCheckCircle className='check'/><span className='check-item'> Over ...+ workouts</span></li>
+                        <li><AiFillCheckCircle className='check'/><span className='check-item'>Flexible workout planning</span></li>
+                        <li><AiFillCheckCircle className='check'/><span className='check-item'>Log training</span></li>
+                        <li><AiFillCheckCircle className='check'/><span className='check-item'>Track workout time</span></li>
                     </ul>
                 </div>
             </div>        

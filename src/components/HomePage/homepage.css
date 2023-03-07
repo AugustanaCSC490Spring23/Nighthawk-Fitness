@@ -1,11 +1,20 @@
 .header {
-    box-shadow: 1px 3px 50px -10px rgba(250,148,148,0.68);
-    -webkit-box-shadow: 1px 3px 50px -10px rgba(250,148,148,0.68);
-    -moz-box-shadow: 1px 3px 50px -10px rgba(250,148,148,0.68);
+    box-shadow: 0px 7px 52px 15px rgba(170,171,171,0.84);
+-webkit-box-shadow: 0px 7px 52px 15px rgba(170,171,171,0.84);
+-moz-box-shadow: 0px 7px 52px 15px rgba(170,171,171,0.84);
+    position: relative;
+    
+}
+
+
+
+main {
+    background: var(--bg);
 }
 
 .logo-main {
     width: 120px;
+
 }
 
 nav {
@@ -14,6 +23,8 @@ nav {
     justify-content: space-between;
     max-width: 1100px;
     margin: auto;
+    
+    
 }
 
 .menu-item {
@@ -33,7 +44,7 @@ nav {
 .log {
     text-decoration: none;
     font-weight: 600;
-    color: white;
+    color: black;
     padding: .5rem;
     border: 1px solid transparent;
     border-radius: 1rem;
