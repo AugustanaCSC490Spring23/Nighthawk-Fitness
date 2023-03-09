@@ -6,6 +6,8 @@ import FirstBanner from './first-banner/FirstBanner'
 import SecondBanner from './second-banner/SecondBanner'
 import Tools from './tools/Tools'
 import Footer from './footer/Footer'
+import Zoom from 'react-reveal/Zoom'
+import { Bounce } from 'react-reveal'
 
 export default function HomePage() {
   return (
@@ -27,9 +29,14 @@ export default function HomePage() {
             </div>
         </header>
         <main>
-            <FirstBanner />
-            <SecondBanner />
-            <Tools />
+            <Zoom>
+                <FirstBanner />
+                <SecondBanner />
+                <Tools />
+            </Zoom>
+            
+            {/* <SecondBanner /> */}
+            
             <Footer />
         </main>
     </div>

@@ -7,7 +7,7 @@
 }
 
 .banner-card {
-    margin-bottom: 15rem;
+    margin-bottom: 18rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }

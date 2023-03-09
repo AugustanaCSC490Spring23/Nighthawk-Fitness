@@ -17,7 +17,7 @@ function Profile() {
     const navigate = useNavigate();
 
 
-    
+    console.log(currentUser);
 
     return (
         <div className="profile">

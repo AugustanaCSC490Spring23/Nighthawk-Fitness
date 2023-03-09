@@ -17,7 +17,11 @@ import {FiMinimize2} from 'react-icons/fi'
 import { SidebarData } from "./SliderbarData";
 import "./navbar.css"
 import { useAuth } from "../../contexts/AuthContext";
+import { Avatar } from "@mui/material";
+
 function NavBar(){
+
+    const {currentUser} = useAuth();
 
     const {logout} = useAuth();
 
@@ -46,6 +50,7 @@ function NavBar(){
                 <FiMinimize2 onClick={showSideBar}/> 
             </div>
             <ul className="nav-menu-items">
+                <li className="avatar nav-text"><Avatar sx={{ bgcolor: 'orange' }}> {currentUser.displayName.substring(0,1).toUpperCase()}</Avatar> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li>
                 {SidebarData.map((item, index) => {
                     return (
                         <li key = {index} className={item.cName}>

@@ -9,25 +9,25 @@ import * as IoIcons from "react-icons/io"
     {
         title:"Dashboard",
         path: "/dashboard",
-        icons: <AiIcons.AiFillHome />,
+        icons: <AiIcons.AiFillHome className="nav-icons"/>,
         cName: "nav-text",
     },
     {
         title:"Profile",
         path: "profile",
-        icons: <IoIcons.IoIosPerson />,
+        icons: <IoIcons.IoIosPerson className="nav-icons"/>,
         cName: "nav-text",
     },
     {
         title: "Workouts",
         path: "workout",
-        icons: <IoIcons.IoIosJournal />,
+        icons: <IoIcons.IoIosJournal className="nav-icons"/>,
         cName: "nav-text"
     },
     {
         title: "Recipes",
         path: "/recipes",
-        icons: <FaIcons.FaHotdog />,
+        icons: <FaIcons.FaHotdog className="nav-icons"/>,
         cName: "nav-text"
 
     }
