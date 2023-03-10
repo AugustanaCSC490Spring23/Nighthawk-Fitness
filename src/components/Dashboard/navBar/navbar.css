@@ -117,3 +117,13 @@
     background: #d3d3d310;
     width: max-content;
   }
+
+.profile-btn {
+  background: #1E1F1F;
+  border-radius: 3rem;
+
+}
+
+.profile-btn:hover{
+  border-color:white
+}
