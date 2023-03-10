@@ -1,4 +1,5 @@
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, GoogleAuthProvider, updateProfile } from 'firebase/auth';
+import { updateDoc,doc } from 'firebase/firestore';
 import React, { useContext, useEffect, useState } from 'react'
 import { auth, db, addDoc, collection, signInWithPopup, where, query, getDocs } from '../Firebase/firebase';
 
@@ -26,7 +27,8 @@ export function AuthProvider({children}) {
             uid: user.uid,
             name: user.displayName,
             authProvide: 'google',
-            email: user.email
+            email: user.email,
+            isFilled:'false'
         });
         }
     } catch(err) {
@@ -46,6 +48,13 @@ export function AuthProvider({children}) {
             name,
             authProvider: "local",
             email,
+            docID: null,
+            isFilled:false
+            }).then((value) =>{
+                const currentDoc = doc(db, 'users', value.id);
+                updateDoc(currentDoc, {
+                    docID: value.id
+                })
             });
         }catch (err) {
             console.error(err);
