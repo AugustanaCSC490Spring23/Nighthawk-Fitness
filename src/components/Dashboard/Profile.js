@@ -3,58 +3,55 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate} from "react-router-dom";
 import './profile.css'
 import { auth, db } from "../Firebase/firebase";
-import { query, collection, getDocs, updateDoc, where, doc } from "firebase/firestore";
+import { updateDoc, doc } from "firebase/firestore";
 import { useAuth } from "../contexts/AuthContext";
-import { logDOM } from "@testing-library/react";
-import { updateProfile } from "firebase/auth";
+
 
 function Profile() {
 
 
     const {currentUser} = useAuth();
+    const [userData, setUserData] = useState(() => {
+        const savedUserData = localStorage.getItem('userData');
+        return savedUserData ? JSON.parse(savedUserData) : null
+    }); 
+    // const [user, loading, error] = useAuthState(auth);
+    
 
-    const [user, loading, error] = useAuthState(auth);
-    const [id, setID] = useState('');
-    const [finished, setFinished] = useState(false);
+    
     const navigate = useNavigate();
 
     async function handleClick() {
         try {
-            const currentDoc = doc(db, 'users', id);
+            const currentDoc = doc(db, 'users', userData.docID);
             await updateDoc(currentDoc, {
                 isFilled: true
             })
+            const updateUserData = {
+                ...userData,
+                isFilled:true
+            };
+
+            setUserData(updateUserData);
+            localStorage.setItem('userData', JSON.stringify(updateUserData))
         }catch(e) {
             console.log(e);
         }
     }
 
-    const fetchUserName = async () => {
-        try {
-            const q = query(collection(db, "users"), where("uid", "==", user?.uid));
-            const doc = await getDocs(q);
-            const data = doc.docs[0].data();
-            setID(data.docID);
-            setFinished(data.isFilled)
-            console.log(data.isFilled);
-        } catch (err) {
-            console.error(err);
-            alert("An error occured while fetching user data");
-        }
-    }
-    useEffect(() => {
-        fetchUserName()
-    })
+    
 
-    console.log(user.providerData);
+    
+    
 
+    
     return (
         <div className="profile">
         <div className="profile__container">
-            <h1 style={finished ? {color: 'red'}:{color: 'black'}}>Profile</h1>
+            <h1 style={userData?.isFilled ? {color: 'red'}:{color: 'black'}}>Profile</h1>
             <div className="name">
                 <h3>Name</h3>
-                {currentUser.displayName}
+                {userData ? userData.name : ''}
             </div>
             <div className="email">
                 <h3>Email</h3>

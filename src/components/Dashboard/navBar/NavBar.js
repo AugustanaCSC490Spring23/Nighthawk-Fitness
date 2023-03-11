@@ -36,6 +36,7 @@ function NavBar(){
     async function handleLogOut() {
         try {
             await logout()
+            // localStorage.removeItem('userData')
             navigate('/login')
         }catch(err) {
             console.log(err);

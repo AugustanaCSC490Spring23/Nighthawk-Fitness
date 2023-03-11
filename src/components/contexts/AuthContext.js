@@ -28,7 +28,12 @@ export function AuthProvider({children}) {
             name: user.displayName,
             authProvide: 'google',
             email: user.email,
-            isFilled:'false'
+            isFilled:false
+        }).then((value) => {
+            const Doc = doc(db, 'users', value.id);
+            updateDoc(Doc, {
+                docID: value.id
+            })
         });
         }
     } catch(err) {

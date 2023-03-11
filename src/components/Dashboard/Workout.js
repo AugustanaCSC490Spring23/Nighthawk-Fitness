@@ -11,7 +11,10 @@ export default function Workout() {
     const [diff, setDiff] = useState('')
     const [type, setType] = useState('')
     const [workout, setWorkout] = useState([])
-
+    const [userData, setUserData] = useState(() => {
+        const savedUserData = localStorage.getItem('userData');
+        return savedUserData ? JSON.parse(savedUserData) : null
+    });
     const option = {
         method: 'GET',
         headers: {
@@ -33,6 +36,7 @@ export default function Workout() {
         <div>
             <div className="workout-container">
                 <div className="workout-content">
+                    <h1>{userData.name}</h1>
                     <h2>WORKOUTS</h2>
                     {/* <div className="muscle">Muscle</div>
                     <input className='workout-input' onChange={e => setMuscle(e.target.value)} type="text" />
