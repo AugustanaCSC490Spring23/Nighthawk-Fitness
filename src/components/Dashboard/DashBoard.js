@@ -34,11 +34,11 @@ function Dashboard() {
         }
     }
 
+
     useEffect(() => {
         if(loading) return;
         if (!user) {
-            localStorage.removeItem('userData');
-            setUserData(null);
+            
             return navigate('/login');
         };
         

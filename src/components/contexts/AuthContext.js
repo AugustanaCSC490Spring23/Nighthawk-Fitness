@@ -1,5 +1,5 @@
 import { createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword, signOut, GoogleAuthProvider, updateProfile } from 'firebase/auth';
-import { updateDoc,doc } from 'firebase/firestore';
+import { updateDoc,doc, setDoc } from 'firebase/firestore';
 import React, { useContext, useEffect, useState } from 'react'
 import { auth, db, addDoc, collection, signInWithPopup, where, query, getDocs } from '../Firebase/firebase';
 
@@ -13,7 +13,7 @@ export function useAuth() {
 export function AuthProvider({children}) {
 
     const  [currentUser, setCurrentUser] = useState();
-    const  [loading, setLoading] = useState(true)
+    const  [loading, setLoading] = useState(false)
 
     const googleProvider = new GoogleAuthProvider();
     const signInWithGoogle = async () => {
@@ -23,18 +23,18 @@ export function AuthProvider({children}) {
         const q = query(collection(db, 'users'), where('uid', '==', user.uid));
         const docs = await getDocs(q);
         if (docs.docs.length === 0) {
-        await addDoc(collection(db, 'users'), {
-            uid: user.uid,
-            name: user.displayName,
-            authProvide: 'google',
-            email: user.email,
-            isFilled:false
-        }).then((value) => {
-            const Doc = doc(db, 'users', value.id);
-            updateDoc(Doc, {
-                docID: value.id
-            })
-        });
+            const docRef = doc(collection(db, 'users'));
+            const docData = {
+                uid: user.uid,
+                name: user.displayName,
+                authProvider: 'local',
+                email: user.email,
+                docID: docRef.id,
+                isFilled: false,
+                photoURL: user.photoURL
+            };
+
+            await setDoc(docRef, docData);
         }
     } catch(err) {
         console.log(err);
@@ -45,25 +45,27 @@ export function AuthProvider({children}) {
 
     async function signup(name, email, password) {
         try  {
+            
             const res = await createUserWithEmailAndPassword(auth, email, password)
             const user = res.user;
             await updateProfile(user, {displayName: name})
-            await addDoc(collection(db, "users"), {
-            uid: user.uid,
-            name,
-            authProvider: "local",
-            email,
-            docID: null,
-            isFilled:false
-            }).then((value) =>{
-                const currentDoc = doc(db, 'users', value.id);
-                updateDoc(currentDoc, {
-                    docID: value.id
-                })
-            });
+            const docRef = doc(collection(db, 'users'));
+            const docData = {
+                uid: user.uid,
+                name,
+                authProvider: 'local',
+                email,
+                docID: docRef.id,
+                isFilled: false
+            };
+
+            await setDoc(docRef, docData);
+
+            
         }catch (err) {
             console.error(err);
             alert(err.message);
+            
         } 
     }
 
@@ -99,6 +101,8 @@ export function AuthProvider({children}) {
     }
 
     return (
-        <AuthContext.Provider value={value}>{!loading && children}</AuthContext.Provider>
+        <AuthContext.Provider value={value}>
+            {!loading  && children}
+        </AuthContext.Provider>
     )
 }

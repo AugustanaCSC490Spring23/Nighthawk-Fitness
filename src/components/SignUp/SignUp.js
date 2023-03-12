@@ -50,7 +50,7 @@ export default function SignUp() {
         if (loading) return;
         if (user) setTimeout(function() {
             navigate("/dashboard", {replace:true});
-        },400)
+        },800)
     }, [user, loading]);
   return (
     

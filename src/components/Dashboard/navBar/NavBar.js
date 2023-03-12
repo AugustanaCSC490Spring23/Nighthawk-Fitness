@@ -27,6 +27,7 @@ function NavBar(){
 
     const navigate = useNavigate();
 
+
     const[sidebar,setSidebar] = useState(true)
 
     const showSideBar = () => {
@@ -51,7 +52,7 @@ function NavBar(){
                 <FiMinimize2 onClick={showSideBar}/> 
             </div>
             <ul className="nav-menu-items">
-                <li className="avatar nav-text"><Avatar sx={{ bgcolor: 'orange' }}> {currentUser.displayName.substring(0,1).toUpperCase()}</Avatar> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li>
+                <li className="avatar nav-text"><Avatar alt="ava" sx={{ width: 45, height: 45 }} src={currentUser.photoURL}/> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li>
                 {SidebarData.map((item, index) => {
                     return (
                         <li key = {index} className={item.cName}>
