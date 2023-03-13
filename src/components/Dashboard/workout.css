@@ -3,6 +3,12 @@ h2 {
     text-align: center;
 }
 
+.workout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .workout-container {
     min-height: 100vh;
     display: flex;
@@ -13,7 +19,7 @@ h2 {
 
 .workout-content {
     background: var(--primary-light);
-    width: 100vw;
+    width: 90%;
     max-width: 500px;
     padding: 2rem 1rem;
     border: 1px solid transparent;

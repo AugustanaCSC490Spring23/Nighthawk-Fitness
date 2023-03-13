@@ -1,0 +1,222 @@
+.form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    width: 90%;
+    max-width: 500px;
+    height: 600px;
+    background-color: #1E1F1F;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 44px 5px rgba(203,253,3,0.3);
+-webkit-box-shadow: 0px 0px 44px 5px rgba(203,253,3,0.3);
+-moz-box-shadow: 0px 0px 44px 5px rgba(203,253,3,0.3);
+  }
+  
+  .form-container .head {
+    /* margin-top: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container .head > h1 {
+    color: white;
+  }
+  
+  .form-container .body {
+    padding: 0rem 5rem 2rem 5rem;
+    text-align: center;
+  }
+  
+  .form-container .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .form-container .footer button {
+    border-radius: 1rem;
+    width: 100px;
+    height: 40px;
+    background-color: var(--primary-variant);
+    font-weight: 700;
+    color: black;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+    margin: 5px;
+  }
+
+  .form-container .footer button:hover {
+    background: transparent;
+    border-color: var(--primary-variant);
+    color: var(--primary-variant);
+  }
+  
+  .signup-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signup-container h3,
+  .signup-container h3 {
+    color: white;
+  }
+  
+  .personal-info-container h4,
+  .other-info-container h4 {
+    color: white;
+    padding: 0 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .personal-info-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .personal-info-container input {
+    margin: 5px;
+    width: 80%;
+    height: 40px;
+    padding: 1.5rem 1rem;
+    font-size: 20px;
+    background: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+  }
+
+  .personal-info-container input::placeholder {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 100;
+  }
+
+  .personal-info-container select {
+    width: 80%;
+    height: 50px;
+    margin-top: .5rem;
+    background: transparent;
+    border-radius: 1rem;
+    color: var(--primary);
+    padding: 0 1rem;
+
+  }
+
+  option {
+    background: #1E1F1F;
+    border-radius: 1rem;
+  }
+
+  
+  
+  /* PROGRESS BAR */
+  .progressbar {
+    width: 100%;
+    height: 10px;
+    background-color: #1E1F1F;
+    margin-bottom: 50px;
+  }
+  
+  .progressbar div {
+    width: 33.3%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: var(--primary-variant);
+    transition: var(--transition);
+  }
+  
+  .other-info-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .other-info-container label input {
+    width: max-content;
+    visibility: hidden;
+  }
+  
+  .other-info-container label span {
+    transition: var(--transition);
+  }
+
+  input:checked+span {
+    color: var(--primary-variant);
+    font-size: 17px;
+  }
+  .other-info-container label {
+    cursor: pointer;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border: 1px solid var(--primary);
+    border-radius: 1rem;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    transition: var(--transition);
+  }
+
+  .other-info-container label:hover {
+    border-color: var(--primary-variant);
+    color: var(--primary-variant);
+  }
+  
+
+  .other-info-container .info-container .info {
+    width: 100%;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+    margin-bottom: 1.5rem;
+  }
+
+  .other-info-container .info-container {
+    background: #d3d3d310;
+    border: 1px solid transparent;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    transition: var(--transition);
+  }
+
+  .other-info-container .info-container:hover {
+    background: transparent;
+    border-color: var(--primary-variant);
+  }
+ 
+  
+  .personal-info-container input {
+    color: white;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+  }
+  
+  input:focus {
+    border: 3px solid var(--primary-variant);
+  }

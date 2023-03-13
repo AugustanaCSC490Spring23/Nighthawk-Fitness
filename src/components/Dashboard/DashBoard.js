@@ -13,9 +13,13 @@ function Dashboard() {
     const {currentUser} = useAuth();
 
     const [user, loading, error] = useAuthState(auth);
+    
     const [userData, setUserData] = useState(() => {
-        const savedUserData = localStorage.getItem('userData');
-        return savedUserData ? JSON.parse(savedUserData) : null
+        if (currentUser) {
+            const savedUserData = localStorage.getItem('userData');
+            return savedUserData ? JSON.parse(savedUserData) : null
+        }
+        
     });
 
     const navigate = useNavigate();
@@ -46,7 +50,7 @@ function Dashboard() {
             fetchUserName();
         }
         
-    },[user, userData, loading, navigate])
+    },[user, userData])
 
     useEffect(() => {
         
