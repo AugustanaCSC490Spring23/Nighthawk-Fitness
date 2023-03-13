@@ -6,13 +6,12 @@ import ActivityLevel from "./ActivityLevel";
 import ProfilePreview from './ProfilePreview'
 import './form.css';
 import { useAuth } from "../../contexts/AuthContext";
-import { auth, db } from '../../Firebase/firebase';
+import { db } from '../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
-import { reload } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 
 
-function Form() {
+function Form({onSubmit}) {
 
   const [userData, setUserData] = useState(() => {
     const savedUserData = localStorage.getItem('userData');
@@ -57,16 +56,14 @@ function Form() {
             isFilled: true,
             info: formData
         })
-        const updateUserData = {
-            ...userData,
-            info:formData,
-            isFilled:true
-        };
 
-        setUserData(updateUserData);
-        localStorage.setItem('userData', JSON.stringify(updateUserData))
+        const updateData = {
+          ...userData,
+          isFilled:true,
+          info: formData
+      };
 
-        window.location.reload();
+        onSubmit(updateData)
     }catch(e) {
         console.log(e);
     }

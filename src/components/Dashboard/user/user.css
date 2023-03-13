@@ -1,0 +1,5 @@
+.user  {
+    background: var(--primary-dashboard);
+    color: var(--primary-box);
+    padding: 6rem;
+}

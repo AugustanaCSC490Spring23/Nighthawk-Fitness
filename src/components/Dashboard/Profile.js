@@ -1,11 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate} from "react-router-dom";
-import './profile.css'
-import { auth, db } from "../Firebase/firebase";
-import { updateDoc, doc } from "firebase/firestore";
+import './profile.css';
 import { useAuth } from "../contexts/AuthContext";
 import  Form from './form/Form'
+import User from "./user/User";
 
 function Profile() {
     const [userData, setUserData] = useState(() => {
@@ -16,13 +15,22 @@ function Profile() {
     const {currentUser} = useAuth();
     const navigate = useNavigate();
 
-  
+    function handleSubmit(formData)  {
+        const updateData = {
+            ...userData,
+            isFilled:true,
+            info: formData
+        };
+
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))
+    }
 
 
     
     return (
         <div className="profile">
-            {userData.isFilled ? (<div style={{color: 'red'}}>You have filled the form</div>) : <Form/>}
+            {userData.isFilled ? <User userData={userData}/> : <Form onSubmit={handleSubmit}/>}
             
         </div>
             
