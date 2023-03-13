@@ -27,7 +27,7 @@ function NavBar(){
 
     const navigate = useNavigate();
 
-    const[sidebar,setSidebar] = useState(true)
+    const[sidebar,setSidebar] = useState(true) 
 
     const showSideBar = () => {
         setSidebar(!sidebar)
@@ -50,7 +50,7 @@ function NavBar(){
                 <FiMinimize2 onClick={showSideBar}/> 
             </div>
             <ul className="nav-menu-items">
-                <NavLink to={("profile")}><button className="profile-btn"><li className="avatar nav-text"><Avatar sx={{ bgcolor: 'orange' }}> {currentUser.displayName.substring(0,1).toUpperCase()}</Avatar> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li></button></NavLink>
+ {/*               <NavLink to={("profile")}><button className="profile-btn"><li className="avatar nav-text"><Avatar sx={{ bgcolor: 'orange' }}> {currentUser.displayName.substring(0,1).toUpperCase()}</Avatar> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li></button></NavLink> */}
                 {SidebarData.map((item, index) => {
                     return (
                         <li key = {index} className={item.cName}>

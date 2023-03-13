@@ -10,8 +10,11 @@ function Dashboard() {
 
 
     const [user, loading, error] = useAuthState(auth);
+
     const [name, setName] = useState('');
 
+    const[sidebar,activeSideBar] = useState(true)
+ 
     const navigate = useNavigate();
     
     
@@ -27,18 +30,17 @@ function Dashboard() {
 
     return (
         <div className="dashboard">
-            <div className="dashboard__container">
-                <div className="dashboard-card">
+                <div className={sidebar ? "dashboard-card-active" : 'dashboard-card-deactive'}>
                     <div className="dashboard-nav">
                         <NavBar />
-                    </div>
-                    <div className="dashboard-content">
                         <Outlet />
                     </div>
+                    <div className="dashboard-container">
+                    <div className="graph">Graph with user data</div>
+                    <div className="inspirational">You can do it!</div>
+                    </div>
                 </div>
-                
-
-            </div>
+        
         </div>
     );
 }
