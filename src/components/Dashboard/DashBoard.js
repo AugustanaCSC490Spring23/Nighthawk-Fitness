@@ -33,9 +33,10 @@ function Dashboard() {
                 <div className={sidebar ? "dashboard-card-active" : 'dashboard-card-deactive'}>
                     <div className="dashboard-nav">
                         <NavBar />
-                        <Outlet />
+                        
                     </div>
                     <div className="dashboard-container">
+                    <Outlet />
                     <div className="graph">Graph with user data</div>
                     <div className="inspirational">You can do it!</div>
                     <div className="inspirational">
@@ -44,7 +45,9 @@ function Dashboard() {
                         <input type="text" style={{color: "white"}} placeholder="Enter your weight in Inches"></input>
                         <h3>BMI</h3>
                     </div>
+                    
                     </div>
+                    
                 </div>
         
         </div>

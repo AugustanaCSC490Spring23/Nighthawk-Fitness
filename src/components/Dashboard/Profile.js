@@ -18,6 +18,7 @@ function Profile() {
 
 
     console.log(currentUser);
+    console.log("Hi")
 
     return (
         <div className="profile">
