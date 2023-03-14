@@ -27,7 +27,7 @@ export function AuthProvider({children}) {
             const docData = {
                 uid: user.uid,
                 name: user.displayName,
-                authProvider: 'local',
+                authProvider: 'google',
                 email: user.email,
                 docID: docRef.id,
                 isFilled: false,

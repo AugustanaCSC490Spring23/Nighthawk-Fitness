@@ -3,27 +3,22 @@ h2 {
     text-align: center;
 }
 
-.workout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .workout-container {
-    min-height: 100vh;
+    max-width: 500px;
+    width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
+} 
 
 .workout-content {
     background: var(--primary-light);
-    width: 90%;
-    max-width: 500px;
     padding: 2rem 1rem;
     border: 1px solid transparent;
     border-radius: 2rem;
+    width: 100%;
 }
 
 .workout-input {
@@ -56,4 +51,10 @@ li {
 .workout-list {
     max-width: 400px;
     margin-top: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+    .workout-container {
+        width: 90vw;
+    }
 }

@@ -34,7 +34,7 @@ export default function Workout() {
 
     return (
         <div>
-            <div className="workout">
+            <div className="container">
                 <div className="workout-container">
                     <div className="workout-content">
                         <h1>{userData.name}</h1>

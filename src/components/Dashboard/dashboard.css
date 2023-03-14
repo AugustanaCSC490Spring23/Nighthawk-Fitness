@@ -27,3 +27,13 @@
     min-height: 100vh;
     
 }
+
+
+@media screen and (max-width: 1000px) {
+    .dashboard-card {
+        grid-template-columns: 1fr;
+    }
+    .dashboard-nav {
+        display: none;
+    }
+}

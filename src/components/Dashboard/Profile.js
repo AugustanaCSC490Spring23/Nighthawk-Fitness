@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate} from "react-router-dom";
-import './profile.css';
+
 import { useAuth } from "../contexts/AuthContext";
 import  Form from './form/Form'
 import User from "./user/User";
@@ -16,20 +16,15 @@ function Profile() {
     const navigate = useNavigate();
 
     function handleSubmit(formData)  {
-        const updateData = {
-            ...userData,
-            isFilled:true,
-            info: formData
-        };
-
-        setUserData(updateData);
-        localStorage.setItem('userData', JSON.stringify(updateData))
+    
+        setUserData(formData);
+        localStorage.setItem('userData', JSON.stringify(formData))
     }
 
 
     
     return (
-        <div className="profile">
+        <div className="container">
             {userData.isFilled ? <User userData={userData}/> : <Form onSubmit={handleSubmit}/>}
             
         </div>

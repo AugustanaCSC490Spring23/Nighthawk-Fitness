@@ -54,13 +54,13 @@ function Form({onSubmit}) {
         const currentDoc = doc(db, 'users', userData.docID);
         await updateDoc(currentDoc, {
             isFilled: true,
-            info: formData
+            information: formData
         })
 
         const updateData = {
           ...userData,
           isFilled:true,
-          info: formData
+          information: formData
       };
 
         onSubmit(updateData)
