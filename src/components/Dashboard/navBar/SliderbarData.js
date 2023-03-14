@@ -8,7 +8,7 @@ import * as IoIcons from "react-icons/io"
  export const SidebarData = [
     {
         title:"Dashboard",
-        path: "dashMain",
+        path: "/dashboard",
         icons: <AiIcons.AiFillHome className="nav-icons"/>,
         cName: "nav-text",
     },

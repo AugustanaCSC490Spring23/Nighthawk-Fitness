@@ -23,9 +23,10 @@ function App() {
             <Route path="/signup" element={<SignUp/>} />
             <Route element={<ProtectedRoutes/>}>
               <Route path="/dashboard" element={<Dashboard/>}>
+                <Route index element={<DashboardMain/>} />
                 <Route path="profile" element={<Profile/>} />
                 <Route path="workout" element={<Workout/>} />
-                <Route path="dashMain" element={<DashboardMain/>} />
+                
               </Route>
             </Route>  
           </Routes>

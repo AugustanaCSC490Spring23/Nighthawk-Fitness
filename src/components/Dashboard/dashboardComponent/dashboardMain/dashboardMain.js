@@ -2,7 +2,6 @@ import "./dashboardMain.css"
 import React, { useEffect, useState } from "react";
 
 function DashboardMain(){
-
     return(
         <div className="dashboard">
                     <div className="dashboard-container">
