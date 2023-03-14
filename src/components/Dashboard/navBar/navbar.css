@@ -28,8 +28,6 @@
 
   .items {
     transition: var(--transition);
-    
-    
   }
   
   .nav-text {
@@ -39,7 +37,6 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
-  
   }
   
   .nav-text a {
@@ -83,8 +80,7 @@
   span {
     margin-left: 16px;
   }
-
-
+  
   nav {
     
     border-radius: 0px 74px 74px 0px;
