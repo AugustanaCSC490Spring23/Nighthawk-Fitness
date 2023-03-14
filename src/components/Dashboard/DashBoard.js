@@ -12,11 +12,10 @@ function Dashboard() {
     const [user, loading, error] = useAuthState(auth);
 
     const [name, setName] = useState('');
-
-    const[sidebar,activeSideBar] = useState(true)
  
     const navigate = useNavigate();
     
+    const[sidebar,activeSideBar] = useState(true)
     
 
     useEffect(() => {
@@ -30,26 +29,14 @@ function Dashboard() {
 
     return (
         <div className="dashboard">
-                <div className={sidebar ? "dashboard-card-active" : 'dashboard-card-deactive'}>
+                <div className="dash-skeleton">
                     <div className="dashboard-nav">
-                        <NavBar />
-                        
+                    <div className={sidebar ? "dashboard-card-active" : 'dashboard-card-deactive'}>
+                    <NavBar />  
+                    <Outlet /> 
                     </div>
-                    <div className="dashboard-container">
-                    <Outlet />
-                    <div className="graph">Graph with user data</div>
-                    <div className="inspirational">You can do it!</div>
-                    <div className="inspirational">
-                        <h1>BMI calculator</h1>
-                        <input type="text" style={{color: "white"}} placeholder="Enter your height in Inches"></input>
-                        <input type="text" style={{color: "white"}} placeholder="Enter your weight in Inches"></input>
-                        <h3>BMI</h3>
-                    </div>
-                    
-                    </div>
-                    
                 </div>
-        
+            </div>
         </div>
     );
 }

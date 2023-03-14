@@ -4,8 +4,9 @@ import LogIn from "./components/LogIn/LogIn"
 import Reset from "./components/Reset/Reset"
 import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
-import Profile from "./components/Dashboard/Profile";
-import Workout from "./components/Dashboard/Workout";
+import Profile from "./components/Dashboard/dashboardComponent/Profile";
+import Workout from "./components/Dashboard/dashboardComponent/Workout";
+import DashboardMain from "./components/Dashboard/dashboardComponent/dashboardMain/dashboardMain";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
@@ -24,6 +25,7 @@ function App() {
               <Route path="/dashboard" element={<Dashboard/>}>
                 <Route path="profile" element={<Profile/>} />
                 <Route path="workout" element={<Workout/>} />
+                <Route path="dashMain" element={<DashboardMain/>} />
               </Route>
             </Route>  
           </Routes>
