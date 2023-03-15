@@ -10,6 +10,7 @@ import DashboardMain from "./components/Dashboard/dashboardComponent/dashboardMa
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
+import WorkoutLog from "./components/Dashboard/dashboardComponent/workoutLog";
 function App() {
   return (
     
@@ -26,6 +27,7 @@ function App() {
                 <Route index element={<DashboardMain/>} />
                 <Route path="profile" element={<Profile/>} />
                 <Route path="workout" element={<Workout/>} />
+                <Route path="workoutLog" element={<WorkoutLog/>} />
                 
               </Route>
             </Route>  

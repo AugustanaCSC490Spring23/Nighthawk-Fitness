@@ -21,7 +21,7 @@ import * as IoIcons from "react-icons/io"
     {
         title: "Workouts",
         path: "workout",
-        icons: <IoIcons.IoIosJournal className="nav-icons"/>,
+        icons: <FaIcons.FaWeightHanging className="nav-icons"/>,
         cName: "nav-text"
     },
     {
@@ -29,6 +29,11 @@ import * as IoIcons from "react-icons/io"
         path: "/recipes",
         icons: <FaIcons.FaHotdog className="nav-icons"/>,
         cName: "nav-text"
-    },
+    }, {
+        title: "Workout Log",
+        path: "workoutLog",
+        icons: <IoIcons.IoIosJournal className="nav-icons"/>,
+        cName: "nav-text"
+    }
     
 ]
