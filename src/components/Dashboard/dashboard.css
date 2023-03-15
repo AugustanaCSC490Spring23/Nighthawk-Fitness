@@ -33,7 +33,5 @@
     .dashboard-card {
         grid-template-columns: 1fr;
     }
-    .dashboard-nav {
-        display: none;
-    }
+    
 }

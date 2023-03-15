@@ -3,7 +3,6 @@ import './user.css'
 import { Avatar } from '@mui/material'
 
 export default function User({userData}) {
-  console.log(userData.information);
   
   return (
     

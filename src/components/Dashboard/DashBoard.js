@@ -13,6 +13,8 @@ function Dashboard() {
     const {currentUser} = useAuth();
 
     const [user, loading, error] = useAuthState(auth);
+
+    const[close, setClose] = useState(true);
     
     const [userData, setUserData] = useState(() => {
         if (currentUser) {
@@ -59,7 +61,10 @@ function Dashboard() {
         
     },[userData])
 
-    
+    function showNav() {
+        document.getElementById('nav-bar').classList.remove('inactive')
+        document.getElementById('nav-bar').classList.add('show')
+    }
 
     
 
@@ -69,8 +74,14 @@ function Dashboard() {
                 <div className="dashboard-card">
                     <div className="dashboard-nav">
                         <NavBar />
+                        
                     </div>
                     <div className="dashboard-content">
+                        <div className="burger-dropdown" onClick={showNav}>
+                            <div className="line1"></div>
+                            <div className="line2"></div>
+                            <div className="line3"></div>
+                        </div>
                         <Outlet />
                     </div>
                 </div>

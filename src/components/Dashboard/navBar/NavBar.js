@@ -45,9 +45,14 @@ function NavBar(){
         
     }
 
+    function hideNav() {
+        document.getElementById('nav-bar').classList.toggle('inactive')
+    }
+
     return ( <>
     <IconContext.Provider value = {{ color: "undefined"}}>
-        <nav className={sidebar ? "nav-menu" : 'nav-menu active'}>
+        <nav id="nav-bar" className={sidebar ? "nav-menu" : 'nav-menu active'} > 
+        
             <div className="toggle">
                 <FiMinimize2 onClick={showSideBar}/> 
             </div>
@@ -64,7 +69,13 @@ function NavBar(){
                     )
                 })}
                 <li className="log-out-btn" style={sidebar ? {display: 'block'}:{display:'none'}} onClick={handleLogOut}>Log Out</li>
+                <div className="burger-close" onClick={hideNav}>
+                    <div></div>
+                    <div className="sec"></div>
+                    <div style={{marginBottom : '0'}}></div>
+                </div>
             </ul>
+            
         </nav>
 </IconContext.Provider>
 </>

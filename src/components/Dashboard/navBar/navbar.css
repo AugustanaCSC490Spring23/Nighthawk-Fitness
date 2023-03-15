@@ -33,6 +33,7 @@
   }
   
   .nav-text {
+    
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -116,4 +117,131 @@
     margin: 0 .5rem;
     background: #d3d3d310;
     width: max-content;
+  }
+
+  .burger-dropdown {
+    position: relative;
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    /* bottom: -60px; */
+  }
+
+  .burger-dropdown div {
+    content: '';
+    border-radius: 1rem;
+    width: 45px;
+    height: 5px;
+    margin-bottom: .5rem;
+    background: white;
+    bottom: -50px;
+    transition: var(--transition);
+  }
+
+  .burger-close {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+  }
+
+  .burger-close div {
+    content: '';
+    border-radius: 1rem;
+    width: 45px;
+    height: 5px;
+    margin-bottom: .5rem;
+    background: white;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .burger-dropdown {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .burger-dropdown:hover div {
+      background: var(--primary-variant);
+    }
+
+    .burger-close {
+      display: block;
+      cursor: pointer;
+      border-radius: 100%;
+    }
+
+    .burger-close :first-child,
+    .burger-close :last-child,
+    .burger-close .sec  {
+      transition: all 450ms ease-in-out;
+    }
+
+
+    .burger-close:hover :first-child {
+      background: var(--primary-variant);
+      transform: rotate(405deg) translate(9px, 9px);
+    }
+
+    .burger-close:hover :last-child {
+      background: var(--primary-variant);
+      transform: rotate(-405deg) translate(9px, -9px);
+    }
+
+    .burger-close:hover .sec {
+      opacity: 0;
+    }
+
+     
+
+    .nav-menu {
+      width: 100%;
+      height: 470px;
+      margin-bottom: 4rem;
+      position: fixed;
+      z-index: 5;
+      top: -100%;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, .7);
+      
+    }
+
+
+    nav  {
+      border-radius: 0;
+    
+    }
+    .nav-menu-items {
+      /* display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start; */
+      
+      margin: 0;
+      padding: 2rem 1rem;
+    }
+
+    .log-out-btn {
+      left: 3rem;
+      bottom: 5%;
+    }
+
+    .toggle {
+      display: none;
+    }
+
+    .items,
+    .nav-icons {
+      position: relative;
+      visibility:visible;
+    }
+
+    .show {
+      top: 0;
+    }
+
+    .inactive  {
+      top: -100%;
+    }
   }
