@@ -3,14 +3,15 @@ import {getAuth,signInWithPopup} from "firebase/auth";
 import {getFirestore,query,getDocs,collection,where,addDoc} from "firebase/firestore";
 
 
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
-  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_APP_ID
+  apiKey: "AIzaSyCxmQ_DlIl4816WRVRGAlj6qpdA9iGzE1k",
+  authDomain: "fitness-dev-a6a25.firebaseapp.com",
+  projectId:"fitness-dev-a6a25",
+  storageBucket: "fitness-dev-a6a25.appspot.com",
+  messagingSenderId: "550148254885",
+  appId: "1:550148254885:web:b2cd5bcd9d1435889fb14c"
 };
 
 // Initialize Firebase
