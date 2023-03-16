@@ -9,8 +9,19 @@
 
 
 main {
-    background: var(--bg);
+    background: linear-gradient( 30deg, var(--bg), var(--primary-variant));
+    animation: gradient-loop 5s linear infinite;
 }
+
+@keyframes gradient-loop {
+    from {
+        background-position: left;
+    }
+    to {
+        background-position: right;
+    }
+}
+
 
 .logo-main {
     width: 120px;
@@ -33,12 +44,23 @@ nav {
     gap: 2rem;
 }
 
-.menu-item li {
+.menu-item li,
+.menu-item li a {
     list-style-type: none;
     color: black;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 600;
+}
+
+.contact {
+    padding: .5rem;
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.contact:hover {
+    background: var(--primary-variant);
 }
 
 .log {

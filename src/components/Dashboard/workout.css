@@ -1,60 +1,63 @@
-h2 {
-    color: white;
-    text-align: center;
-}
-
-
-.workout-container {
-    max-width: 500px;
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} 
-
-.workout-content {
-    background: var(--primary-light);
-    padding: 2rem 1rem;
-    border: 1px solid transparent;
-    border-radius: 2rem;
+.workout-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    height: 800px;
+    max-width: 1200px;
     width: 100%;
 }
 
-.workout-input {
-    background: white;
-}
-
-.find-workout {
-    background: black;
-}
-
-li {
-    color: white;
-    list-style-type: none;
-}
-
-.instruction {
-    margin-bottom: 2rem;
-}
-.workout-list ul  {
+.workout-features {
+    background: linear-gradient( 195deg, var(--bg), var(--primary-variant));
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 4rem;
+    transition: all 1s ease-out;
+    
 }
 
-.muscle {
-    position: relative;
-    z-index: 5;
+.workout-card :last-child {
+    background: linear-gradient( 125deg, var(--bg), var(--primary-variant));
+
 }
 
-.workout-list {
-    max-width: 400px;
-    margin-top: 2rem;
+.workout-features:hover {
+    border: 1px solid var(--primary-variant);
+    background: transparent;
 }
 
-@media screen and (max-width: 650px) {
-    .workout-container {
-        width: 90vw;
+.workout-features .btn {
+    width: max-content;
+    padding: 1rem 2rem;
+    font-weight: 900;
+    background: var(--primary-variant);
+    color: black;
+}
+
+.workout-features .icon {
+    color: white;
+    font-size: 9rem;
+}
+
+.workout-features .btn:hover {
+    background: transparent;
+    color: var(--primary-variant);
+    border: 1px solid var(--primary-variant);
+}
+
+.workout-features h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+}
+
+@media screen and (max-width: 1500px) {
+    .workout-card {
+        grid-template-columns: 1fr;
+        width: 80%;
     }
 }

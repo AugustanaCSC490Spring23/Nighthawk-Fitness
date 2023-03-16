@@ -18,7 +18,7 @@
     margin: 0;
     top: 0;
     transition: var(--transition);
-    
+    position: relative;
   }
 
   .active {
@@ -33,13 +33,14 @@
   }
   
   .nav-text {
-    
+    color: white;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
+
   
   }
   
@@ -68,17 +69,26 @@
     margin-top: 5rem;
     border-bottom: 1px solid #d3d3d310;
     border-width: 80%;
+    
   }
 
   .toggle {
+    font-size: 25px;
     position: absolute;
     color: var(--primary-variant);
-    top: 50%;
-    right: -14px;
-    border: 1px solid var(--primary-variant);
-    padding: .25rem;
-    border-radius: 2rem;
+    top: 48%;
+    right: -29px;
     cursor: pointer;
+    transition: var(--transition);
+    padding: 1rem;
+  }
+
+  .toggle-out  {
+    transform: rotate(180deg);
+  }
+
+  .toggle:hover {
+    font-size: 35px;
   }
 
   span {
@@ -157,6 +167,12 @@
   }
 
   @media screen and (max-width: 1000px) {
+
+    span.items,
+    .log-out-btn {
+      display: block !important;
+    }
+
     .burger-dropdown {
       display: flex;
       cursor: pointer;

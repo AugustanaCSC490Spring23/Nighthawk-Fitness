@@ -11,6 +11,10 @@ body {
    
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 img {
     display: block;
     object-fit: cover;
@@ -20,17 +24,19 @@ img {
 :root {
     --bg: #000;
     --primary: #AAABAB  ;
-    --primary-variant: #CBFD03;
+    /* --primary-variant: #CBFD03; */
+    --primary-variant: 	#a4fba6;
     --primary-light: #ACD603;
     --transition: all 300ms ease;
 
     --primary-dashboard: #1E1F1F;
     --primary-box: #d3d3d310;
-    
+
 }
 
 ::-webkit-scrollbar {
     display: none;
+    
 }
 
 .home-container {

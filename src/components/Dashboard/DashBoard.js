@@ -13,16 +13,16 @@ function Dashboard() {
     const {currentUser} = useAuth();
 
     const [user, loading, error] = useAuthState(auth);
-
-    const[close, setClose] = useState(true);
     
     const [userData, setUserData] = useState(() => {
         if (currentUser) {
             const savedUserData = localStorage.getItem('userData');
             return savedUserData ? JSON.parse(savedUserData) : null
         }
-        
+       
+        return null;
     });
+
 
     const navigate = useNavigate();
     
@@ -31,7 +31,7 @@ function Dashboard() {
             const q = query(collection(db, "users"), where("uid", "==", user?.uid));
             const doc = await getDocs(q);
             const data = doc.docs[0].data();
-            
+          
             setUserData(data);
             localStorage.setItem('userData', JSON.stringify(data));
         } catch (err) {
@@ -48,7 +48,8 @@ function Dashboard() {
             return navigate('/login');
         };
         
-        if (currentUser.uid !== userData.uid) {
+        if (userData ===  null || currentUser.uid !== userData.uid) {
+         
             fetchUserName();
         }
         

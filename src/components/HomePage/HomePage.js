@@ -6,14 +6,14 @@ import FirstBanner from './first-banner/FirstBanner'
 import SecondBanner from './second-banner/SecondBanner'
 import Tools from './tools/Tools'
 import Footer from './footer/Footer'
-import Zoom from 'react-reveal/Zoom'
-import { Bounce } from 'react-reveal'
 
 export default function HomePage() {
+
+
   return (
     <div className='main-page'>
         <header>
-            <div className="header">
+            <div id='header' className="header">
                 <div className="header-container">
                     <nav>
                         <div className="logo-main">
@@ -21,7 +21,7 @@ export default function HomePage() {
                         </div>
                         <ul className="menu-item">
                             <li>About</li>
-                            <li>Contact</li>
+                            <li><a className='contact' href="#contact">Contact</a></li>
                             <li><Link className='log' to='/login'>Login</Link></li>
                         </ul>
                     </nav>
@@ -29,14 +29,10 @@ export default function HomePage() {
             </div>
         </header>
         <main>
-            <Zoom>
-                <FirstBanner />
-                <SecondBanner />
-                <Tools />
-            </Zoom>
             
-            {/* <SecondBanner /> */}
-            
+            <FirstBanner />
+            <SecondBanner />
+            <Tools />
             <Footer />
         </main>
     </div>

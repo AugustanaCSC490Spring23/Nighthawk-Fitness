@@ -13,11 +13,12 @@ import React, { useEffect, useState } from "react";
 import { IconContext } from "react-icons"
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
-import {FiMinimize2} from 'react-icons/fi'
+import {FaArrowCircleLeft} from 'react-icons/fa'
 import { SidebarData } from "./SliderbarData";
 import "./navbar.css"
 import { useAuth } from "../../contexts/AuthContext";
 import { Avatar } from "@mui/material";
+import { Rotate } from "react-reveal";
 
 function NavBar(){
 
@@ -53,8 +54,8 @@ function NavBar(){
     <IconContext.Provider value = {{ color: "undefined"}}>
         <nav id="nav-bar" className={sidebar ? "nav-menu" : 'nav-menu active'} > 
         
-            <div className="toggle">
-                <FiMinimize2 onClick={showSideBar}/> 
+            <div className="toggle" onClick={showSideBar}>
+                <FaArrowCircleLeft style={sidebar ? {transform: 'Rotate(0)'} : {transform: 'Rotate(180deg)'}}/> 
             </div>
             <ul className="nav-menu-items">
                 <li className="avatar nav-text"><Avatar alt="ava" sx={{ width: 45, height: 45 }} src={currentUser.photoURL}/> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li>

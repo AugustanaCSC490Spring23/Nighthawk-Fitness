@@ -10,7 +10,7 @@
   .form-container {
     width: 90%;
     max-width: 500px;
-    height: 600px;
+    height: 650px;
     background-color: #1E1F1F;
     border-radius: 1rem;
     overflow: hidden;
@@ -79,7 +79,7 @@
   .personal-info-container h4,
   .other-info-container h4 {
     color: white;
-    padding: 0 3.5rem;
+    padding: 0 1rem;
     margin-bottom: 1rem;
   }
 
@@ -217,6 +217,12 @@
     border-radius: 5px;
   }
   
-  input:focus {
+  /* input:focus {
     border: 3px solid var(--primary-variant);
+  } */
+
+  @media screen and (max-width: 500px) {
+    .form-container .head > h1  {
+      font-size: 1.5rem;
+    }
   }
