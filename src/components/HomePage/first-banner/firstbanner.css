@@ -82,4 +82,12 @@ p {
     h2, p, .btn-first-banner {
         text-align: left !important;
     }
+
+    .banner-card {
+        margin-bottom: 10rem;
+    }
+
+    .first {
+        padding-top: 9rem;
+    }
 }

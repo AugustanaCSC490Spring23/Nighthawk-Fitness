@@ -55,6 +55,7 @@
 .contact-form textarea  {
     background: var(--primary-dashboard);
     color: var(--primary);
+    width: 100%;
 }
 
 .contact-form  button {
@@ -70,4 +71,34 @@
     border-color: var(--primary-dashboard);
     background: transparent;
     color: var(--primary-dashboard);
+}
+
+@media screen and (max-width: 1000px) {
+    .info-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .footer-logo a img {
+        width: 320px;
+    }
+
+    .contact-us  p {
+        padding: 1rem;
+        text-align: center !important;
+    }
+    
+    .copyright-content :first-child,
+    .copyright-content :last-child {
+        display: none;
+    }
+
+
 }

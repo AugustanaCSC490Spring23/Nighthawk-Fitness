@@ -169,7 +169,8 @@
   @media screen and (max-width: 1000px) {
 
     span.items,
-    .log-out-btn {
+    .log-out-btn,
+    .user-name {
       display: block !important;
     }
 

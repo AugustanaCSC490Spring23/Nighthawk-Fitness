@@ -18,7 +18,7 @@ export default function Footer() {
                   <form id='contact' className="contact-form">
                     <input type="text" placeholder='Name' />
                     <input type="email" placeholder='Email'/>
-                    <textarea name="" id="" cols="69" rows="10"></textarea>
+                    <textarea name="" id=""  rows="10"></textarea>
                     <button>Send</button>
                   </form>
                 </div>
