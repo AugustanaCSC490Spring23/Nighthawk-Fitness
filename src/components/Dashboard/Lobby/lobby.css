@@ -1,0 +1,115 @@
+
+.text1{
+    color: white;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    background: black;
+    position: relative;
+    animation: text 2.5s 1;
+}
+
+.text2{
+    font-size: 3rem;
+    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lobby button {
+    width: max-content;
+    padding: 1rem 2rem;
+    animation: button 3s 1;
+}
+
+.lobby button:hover .lobby-link{
+    background: transparent;
+    color: var(--primary-variant);
+}
+
+.lobby-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+@keyframes text {
+    0%{
+      color: black;
+      margin-bottom: -80px;
+    }
+    30%{
+      letter-spacing: 15px;
+      margin-bottom: -80px;
+    }
+    85%{
+      letter-spacing: 8px;
+      margin-bottom: -80px;
+    }
+}
+
+@keyframes button {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .text1 {
+        font-size: 5rem;
+    }
+
+    .text2  {
+        font-size: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .text1  {
+        font-size: 2rem;
+    }
+
+    .text2  {
+        font-size: 1rem;
+    }
+
+    @keyframes text {
+        0%{
+          color: black;
+          margin-bottom: -20px;
+        }
+        30%{
+          letter-spacing: 15px;
+          margin-bottom: -20px;
+        }
+        85%{
+          letter-spacing: 8px;
+          margin-bottom: -20px;
+        }
+    }
+}

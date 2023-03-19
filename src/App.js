@@ -6,6 +6,9 @@ import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
 import Profile from "./components/Dashboard/Profile";
 import Workout from "./components/Dashboard/Workout";
+import Nutrition from "./components/Dashboard/nutrition/Nutrition";
+import DashboardMain from "./components/Dashboard/dashboardMain/DashboardMain";
+import Lobby from "./components/Dashboard/Lobby/Lobby";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
@@ -22,8 +25,11 @@ function App() {
             <Route path="/signup" element={<SignUp/>} />
             <Route element={<ProtectedRoutes/>}>
               <Route path="/dashboard" element={<Dashboard/>}>
+                <Route index element={<Lobby/>} />
+                <Route path="main" element={<DashboardMain/>} />
                 <Route path="profile" element={<Profile/>} />
                 <Route path="workout" element={<Workout/>} />
+                <Route path="recipes"  element={<Nutrition/>} />
               </Route>
             </Route>  
           </Routes>

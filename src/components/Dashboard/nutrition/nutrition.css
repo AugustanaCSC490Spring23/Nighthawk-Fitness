@@ -1,0 +1,11 @@
+.nutrition input {
+    background: white;
+}
+
+.nutrition ul {
+    background: var(--primary-variant);
+}
+
+.nutrition ul li:hover {
+    background: red;
+}

@@ -18,7 +18,7 @@ import { SidebarData } from "./SliderbarData";
 import "./navbar.css"
 import { useAuth } from "../../contexts/AuthContext";
 import { Avatar } from "@mui/material";
-import { Rotate } from "react-reveal";
+
 
 function NavBar(){
 

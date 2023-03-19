@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, Outlet} from "react-router-dom";
 import "./dashboard.css";
 import { auth,db } from "../Firebase/firebase";
-import {query, collection, where, getDocs} from 'firebase/firestore';
+import {query, collection, where, getDocs, doc, updateDoc} from 'firebase/firestore';
 import NavBar from "./navBar/NavBar";
 import { useAuth } from "../contexts/AuthContext";
 
@@ -25,6 +25,8 @@ function Dashboard() {
 
 
     const navigate = useNavigate();
+
+    
     
     const fetchUserName = async () => {
         try {
@@ -48,9 +50,12 @@ function Dashboard() {
             return navigate('/login');
         };
         
+        
+
         if (userData ===  null || currentUser.uid !== userData.uid) {
          
             fetchUserName();
+            
         }
         
     },[user, userData])

@@ -1,0 +1,108 @@
+.dashboard-main-container  {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 1500px;
+    height: 900px;
+    color: white;
+    gap: 2rem;
+}
+
+.dashboard-main-item h3 {
+    font-weight: 900;
+    font-size: 2rem;
+} 
+
+.bmi-calories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  
+}
+
+.dashboard-main-first {
+    display: grid;
+    grid-template-columns: 47% 50%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.dashboard-main-first .tabs,
+.dashboard-main-second .tabs {
+    background: var(--primary-dashboard);
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+.dashboard-main-first .tabs:hover,
+.dashboard-main-second .tabs:hover {
+    box-shadow: 0px 0px 86px -28px rgba(164,251,166,0.56);
+    -webkit-box-shadow: 0px 0px 86px -28px rgba(164,251,166,0.56);
+    -moz-box-shadow: 0px 0px 86px -28px rgba(164,251,166,0.56);
+        
+}
+
+.dashboard-main-second {
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 1900px) {
+
+    .bmi-cal,
+    .calories-req {
+        grid-row-start: 2;
+    }
+
+
+    .dashboard-main-container {
+        width: 1000px;
+    }
+
+    .dashboard-main-first {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .dashboard-main-second {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 1350px) {
+    .dashboard-main-container {
+        width: 700px;
+        height: max-content;
+    }
+
+    .dashboard-main-first {
+        gap: 2rem;
+    }
+
+    .dashboard-main-second {
+        grid-template-columns: 1fr;
+    }
+
+    .bmi-calories {
+        grid-template-columns: 1fr;
+    }
+
+    .bmi-cal {
+        grid-row-start: 1;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .dashboard-main-container {
+        width: 70vw;
+    }
+}

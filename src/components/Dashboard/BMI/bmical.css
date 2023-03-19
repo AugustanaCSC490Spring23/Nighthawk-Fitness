@@ -1,0 +1,75 @@
+.bmi-cal {
+    text-align: center;
+    padding: 2rem 2rem;
+    /* height: 90%; */
+}
+
+.weight,
+.height  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--primary-box) !important;
+    padding: .5rem 1rem 0;
+    border-radius: 1rem;
+    margin: 1rem 0;
+    gap: 1.5rem;
+}
+
+.cal h4 {
+    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.bmi-cal input::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+    height: 2px;
+    width: 90%;
+    background: var(--primary-box);
+}
+
+.bmi-cal input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: -10px;
+    background: var(--primary-variant);
+    
+}
+
+.bmi-cal  input {
+    -webkit-appearance: none;
+    padding: 0;
+    border: 0;
+}
+
+.result h2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+}
+
+.result p {
+    width: 100%;
+    margin-top: 1rem;
+    font-size: .9rem;
+}
+
+.result .refresh {
+    color: var(--primary-variant);
+    font-size: 3rem;
+    transition: var(--transition);
+}
+
+.result .refresh:hover {
+    font-size: 3.5rem;
+}
+

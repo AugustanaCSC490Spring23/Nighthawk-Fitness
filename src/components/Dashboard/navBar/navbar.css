@@ -166,7 +166,7 @@
     background: white;
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1350px) {
 
     span.items,
     .log-out-btn,
