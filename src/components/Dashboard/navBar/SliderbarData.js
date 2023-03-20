@@ -23,7 +23,7 @@ import * as IoIcons from "react-icons/io"
         cName: "nav-text"
     },
     {
-        title: "Recipes",
+        title: "Nutrition",
         path: "recipes",
         icons: <FaIcons.FaHotdog className="nav-icons"/>,
         cName: "nav-text"

@@ -1,0 +1,85 @@
+.nutrition-display  {
+    border-radius: -2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    padding: 1.5rem 0;
+    border: 1px dotted var(--primary-variant);
+    border-radius: 1rem;
+}
+
+.target-cal h5 {
+    position: absolute;
+    color: white;
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+    border-radius: 100%;
+    border: 1px dotted var(--primary-variant);
+    font-weight: 300;
+}
+
+.progress-circle {
+    right: -2px;
+    position: relative;
+    
+}
+
+.consumed,
+.remaining {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.target-cal h3 {
+    font-size: 2.5rem;
+    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.target-cal h4 {
+    color: white;
+}
+
+.nutrition-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    width: max-content;
+    margin: auto;
+    margin-top: 1rem;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    background: var(--primary-box);
+    border-radius: 1rem;
+}
+
+.protein, 
+.carb,
+.fat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.nutrition-detail .data {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.nutrition-detail .data {
+    color: white;
+    font-weight: 900;
+}
+
+.nutrition-detail .label {
+    color: white;
+    font-weight: 100;
+}

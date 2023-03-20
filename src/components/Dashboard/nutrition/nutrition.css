@@ -1,4 +1,4 @@
-.nutrition input {
+/* .nutrition input {
     background: white;
 }
 
@@ -8,4 +8,156 @@
 
 .nutrition ul li:hover {
     background: red;
+} */
+
+.add-food {
+    height: 650px;
+    width: 500px;
+    border-radius: 1rem;
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(30px);
+    transition: var(--transition);
+    opacity: 0;
+}
+
+.add-food .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    
+}
+
+.add-food .close:hover div {
+    background: var(--primary-variant);
+}
+
+.add-food .close div {
+    content: '';
+    width: 25px;
+    height: 5px;
+    background: white;
+    margin-bottom: 5px;
+    transition: var(--transition);
+}
+
+.add-food .close :first-child {
+    transform: rotate(45deg) translate(7px,7px);
+} 
+
+.add-food .close :last-child {
+    transform: rotate(-45deg);
+}
+
+
+.openAddFood {
+    opacity: 1 !important;
+}
+
+
+
+
+.nutrition h1 {
+    text-align: center;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 3.5rem;
+}
+
+.nutrition-container {
+    background: var(--primary-dashboard);
+    width: 1100px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem 0;
+}
+
+.nutrition-content {
+    
+    height: 70%;
+    width: 80%;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    border-radius: 1rem;
+    
+}
+
+.nutrition-display,
+.nutrition-log {
+    background: var(--primary-box);
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    .nutrition-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .nutrition-display {
+        flex-direction: column;
+        gap: 2rem !important;
+    }
+
+
+    .nutrition-detail {
+        gap: 3rem;
+    }
+
+    .progress-circle {
+        right: 8px !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .nutrition h1 {
+        font-size: 2rem;
+    }
+
+    .nutrition-display {
+        gap: 2rem !important;
+    }
+
+    .nutrition-detail {
+        gap: 1.5rem !important;
+    }
+}
+
+.nutrition-log {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.breakfast,
+.lunch,
+.dinner,
+.snack {
+    background: var(--primary-box);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    border-bottom: 1px solid var(--primary-dashboard);
+}
+
+.nutrition-log h3 {
+    padding: .5rem;
+    color: white;
+}
+
+.log-food-icon {
+    font-size: 2rem;
+    color: var(--primary-variant);
+    cursor: pointer;
 }
