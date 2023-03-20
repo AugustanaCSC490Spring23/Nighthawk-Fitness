@@ -33,8 +33,6 @@ const NewWorkout = () => {
         event.preventDefault()
         console.log(workoutInfo)
     }
-    
-
 
     return <>
     <h1>Add a new Workout</h1>
