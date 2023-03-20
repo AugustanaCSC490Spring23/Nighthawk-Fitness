@@ -19,7 +19,7 @@ import "./navbar.css"
 import { useAuth } from "../../contexts/AuthContext";
 import { Avatar } from "@mui/material";
 
-function NavBar(){
+function NavBar(props){
 
     const {currentUser} = useAuth();
 
@@ -27,10 +27,10 @@ function NavBar(){
 
     const navigate = useNavigate();
 
-    const[sidebar,setSidebar] = useState(true) 
+     
 
     const showSideBar = () => {
-        setSidebar(!sidebar)
+        props.setSidebar(!(props.sidebar))
     }
 
     async function handleLogOut() {
@@ -42,26 +42,27 @@ function NavBar(){
         }   
         
     }
+    console.log(props)
 
     return ( <>
     <IconContext.Provider value = {{ color: "undefined"}}>
-        <nav className={sidebar ? "nav-menu" : 'nav-menu active'}>
+        <nav className={props.sidebar ? "nav-menu" : 'nav-menu active'}>
             <div className="toggle">
                 <FiMinimize2 onClick={showSideBar}/> 
             </div>
             <ul className="nav-menu-items">
-               <NavLink to={("profile")}><button className="profile-btn"><li className="avatar nav-text"><Avatar sx={{ bgcolor: 'orange' }}> {currentUser.displayName.substring(0,1).toUpperCase()}</Avatar> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li></button></NavLink> 
+               <NavLink to={("profile")}><button className="profile-btn"><li className="avatar nav-text"><Avatar sx={{ bgcolor: 'orange' }}> {currentUser.displayName.substring(0,1).toUpperCase()}</Avatar> <span className="user-name" style={props.sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li></button></NavLink> 
                 {SidebarData.map((item, index) => {
                     return (
                         <li key = {index} className={item.cName}>
                             <NavLink to={item.path}>
                                 {item.icons}
-                                <span className="items" style={sidebar ? {display: 'block'}:{display:'none'}}>{item.title}</span>
+                                <span className="items" style={props.sidebar ? {display: 'block'}:{display:'none'}}>{item.title}</span>
                             </NavLink>
                         </li>
                     )
                 })}
-                <li className="log-out-btn" style={sidebar ? {display: 'block'}:{display:'none'}} onClick={handleLogOut}>Log Out</li>
+                <li className="log-out-btn" style={props.sidebar ? {display: 'block'}:{display:'none'}} onClick={handleLogOut}>Log Out</li>
             </ul>
         </nav>
 </IconContext.Provider>

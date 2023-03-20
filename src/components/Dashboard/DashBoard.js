@@ -15,7 +15,7 @@ function Dashboard() {
  
     const navigate = useNavigate();
     
-    const[sidebar,activeSideBar] = useState(true)
+    const[sidebar,setSidebar] = useState(true)
     
 
     useEffect(() => {
@@ -32,7 +32,9 @@ function Dashboard() {
                 <div className="dash-skeleton">
                     <div className="dashboard-nav">
                     <div className={sidebar ? "dashboard-card-active" : 'dashboard-card-deactive'}>
-                    <NavBar />  
+                    <NavBar 
+                    sidebar={sidebar}
+                    setSidebar={setSidebar}/>  
                     <Outlet /> 
                     </div>
                 </div>

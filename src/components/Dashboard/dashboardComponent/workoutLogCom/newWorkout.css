@@ -1,7 +1,9 @@
-input, select, textare{
-    color:aliceblue
+input, select, textarea{
+    color:aliceblue;
+  
 }
 
 .formWorkout{
-    color:aliceblue
+    color:aliceblue;
+    width:10rem;
 }
