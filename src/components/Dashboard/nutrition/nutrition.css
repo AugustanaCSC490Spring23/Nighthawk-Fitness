@@ -1,14 +1,60 @@
-/* .nutrition input {
-    background: white;
+.add-food input {
+    background: var(--primary-box);
+    border: 1px solid var(--primary);
+    margin-bottom: 0;
+    color: white;
 }
 
-.nutrition ul {
-    background: var(--primary-variant);
+.add-food  img {
+    width: 2rem;
+    display: inline-block;
 }
 
-.nutrition ul li:hover {
-    background: red;
-} */
+.add-food h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.add-food ul {
+    list-style-type: none;
+    /* background: var(--primary-box); */
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    height: 300px;
+    overflow: hidden;
+    overflow: scroll;
+    flex-direction: column;
+    color: white;
+    gap: .5rem;
+}
+
+.add-food ul li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.add-food ul li:hover {
+    opacity: .3;
+}
+
+.add-food .common,
+.add-food  .branded {
+    color: var(--primary-variant);
+    font-weight: 900;
+    margin: 1rem 0
+}
+
+.add-food button {
+    position: absolute;
+    left: 1.5rem;
+    width: 90%;
+
+    bottom: 1rem;
+    
+}
 
 .add-food {
     height: 650px;
@@ -19,6 +65,7 @@
     backdrop-filter: blur(30px);
     transition: var(--transition);
     opacity: 0;
+    padding: 2rem;
 }
 
 .add-food .close {
@@ -160,4 +207,44 @@
     font-size: 2rem;
     color: var(--primary-variant);
     cursor: pointer;
+}
+
+.log-item div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.log-item .item ul {
+    color: white;
+    display: flex;
+    list-style-type: none;
+    flex-direction: column;
+    gap: .75rem;
+    width: 100%;
+}
+
+.log-item .item {
+    padding: 0;
+}
+
+.log-item .item ul li {
+    text-transform: capitalize;
+}
+
+.food-selected {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--primary-box);
+    padding: .2rem 1rem;
+}
+
+.food-selected-calories {
+    margin-left: 1rem;
+    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }

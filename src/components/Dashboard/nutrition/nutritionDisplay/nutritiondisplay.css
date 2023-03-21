@@ -23,7 +23,8 @@
 .progress-circle {
     right: -2px;
     position: relative;
-    
+    border: 1px dotted var(--primary-variant);
+    border-radius: 100%;
 }
 
 .consumed,

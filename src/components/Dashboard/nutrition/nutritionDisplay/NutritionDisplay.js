@@ -3,13 +3,10 @@ import { CircularProgress } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './nutritiondisplay.css'
 
-export default function NutritionDisplay({userData}) {
-    const [consumed, setConsumed] = useState(0);
-    const [remain, setRemain] = useState(Math.round(userData.dailyCal.maintain_cal * 100 / 100));
+export default function NutritionDisplay({userData, remain, consumed, protein, carb, fat}) {
+    
   
-    const [protein, setProtein] = useState(0)
-    const [carb, setCarb] = useState(0)
-    const [fat, setFat] = useState(0)
+    
     const theme = createTheme({
         palette: {
           primary: {
@@ -31,8 +28,8 @@ export default function NutritionDisplay({userData}) {
                 <h4>Consumed</h4>
               </div>
               <ThemeProvider theme={theme}>
-                <h5>{Math.round(userData.dailyCal.maintain_cal * 100 / 100)}</h5>
-                <CircularProgress className="progress-circle" color='primary' size='12rem' thickness='8' variant="determinate" value={100}/>
+                {/* <h5>{Math.round(userData.dailyCal.maintain_cal * 100 / 100)}</h5> */}
+                <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={(consumed/userData.dailyCal.maintain_cal)*100}/>
               </ThemeProvider>
               <div className="remaining">
                 <h3>{remain}</h3>
