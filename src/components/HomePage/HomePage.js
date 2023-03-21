@@ -20,7 +20,7 @@ export default function HomePage() {
                             <img src={Fitness} alt="" />
                         </div>
                         <ul className="menu-item">
-                            <li>About</li>
+                            <li><Link className='abt' to='/about'>About</Link></li>
                             <li>Contact</li>
                             <li><Link className='log' to='/login'>Login</Link></li>
                         </ul>
