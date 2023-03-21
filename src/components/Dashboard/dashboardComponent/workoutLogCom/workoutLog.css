@@ -10,3 +10,14 @@
 #add-btn:hover {
     background-color:rgba(255,255,255,0.3) ;
 }
+
+button{
+    border-radius: 0px;
+}
+
+.add-btns{
+    display: flex;
+    margin: 2rem;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
