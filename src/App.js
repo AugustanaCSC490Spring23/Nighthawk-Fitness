@@ -10,6 +10,7 @@ import WorkoutLog from "./components/Dashboard/dashboardComponent/workoutLogCom/
 import DashboardMain from "./components/Dashboard/dashboardComponent/dashboardMain/dashboardMain";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
+
 import './app.css'
 
 function App() {
@@ -25,7 +26,6 @@ function App() {
             <Route path="/signup" element={<SignUp/>} />
             <Route path="/profile" element={<Profile/>}/>
             <Route path="/workoutLog" element={<WorkoutLog/>}/>
-            <Route path="/recipes" element={<Recipes/>}/>
             <Route path="/*" element={<h1>ERROR 404: Page not found :&#40;</h1>}/>
             <Route element={<ProtectedRoutes/>}>
               <Route path="/dashboard" element={<Dashboard/>}>
