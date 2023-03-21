@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignUp from "./components/SignUp/SignUp";
+import About from "./components/About/About"
 import LogIn from "./components/LogIn/LogIn"
 import Reset from "./components/Reset/Reset"
 import Dashboard from "./components/Dashboard/DashBoard";
@@ -19,6 +20,7 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route exact path="/" element={<HomePage/>} />
+            <Route path="/about" element={<About/>} />
             <Route path="/login" element={<LogIn/>} />
             <Route path="/reset" element={<Reset/>} />
             <Route path="/signup" element={<SignUp/>} />

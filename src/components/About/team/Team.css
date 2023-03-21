@@ -1,0 +1,40 @@
+.team-main-container h1 {
+    padding-top: 50px;
+    color: white;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 50px;
+}
+
+.team-member {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.team-member img {
+    border-radius: 50%;
+    max-width: 200px;
+    width: 100%;
+}
+
+.team-member h2 {
+    font-size: 20px !important;
+    margin-top: 20px;
+    text-align: center !important;
+}
+
+@media (max-width: 1100px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
