@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import './nutrition.css'
-
+import RequestForm from "../Calories/calories-content/requestForm";
 
 import NutritionDisplay from "./nutritionDisplay/NutritionDisplay";
 import LogItem from "./LogItem";
 
-function Nutrition() {
+function Nutrition({userData}) {
   const [protein, setProtein] = useState(0)
   const [carb, setCarb] = useState(0)
   const [fat, setFat] = useState(0)
   const [query, setQuery] = useState("");
   const [common, setCommon] = useState([]);
   const [branded, setBranded] = useState([]);
-  const [userData, setUserData] = useState(() => {
-    const savedUserData = localStorage.getItem('userData');
-    return savedUserData ? JSON.parse(savedUserData) : null
-  });
+  // const [userData, setUserData] = useState(() => {
+  //   const savedUserData = localStorage.getItem('userData');
+  //   return savedUserData ? JSON.parse(savedUserData) : null
+  // });
   const [nutrition,  setNutrition] = useState ({})
 
   const [remain, setRemain] = useState(Math.round(userData.dailyCal.maintain_cal * 100 / 100));
@@ -193,13 +193,13 @@ function Nutrition() {
 
     }
   }
-
+  
   return (
     <div className="container nutrition">
-      
       <div className="nutrition-container">
         <h1>daily nutrition</h1>
-        <div className="nutrition-content">
+        {!userData.isFilled ? <RequestForm /> : ''}
+        <div className="nutrition-content"  style={userData.isFilled ? {display: 'block'}:{display:'none'}} >
           <NutritionDisplay userData={userData} consumed={consumed} remain={remain} protein={protein} carb={carb} fat={fat}/>
           <div className="nutrition-log">
 
@@ -228,8 +228,8 @@ function Nutrition() {
             {branded.map((item,i) => (
             <li key={i} onClick={handleClick}><img src={item.photo.thumb} alt="" /> {item.food_name}</li>
             ))}
-          <button>Add</button>
-      </ul>
+            <button>Add</button>
+          </ul>
         </div>
       </div>
     </div>

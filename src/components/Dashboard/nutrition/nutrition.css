@@ -248,3 +248,9 @@
     background-clip: text;
     color: transparent;
 }
+
+.nutrition-check .request_form h4 {
+    font-size: 4rem;
+    width: 52%;
+    text-align: center;
+}

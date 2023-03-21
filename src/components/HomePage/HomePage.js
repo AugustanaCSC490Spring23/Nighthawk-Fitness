@@ -35,7 +35,7 @@ export default function HomePage() {
                                 <div className="sec"></div>
                                 <div style={{marginBottom : '0'}}></div>
                             </div>
-                            <li>About</li>
+                            <li><Link to='/about'>About</Link></li>
                             <li><a className='contact' href="#contact">Contact</a></li>
                             <li><Link className='log' to='/login'>Login</Link></li>
                         </ul>
@@ -49,7 +49,6 @@ export default function HomePage() {
             </div>
         </header>
         <main>
-            
             <FirstBanner />
             <SecondBanner />
             <Tools />

@@ -6,9 +6,10 @@ import Dashboard from "./components/Dashboard/DashBoard";
 import HomePage from "./components/HomePage/HomePage";
 import Profile from "./components/Dashboard/Profile";
 import Workout from "./components/Dashboard/Workout";
-import Nutrition from "./components/Dashboard/nutrition/Nutrition";
+import NutritionCheck from "./components/Dashboard/nutrition/NutritionCheck";
 import DashboardMain from "./components/Dashboard/dashboardMain/DashboardMain";
 import Lobby from "./components/Dashboard/Lobby/Lobby";
+import About from "./components/HomePage/about/About";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
@@ -20,6 +21,7 @@ function App() {
         <AuthProvider>
           <Routes>
             <Route exact path="/" element={<HomePage/>} />
+            <Route path="/about" element={<About/>} />
             <Route path="/login" element={<LogIn/>} />
             <Route path="/reset" element={<Reset/>} />
             <Route path="/signup" element={<SignUp/>} />
@@ -29,7 +31,7 @@ function App() {
                 <Route path="main" element={<DashboardMain/>} />
                 <Route path="profile" element={<Profile/>} />
                 <Route path="workout" element={<Workout/>} />
-                <Route path="recipes"  element={<Nutrition/>} />
+                <Route path="nutrition"  element={<NutritionCheck/>} />
               </Route>
             </Route>  
           </Routes>
