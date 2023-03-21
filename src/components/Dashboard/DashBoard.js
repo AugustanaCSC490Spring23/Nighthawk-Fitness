@@ -28,6 +28,7 @@ function Dashboard() {
     
 
     return (
+            <div>
         <div className="dashboard">
                 <div className="dash-skeleton">
                     <div className="dashboard-nav">
@@ -39,6 +40,7 @@ function Dashboard() {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     );
 }
