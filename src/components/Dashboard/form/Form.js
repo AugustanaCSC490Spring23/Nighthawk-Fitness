@@ -78,7 +78,7 @@ function Form({onSubmit}) {
             style={{ width: page === 0 ? "0%" : page === 1 ? "25%" : page === 2 ? '50%': page === 3 ? '75%' : '100%' }}
           ></div>
         </div>
-        <div className="head" style={page === 0 ? {marginTop: '80px'}:{marginTop: '10px'}}>
+        <div className="head" style={page === 0 ? {marginTop: '130px'}:{marginTop: '40px'}}>
           <h1>{FormTitles[page]}</h1>
         </div>
         <div className="body">{PageDisplay()}</div>

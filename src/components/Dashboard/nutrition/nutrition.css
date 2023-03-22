@@ -17,27 +17,55 @@
 
 .add-food ul {
     list-style-type: none;
-    /* background: var(--primary-box); */
-    padding: 1rem;
+    padding: 1rem 0;
     border-radius: 1rem;
     display: flex;
-    height: 300px;
+    height: 500px;
     overflow: hidden;
     overflow: scroll;
     flex-direction: column;
     color: white;
-    gap: .5rem;
+    gap: .75rem;
 }
 
 .add-food ul li {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    justify-content: space-between;
     cursor: pointer;
+    /* background: var(--primary-box); */
+    padding: .5rem 0;
+}
+
+.add-food ul li .item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.add-food ul li .item-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.pop-up {
+    background: var(--primary-variant);
+}
+
+.add-food ul li .item-input .quantity {
+    width: 3rem;
+}
+
+.add-food ul li .item-input .unit {
+    width: 6rem;
 }
 
 .add-food ul li:hover {
-    opacity: .3;
+    opacity: .7;
+    background: var(--primary-box);
+    border-radius: 5px;
 }
 
 .add-food .common,
@@ -47,14 +75,6 @@
     margin: 1rem 0
 }
 
-.add-food button {
-    position: absolute;
-    left: 1.5rem;
-    width: 90%;
-
-    bottom: 1rem;
-    
-}
 
 .add-food {
     height: 650px;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './nutrition.css'
 import RequestForm from "../Calories/calories-content/requestForm";
 
@@ -10,13 +10,14 @@ function Nutrition({userData}) {
   const [carb, setCarb] = useState(0)
   const [fat, setFat] = useState(0)
   const [query, setQuery] = useState("");
+
+  const [food, setFood] = useState('')
+  const [qty, setQty] = useState('')
+  const [unit, setUnit] = useState('')
   const [common, setCommon] = useState([]);
   const [branded, setBranded] = useState([]);
-  // const [userData, setUserData] = useState(() => {
-  //   const savedUserData = localStorage.getItem('userData');
-  //   return savedUserData ? JSON.parse(savedUserData) : null
-  // });
-  const [nutrition,  setNutrition] = useState ({})
+
+  const [selectedItem,  setSelectedItem] = useState(null)
 
   const [remain, setRemain] = useState(Math.round(userData.dailyCal.maintain_cal * 100 / 100));
   const [consumed, setConsumed] = useState(0);
@@ -30,12 +31,11 @@ function Nutrition({userData}) {
   async function fetchResults(query) {
     const url = `https://trackapi.nutritionix.com/v2/search/instant?query=${query}`;
     const headers = {
-      "x-app-id": "4288aa9b",
-      "x-app-key": "0ce4b0ca6ed3c4894aa01d67bb1e85fd",
+      "x-app-id": process.env.REACT_APP_RAPID_ID,
+      "x-app-key": process.env.REACT_APP_RAPID_KEY,
     };
     const response = await fetch(url, { headers });
     const data = await response.json();
-    
     setCommon(data.common);
     setBranded(data.branded);
   }
@@ -44,8 +44,8 @@ function Nutrition({userData}) {
     const url = "https://trackapi.nutritionix.com/v2/natural/nutrients";
     const headers = {
       "Content-Type": "application/json",
-      "x-app-id": "4288aa9b",
-      "x-app-key": "0ce4b0ca6ed3c4894aa01d67bb1e85fd",
+      "x-app-id": process.env.REACT_APP_RAPID_ID,
+      "x-app-key": process.env.REACT_APP_RAPID_KEY,
     };
     const body = {
       query,
@@ -59,7 +59,6 @@ function Nutrition({userData}) {
     return data;
   
 }
-
   function closeAddFood() {
     document.getElementById('addFood').classList.remove('openAddFood');
   }
@@ -79,47 +78,65 @@ function Nutrition({userData}) {
     }
   }
 
-  async function handleClick(event) {
-
+  async function handleClick(item) {
     try {
-      const query = '1' + event.target.textContent;
-    
-      await fetchNutrients(query).then((data) => {
-        setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
-        setRemain(Math.round(remain-data.foods[0].nf_calories) * 100 / 100);
-        setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
-        setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
-        setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
-        if (section ===  'breakfast'){
-          setBf(prev => {
-            return [...prev, data.foods[0]]
-          })
-
-        }else if (section === 'lunch') {
-          setLunch(prev => {
-            return [...prev, data.foods[0]]
-          })
-
-        }else if  (section === 'dinner') {
-          setDinner(prev => {
-            return [...prev, data.foods[0]]
-          })
-
-        }else {
-          setSnack(prev => {
-            return [...prev, data.foods[0]]
-          })
-
-        }
-        
-        setNutrition(data.foods[0])
-        // console.log(data.foods[0]);
-      })
+      setUnit('')
+      setQty('')
+      setSelectedItem(item)
       
     }catch(e) {
       console.log(e);
     }
+  }
+
+  useEffect(() => {
+    if (selectedItem) {
+      setFood(qty + ' ' + unit + ' ' + selectedItem.food_name)
+      
+    }
     
+  },[qty, unit, selectedItem, setFood, setUnit, setQty])
+
+  async function logItem() {
+    try {
+
+      console.log(food);
+      setUnit('')
+      setQty('')
+      
+      // await fetchNutrients(query).then((data) => {
+      //   console.log(data);
+      //   setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
+      //   setRemain(Math.round(remain-data.foods[0].nf_calories) * 100 / 100);
+      //   setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
+      //   setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
+      //   setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
+      //   if (section ===  'breakfast'){
+      //     setBf(prev => {
+      //       return [...prev, data.foods[0]]
+      //     })
+
+      //   }else if (section === 'lunch') {
+      //     setLunch(prev => {
+      //       return [...prev, data.foods[0]]
+      //     })
+
+      //   }else if  (section === 'dinner') {
+      //     setDinner(prev => {
+      //       return [...prev, data.foods[0]]
+      //     })
+
+      //   }else {
+      //     setSnack(prev => {
+      //       return [...prev, data.foods[0]]
+      //     })
+
+      //   }
+        
+      // })
+    }catch(e) {
+      console.log(e);
+    }
   }
 
   function deleteItem(id, sectionID) {
@@ -222,13 +239,15 @@ function Nutrition({userData}) {
           <ul>
             <li className="common">Common</li>
             {common.map((item,i) => (
-            <li key={i} onClick={handleClick}> <img src={item.photo.thumb} alt="" /> {item.food_name}</li>
+            <li id={i} key={i} onClick={() => handleClick(item)}> <span className="item"><img src={item.photo.thumb} alt="" /> {item.food_name}</span> 
+            {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> <input value={unit} onChange={(e) => setUnit(e.target.value)} className="unit" type="text" placeholder={item.serving_unit} /> <button onClick={logItem}>Add</button></span> )} </li>
             ))}
             <li  className="branded">Branded</li>
             {branded.map((item,i) => (
-            <li key={i} onClick={handleClick}><img src={item.photo.thumb} alt="" /> {item.food_name}</li>
+            <li id={i} key={i} onClick={() => handleClick(item)}> <span className="item"><img src={item.photo.thumb} alt="" /> {item.food_name}</span> 
+            {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> <input value={unit} onChange={(e) => setUnit(e.target.value)} className="unit" type="text" placeholder={item.serving_unit} /> <button onClick={logItem}>Add</button></span> )} </li>
             ))}
-            <button>Add</button>
+           
           </ul>
         </div>
       </div>
