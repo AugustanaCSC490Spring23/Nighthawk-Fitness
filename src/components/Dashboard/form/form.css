@@ -29,7 +29,7 @@
   }
 
   .form-container .head > h1 {
-    color: white;
+    color: var(--primary-text);
   }
   
   .form-container .body {
@@ -49,7 +49,7 @@
     height: 40px;
     background-color: var(--primary-variant);
     font-weight: 700;
-    color: black;
+    color: var(--bg);
     cursor: pointer;
     padding: 10px 5px;
     margin: 10px 5px;
@@ -73,12 +73,12 @@
   
   .signup-container h3,
   .signup-container h3 {
-    color: white;
+    color: var(--primary-text);
   }
   
   .personal-info-container h4,
   .other-info-container h4 {
-    color: white;
+    color: var(--primary-text);
     padding: 0 1rem;
     margin-bottom: 1rem;
   }
@@ -121,7 +121,7 @@
   }
 
   option {
-    background: #1E1F1F;
+    background: var(--primary-dashboard);
     border-radius: 1rem;
   }
 
@@ -131,7 +131,7 @@
   .progressbar {
     width: 100%;
     height: 10px;
-    background-color: #1E1F1F;
+    background-color: var(--primary-dashboard);
     margin-bottom: 50px;
   }
   
@@ -167,7 +167,7 @@
   }
   .other-info-container label {
     cursor: pointer;
-    color: white;
+    color: var(--primary-text);
     font-size: 12px;
     display: flex;
     width: 100%;
@@ -189,7 +189,7 @@
 
   .other-info-container .info-container .info {
     width: 100%;
-    color: white;
+    color: var(--primary-text);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -198,7 +198,7 @@
   }
 
   .other-info-container .info-container {
-    background: #d3d3d310;
+    background: var(--primary-box);
     border: 1px solid transparent;
     padding: 2.5rem;
     border-radius: 1rem;
@@ -212,7 +212,7 @@
  
   
   .personal-info-container input {
-    color: white;
+    color: var(--primary-text);
     border: 1px solid var(--primary);
     border-radius: 5px;
   }

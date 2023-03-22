@@ -14,11 +14,11 @@
 
 .nav-item {
     text-decoration: none;
-    color: white;
+    color: var(--primary-text);
 }
 
 .log-out-btn {
-    color: white;
+    color: var(--primary-text);
 }
 
 .dashboard-card {

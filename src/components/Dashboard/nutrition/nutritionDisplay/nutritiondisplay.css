@@ -12,7 +12,7 @@
 
 .target-cal h5 {
     position: absolute;
-    color: white;
+    color: var(--primary-text);
     font-size: 1.5rem;
     padding: 2rem 1rem;
     border-radius: 100%;
@@ -37,14 +37,14 @@
 
 .target-cal h3 {
     font-size: 2.5rem;
-    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
 .target-cal h4 {
-    color: white;
+    color: var(--primary-text);
 }
 
 .nutrition-detail {
@@ -76,11 +76,11 @@
 }
 
 .nutrition-detail .data {
-    color: white;
+    color: var(--primary-text);
     font-weight: 900;
 }
 
 .nutrition-detail .label {
-    color: white;
-    font-weight: 100;
+    color: var(--primary-text);
+    font-weight: 300;
 }

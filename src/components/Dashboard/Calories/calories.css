@@ -23,7 +23,7 @@
 }
 
 .calories_content h4 {
-    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -39,7 +39,7 @@
 
 .request_form h4 {
     font-size: 2rem;
-    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

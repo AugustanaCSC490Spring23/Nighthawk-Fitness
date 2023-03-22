@@ -20,7 +20,7 @@
 }
 
 .workout-card :last-child {
-    background: linear-gradient( 125deg, var(--bg), var(--primary-variant));
+    background: linear-gradient( 135deg, var(--bg), var(--primary-variant));
     
 
 }
@@ -35,11 +35,11 @@
     padding: 1rem 2rem;
     font-weight: 900;
     background: var(--primary-variant);
-    color: black;
+    color: var(--bg);
 }
 
 .workout-features .icon {
-    color: white;
+    color: var(--primary-text);
     font-size: 9rem;
 }
 
@@ -52,8 +52,8 @@
 .workout-features h3 {
     text-align: center;
     font-size: 2rem;
-    font-weight: 100;
-    color: white;
+    font-weight: 300;
+    color: var(--primary-text);
 }
 
 @media screen and (max-width: 1500px) {

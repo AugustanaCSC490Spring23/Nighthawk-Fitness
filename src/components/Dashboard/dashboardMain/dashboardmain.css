@@ -4,7 +4,7 @@
     grid-template-rows: 1fr 1fr;
     width: 1500px;
     height: 900px;
-    color: white;
+    color: var(--primary-text);
     gap: 2rem;
 }
 

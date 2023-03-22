@@ -80,8 +80,8 @@ function Nutrition({userData}) {
 
   async function handleClick(item) {
     try {
-      setUnit('')
-      setQty('')
+      // setUnit('')
+      // setQty('')
       setSelectedItem(item)
       
     }catch(e) {

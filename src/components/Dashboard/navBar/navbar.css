@@ -8,9 +8,12 @@
     display: inline-block;
   }
   
+  .user-name {
+    font-weight: 900;
+    color: var(--primary-text);
+  }
   .nav-menu {
-    background: #1E1F1F;
-    backdrop-filter: blur(10px);
+    background: var(--primary-dashboard);
     width: 250px;
     height: 100vh;
     display: flex;
@@ -33,7 +36,7 @@
   }
   
   .nav-text {
-    color: white;
+    color: var(--primary-text);
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -55,19 +58,19 @@
     padding: 0 16px;
     border-radius: 4px;
     transition: var(--transition);
-    
+
   }
   
   .nav-text a:hover {
     background-color: var(--primary-variant);
-    color: black;
+    color: var(--bg);
   }
 
   
   .nav-menu-items {
     width: 100%;
     margin-top: 5rem;
-    border-bottom: 1px solid #d3d3d310;
+    border-bottom: 1px solid var(--primary-box);
     border-width: 80%;
     
   }
@@ -75,6 +78,7 @@
   .toggle {
     font-size: 25px;
     position: absolute;
+    z-index: 5 !important;
     color: var(--primary-variant);
     top: 48%;
     right: -29px;
@@ -112,11 +116,12 @@
     border: 1px solid var(--primary-variant);
     border-radius: 1rem;
     transition: var(--transition);
+    font-weight: 900;
   }
 
   .log-out-btn:hover {
     background: var(--primary-variant);
-    color: black;
+    color: var(--bg);
   }
 
   .avatar {
@@ -125,7 +130,7 @@
     padding: 1rem;
     border-radius: 2rem;
     margin: 0 .5rem;
-    background: #d3d3d310;
+    background: var(--primary-box);
     width: max-content;
   }
 
@@ -145,7 +150,7 @@
     width: 45px;
     height: 5px;
     margin-bottom: .5rem;
-    background: white;
+    background: var(--primary-text);
     bottom: -50px;
     transition: var(--transition);
   }
@@ -163,7 +168,33 @@
     width: 45px;
     height: 5px;
     margin-bottom: .5rem;
-    background: white;
+    background: var(--primary-text);
+  }
+
+  .light-dark {
+    position: absolute;
+    border-radius: 2rem;
+    overflow: hidden;
+    bottom: 8rem;
+    left: 4.5rem;
+    display: flex;
+    width: max-content;
+  }
+
+  .light-dark button {
+    border-radius: 0;
+    font-size: 1.5rem;
+    padding: .5rem .75rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .light-dark button:hover {
+    border: transparent;
+  }
+
+  .light-dark .light {
+    border-right: 1px solid var(--bg);
   }
 
   @media screen and (max-width: 1350px) {
@@ -220,7 +251,7 @@
       z-index: 5;
       top: -100%;
       backdrop-filter: blur(10px);
-      background: rgba(0, 0, 0, .7);
+      background: var(--primary-dropdown);
       
     }
 
@@ -242,6 +273,11 @@
     .log-out-btn {
       left: 3rem;
       bottom: 5%;
+    }
+
+    .light-dark {
+      bottom: 5%;
+      left: 12rem;
     }
 
     .toggle {

@@ -2,7 +2,7 @@
     background: var(--primary-box);
     border: 1px solid var(--primary);
     margin-bottom: 0;
-    color: white;
+    color: var(--primary-text);
 }
 
 .add-food  img {
@@ -13,6 +13,7 @@
 .add-food h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+    color: var(--primary-text);
 }
 
 .add-food ul {
@@ -24,7 +25,7 @@
     overflow: hidden;
     overflow: scroll;
     flex-direction: column;
-    color: white;
+    color: var(--primary-text);
     gap: .75rem;
 }
 
@@ -35,6 +36,7 @@
     cursor: pointer;
     /* background: var(--primary-box); */
     padding: .5rem 0;
+    color: var(--primary-text);
 }
 
 .add-food ul li .item {
@@ -81,7 +83,7 @@
     width: 500px;
     border-radius: 1rem;
     position: absolute;
-    background: rgba(0, 0, 0, .5);
+    background: var(--primary-dropdown);
     backdrop-filter: blur(30px);
     transition: var(--transition);
     opacity: 0;
@@ -104,7 +106,7 @@
     content: '';
     width: 25px;
     height: 5px;
-    background: white;
+    background: var(--primary-text);
     margin-bottom: 5px;
     transition: var(--transition);
 }
@@ -128,7 +130,7 @@
 .nutrition h1 {
     text-align: center;
     width: 100%;
-    color: white;
+    color: var(--primary-text);
     text-transform: uppercase;
     font-weight: 900;
     font-size: 3.5rem;
@@ -220,7 +222,7 @@
 
 .nutrition-log h3 {
     padding: .5rem;
-    color: white;
+    color: var(--primary-text);
 }
 
 .log-food-icon {
@@ -237,7 +239,7 @@
 }
 
 .log-item .item ul {
-    color: white;
+    color: var(--primary-text);
     display: flex;
     list-style-type: none;
     flex-direction: column;
@@ -263,7 +265,7 @@
 
 .food-selected-calories {
     margin-left: 1rem;
-    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
