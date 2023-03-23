@@ -1,8 +1,26 @@
 import React from 'react'
 import './footer.css'
 import Fitness from '../../SignUp/logo-fitness.svg'
+import emailjs from '@emailjs/browser'
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
-export default function Footer() {
+
+const Footer = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_isy7h6h', 'template_q36vpgf', form.current, 'TD7NnI1kph0WncjrT')
+      .then((result) => {
+          console.log(result.text);
+          console.log("message sent");
+      }, (error) => {
+          console.log(error.text);
+          console.log("message not sent");
+      });
+  };
+
   return (
     <div>
         <div className="footer-container">
@@ -15,11 +33,11 @@ export default function Footer() {
                   <h1>Contact us</h1>
                   <p>We'd love to hear from you! If you have any questions, comments, 
                   or suggestions, please don't hesitate to reach out using the below.</p>
-                  <form id='contact' className="contact-form">
-                    <input type="text" placeholder='Name' />
-                    <input type="email" placeholder='Email'/>
-                    <textarea name="" id=""  rows="10"></textarea>
-                    <button>Send</button>
+                  <form ref={form} onSubmit={sendEmail} id='contact' className="contact-form">
+                    <input name='name' type="text" placeholder='Name' />
+                    <input name='email' type="email" placeholder='Email'/>
+                    <textarea name='message' rows="10"></textarea>
+                    <button type='submit'>Send</button>
                   </form>
                 </div>
               </div>
@@ -34,3 +52,5 @@ export default function Footer() {
     </div>
   )
 }
+
+export default Footer;

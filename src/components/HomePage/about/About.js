@@ -15,7 +15,7 @@ export default function About() {
                             <Link to="/"><img src={Fitness} alt="" /></Link>
                             </div>
                             <ul className="menu-item">
-                                <li><Link className='abt' to='/'>Home</Link></li>
+                                <li><Link className='home' to='/'>Home</Link></li>
                             
                                 <li><Link className='log' to='/login'>Login</Link></li>
                             </ul>

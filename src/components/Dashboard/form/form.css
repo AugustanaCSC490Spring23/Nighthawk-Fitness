@@ -16,6 +16,7 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    transition: var(--transition);
     box-shadow: 0px 0px 86px -28px rgba(164,251,166,0.56);
 -webkit-box-shadow: 0px 0px 86px -28px rgba(164,251,166,0.56);
 -moz-box-shadow: 0px 0px 86px -28px rgba(164,251,166,0.56);

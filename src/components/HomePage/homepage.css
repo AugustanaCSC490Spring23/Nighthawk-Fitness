@@ -53,13 +53,13 @@ nav {
     font-weight: 600;
 }
 
-.contact {
+.contact, .about, .home {
     padding: .5rem;
     border-radius: 1rem;
     transition: var(--transition);
 }
 
-.contact:hover {
+.contact:hover, .about:hover, .home:hover {
     background: var(--primary-variant);
 }
 
