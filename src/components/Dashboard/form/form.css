@@ -11,7 +11,7 @@
     width: 90%;
     max-width: 500px;
     height: 750px;
-    background-color: #1E1F1F;
+    background-color: var(--primary-dashboard);
     border-radius: 1rem;
     overflow: hidden;
     display: flex;
