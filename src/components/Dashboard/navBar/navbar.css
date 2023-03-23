@@ -205,6 +205,10 @@
       display: block !important;
     }
 
+    .light-dark {
+      display: flex !important;
+    }
+
     .burger-dropdown {
       display: flex;
       cursor: pointer;
