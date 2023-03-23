@@ -63,7 +63,7 @@
     padding: .75rem 1rem;
     text-transform: uppercase;
     border: 1px solid transparent;
-    color: white;
+    color: var(--primary-text);
     background: var(--primary-dashboard);
 }
 

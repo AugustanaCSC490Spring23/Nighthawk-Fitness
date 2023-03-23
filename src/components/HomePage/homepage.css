@@ -47,7 +47,7 @@ nav {
 .menu-item li,
 .menu-item li a {
     list-style-type: none;
-    color: black;
+    color: var(--bg);
     text-decoration: none;
     text-transform: capitalize;
     font-weight: 600;
@@ -66,7 +66,7 @@ nav {
 .log {
     text-decoration: none;
     font-weight: 600;
-    color: black;
+    color: var(--bg);
     padding: .5rem;
     border: 1px solid transparent;
     border-radius: 1rem;

@@ -4,7 +4,7 @@
 }
 
 .stay-on-track li{
-    color: black;
+    color: var(--bg);
     display: flex;
     align-items: center;
     gap: 1rem;

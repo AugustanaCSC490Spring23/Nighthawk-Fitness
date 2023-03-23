@@ -106,7 +106,7 @@ input::placeholder {
 
 button {
     border: 1px solid transparent;
-    border-radius: 1rem;
+    border-radius: 1rem !important;
     width: 100%;
     padding: .75rem;
     background: var(--primary-variant);

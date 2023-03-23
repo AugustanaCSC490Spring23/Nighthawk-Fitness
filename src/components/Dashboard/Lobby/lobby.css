@@ -1,18 +1,18 @@
 
 .text1{
-    color: white;
+    color: var(--primary-text);
     font-size: 7rem;
     font-weight: 700;
     letter-spacing: 8px;
     margin-bottom: 20px;
-    background: black;
+    background: var(--bg);
     position: relative;
     animation: text 2.5s 1;
 }
 
 .text2{
     font-size: 3rem;
-    background: linear-gradient(92deg,var(--primary-variant), lightyellow );
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -31,7 +31,7 @@
 
 .lobby-link {
     text-decoration: none;
-    color: black;
+    color: var(--bg);
     font-weight: 900;
     text-transform: uppercase;
     transition: var(--transition);
@@ -39,7 +39,7 @@
 
 @keyframes text {
     0%{
-      color: black;
+      color: var(--bg);
       margin-bottom: -80px;
     }
     30%{

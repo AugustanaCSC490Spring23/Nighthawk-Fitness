@@ -100,40 +100,40 @@ function Nutrition({userData}) {
   async function logItem() {
     try {
 
-      console.log(food);
+      // console.log(food);
       setUnit('')
       setQty('')
       
-      // await fetchNutrients(query).then((data) => {
-      //   console.log(data);
-      //   setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
-      //   setRemain(Math.round(remain-data.foods[0].nf_calories) * 100 / 100);
-      //   setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
-      //   setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
-      //   setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
-      //   if (section ===  'breakfast'){
-      //     setBf(prev => {
-      //       return [...prev, data.foods[0]]
-      //     })
+      await fetchNutrients(food).then((data) => {
+        console.log(data);
+        setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
+        setRemain(Math.round(remain-data.foods[0].nf_calories) * 100 / 100);
+        setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
+        setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
+        setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
+        if (section ===  'breakfast'){
+          setBf(prev => {
+            return [...prev, data.foods[0]]
+          })
 
-      //   }else if (section === 'lunch') {
-      //     setLunch(prev => {
-      //       return [...prev, data.foods[0]]
-      //     })
+        }else if (section === 'lunch') {
+          setLunch(prev => {
+            return [...prev, data.foods[0]]
+          })
 
-      //   }else if  (section === 'dinner') {
-      //     setDinner(prev => {
-      //       return [...prev, data.foods[0]]
-      //     })
+        }else if  (section === 'dinner') {
+          setDinner(prev => {
+            return [...prev, data.foods[0]]
+          })
 
-      //   }else {
-      //     setSnack(prev => {
-      //       return [...prev, data.foods[0]]
-      //     })
+        }else {
+          setSnack(prev => {
+            return [...prev, data.foods[0]]
+          })
 
-      //   }
+        }
         
-      // })
+      })
     }catch(e) {
       console.log(e);
     }

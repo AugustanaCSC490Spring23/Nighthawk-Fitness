@@ -182,7 +182,7 @@
   }
 
   .light-dark button {
-    border-radius: 0;
+    border-radius: 0 !important;
     font-size: 1.5rem;
     padding: .5rem .75rem;
     display: flex;

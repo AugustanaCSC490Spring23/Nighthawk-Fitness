@@ -189,6 +189,14 @@
 }
 
 @media screen and (max-width: 600px) {
+    .add-food {
+        width: 80%;
+    }
+
+    .nutrition-container {
+        margin-top: 3rem;
+    }
+
     .nutrition h1 {
         font-size: 2rem;
     }

@@ -4,6 +4,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import {MdOutlineEditNote} from 'react-icons/md'
+import { Link } from 'react-router-dom';
 import './workout.css'
 
 export default function Workout() {
@@ -42,7 +43,7 @@ export default function Workout() {
                 </div>
                 <div className="workout-features">
                     <h3>Track your progress and log your completed workouts to stay on top of your fitness journey.</h3>
-                    <div className="btn">Log Plan</div>
+                    <div className="btn"><Link className='log-plan' to='log'>Log Plan</Link></div>
                 </div>
             </div>
         </div>

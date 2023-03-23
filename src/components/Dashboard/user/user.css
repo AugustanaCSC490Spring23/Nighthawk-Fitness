@@ -128,3 +128,9 @@
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    .user-container  {
+        margin-top: 2rem;
+    }
+}

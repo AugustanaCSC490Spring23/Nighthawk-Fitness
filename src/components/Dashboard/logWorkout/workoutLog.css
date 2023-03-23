@@ -1,0 +1,31 @@
+.log-container{
+    display:flex;
+    flex-direction:column
+}
+
+#add-btn{
+    color: #CBFD03;
+}
+
+#add-btn:hover {
+    background-color:rgba(255,255,255,0.3) ;
+}
+
+button{
+    border-radius: 0px;
+}
+
+.add-btns{
+    display: flex;
+    margin: 2rem;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+#workoutForm label {
+    color: var(--primary-text);
+}
+
+#workoutForm input {
+    color: var(--primary-text);
+}

@@ -22,7 +22,7 @@
     border: 1px solid transparent;
     border-radius: 1rem;
     background: var(--primary-variant);
-    color: black;
+    color: var(--bg);
     text-decoration: none;
     transition: var(--transition);
     font-weight: 600;
