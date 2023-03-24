@@ -29,6 +29,30 @@ function PersonalInfo({ formData, setFormData }) {
           setFormData({ ...formData, height: e.target.value });
         }}
       />
+      <div className="height-label">Height</div>
+      <div className="height-selection">
+        <select >
+          <option value="">ft</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+        </select>
+        <select>
+          <option value="">inches</option>
+          <option value="">1</option>
+          <option value="">2</option>
+          <option value="">3</option>
+          <option value="">4</option>
+          <option value="">5</option>
+          <option value="">6</option>
+          <option value="">7</option>
+          <option value="">8</option>
+          <option value="">9</option>
+          <option value="">10</option>
+          <option value="">11</option>
+        </select>
+      </div>
       <select onChange={(e) => {
           setFormData({ ...formData, gender: e.target.value });
         }} placeholder="Gender">

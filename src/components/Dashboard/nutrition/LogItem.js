@@ -4,6 +4,7 @@ import {MdCancel} from 'react-icons/md'
 
 
 export default function LogItem({title, onDelete, onPress, array}) {
+
   return (
     <div>
         <div className="log-item">
@@ -12,7 +13,7 @@ export default function LogItem({title, onDelete, onPress, array}) {
                 <ul>
                     {array.map((item,i) => (
                     <div className="food-selected">
-                        <li key={item} id={i}>{item.food_name} <span className='food-selected-calories'>{Math.round((item.nf_calories)*100/100)}cal</span></li>
+                        <li key={item} id={i}>{item.food_name}<span className='food-selected-calories'>{Math.round((item.nf_calories)*100/100)}cal</span></li>
                         <MdCancel onClick={() => onDelete(i)}/>
                     </div>
                     

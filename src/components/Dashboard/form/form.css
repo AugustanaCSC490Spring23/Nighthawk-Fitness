@@ -121,6 +121,18 @@
 
   }
 
+  .height-selection {
+    display: flex;
+    width: 80%;
+    gap: 1rem;
+  }
+
+  .height-label {
+    width: 80%;
+    text-align: left;
+    color: var(--primary-text);
+  }
+
   option {
     background: var(--primary-dashboard);
     border-radius: 1rem;

@@ -9,10 +9,8 @@
 ***************************************************************************************/
 import { NavLink, useNavigate } from "react-router-dom"
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { IconContext } from "react-icons"
-import * as FaIcons from "react-icons/fa"
-import * as AiIcons from "react-icons/ai"
 import {FaArrowCircleLeft} from 'react-icons/fa'
 import { SidebarData } from "./SliderbarData";
 import "./navbar.css"
@@ -88,7 +86,7 @@ function NavBar(){
                         <li key = {index} className={item.cName}>
                             <NavLink to={item.path}>
                                 {item.icons}
-                                <span className="items" style={sidebar ? {display: 'block'}:{display:'none'}}>{item.title}</span>
+                                <span className="items" >{item.title}</span>
                             </NavLink>
                         </li>
                     )

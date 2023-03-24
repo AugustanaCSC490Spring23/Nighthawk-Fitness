@@ -165,6 +165,12 @@
     overflow: hidden;
 }
 
+.unit select {
+    background: var(--primary-box);
+    padding: .75rem .75rem;
+    border-radius: 1rem;
+    color: var(--primary-text);
+}
 
 
 @media screen and (max-width: 1500px) {

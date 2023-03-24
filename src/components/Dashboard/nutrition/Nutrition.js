@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './nutrition.css'
 import RequestForm from "../Calories/calories-content/requestForm";
-
+import Unit from "./Unit";
 import NutritionDisplay from "./nutritionDisplay/NutritionDisplay";
 import LogItem from "./LogItem";
 
@@ -68,6 +68,7 @@ function Nutrition({userData}) {
     setSection(sectionID);
   }
 
+
   function handleInputChange(event) {
     setQuery(event.target.value);
     if (event.target.value) {
@@ -100,7 +101,7 @@ function Nutrition({userData}) {
   async function logItem() {
     try {
 
-      // console.log(food);
+      console.log(food);
       setUnit('')
       setQty('')
       
@@ -220,7 +221,7 @@ function Nutrition({userData}) {
           <NutritionDisplay userData={userData} consumed={consumed} remain={remain} protein={protein} carb={carb} fat={fat}/>
           <div className="nutrition-log">
 
-            <LogItem title='Breakfast'  onDelete={(id) => deleteItem(id, 'breakfast')} onPress={(event) => openAddFood(event, 'breakfast')} array={bf}/>
+            <LogItem title='Breakfast' onDelete={(id) => deleteItem(id, 'breakfast')} onPress={(event) => openAddFood(event, 'breakfast')} array={bf}/>
             <LogItem title='Lunch'  onDelete={(id) => deleteItem(id, 'lunch')} onPress={(event) => openAddFood(event, 'lunch')} array={lunch}/>
             <LogItem title='Dinner'  onDelete={(id) => deleteItem(id, 'dinner')} onPress={(event) => openAddFood(event, 'dinner')} array={dinner}/>
             <LogItem title='Snack'  onDelete={(id) => deleteItem(id, 'snack')} onPress={(event) => openAddFood(event, 'snack')} array={snack}/>
@@ -240,12 +241,18 @@ function Nutrition({userData}) {
             <li className="common">Common</li>
             {common.map((item,i) => (
             <li id={i} key={i} onClick={() => handleClick(item)}> <span className="item"><img src={item.photo.thumb} alt="" /> {item.food_name}</span> 
-            {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> <input value={unit} onChange={(e) => setUnit(e.target.value)} className="unit" type="text" placeholder={item.serving_unit} /> <button onClick={logItem}>Add</button></span> )} </li>
+            {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> 
+             
+            <Unit unit={unit} setUnit={setUnit}/>
+            <button onClick={logItem}>Add</button></span> )} </li>
             ))}
             <li  className="branded">Branded</li>
             {branded.map((item,i) => (
             <li id={i} key={i} onClick={() => handleClick(item)}> <span className="item"><img src={item.photo.thumb} alt="" /> {item.food_name}</span> 
-            {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> <input value={unit} onChange={(e) => setUnit(e.target.value)} className="unit" type="text" placeholder={item.serving_unit} /> <button onClick={logItem}>Add</button></span> )} </li>
+            {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> 
+            <input value={unit} onChange={(e) => setUnit(e.target.value)} className="unit" type="text" placeholder={item.serving_unit} />
+            <Unit setUnit={setUnit}/> 
+            <button onClick={logItem}>Add</button></span> )} </li>
             ))}
            
           </ul>

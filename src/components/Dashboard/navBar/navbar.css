@@ -22,6 +22,7 @@
     top: 0;
     transition: var(--transition);
     position: relative;
+    overflow: hidden;
   }
 
   .active {
@@ -43,7 +44,7 @@
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
-
+    width: 250px;
   
   }
   
@@ -54,6 +55,7 @@
     width: 95%;
     height: 100%;
     display: flex;
+    gap: 2rem;
     align-items: center;
     padding: 0 16px;
     border-radius: 4px;
@@ -80,8 +82,8 @@
     position: absolute;
     z-index: 5 !important;
     color: var(--primary-variant);
-    top: 48%;
-    right: -29px;
+    top: 40%;
+    /* right: -29px; */
     cursor: pointer;
     transition: var(--transition);
     padding: 1rem;
