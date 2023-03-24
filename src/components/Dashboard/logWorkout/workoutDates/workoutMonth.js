@@ -1,24 +1,24 @@
 import React, {useEffect, useState} from 'react'
+import WorkoutMonthData from './workoutMonthData'
 
 export default function WorkoutMonth(){
     
     const [workoutWeeks, setWorkoutWeek] =
         useState([])
     
-    const [newWeek, setNewWeek] =
-        useState(null)
+  /*  const [newWeek, setNewWeek] =
+        useState(null) */
 
     function createMonth(){
-        handleClick()
-    }
-
-    const handleClick = () =>{
+        const newWeek = <WorkoutMonthData key={workoutWeeks.length}/>
         setWorkoutWeek([...workoutWeeks, newWeek])
     }
 
-    return <>
-        <button onClick={createMonth()}>Add Month</button>
+    return (
+        <div>
+        <button onClick={createMonth}>Add Month</button>
         {workoutWeeks.map((workoutWeek) => workoutWeek)}
-    </>
+        </div>
+    )
 }
 

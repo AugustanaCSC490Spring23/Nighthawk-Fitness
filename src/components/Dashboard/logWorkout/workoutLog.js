@@ -12,7 +12,7 @@ function WorkoutLog() {
     <div className='workoutLog-ctn'>
     <div className="add-btns">
         <WorkoutMonth />
-       <button>Add Month</button>
+       <button>No function yet</button>
     </div>
         <div className='log-container'>
         <IconButton id="add-btn" aria-label="Log a workout" 
