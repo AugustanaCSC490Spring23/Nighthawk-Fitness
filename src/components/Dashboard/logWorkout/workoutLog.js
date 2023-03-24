@@ -3,6 +3,7 @@ import { Button, Icon, IconButton } from '@mui/material';
 import NewWorkout from './newWorkout';
 import React, { useEffect, useState } from "react";
 import './workoutLog.css'
+import WorkoutMonth from './workoutDates/workoutMonth';
 // import WorkoutMonth from './logCalendar/workoutMonth';
 // import WorkoutWeek from "./logCalendar/workoutWeek"
 function WorkoutLog() {
@@ -10,7 +11,7 @@ function WorkoutLog() {
     return( <>
     <div className='workoutLog-ctn'>
     <div className="add-btns">
-      <button>Add Week</button>
+        <WorkoutMonth />
        <button>Add Month</button>
     </div>
         <div className='log-container'>
