@@ -14,6 +14,7 @@ function DashboardMain(){
 
     return(
         <div className=" container">
+            <div className="title">dashboard</div>
             <div className="dashboard-main-container">
                 <div className="dashboard-main-item">
                     <div className="dashboard-main-first">

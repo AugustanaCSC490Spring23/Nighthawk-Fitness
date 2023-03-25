@@ -29,6 +29,7 @@
 }
 
 
+
 @media screen and (max-width: 1000px) {
     .dashboard-card {
         grid-template-columns: 1fr;

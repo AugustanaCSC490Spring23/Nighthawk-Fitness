@@ -36,6 +36,7 @@ export default function Workout() {
 
     return (
         <div className='container'>
+            <div className="title">workout</div>
             <div className="workout-card">
                 <div className="workout-features">
                     <h3>Create a personalized workout plan tailored to your fitness goals and preferences.</h3>

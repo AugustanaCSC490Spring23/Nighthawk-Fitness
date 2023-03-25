@@ -203,6 +203,21 @@ h2 {
     width: 2.5rem;
 }
 
+.container .title {
+    color: var(--primary-text);
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: none;
+}
+
+@media screen and (max-width: 1350px) {
+    .container .title {
+        display: block;
+        margin-bottom: 2rem;
+    }
+}
+
 @media screen and (max-width: 1300px ) {
     .container-card {
         grid-template-columns: 1fr;

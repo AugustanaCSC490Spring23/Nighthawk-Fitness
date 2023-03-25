@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function Unit({setUnit, unit}) {
+export default function Unit({setUnit, unit, item}) {
   return (
     <div className='unit'>
         <select onChange={(e) => setUnit(e.target.value)} value={unit}>
+            <option value={item.serving_unit}>{item.serving_unit}</option>
             <option value="gram">g</option>
             <option value="tbsp">tbsp</option>
             <option value="tsp">tsp</option>

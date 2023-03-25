@@ -83,8 +83,8 @@ function NavBar(){
                 <li className="avatar nav-text"><Avatar alt="ava" sx={{ width: 45, height: 45 }} src={currentUser.photoURL}/> <span className="user-name" style={sidebar ? {display: 'block'}:{display:'none'}}>{currentUser.displayName}</span></li>
                 {SidebarData.map((item, index) => {
                     return (
-                        <li key = {index} className={item.cName}>
-                            <NavLink to={item.path}>
+                        <li key = {index} className={item.cName} >
+                            <NavLink to={item.path} >
                                 {item.icons}
                                 <span className="items" >{item.title}</span>
                             </NavLink>

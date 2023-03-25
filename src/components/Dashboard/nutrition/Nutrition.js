@@ -81,8 +81,6 @@ function Nutrition({userData}) {
 
   async function handleClick(item) {
     try {
-      // setUnit('')
-      // setQty('')
       setSelectedItem(item)
       
     }catch(e) {
@@ -106,9 +104,9 @@ function Nutrition({userData}) {
       setQty('')
       
       await fetchNutrients(food).then((data) => {
-        console.log(data);
+        // console.log(data);
         setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
-        setRemain(Math.round(remain-data.foods[0].nf_calories) * 100 / 100);
+        setRemain(Math.round(remain - Math.round(data.foods[0].nf_calories)) * 100 / 100);
         setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
         setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
         setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
@@ -148,7 +146,7 @@ function Nutrition({userData}) {
             const del = item;
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + del.nf_calories) * 100 / 100)
+            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
             setProtein(Math.round(protein  - del.nf_protein)*100/100)
             setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
             setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
@@ -165,7 +163,7 @@ function Nutrition({userData}) {
             const del = item;
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + del.nf_calories) * 100 / 100)
+            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
             setProtein(Math.round(protein  - del.nf_protein)*100/100)
             setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
             setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
@@ -182,7 +180,7 @@ function Nutrition({userData}) {
             const del = item;
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + del.nf_calories) * 100 / 100)
+            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
             setProtein(Math.round(protein  - del.nf_protein)*100/100)
             setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
             setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
@@ -199,7 +197,7 @@ function Nutrition({userData}) {
             const del = item;
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + del.nf_calories) * 100 / 100)
+            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
             setProtein(Math.round(protein  - del.nf_protein)*100/100)
             setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
             setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
@@ -243,7 +241,7 @@ function Nutrition({userData}) {
             <li id={i} key={i} onClick={() => handleClick(item)}> <span className="item"><img src={item.photo.thumb} alt="" /> {item.food_name}</span> 
             {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> 
              
-            <Unit unit={unit} setUnit={setUnit}/>
+            <Unit item={item} unit={unit} setUnit={setUnit}/>
             <button onClick={logItem}>Add</button></span> )} </li>
             ))}
             <li  className="branded">Branded</li>
@@ -251,7 +249,7 @@ function Nutrition({userData}) {
             <li id={i} key={i} onClick={() => handleClick(item)}> <span className="item"><img src={item.photo.thumb} alt="" /> {item.food_name}</span> 
             {selectedItem === item && (<span className="item-input"><input className="quantity" value={qty} onChange={(e) => setQty(e.target.value)} placeholder={item.serving_qty} type="text" /> 
             <input value={unit} onChange={(e) => setUnit(e.target.value)} className="unit" type="text" placeholder={item.serving_unit} />
-            <Unit setUnit={setUnit}/> 
+            <Unit item={item} setUnit={setUnit}/> 
             <button onClick={logItem}>Add</button></span> )} </li>
             ))}
            

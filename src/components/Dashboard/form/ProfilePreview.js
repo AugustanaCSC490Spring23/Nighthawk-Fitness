@@ -16,7 +16,7 @@ function ProfilePreview({ formData }) {
         </div>
         <div className="info">
             <h5>Height</h5>
-            <div className="info-data">{formData.height} ft</div>
+            <div className="info-data">{formData.height.ft}'{formData.height.inch}''</div>
         </div>
         <div className="info">
             <h5>Gender</h5>

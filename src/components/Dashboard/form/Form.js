@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SignUpInfo from "./SignUpInfo";
 import PersonalInfo from "./PersonalInfo";
 import OtherInfo from "./OtherInfo";
@@ -8,22 +8,27 @@ import './form.css';
 import { useAuth } from "../../contexts/AuthContext";
 import { db } from '../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+
 
 
 function Form({onSubmit}) {
 
+  const [allfilled, setAllfilled] = useState(true);
+  const [message, setMessage] = useState('')
   const [userData, setUserData] = useState(() => {
     const savedUserData = localStorage.getItem('userData');
     return savedUserData ? JSON.parse(savedUserData) : null
   });
-  const navigate = useNavigate();
+  
   const {currentUser} = useAuth();
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     age: "",
     weight: "",
-    height: "",
+    height: {
+      ft: '',
+      inch: ''
+    },
     gender: '',
     goal: {
       weight_goal: '',
@@ -69,6 +74,31 @@ function Form({onSubmit}) {
     }
 }
 
+
+useEffect(()  => {
+  if (page ===  1) {
+    if (formData.age === '' || formData.weight === '' || formData.gender === '' || formData.height.ft === '' ) {
+      setAllfilled(false)
+    }else {
+      setAllfilled(true)
+    }
+  }else if(page === 2) {
+    if (formData.goal.weight_goal === '' && formData.goal.muscle_goal  === '') {
+      setAllfilled(false)
+    }else  {
+      setAllfilled(true)
+    }
+  }else if(page === 3) {
+    if ( formData.activity_level === '') {
+      setAllfilled(false)
+    }else  {
+      setAllfilled(true)
+    } 
+  }else {
+    setAllfilled(true)
+  } 
+},[formData, page])
+
   return (
     <div className="form">
       
@@ -82,6 +112,7 @@ function Form({onSubmit}) {
           <h1>{FormTitles[page]}</h1>
         </div>
         <div className="body">{PageDisplay()}</div>
+        {message}
         <div className="footer">
           <button
             style={page === 0 ? {display:'none'}:{display:'block'}}
@@ -101,6 +132,7 @@ function Form({onSubmit}) {
                 setPage((currPage) => currPage + 1);
               }
             }}
+            disabled={!allfilled}
           >
             {page === FormTitles.length - 1 ? "Create" : "Next"}
           </button>

@@ -39,12 +39,12 @@
   .nav-text {
     color: var(--primary-text);
     display: flex;
-    justify-content: flex-start;
+    /* justify-content: flex-start; */
     align-items: center;
     padding: 8px 0px 8px 16px;
     list-style: none;
     height: 60px;
-    width: 250px;
+    width: 800px;
   
   }
   
@@ -103,7 +103,6 @@
 
 
   nav {
-    
     border-radius: 0px 74px 74px 0px;
   -webkit-border-radius: 0px 74px 74px 0px;
   -moz-border-radius: 0px 74px 74px 0px;

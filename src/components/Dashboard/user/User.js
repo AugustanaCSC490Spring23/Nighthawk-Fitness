@@ -31,7 +31,7 @@ export default function User({userData}) {
 
             <div className="field-item">
               <div className="field-name">Height</div>
-              <div className="field-data">{userData.information.height}</div>
+              <div className="field-data">{userData.information.height.ft}'{userData.information.height.inch}''</div>
             </div>
 
             <div className="field-item">
