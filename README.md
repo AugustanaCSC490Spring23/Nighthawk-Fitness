@@ -1,10 +1,8 @@
 # Getting Started with Create React App
 
-Go to the link below to keep up with our weekly blog.
-https://sites.google.com/view/nighthawkfitness 
+Feel like keeping up with our project, here's our [weekly blog](https://sites.google.com/view/nighthawkfitness).
 
-Project Link:
-https://fitness-dev-a6a25.firebaseapp.com/
+Check out [Nighthawk Fitness](https://fitness-dev-a6a25.firebaseapp.com/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
