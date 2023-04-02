@@ -1,3 +1,7 @@
+/* html {
+    filter: brightness(.3);
+} */
+
 .add-food input {
     background: var(--primary-box);
     border: 1px solid var(--primary);
@@ -88,9 +92,10 @@
     transition: var(--transition);
     opacity: 0;
     padding: 2rem;
+    filter: none !important;
 }
 
-.add-food .close {
+ .close {
     position: absolute;
     right: 1rem;
     top: 1rem;
@@ -98,24 +103,25 @@
     
 }
 
-.add-food .close:hover div {
+.close:hover div {
     background: var(--primary-variant);
 }
 
-.add-food .close div {
+.close div {
     content: '';
     width: 25px;
     height: 5px;
     background: var(--primary-text);
     margin-bottom: 5px;
     transition: var(--transition);
+    border-radius: 1rem;
 }
 
-.add-food .close :first-child {
+.close :first-child {
     transform: rotate(45deg) translate(7px,7px);
 } 
 
-.add-food .close :last-child {
+.close :last-child {
     transform: rotate(-45deg);
 }
 

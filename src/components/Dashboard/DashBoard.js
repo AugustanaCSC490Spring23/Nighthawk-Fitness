@@ -3,7 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate, Outlet} from "react-router-dom";
 import "./dashboard.css";
 import { auth,db } from "../Firebase/firebase";
-import {query, collection, where, getDocs, doc, updateDoc} from 'firebase/firestore';
+import {query, collection, where, getDocs} from 'firebase/firestore';
 import NavBar from "./navBar/NavBar";
 import { useAuth } from "../contexts/AuthContext";
 

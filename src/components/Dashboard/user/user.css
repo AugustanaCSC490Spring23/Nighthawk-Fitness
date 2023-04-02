@@ -70,13 +70,17 @@
 }
 
 .user-data .title,
-.user-contact .title {
+.user-contact .title,
+.biometric-data .title {
+    display: block !important;
+    text-transform: capitalize !important;
     font-weight: 900;
     font-size: 2rem;
     padding: .75rem 1rem;
     background: var(--primary-box);
     border-radius: 1rem;
     margin: auto;
+    text-align: center;
 }
 
 .user-field {
@@ -104,6 +108,92 @@
     
 }
 
+.user-link {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.link-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    flex-wrap: wrap;
+    padding: .5rem;
+    /* border-bottom: 1px solid var(--primary-variant);
+    padding-bottom: .5rem; */
+}
+
+.link-btn,
+.link-icon {
+    display: flex;
+    align-items: center;
+    padding: .75rem;
+    background: var(--primary-box);
+    border-radius: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+}
+
+.link-to-item {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-text);
+}
+
+.underline  {
+    width: 0;
+    height: 100%;
+    opacity: .1;
+    border-radius: 1rem;
+    position: absolute;
+    transition: all 400ms ease-in-out;
+}
+
+.underline.body  {
+    background: #E1FFEE;
+}
+
+.underline.goal  {
+    background: #FFEEAF;
+}
+.underline.setting  {
+    background: #F0ECE3;
+}
+.link-item:hover .underline {
+    width: 100%;
+}
+
+.mail:hover .underline {
+    background: #E1FFEE;
+    width: 100%;
+}
+
+.body  {
+    background: #E1FFEE;
+    color: #7FBCD2;
+}
+
+.goal  {
+    background: #FFEEAF;
+    color: #F7A76C;
+}
+
+.setting  {
+    background: #F0ECE3;
+    color: #AD8B73;
+}
 @media screen and (max-width: 1500px) {
     .user-container {
         grid-template-columns: 1fr;

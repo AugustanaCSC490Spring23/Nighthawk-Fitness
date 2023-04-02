@@ -11,6 +11,7 @@ import DashboardMain from "./components/Dashboard/dashboardMain/DashboardMain";
 import Lobby from "./components/Dashboard/Lobby/Lobby";
 import About from "./components/HomePage/about/About";
 import WorkoutLog from "./components/Dashboard/logWorkout/workoutLog";
+import MyBody from "./components/Dashboard/user/myBody/MyBody";
 import ProtectedRoutes from "./ProtectedRoute";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
@@ -30,10 +31,13 @@ function App() {
               <Route path="/dashboard" element={<Dashboard/>}>
                 <Route index element={<Lobby/>} />
                 <Route path="main" element={<DashboardMain/>} />
+
                 <Route path="profile" element={<Profile/>} />
+                <Route path="profile/mybody" element={<MyBody/>} />
+
                 <Route path="workout" element={<Workout/>} />
-               
                 <Route path="workout/log" element={<WorkoutLog/>} />
+
                 <Route path="nutrition"  element={<NutritionCheck/>} />
               </Route>
             </Route>  

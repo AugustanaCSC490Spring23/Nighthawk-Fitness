@@ -147,9 +147,9 @@ function Nutrition({userData}) {
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
             setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - del.nf_protein)*100/100)
-            setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
-            setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
+            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
+            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
+            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
           }
   
           return index !== id;
@@ -164,9 +164,9 @@ function Nutrition({userData}) {
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
             setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - del.nf_protein)*100/100)
-            setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
-            setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
+            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
+            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
+            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
           }
   
           return index !== id;
@@ -181,9 +181,9 @@ function Nutrition({userData}) {
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
             setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - del.nf_protein)*100/100)
-            setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
-            setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
+            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
+            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
+            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
           }
   
           return index !== id;
@@ -198,9 +198,9 @@ function Nutrition({userData}) {
             
             setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
             setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - del.nf_protein)*100/100)
-            setCarb(Math.round(carb  - del.nf_total_carbohydrate) * 100/100)
-            setFat(Math.round(fat  - del.nf_total_fat) * 100 / 100)
+            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
+            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
+            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
           }
   
           return index !== id;

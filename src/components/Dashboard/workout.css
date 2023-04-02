@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 0 4rem;
+    padding: 0 3rem;
     transition: all 400ms ease-out;
     
 }
@@ -27,7 +27,7 @@
 }
 
 .workout-features:hover {
-    border: 2px solid var(--primary-variant);
+    border: 1px solid var(--primary-variant);
     background: transparent;
 }
 
