@@ -1,3 +1,8 @@
  h1{
     color: white;
  }
+   
+ .weekContainer{
+   color:aliceblue;
+   display: flex;
+ }

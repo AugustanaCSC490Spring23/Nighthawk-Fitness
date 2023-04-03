@@ -18,7 +18,9 @@ export default function WorkoutWeek(props){
     return( <>
     <div><button onClick={createWeek}>Add week</button>
     <h1>{props.name}</h1> 
+    <div className="weekContainer">
     {workoutWeekData.map((workoutWeekD) => workoutWeekD)}
+    </div>
     </div>
     </>
     )
