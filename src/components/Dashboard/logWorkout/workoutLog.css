@@ -16,10 +16,12 @@ button{
 }
 
 .add-btns{
+    flex-grow: 0;
     display: flex;
     margin: 2rem;
     justify-content: space-evenly;
     gap: 1rem;
+    flex: 0 1 auto;
 }
 
 #workoutForm label {

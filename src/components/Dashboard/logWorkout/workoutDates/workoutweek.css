@@ -5,4 +5,5 @@
  .weekContainer{
    color:aliceblue;
    display: flex;
+   justify-content: space-evenly;
  }
