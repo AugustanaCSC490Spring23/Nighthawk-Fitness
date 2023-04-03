@@ -1,12 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { IconContext } from "react-icons"
 import * as FaIcons from "react-icons/fa"
 import * as AiIcons from "react-icons/ai"
 import * as IoIcons from "react-icons/io"
 
+
  export const SidebarData = [
     {
         title:"Dashboard",
-        path: "main",
+        path: "/dashboard",
         icons: <AiIcons.AiFillHome className="nav-icons"/>,
         cName: "nav-text",
     },
@@ -19,14 +22,19 @@ import * as IoIcons from "react-icons/io"
     {
         title: "Workouts",
         path: "workout",
-        icons: <IoIcons.IoIosJournal className="nav-icons"/>,
+        icons: <FaIcons.FaWeightHanging className="nav-icons"/>,
         cName: "nav-text"
     },
     {
-        title: "Nutrition",
-        path: "nutrition",
+        title: "Recipes",
+        path: "/recipes",
         icons: <FaIcons.FaHotdog className="nav-icons"/>,
         cName: "nav-text"
-
+    }, {
+        title: "Workout Log",
+        path: "workoutLog",
+        icons: <IoIcons.IoIosJournal className="nav-icons"/>,
+        cName: "nav-text"
     }
+    
 ]

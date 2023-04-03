@@ -13,6 +13,7 @@ const NewWorkout = () => {
                 this.reps = reps
             }
     }
+
     const[workoutInfo, setWorkoutInfo] = useState({
         workoutName: "",
         weight: "",
@@ -28,6 +29,7 @@ const NewWorkout = () => {
         weight: "",
         reps: "",})
     }
+    
     console.log(workoutInfo);
 
     const handleSubmit = (event) =>{
