@@ -1,11 +1,14 @@
+import WorkoutWeekData from "./workoutWeekData"
 import "./workoutweek.css"
+import React, {useEffect, useState} from 'react'
 export default function WorkoutWeek(props){
 
     const [workoutWeekData, setWorkoutWeekData] =
     useState([])
 
-    function addWeek(){
-        
+    function createWeek(){
+        const newWeekData = <WorkoutWeekData key={workoutWeekData.length}/>
+        setWorkoutWeekData([...workoutWeekData, newWeekData])
     }
 
 
@@ -15,7 +18,7 @@ export default function WorkoutWeek(props){
     return( <>
     <div><button onClick={createWeek}>Add week</button>
     <h1>{props.name}</h1> 
-    {workoutWeekData.map((workoutWeekData) => workoutWeekData)}
+    {workoutWeekData.map((workoutWeekD) => workoutWeekD)}
     </div>
     </>
     )
