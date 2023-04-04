@@ -1,7 +1,7 @@
 import { setMonth } from 'date-fns'
 import React, {useEffect, useState} from 'react'
 import './workoutMonth.css'
-import WorkoutWeek from './workoutWeek'
+import WorkoutWeek from '../weeks/workoutWeek'
 export default function WorkoutMonthData(props) {
 
     const[monthName, setMonthName] = useState("")

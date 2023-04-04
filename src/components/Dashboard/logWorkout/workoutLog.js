@@ -3,7 +3,7 @@ import { Button, Icon, IconButton } from '@mui/material';
 import NewWorkout from './newWorkout';
 import React, { useEffect, useState } from "react";
 import './workoutLog.css'
-import WorkoutMonth from './workoutDates/workoutMonth';
+import WorkoutMonth from './workoutDates/months/workoutMonth';
 // import WorkoutMonth from './logCalendar/workoutMonth';
 // import WorkoutWeek from "./logCalendar/workoutWeek"
 function WorkoutLog() {

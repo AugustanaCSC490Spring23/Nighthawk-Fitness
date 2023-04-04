@@ -11,10 +11,6 @@ export default function WorkoutWeek(props){
         setWorkoutWeekData([...workoutWeekData, newWeekData])
     }
 
-
-
-
-
     return( <>
     <div><button onClick={createWeek}>Add week</button>
     <h1>{props.name}</h1> 
