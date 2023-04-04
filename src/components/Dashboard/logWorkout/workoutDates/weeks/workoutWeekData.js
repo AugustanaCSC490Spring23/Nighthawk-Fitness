@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 export default function WorkoutWeekData(){
-    return(
+    return(<>
         <input/>
+        <h1>Hi</h1>
+        </>
     )
 }

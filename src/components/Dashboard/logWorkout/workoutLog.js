@@ -10,6 +10,9 @@ function WorkoutLog() {
   const [added, addWorkout] = useState(false)
     return( <>
     <div className='workoutLog-ctn'>
+      <div className='workoutLog-Greeting'>
+        <h1 id="welcome">Welcome to your workout log</h1>
+      </div>
     <div className="add-btns">
         <WorkoutMonth />
     </div>

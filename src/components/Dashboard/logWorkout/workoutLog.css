@@ -1,7 +1,32 @@
 .log-container{
     display:flex;
-    flex-direction:column
+    flex-direction:column;
+
 }
+
+.workoutLog-Greeting{
+    display:flex;
+    padding: 2rem;
+    padding-top:3rem;
+    justify-content: center;
+}
+
+
+#welcome{
+    animation: fadeIn 5s; 
+    color:#a4fba6;
+    outline: 1px solid #a4fba6;
+    padding: .5rem;
+    width: 80%;
+    border-radius: 90px;
+
+
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
 
 #add-btn{
     color: #CBFD03;
@@ -17,7 +42,7 @@ button{
 
 .add-btns{
     flex-grow: 0;
-    display: flex;
+    display:grid;
     margin: 2rem;
     justify-content: space-evenly;
     gap: 1rem;
