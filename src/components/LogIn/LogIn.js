@@ -38,7 +38,7 @@ export default function LogIn() {
         }
         if (user) setTimeout(function() {
             navigate("/dashboard");
-        },400) 
+        },1000) 
     }, [user, loading]);
     
     return (

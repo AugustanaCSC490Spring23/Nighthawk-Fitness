@@ -32,7 +32,7 @@ function Dashboard() {
         try {
             const q = query(collection(db, "users"), where("uid", "==", user?.uid));
             const doc = await getDocs(q);
-            const data = doc.docs[0].data();
+            const data = await doc.docs[0].data();
           
             setUserData(data);
             localStorage.setItem('userData', JSON.stringify(data));
