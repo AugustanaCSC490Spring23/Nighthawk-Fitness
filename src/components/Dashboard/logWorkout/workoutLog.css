@@ -5,22 +5,34 @@
 }
 
 .workoutLog-Greeting{
-    display:flex;
+    display:grid;
+    grid-template-columns:repeat(10, 1fr);
+    grid-template-rows:repeat(10, 10%);
+    grid-column-gap: 3px;
     padding: 2rem;
     padding-top:3rem;
     justify-content: center;
 }
 
+.notebook{
+    outline: 1px solid #a4fba6;
+    height:40rem;
+    width: 2.5rem;
+    border-radius:8% 90% 3% 90%;
+    grid-column-start: 3;
+}
 
 #welcome{
+    grid-column-start: 4;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
     animation: fadeIn 5s; 
     color:#a4fba6;
     outline: 1px solid #a4fba6;
     padding: .5rem;
     width: 80%;
     border-radius: 90px;
-
-
 }
 
 @keyframes fadeIn {
