@@ -13,10 +13,13 @@ function WorkoutLog() {
     <div className='containerGreeting'>
       <div className='workoutLog-Greeting'>
       <div className="notebook"></div><h1 id="welcome">Welcome to your workout log</h1>
+      <div className='month'>
+      <WorkoutMonth />
+      </div>
       </div>
       </div>
     <div className="add-btns">
-        <WorkoutMonth />
+        
     </div>
         <div className='log-container'>
         <IconButton id="add-btn" aria-label="Log a workout" 
@@ -27,7 +30,6 @@ function WorkoutLog() {
         </div>
         </div>
         </>
-        
     )
 }
 

@@ -1,7 +1,6 @@
 .log-container{
     display:flex;
     flex-direction:column;
-
 }
 
 .workoutLog-Greeting{
@@ -12,6 +11,15 @@
     padding: 2rem;
     padding-top:3rem;
     justify-content: center;
+    margin: 2rem;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+
+.month{
+    grid-row-start: 3;
+    grid-column: 4;
 }
 
 .notebook{
@@ -20,6 +28,7 @@
     width: 2.5rem;
     border-radius:8% 90% 3% 90%;
     grid-column-start: 3;
+    grid-row-start: 5;
 }
 
 #welcome{
@@ -55,9 +64,6 @@ button{
 .add-btns{
     flex-grow: 0;
     display:grid;
-    margin: 2rem;
-    justify-content: space-evenly;
-    gap: 1rem;
     flex: 0 1 auto;
 }
 
