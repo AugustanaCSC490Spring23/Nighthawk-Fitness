@@ -13,8 +13,6 @@ export default function WorkoutWeekName(props) {
     }
     
     return(<>
-    <input onChange={handleChange} placeholder="Enter Month name"/>
-        <button onClick={monthNamer}>Submit Name</button>
-        {visibility && <WorkoutWeek name={monthName}/>}
+        {props.name}
         </>)
 }
