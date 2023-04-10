@@ -1,4 +1,3 @@
-import { setMonth } from 'date-fns'
 import React, {useEffect, useState} from 'react'
 import './workoutMonth.css'
 import WorkoutWeek from '../weeks/workoutWeek'
