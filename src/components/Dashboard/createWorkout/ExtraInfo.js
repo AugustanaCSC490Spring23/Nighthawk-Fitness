@@ -4,11 +4,14 @@ import {BsArrowLeft} from 'react-icons/bs'
 import { useNavigate } from 'react-router-dom';
 import { db } from '../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
-import Loading from './loading';
 
 export default function ExtraInfo({userData, onSubmit}) {
 
   const navigate = useNavigate();
+
+  const [isPlan, setIsPlan] = useState(true)
+
+  const [show, setShow] = useState(false)
 
   const [extraInfo, setExtraInfo] = useState({
     experience_level: '',
@@ -40,6 +43,16 @@ export default function ExtraInfo({userData, onSubmit}) {
       console.log(e);
     }
   }
+  
+
+  useEffect(() =>  {
+    if (extraInfo.experience_level === '' || extraInfo.workout_time === '') {
+      setIsPlan(false)
+    }else{
+      setShow(true)
+      setIsPlan(true)
+    }
+  }, [extraInfo])
 
 
   return (
@@ -97,10 +110,12 @@ export default function ExtraInfo({userData, onSubmit}) {
               </div>
             </div>
           </div>
+          {show && 
           <div className="plan-btn">
             <span>Ready, Set</span>
-            <button onClick={createPlan}>Plan</button>
-          </div>
+            <button disabled={!isPlan} onClick={createPlan}>Plan</button>
+          </div>}
+          
              
         </div>
         

@@ -118,7 +118,7 @@ label div:hover {
     margin-top: 5rem;
     position: absolute;
     right: 0;
-    animation: appear3 3s 1;
+    animation: appear3 1s 1;
 } 
 
 .plan-btn span {
@@ -135,4 +135,19 @@ label div:hover {
 
 .extra-icon:hover {
     font-size: 3rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .extra-info {
+        width: 90vw;
+    }
+
+    .extra-info h2 {
+        font-size: 3rem;
+    }
+
+    .extra-info h3 {
+        font-size: 1.8rem;
+    }
 }

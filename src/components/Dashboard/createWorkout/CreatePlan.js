@@ -9,8 +9,7 @@ export default function CreatePlan() {
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    const location = useLocation();
-    console.log(location);
+   
     function handleSubmit(extraInfo)  {
     
         setUserData(extraInfo);
