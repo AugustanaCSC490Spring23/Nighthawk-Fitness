@@ -1,7 +1,12 @@
-.calendar_main {
-    text-align: center;
-    padding: 2rem 1rem;
+.calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 1rem;
 }
+
+
 
 .calendar_workouts {
     display: flex;

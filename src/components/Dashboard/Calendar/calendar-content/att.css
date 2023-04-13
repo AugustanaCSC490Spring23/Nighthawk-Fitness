@@ -1,0 +1,154 @@
+.main-container {
+     
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    height: max-content;
+}
+
+.main-container h1 {
+    font-size: small;
+    margin-bottom: 0;
+}
+
+.contain {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.calendar-date {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    align-content: center;
+}
+
+.current-date {
+    padding-left: 30px;
+}
+
+.toggles {
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
+    padding-right: 30px;
+    
+}
+
+.arrow {
+    color: white !important;
+    transition-property: all; 
+    width: 1rem; 
+    height: 1rem; 
+    cursor: pointer;
+}
+
+.arrow:hover{
+    --transform-scale-x: 1.05;
+    --transform-scale-y: 1.05; 
+}
+
+.today {
+    text-align: center;
+    transition-property: all;
+    cursor: pointer;
+}
+
+.today:hover {
+    --transform-scale-x: 1.05;
+    --transform-scale-y: 1.05; 
+}
+
+.days-box {
+    display: grid; 
+    width: 100%; 
+    grid-template-columns: repeat(7, minmax(0, 1fr)); 
+}
+
+.days {
+    display: grid; 
+    color: #6B7280; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    text-align: center; 
+    place-content: center; 
+    width: 3.5rem; 
+    height: 3rem; 
+    user-select: none; 
+    
+}
+
+.calendar-container {
+    display: grid; 
+    width: 100%; 
+    grid-template-columns: repeat(7, minmax(0, 1fr)); 
+    grid-column-gap: 2rem;
+}
+
+.calendar-box {
+    display: grid; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    place-content: center; 
+    height: 3rem; 
+    border-top-width: 1px;
+}
+
+.calendar-day {
+    display: grid; 
+    transition-property: all; 
+    place-content: center; 
+    width: 2.5rem; 
+    height: 2.5rem; 
+    border-radius: 9999px; 
+    cursor: pointer; 
+    user-select: none; 
+}
+
+.calendar-day:hover {
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+
+
+
+
+
+.currMonthFalse {
+    color: #9CA3AF; 
+}
+
+.todayTrue {
+    background-color: #DC2626; 
+    color: #ffffff; 
+}
+
+.somethingTrue {
+    background-color: #000000; 
+    color: #ffffff; 
+}
+
+
+
+
+
+.schedule {
+    width: 24rem;
+    height: 24rem;
+}
+
+
+
+@media (min-width: 640px) { 
+    .main-container {
+        flex-direction: row; 
+        width: 40rem; 
+        height: max-content;
+        border-left-width: 1px;
+    }
+}
