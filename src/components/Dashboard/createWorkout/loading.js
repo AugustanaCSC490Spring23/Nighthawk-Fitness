@@ -1,10 +1,33 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate} from 'react-router-dom'
 import {BiDumbbell} from 'react-icons/bi'
+import beginner from './personalizedPlan/plans/Plans'
+import { db } from '../../Firebase/firebase'
+import { updateDoc, doc } from 'firebase/firestore'
 import './loading.css'
 
 export default function Loading() {
+    const [userData, setUserData] = useState(() => {
+      const savedUserData = localStorage.getItem('userData');
+      return savedUserData ? JSON.parse(savedUserData) : null
+    });
+
+    const [planner, setPlanner] = useState({})
     const navigate = useNavigate();
+
+    function addPlan(plan) {
+        const currentDoc = doc(db, 'users', userData.docID);
+        updateDoc(currentDoc, {
+            plan: plan
+        })
+
+        const updateData = {
+          ...userData,
+          plan: plan
+        };
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))
+    }
 
     useEffect(() => {
         const timeOut = setTimeout(() => {
@@ -15,9 +38,21 @@ export default function Loading() {
           clearTimeout(timeOut)
         }
     },[navigate])
+    
+    useEffect(() => {
+      if (!userData.plan) {
+        if (userData.personal_preference.experience_level === 'beginner') {
+          if (userData.personal_preference.workout_time === '2-3') {
+              // setPlanner()
+              addPlan(beginner.weight_loss.two_three.workout)
+          }else {
 
+          }
+        }
+      }
+    }, [userData])
 
-    console.log(navigate);
+    
   return (
     <div className="container">
       <div className="loading-container">

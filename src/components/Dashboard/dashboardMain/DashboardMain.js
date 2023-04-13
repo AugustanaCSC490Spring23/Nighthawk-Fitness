@@ -35,7 +35,7 @@ function DashboardMain(){
                 <div className="dashboard-main-item">
                     <div className="dashboard-main-second">
                         <div className="current-plan tabs">plan</div>
-                        <div className="current-goal tabs">goal</div>
+                        
                         <div className="calendar tabs"><Calendar/></div>
                     </div>
                     
