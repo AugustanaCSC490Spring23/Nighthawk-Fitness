@@ -11,9 +11,13 @@ import DashboardMain from "./components/Dashboard/dashboardMain/DashboardMain";
 import Lobby from "./components/Dashboard/Lobby/Lobby";
 import About from "./components/HomePage/about/About";
 import WorkoutLog from "./components/Dashboard/logWorkout/workoutLog";
+import MyBody from "./components/Dashboard/user/myBody/MyBody";
 import ProtectedRoutes from "./ProtectedRoute";
+import PersonalizedPlan from "./components/Dashboard/createWorkout/personalizedPlan/PersonalizedPlan";
+import Loading from "./components/Dashboard/createWorkout/loading";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
+import CreatePlan from "./components/Dashboard/createWorkout/CreatePlan";
 function App() {
   return (
     
@@ -30,10 +34,16 @@ function App() {
               <Route path="/dashboard" element={<Dashboard/>}>
                 <Route index element={<Lobby/>} />
                 <Route path="main" element={<DashboardMain/>} />
+
                 <Route path="profile" element={<Profile/>} />
+                <Route path="profile/mybody" element={<MyBody/>} />
+
                 <Route path="workout" element={<Workout/>} />
-               
+                <Route path="workout/workoutplan" element={<CreatePlan/>} />
+                <Route path="workout/workoutplan/loading" element={<Loading/>} />
+                
                 <Route path="workout/log" element={<WorkoutLog/>} />
+
                 <Route path="nutrition"  element={<NutritionCheck/>} />
               </Route>
             </Route>  

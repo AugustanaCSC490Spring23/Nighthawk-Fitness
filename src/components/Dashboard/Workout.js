@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
-import {MdOutlineEditNote} from 'react-icons/md'
 import { Link } from 'react-router-dom';
 import './workout.css'
 
 export default function Workout() {
 
+    
+    const [userData, setUserData] = useState(() => {
+        const savedUserData = localStorage.getItem('userData');
+        return savedUserData ? JSON.parse(savedUserData) : null
+    });
     // const [muscle, setMuscle] = useState('')
     // const [diff, setDiff] = useState('')
     // const [type, setType] = useState('')
@@ -36,14 +36,17 @@ export default function Workout() {
 
     return (
         <div className='container'>
+            <div className="title">workout</div>
             <div className="workout-card">
+                
                 <div className="workout-features">
-                    <h3>Create a personalized workout plan tailored to your fitness goals and preferences.</h3>
-                    <div className="btn">Create Plan</div>
+                    {userData.isCreated ? <h3>Let's keep working on your goal</h3>:<h3>Create a personalized workout plan tailored to your fitness goals and preferences.</h3>}
+                    
+                    {userData.isCreated ? <Link className='workout-link' to='workoutplan'>View Plan</Link>:<Link className='workout-link' to='workoutplan'>Create Plan</Link>}
                 </div>
                 <div className="workout-features">
                     <h3>Track your progress and log your completed workouts to stay on top of your fitness journey.</h3>
-                    <div className="btn"><Link className='log-plan' to='log'>Log Plan</Link></div>
+                    <Link className='workout-link' to='log'>Log Plan</Link>
                 </div>
             </div>
         </div>

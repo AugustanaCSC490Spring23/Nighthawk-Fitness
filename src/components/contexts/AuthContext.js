@@ -31,6 +31,7 @@ export function AuthProvider({children}) {
                 email: user.email,
                 docID: docRef.id,
                 isFilled: false,
+                isCreated: false,
                 photoURL: user.photoURL
             };
 
@@ -56,7 +57,8 @@ export function AuthProvider({children}) {
                 authProvider: 'local',
                 email,
                 docID: docRef.id,
-                isFilled: false
+                isFilled: false,
+                isCreated: false
             };
 
             await setDoc(docRef, docData);

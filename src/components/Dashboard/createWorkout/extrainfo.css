@@ -1,0 +1,153 @@
+.extra-info {
+    width: max-content;
+    height: 600px;
+    color: var(--primary-text);
+    position: relative;
+}
+
+@keyframes appear1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear2 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appear3 {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0;
+    }
+    85% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.extra-info h2 {
+    font-size: 4rem;
+    animation: appear1 3s 1;
+    margin-bottom: 2rem;
+    color: var(--primary-text);
+    width: 100%;
+}
+
+.extra-info h3 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    animation: appear2 3s 1;
+}
+
+.extra-info-question  {
+    animation: appear3 3s 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.extra-info label {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    color: var(--bg);
+    font-weight: 600;
+
+}
+
+.extra-info input {
+    width: max-content;
+    display: none;
+    
+}
+
+label div  {
+    background: var(--primary-variant);
+    padding: 1rem 2rem;
+    border: 1px solid var(--primary-variant);
+    border-radius: 1rem;
+    transition: var(--transition);
+}
+
+label div:hover {
+    opacity: .6;
+}
+
+.extra-info input:checked + div {
+    background: transparent;
+    color: var(--primary-variant);
+}
+
+.question-item-title {
+    margin-bottom: 2rem;
+    
+}
+
+.question-item-answer {
+    display: flex;
+    gap: 2rem;
+}
+
+.extra-info button {
+    margin-left: 1rem;
+    width: max-content;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+.plan-btn {
+    margin-top: 5rem;
+    position: absolute;
+    right: 0;
+    animation: appear3 1s 1;
+} 
+
+.plan-btn span {
+    font-weight: 900;
+}
+
+.extra-icon {
+    font-size: 2rem;
+    position: absolute;
+    top: -5rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.extra-icon:hover {
+    font-size: 3rem;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .extra-info {
+        width: 90vw;
+    }
+
+    .extra-info h2 {
+        font-size: 3rem;
+    }
+
+    .extra-info h3 {
+        font-size: 1.8rem;
+    }
+}

@@ -36,6 +36,7 @@
   .form-container .body {
     padding: 0rem 5rem 2rem 5rem;
     text-align: center;
+    background: transparent !important;
   }
   
   .form-container .footer {
@@ -91,12 +92,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
   }
   
   .personal-info-container input {
-    margin: 5px;
-    width: 80%;
+    margin: 0;
     height: 40px;
+    width: 70%;
     padding: 1.5rem 1rem;
     font-size: 20px;
     background: transparent;
@@ -111,14 +113,44 @@
   }
 
   .personal-info-container select {
-    width: 80%;
+    width: 70%;
     height: 50px;
-    margin-top: .5rem;
+    
     background: transparent;
     border-radius: 1rem;
     color: var(--primary);
     padding: 0 1rem;
 
+  }
+
+  .height-selection,
+  .age-selection,
+  .weight-selection,
+  .gender-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    gap: 1rem;
+  }
+
+  .height-label,
+  .age-label,
+  .weight-label,
+  .gender-label {
+    width: max-content;
+    text-align: left;
+    font-weight: 900;
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .height-group {
+    display: flex;
+    width: 70%;
+    gap: 1rem;
   }
 
   option {

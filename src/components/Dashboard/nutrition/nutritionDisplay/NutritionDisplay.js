@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import { CircularProgress } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import './nutritiondisplay.css'
 
 export default function NutritionDisplay({userData, remain, consumed, protein, carb, fat}) {
-    
-  
+    const [percentage, setPercentage] = useState(0)
+    const [remaining, setRemaining] =  useState(remain)
     
     const theme = createTheme({
         palette: {
@@ -19,6 +19,20 @@ export default function NutritionDisplay({userData, remain, consumed, protein, c
           },
         },
       });
+
+    useEffect(()  => {
+      if ((consumed/userData.dailyCal.maintain_cal)*100 <= 100){
+        setPercentage((consumed/userData.dailyCal.maintain_cal)*100)
+      }else {
+        setPercentage(100)
+      }
+    }, [consumed, userData])
+
+    useEffect(() => {
+      if (remain < 0) {
+        setRemaining(0)
+      }
+    }, [remain])
   return (
     <div>
         <div className="target-cal">
@@ -29,10 +43,10 @@ export default function NutritionDisplay({userData, remain, consumed, protein, c
               </div>
               <ThemeProvider theme={theme}>
                 {/* <h5>{Math.round(userData.dailyCal.maintain_cal * 100 / 100)}</h5> */}
-                <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={(consumed/userData.dailyCal.maintain_cal)*100}/>
+                <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={percentage}/>
               </ThemeProvider>
               <div className="remaining">
-                <h3>{remain}</h3>
+                <h3>{remain < 0 && remaining}{remain > 0 && remain}</h3>
                 <h4>Remaining</h4>
               </div>
             </div>

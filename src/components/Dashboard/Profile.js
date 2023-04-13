@@ -32,9 +32,10 @@ function Profile() {
                     'X-RapidAPI-Host': 'fitness-calculator.p.rapidapi.com'
                 }
             };
-            const response = await fetch(`https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${userData.information.age}&gender=male&height=${userData.information.height*30.48}&weight=${userData.information.weight/2.205}&activitylevel=${userData.information.activity_level}`, options)
+            const height =  userData.information.height.ft * 30.48 + userData.information.height.inch * 2.54
+            const response = await fetch(`https://fitness-calculator.p.rapidapi.com/dailycalorie?age=${userData.information.age}&gender=male&height=${height}&weight=${userData.information.weight/2.205}&activitylevel=${userData.information.activity_level}`, options)
             const data = await response.json();
-            console.log(data.data.goals['maintain weight']);
+            // console.log(data.data.goals['maintain weight']);
             const currentDoc = doc(db, 'users', userData.docID);
             
             await updateDoc(currentDoc, {
@@ -75,6 +76,7 @@ function Profile() {
     
     return (
         <div className="container">
+            <div className="title">profile</div>
             {userData.isFilled ? <User userData={userData}/> : <Form onSubmit={handleSubmit}/>}
             
         </div>
