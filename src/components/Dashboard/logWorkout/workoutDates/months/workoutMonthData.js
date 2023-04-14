@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import './workoutMonth.css'
-import WorkoutWeek from '../weeks/workoutWeek'
 export default function WorkoutMonthData(props) {
 
     const[monthName, setMonthName] = useState("")
@@ -17,6 +16,6 @@ export default function WorkoutMonthData(props) {
     return(<>
     <input onChange={handleChange} placeholder="Enter Month name"/>
         <button onClick={monthNamer}>Submit Name</button>
-        {visibility && <WorkoutWeek name={monthName}/>}
+        <h1>{props.name}</h1>
         </>)
 }

@@ -1,6 +1,6 @@
 import {MdAddCircle} from 'react-icons/md'
 import { Button, Icon, IconButton } from '@mui/material';
-import NewWorkout from './newWorkout';
+import NewWorkout from './workoutDates/months/newWorkout';
 import React, { useEffect, useState } from "react";
 import './workoutLog.css'
 import WorkoutMonth from './workoutDates/months/workoutMonth';
