@@ -1,0 +1,75 @@
+.personal-plan {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 900px;
+    height: max-content;
+    background: var(--primary-dashboard);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.personal-plan h2 {
+    text-align: center;
+    width: 100%;
+}
+
+.workout-day {
+    background: var(--primary-box);
+    border-radius: 1rem;
+    padding: .75rem;
+    overflow: hidden;
+    height: 45px;
+    transition: height 400ms ease;
+    margin: 1rem 0;
+}
+
+.active-day {
+    height: max-content !important;
+}
+
+.type-item {
+    height: 0px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+
+.week-day {
+    margin-bottom: 1rem;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.type {
+    background: var(--primary-dashboard);
+    width: max-content;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.exercise {
+    background: var(--primary-dashboard);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.last {
+    margin-bottom: 0rem !important;
+}
+
+.rest {
+    background: var(--primary-box);
+    padding: .75rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    color: var(--primary-variant);
+}

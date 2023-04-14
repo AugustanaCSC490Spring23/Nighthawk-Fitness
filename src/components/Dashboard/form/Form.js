@@ -66,7 +66,7 @@ function Form({onSubmit}) {
           ...userData,
           isFilled:true,
           information: formData
-      };
+        };
 
         onSubmit(updateData)
     }catch(e) {

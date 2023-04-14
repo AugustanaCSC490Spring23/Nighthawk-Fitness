@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import BmiCal from "../BMI/BmiCal";
 import Calories from "../Calories/Calories";
 import Calendar from "../Calendar/Calendar";
-
+import Graph from "../Graph/Graph";
 
 function DashboardMain(){
 
@@ -18,7 +18,9 @@ function DashboardMain(){
             <div className="dashboard-main-container">
                 <div className="dashboard-main-item">
                     <div className="dashboard-main-first">
-                        <div className="graph tabs">graph</div>
+                        <div className="graph">
+                            <Graph/>
+                        </div>
                         <div className="bmi-calories">
                             <div className="bmi-cal tabs">
                                 

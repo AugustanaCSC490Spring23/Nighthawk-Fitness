@@ -20,7 +20,7 @@ export default function CreatePlan() {
 
   return (
     <div className='container'>
-        {userData.isCreated ? <PersonalizedPlan /> : <ExtraInfo userData={userData} onSubmit={handleSubmit}/>}
+        {userData.isCreated ? <PersonalizedPlan userData={userData}/> : <ExtraInfo userData={userData} onSubmit={handleSubmit}/>}
     </div>
   )
 }

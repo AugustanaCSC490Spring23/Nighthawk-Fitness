@@ -55,6 +55,14 @@ export default function Workout_calendar() {
                 <h4>{date2}</h4>
                 <h5>{workout2}</h5>
             </div>
+            <div className='day'>
+                <h4>{date2}</h4>
+                <h5>{workout2}</h5>
+            </div>
+            <div className='day'>
+                <h4>{date2}</h4>
+                <h5>{workout2}</h5>
+            </div>
         </div>
     );
 }
