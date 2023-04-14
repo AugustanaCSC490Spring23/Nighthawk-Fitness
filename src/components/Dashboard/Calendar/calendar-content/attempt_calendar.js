@@ -1,7 +1,6 @@
 import React from "react";
 import dayjs from "dayjs";
 import './att.css'
-import cn from "./cn.js"
 import { useState } from 'react'
 import { getDate, months } from './dates'
 import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
@@ -16,6 +15,7 @@ export default function Attempt_calendar() {
     return(
         <div className="main-container">
             <div className="contain">
+                <div>
                 <div className="calendar-date">
                     <h1 className="current-date">{months[today.month()]}, {today.year()}</h1>
                     <div className="toggles">
@@ -34,16 +34,24 @@ export default function Attempt_calendar() {
                         return(
                             <div key={index} className="calendar-box">
                                 <h1 
+                                className={(today ? "todayTrue" : "")}
                                 onClick={()=>{setSelectDate(date)}}> {date.date()} </h1>
                             </div>
                         );
                     })}
                 </div>
+                </div>
             </div>
+            <div className="line"></div>
             <div className="schedule">
-                <h1>Schedule for {selectDate.toDate().toDateString()}</h1>
+                <h1>{selectDate.toDate().toDateString()}</h1>
                 <p>No workout for today.</p>
             </div>
         </div>
     );
 }
+
+// (currentMonth ? "" : "currentMonthFalse")
+// (today ? "todayTrue" : "")
+// (selectDate.toDate().toDateString() === date.toDate().toDateString() ? "selectDateTrue" : "")
+// ("calendar-day")

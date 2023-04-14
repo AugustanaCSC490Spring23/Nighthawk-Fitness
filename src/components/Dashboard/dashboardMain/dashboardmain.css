@@ -3,12 +3,13 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     width: 1500px;
-    height: 900px;
+    height: max-content;
     color: var(--primary-text);
     gap: 2rem;
 }
 
 .dashboard-main-item h3 {
+    height: max-content;
     font-weight: 900;
     font-size: 2rem;
 } 
@@ -22,7 +23,7 @@
 
 .dashboard-main-first {
     display: grid;
-    grid-template-columns: 47% 50%;
+    grid-template-columns: 45% 1fr;
     height: 100%;
     gap: 2rem;
 }
@@ -44,8 +45,8 @@
 
 .dashboard-main-second {
     display: grid;
-    grid-template-columns: 35% 62%;
-    height: 100%;
+    grid-template-columns: 1fr max-content;
+    height: max-content;
     gap: 2rem;
 }
 
@@ -73,7 +74,7 @@
     }
 
     .dashboard-main-second {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
