@@ -40,7 +40,7 @@
 }
 
 .arrow {
-    color: white !important;
+    color: white;
     transition-property: all; 
     width: 1rem; 
     height: 1rem; 

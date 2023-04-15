@@ -1,67 +1,51 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from "react";
+import dayjs from "dayjs";
+import './workout-calendar.css'
+import { getDate, months } from './dates'
+import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
-export default function Workout_calendar() {
+export default function Attempt_calendar() {
+    const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+    const currentDate = dayjs();
+    const [today, setToday] = useState(currentDate);
+    const [selectDate, setSelectDate] = useState(currentDate);
 
-    const workouts = ["Rest Day",
-    "Chest and Triceps",
-    "Back and Biceps",
-    "Legs and Shoulders",
-    "Rest Day",
-    "Core and Cardio",
-    "Full Body",];
-
-    const days = ['Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday'];
-    
-    const day = new Date();
-    
-    const day1 = day.getDay();
-    let day2 = day.getDay() + 1;
-    let day3 = day.getDay() + 2;
-    
-    if(day2 == 6) {
-        day3 = day3 - 7;
-    }else if(day2 >= 7) {
-        day2 = day2 - 7;
-        day3 = day3 - 7;
-    }
-
-    const [workout, setWorkout] = useState(workouts[day1]);
-    const [date, setDate] = useState(days[day1]);
-
-    const [workout1, setWorkout1] = useState(workouts[day2]);
-    const [date1, setDate1] = useState(days[day2]);
-
-    const [workout2, setWorkout2] = useState(workouts[day3]);
-    const [date2, setDate2] = useState(days[day3]);
-
-    return (
-        <div className='calendar_workouts'>
-            <div className='day'>
-                <h4>{date}</h4>
-                <h5>{workout}</h5>
+    return(
+        <div className="main-container">
+            <div className="contain">
+                <div>
+                <div className="calendar-date">
+                    <h1 className="current-date">{months[today.month()]}, {today.year()}</h1>
+                    <div className="toggles">
+                        <FaAngleLeft className="arrow" onClick={() => {setToday(today.month(today.month() - 1));}}/>
+                        <h1 className="today" onClick={() => {setToday(currentDate);}}>Today</h1>
+                        <FaAngleRight className="arrow" onClick={() => {setToday(today.month(today.month() + 1));}}/>
+                    </div>
+                </div>
+                <div className="days-box">
+                    {days.map((day, index) => {
+                        return <h1 key={index} className="days">{day}</h1>;
+                    })}
+                </div>
+                <div className="calendar-container">
+                    {getDate(today.month(), today.year()).map(({date, currentMonth, today}, index) => {
+                        const calendarArray = []
+                        calendarArray.push((currentMonth ? "" : "currentMonthFalse"), (today ? "todayTrue" : ""), (selectDate.toDate().toDateString() === date.toDate().toDateString() ? "selectDateTrue" : ""), ("calendar-day"))
+                        return(
+                            <div key={index} className="calendar-box">
+                                <h1 className={calendarArray.join(" ")} onClick={()=>{setSelectDate(date)}}>
+                                    {date.date()}
+                                </h1>
+                            </div>
+                        );
+                    })}
+                </div>
+                </div>
             </div>
-            <div className='day'>
-                <h4>{date1}</h4>
-                <h5>{workout1}</h5>
-            </div>
-            <div className='day'>
-                <h4>{date2}</h4>
-                <h5>{workout2}</h5>
-            </div>
-            <div className='day'>
-                <h4>{date2}</h4>
-                <h5>{workout2}</h5>
-            </div>
-            <div className='day'>
-                <h4>{date2}</h4>
-                <h5>{workout2}</h5>
+            <div className="line"></div>
+            <div className="schedule">
+                <h1>{selectDate.toDate().toDateString()}</h1>
+                <p>No workout for today.</p>
             </div>
         </div>
     );
