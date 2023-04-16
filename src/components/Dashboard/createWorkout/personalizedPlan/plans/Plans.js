@@ -13,7 +13,11 @@ const beginner = {
                                         day: 1,
                                             warm_up: 
                                                 [
-                                                    'Jumping Jacks'
+                                                    {
+                                                        name: 'Jumping Jacks',
+                                                        instruction: '...',
+                                                        photoURL: '...'
+                                                    }    
                                                 ]
                                         ,
                                         
@@ -89,6 +93,11 @@ const beginner = {
                                         ,
                                         
                                             main_workout: [
+                                                {
+                                                    name: '..',
+                                                    photoURL: '..'
+                                                },
+
                                                 'Stationary Bike', 'Rowing Machine', 'Russian Twist', 'Treadmill' 
                                             ] 
                                         ,
@@ -161,8 +170,7 @@ const beginner = {
                             }
                        ]
                 }   
-            }
-            
+            }   
     }        
 }
 

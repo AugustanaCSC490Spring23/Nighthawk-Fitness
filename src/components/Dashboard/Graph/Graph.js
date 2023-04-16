@@ -12,7 +12,7 @@ export default function Graph() {
     const data  = [
         {
             'date': date,
-            'value': userData.information.weight
+            'value': userData.information.weight 
         },
         {
             'date': '3-31-2023',

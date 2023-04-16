@@ -21,7 +21,7 @@
 }
 
 .progress-circle {
-    right: -2px;
+    right: 4px;
     position: relative;
     border: 1px dotted var(--primary-variant);
     border-radius: 100%;
