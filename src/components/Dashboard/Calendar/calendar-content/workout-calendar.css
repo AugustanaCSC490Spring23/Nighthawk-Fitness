@@ -148,14 +148,15 @@
 
 .line {
     border-left: 1px solid white;
-    height: 30px !important;
+    height: 100%;
     position: absolute;
-    margin-left: 9rem;
+    left: -25px
   }
 
 .schedule {
     width: 100%;
     height: 24rem;
+    position: relative;
 }
 
 .schedule h1, p {
