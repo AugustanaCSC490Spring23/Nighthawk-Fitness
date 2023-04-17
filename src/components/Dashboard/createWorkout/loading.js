@@ -41,10 +41,10 @@ export default function Loading() {
     
     useEffect(() => {
       if (!userData.plan) {
-        if (userData.personal_preference.experience_level === 'beginner') {
-          if (userData.personal_preference.workout_time === '2-3') {
+        if (userData.personal_preference.experience_level === 'intermediate') {
+          if (userData.personal_preference.workout_time === '4-6') {
               // setPlanner()
-              addPlan(beginner.weight_loss.two_three.workout)
+              addPlan(beginner.muscle_gain.five.workout)
           }else {
 
           }
