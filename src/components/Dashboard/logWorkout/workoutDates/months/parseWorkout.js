@@ -17,7 +17,7 @@ export default function ParseWorkout({userData}){
             <h1>Reps:</h1>
             <h2>{userData.workoutLogInfo.reps}</h2>
             <h1>Date:</h1>
-            <h3>{stringDate1}</h3>
+            <h3>{userData.workoutLogInfo.workoutDate}</h3>
             
         </div>
     )

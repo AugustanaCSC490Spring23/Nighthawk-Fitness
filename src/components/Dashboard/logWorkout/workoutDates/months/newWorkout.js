@@ -12,6 +12,8 @@ import ParseWorkout from "./parseWorkout";
 
 const NewWorkout = () => {
 
+    const [stringDate, setStringDate] = useState("")
+
     const [userData, setUserData] = useState(() => {
         const savedUserData = localStorage.getItem('userData');
         return savedUserData ? JSON.parse(savedUserData) : null
@@ -51,14 +53,17 @@ const NewWorkout = () => {
             [event.target.name]: event.target.value}})
     }
 
-    const handleDate=()=>{
+    const handleDate= () =>{
         setWorkoutInfo({...workoutInfo,
              workoutLogInfo: 
-             {...workoutInfo.workoutLogInfo, workoutDate:startDate}})
-        console.log(startDate)
+             {...workoutInfo.workoutLogInfo,
+                 workoutDate:startDate}})
     }
     
-    
+    const handleDateChange = (e, date) =>{
+        setStartDate(date)
+        setStringDate(e.target.value)
+    }
 
     const handleForm = async (event)=>{
         event.preventDefault()
@@ -70,7 +75,7 @@ const NewWorkout = () => {
                 console.log(userData.docID)
                 setUserData(workoutInfo)
                 localStorage.setItem('userData', JSON.stringify(workoutInfo))
-                const savedWorkout = <ParseWorkout key={workout.length} userData={userData}/>
+                const savedWorkout = <ParseWorkout key={workout.length} userData={userData} datePick={stringDate}/>
                 saveWorkout([...workout, savedWorkout])
                 saveYourWorkouts()
             })
@@ -102,7 +107,7 @@ const NewWorkout = () => {
     <form id="workoutForm" onSubmit={handleSubmit}>
     <label>Workout Date</label>
     <DatePicker selected={startDate}
-     onChange={(date) => setStartDate(date)} 
+     onChange={handleDateChange} 
      name="workoutDate" 
      value={workoutInfo.workoutLogInfo.workoutDate}
      dateFormat="yyyy/MM/dd" />
@@ -112,7 +117,7 @@ const NewWorkout = () => {
             type="text" 
             name="workoutName"
             value={workoutInfo.workoutLogInfo.workoutName}
-            onChange={handleChange}
+            onChange={(date) => handleChange(date)}
             placeholder="Bench Press"
             required>
         </input>
