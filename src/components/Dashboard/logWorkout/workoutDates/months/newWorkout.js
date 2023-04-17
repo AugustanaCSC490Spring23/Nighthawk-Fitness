@@ -7,6 +7,7 @@ import { setDoc, addDoc, collection } from "../../../../Firebase/firebase";
 import { async } from "@firebase/util";
 import { doc, updateDoc } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
+import ParseWorkout from "./parseWorkout";
 //import { useForm } from 'react-hook-form'
 
 const NewWorkout = () => {
@@ -15,6 +16,14 @@ const NewWorkout = () => {
         const savedUserData = localStorage.getItem('userData');
         return savedUserData ? JSON.parse(savedUserData) : null
     });
+
+    const [workout, saveWorkout] = 
+        useState([])
+
+    function saveYourWorkouts(){
+        console.log("Saving workout....")
+      
+    }
 
     class Workouts{
         constructor(workoutDate,workoutName, workoutCount, weight,
@@ -27,22 +36,25 @@ const NewWorkout = () => {
             }
     }
     
-
+    
     const[workoutInfo, setWorkoutInfo] = useState({
+        workoutLogInfo: {
         workoutDate: "",
         workoutName: "",
         weight: "",
-        reps: "",
+        reps: ""}
     })
 
     const handleChange = (event) =>{
-        setWorkoutInfo({...workoutInfo, [event.target.name]: event.target.value})
+        setWorkoutInfo({...workoutInfo, 
+            workoutLogInfo: {...workoutInfo.workoutLogInfo, 
+            [event.target.name]: event.target.value}})
     }
 
-    const [workoutPageData, setWorkoutPageData] = useState(null)
-
     const handleDate=()=>{
-        setWorkoutInfo({...workoutInfo, workoutDate:startDate})
+        setWorkoutInfo({...workoutInfo,
+             workoutLogInfo: 
+             {...workoutInfo.workoutLogInfo, workoutDate:startDate}})
         console.log(startDate)
     }
     
@@ -56,6 +68,11 @@ const NewWorkout = () => {
                 ...workoutInfo 
             }).then(docRef => {
                 console.log(userData.docID)
+                setUserData(workoutInfo)
+                localStorage.setItem('userData', JSON.stringify(workoutInfo))
+                const savedWorkout = <ParseWorkout key={workout.length} userData={userData}/>
+                saveWorkout([...workout, savedWorkout])
+                saveYourWorkouts()
             })
             console.log("Success")
         }
@@ -65,10 +82,12 @@ const NewWorkout = () => {
         
         console.log("info added")
         console.log(workoutInfo)
-        setWorkoutInfo({workoutDate: "",
-        workoutName: "",
-        weight: "",
-        reps: "",})
+        setWorkoutInfo({
+            workoutLogInfo: {
+            workoutDate: "",
+            workoutName: "",
+            weight: "",
+            reps: ""}})
     }
 
     const handleSubmit = (event) =>{
@@ -85,14 +104,14 @@ const NewWorkout = () => {
     <DatePicker selected={startDate}
      onChange={(date) => setStartDate(date)} 
      name="workoutDate" 
-     value={workoutInfo.workoutDate}
+     value={workoutInfo.workoutLogInfo.workoutDate}
      dateFormat="yyyy/MM/dd" />
      <button onClick={handleDate}>Sumbit Date</button>
         <label>Workout</label>
         <input 
             type="text" 
             name="workoutName"
-            value={workoutInfo.workoutName}
+            value={workoutInfo.workoutLogInfo.workoutName}
             onChange={handleChange}
             placeholder="Bench Press"
             required>
@@ -101,7 +120,7 @@ const NewWorkout = () => {
         <input 
             type="number" 
             name="weight"
-            value={workoutInfo.weight}
+            value={workoutInfo.workoutLogInfo.weight}
             onChange={handleChange}
             placeholder="220"
             required>
@@ -109,7 +128,7 @@ const NewWorkout = () => {
         <label>How many Rep</label>
         <input type="number" 
             name="reps"
-            value={workoutInfo.reps}
+            value={workoutInfo.workoutLogInfo.reps}
             onChange={handleChange}
             placeholder="8"
             required>
@@ -117,6 +136,7 @@ const NewWorkout = () => {
         <button onClick={handleForm}>Create workout!</button>
     </form>
     </div>
+    {workout.map((workout1) => workout1)}
     </>
 }
 

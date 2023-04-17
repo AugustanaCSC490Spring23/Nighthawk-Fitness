@@ -14,7 +14,11 @@ function WorkoutLog() {
       <div className='workoutLog-Greeting'>
       <div className="notebook"></div><h1 id="welcome">Welcome to your workout log</h1>
       <div className='month'>
-      <WorkoutMonth />
+      <IconButton id="add-btn" aria-label="Log a workout" 
+        onClick={()=>addWorkout(!added)}>
+          <MdAddCircle/>
+        </IconButton>
+        {added && <WorkoutMonth />}
       </div>
       </div>
       </div>
@@ -26,7 +30,7 @@ function WorkoutLog() {
         onClick={()=>addWorkout(!added)}>
           <MdAddCircle/>
         </IconButton>
-        {added && <NewWorkout/>}
+        {added && <WorkoutMonth />}
         </div>
         </div>
         </>

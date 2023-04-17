@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import WorkoutMonthData from './workoutMonthData'
+
 import NewWorkout from './newWorkout'
 export default function WorkoutMonth(){
     
