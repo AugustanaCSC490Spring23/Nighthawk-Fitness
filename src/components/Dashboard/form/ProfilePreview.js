@@ -12,7 +12,7 @@ function ProfilePreview({ formData }) {
         </div>
         <div className="info">
             <h5>Weight</h5>
-            <div className="info-data">{formData.weight} lbs</div>
+            <div className="info-data">{formData.weight[0].w} lbs</div>
         </div>
         <div className="info">
             <h5>Height</h5>

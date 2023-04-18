@@ -1,6 +1,7 @@
 import React from "react";
 
 function PersonalInfo({ formData, setFormData }) {
+  const day = new Date()
   return (
     <div className="personal-info-container">
       <h4>We're happy you're here. Let's get to know a little about you.</h4>
@@ -23,7 +24,10 @@ function PersonalInfo({ formData, setFormData }) {
         placeholder="Weight (lbs)"
         value={formData.firstName}
         onChange={(e) => {
-          setFormData({ ...formData, weight: e.target.value });
+          setFormData({ ...formData, weight: [{
+            w: e.target.value,
+            date: (day.getMonth()+1)+'-'+day.getDate()+'-'+day.getFullYear()
+          }] });
         }}
         />
       </div>

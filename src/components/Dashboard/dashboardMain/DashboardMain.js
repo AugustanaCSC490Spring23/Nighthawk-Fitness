@@ -9,6 +9,9 @@ import WeightHistory from "../weightHistory/WeightHistory";
 import { CircularProgress } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+import UnlockPlan from "../Unlock/UnlockPlan";
+import RequestForm from "../Calories/calories-content/requestForm";
+
 function DashboardMain(){
 
     const [userData, setUserData] = useState(() => {
@@ -36,7 +39,7 @@ function DashboardMain(){
                 <div className="dashboard-main-item">
                     <div className="dashboard-main-first">
                         <div className="graph">
-                            <Graph/>
+                            {!userData.isFilled ? <RequestForm/> : <Graph/>}
                         </div>
                         <div className="bmi-calories">
                             <div className="bmi-cal tabs">
@@ -57,6 +60,8 @@ function DashboardMain(){
                             <div className="current-title">
                                 <h3>Current Plan</h3>
                             </div>
+                                
+                            {!userData.isCreated ? <UnlockPlan/> : 
                             <div className="current-content">
                                 <h4>{userData.plan.name}</h4>
                                 <small>Duration: 4 weeks</small>
@@ -64,9 +69,11 @@ function DashboardMain(){
                                     <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value='90'/>
                                 </ThemeProvider>
                             </div>
+                            }
+                                
                         </div>
                         <div>
-                            <WeightHistory/>
+                            <WeightHistory userData={userData}/>
                         </div>
                         <div className="calendar tabs"><Calendar/></div>
                     </div>

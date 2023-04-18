@@ -3,7 +3,7 @@ import './weighthistory.css'
 import {FaWeight} from 'react-icons/fa'
 
 
-export default function WeightHistory() {
+export default function WeightHistory({userData}) {
   return (
     <div className='weight-history'>
         <div className="history-item tabs">
@@ -12,7 +12,7 @@ export default function WeightHistory() {
                 <small>4/14/2023</small>
             </div>
             <div className="history-content">
-                <h3>170 lbs</h3>
+                <h3>{!userData.information ? 'No History': userData.information.weight[userData.information.weight.length - 1].w}</h3>
                 <h4>Current Weight</h4>
             </div>
             
@@ -23,7 +23,7 @@ export default function WeightHistory() {
                 <small>4/01/2023</small>
             </div>
             <div className="history-content">
-                <h3>160 lbs</h3>
+                <h3>{!userData.information ? 'No History': userData.information.weight[userData.information.weight.length - 1].w}</h3>
                 <h4>Previous Weight</h4>
             </div>
         </div>

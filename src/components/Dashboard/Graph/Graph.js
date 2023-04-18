@@ -9,47 +9,10 @@ export default function Graph() {
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    const data  = [
-        {
-            'date': date,
-            'value': userData.information.weight 
-        },
-        {
-            'date': '3-31-2023',
-            'value': '190'
-        },
-        {
-            'date': '4-1-2023',
-            'value': '220'
-        },
-        {
-            'date': '4-2-2023',
-            'value': '160'
-        },
-        {
-            'date': '4-3-2023',
-            'value': '120'
-        },
-        {
-            'date': '4-4-2023',
-            'value': '190'
-        },
-        {
-            'date': '4-5-2023',
-            'value': '200'
-        },
-        {
-            'date': '4-6-2023',
-            'value': '170'
-        },
-        {
-            'date': '4-7-2023',
-            'value': '165'
-        }
-    ]
+    const data = userData.information.weight;
 
     const formatTooltip = (value, name, props) => {
-        if (name === 'value') {
+        if (name === 'w') {
           return [`${value} lbs`, 'Weight']
         }
     }
@@ -67,9 +30,9 @@ export default function Graph() {
                 </defs>
                 <CartesianGrid opacity={.1} vertical={false}/>
                 <XAxis dataKey="date" />
-                <YAxis dataKey='value' axisLine={false} tickLine={false}/>
+                <YAxis dataKey='w' axisLine={false} tickLine={false}/>
                 <Tooltip formatter={formatTooltip} contentStyle={{backgroundColor: 'black'}} itemStyle={{ color: '#a4fba6' }}/>
-                <Area dataKey="value" stroke="#a4fba6" fill='url(#color)' />
+                <Area dataKey="w" stroke="#a4fba6" fill='url(#color)' />
             </AreaChart>
         </ResponsiveContainer>
     </div>
