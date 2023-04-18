@@ -12,19 +12,16 @@ import ParseWorkout from "./parseWorkout";
 
 const NewWorkout = () => {
 
-    const [stringDate, setStringDate] = useState("")
-
     const [userData, setUserData] = useState(() => {
         const savedUserData = localStorage.getItem('userData');
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
     function saveYourWorkouts(){
-        console.log("Saving workout....")
-      
+        console.log("Saving workout....") 
     }
 
-    class Workouts{
+ {/*   class Workouts{
         constructor(workoutDate,workoutName, weight,
             reps){
                 this.workoutDate = workoutDate
@@ -39,17 +36,18 @@ const NewWorkout = () => {
                 ', weight: ' + this.weight +
                 ', reps: ' + this.reps
             }
-    }
+    } */}
     
     
     const[workoutInfo, setWorkoutInfo] = useState({
         workoutLogInfo: {
-            workoutArray: [],
             workoutDate: "",
             workoutName: "",
             weight: "",
             reps: ""}
     })
+
+    const [arrayOfWorkouts, setArray] = useState([])
 
     const handleChange = (event) =>{
         setWorkoutInfo({...workoutInfo, 
@@ -60,52 +58,50 @@ const NewWorkout = () => {
     }
 
     const handleDate = e =>{
-        setStringDate(e.target.value)
         setWorkoutInfo({...workoutInfo,
              workoutLogInfo: 
              {...workoutInfo.workoutLogInfo,
                  workoutDate:startDate}})
         console.log(startDate)
     }
-    
-    
+
+    const setObject = (workoutObj) => {
+        const arrayOfWorkouts1 = [...arrayOfWorkouts, workoutObj]
+        setArray(arrayOfWorkouts1)
+        console.log(arrayOfWorkouts)
+        console.log(arrayOfWorkouts1)
+    }
 
     const handleForm = async (event)=>{
         event.preventDefault()
-        const workout = new Workouts(workoutInfo.workoutLogInfo.workoutDate, 
-            workoutInfo.workoutLogInfo.workoutName,
-            workoutInfo.workoutLogInfo.weight,
-            workoutInfo.workoutLogInfo.reps)
-        console.log(workout.toString())
-        setWorkoutInfo({...workoutInfo,
-            workoutLogInfo:
-            {...workoutInfo.workoutLogInfo,
-                workoutArray:workout}})
+        const workoutObj = {
+            date: workoutInfo.workoutLogInfo.workoutDate,
+            name: workoutInfo.workoutLogInfo.workoutName,
+            weight: workoutInfo.workoutLogInfo.weight,
+            reps: workoutInfo.workoutLogInfo.reps
+        }
+
+        console.log(workoutObj)
+        setObject(workoutObj)
+
         const currentDoc = doc(db, 'users', userData.docID)
         try{
            await updateDoc(currentDoc, {
             filled:true,
-                ...workoutInfo 
+            ...arrayOfWorkouts
             }).then(docRef => {
                 setUserData({...workoutInfo, filled:true})
                 const allData = {
                     ...userData,
-                    ...workoutInfo,
+                    ...arrayOfWorkouts,
                     filled:true
                 }
                 localStorage.setItem('userData', JSON.stringify(allData))
-                const savedWorkout = <ParseWorkout key={workout.length} userData={userData}/>
-                saveYourWorkouts()
             })
-            console.log("Success")
         }
         catch (e) {
             console.error("Error adding document: ", e)
         }
-        
-        console.log("info added")
-        console.log(workoutInfo)
-        
         setWorkoutInfo({
             workoutLogInfo: {
             workoutDate: "",
@@ -113,6 +109,50 @@ const NewWorkout = () => {
             weight: "",
             reps: ""}})
     }
+
+{/* const handleForm = async (event)=>{
+    event.preventDefault()
+    const workout = new Workouts(workoutInfo.workoutLogInfo.workoutDate, 
+        workoutInfo.workoutLogInfo.workoutName,
+        workoutInfo.workoutLogInfo.weight,
+        workoutInfo.workoutLogInfo.reps)
+    console.log(workout.toString())
+    setWorkoutInfo({...workoutInfo,
+        workoutLogInfo:
+        {...workoutInfo.workoutLogInfo,
+            workoutArray:workout}})
+    const currentDoc = doc(db, 'users', userData.docID)
+    try{
+       await updateDoc(currentDoc, {
+        filled:true,
+            ...workoutInfo 
+        }).then(docRef => {
+            setUserData({...workoutInfo, filled:true})
+            const allData = {
+                ...userData,
+                ...workoutInfo,
+                filled:true
+            }
+            localStorage.setItem('userData', JSON.stringify(allData))
+            const savedWorkout = <ParseWorkout key={workout.length} userData={userData}/>
+            saveYourWorkouts()
+        })
+        console.log("Success")
+    }
+    catch (e) {
+        console.error("Error adding document: ", e)
+    }
+    
+    console.log("info added")
+    console.log(workoutInfo)
+    
+    setWorkoutInfo({
+        workoutLogInfo: {
+        workoutDate: "",
+        workoutName: "",
+        weight: "",
+        reps: ""}})
+}*/}
 
     const handleSubmit = (event) =>{
         event.preventDefault()
