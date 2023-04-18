@@ -36,7 +36,6 @@
     align-items: center; 
     gap: 1rem; 
     padding-right: 30px;
-    
 }
 
 .arrow {
@@ -143,13 +142,6 @@
     color: black; 
 }
 
-.line {
-    border-left: 1px solid white;
-    height: 30%;
-    position: absolute;
-    margin-left: 9rem;
-  }
-
 .schedule {
     width: 24rem;
     height: 24rem;
@@ -160,7 +152,7 @@
     text-align: left;
 }
 
-@media (max-width: 1350px) { 
+@media (min-width: 800px) { 
     .main-container {
         flex-direction: row; 
         height: max-content;
@@ -168,6 +160,43 @@
     }
 
     .line {
-        height: 20%;
+        border-left: 1px solid white;
+        height: 30%;
+        position: absolute;
+        margin-left: 9rem;
+      }
+
+      p {
+        text-align: left !important;
+      }
+
+}
+
+@media (max-width: 799px) {
+    .main-container {
+        flex-direction: column;
+        height: max-content;
+        border-left-width: 1px;
     }
+
+    .days-box {
+        justify-items: center;
+    }
+
+    .line {
+        border-bottom: 1px solid white;
+        width: 70%;
+        position: absolute;
+        margin-bottom: 3rem;
+    }
+
+    .schedule {
+        width: 100%
+    }
+
+    .schedule h1, p {
+        text-align: left !important;
+        margin-left: 35px;
+      }
+      
 }
