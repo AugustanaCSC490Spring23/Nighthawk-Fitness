@@ -19,64 +19,82 @@ const NewWorkout = () => {
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    const [workout, saveWorkout] = 
-        useState([])
-
     function saveYourWorkouts(){
         console.log("Saving workout....")
       
     }
 
     class Workouts{
-        constructor(workoutDate,workoutName, workoutCount, weight,
+        constructor(workoutDate,workoutName, weight,
             reps){
                 this.workoutDate = workoutDate
                 this.workoutName = workoutName
-                this.workoutCount = workoutCount
                 this.weight = weight
                 this.reps = reps
+            }
+
+            toString(){
+                return 'Workout Date: ' + this.workoutDate +
+                ', Workout Name: ' + this.workoutName + 
+                ', weight: ' + this.weight +
+                ', reps: ' + this.reps
             }
     }
     
     
     const[workoutInfo, setWorkoutInfo] = useState({
         workoutLogInfo: {
-        workoutDate: "",
-        workoutName: "",
-        weight: "",
-        reps: ""}
+            workoutArray: [],
+            workoutDate: "",
+            workoutName: "",
+            weight: "",
+            reps: ""}
     })
 
     const handleChange = (event) =>{
         setWorkoutInfo({...workoutInfo, 
             workoutLogInfo: {...workoutInfo.workoutLogInfo, 
             [event.target.name]: event.target.value}})
+
+            
     }
 
-    const handleDate= () =>{
+    const handleDate = e =>{
+        setStringDate(e.target.value)
         setWorkoutInfo({...workoutInfo,
              workoutLogInfo: 
              {...workoutInfo.workoutLogInfo,
                  workoutDate:startDate}})
+        console.log(startDate)
     }
     
-    const handleDateChange = (e, date) =>{
-        setStartDate(date)
-        setStringDate(e.target.value)
-    }
+    
 
     const handleForm = async (event)=>{
         event.preventDefault()
-        const currentDoc = doc(db, 'users', userData.docID);
+        const workout = new Workouts(workoutInfo.workoutLogInfo.workoutDate, 
+            workoutInfo.workoutLogInfo.workoutName,
+            workoutInfo.workoutLogInfo.weight,
+            workoutInfo.workoutLogInfo.reps)
+        console.log(workout.toString())
+        setWorkoutInfo({...workoutInfo,
+            workoutLogInfo:
+            {...workoutInfo.workoutLogInfo,
+                workoutArray:workout}})
+        const currentDoc = doc(db, 'users', userData.docID)
         try{
            await updateDoc(currentDoc, {
+            filled:true,
                 ...workoutInfo 
             }).then(docRef => {
-                console.log(userData.docID)
-                setUserData(workoutInfo)
-                localStorage.setItem('userData', JSON.stringify(workoutInfo))
-                const savedWorkout = <ParseWorkout key={workout.length} userData={userData} datePick={stringDate}/>
-                saveWorkout([...workout, savedWorkout])
+                setUserData({...workoutInfo, filled:true})
+                const allData = {
+                    ...userData,
+                    ...workoutInfo,
+                    filled:true
+                }
+                localStorage.setItem('userData', JSON.stringify(allData))
+                const savedWorkout = <ParseWorkout key={workout.length} userData={userData}/>
                 saveYourWorkouts()
             })
             console.log("Success")
@@ -87,6 +105,7 @@ const NewWorkout = () => {
         
         console.log("info added")
         console.log(workoutInfo)
+        
         setWorkoutInfo({
             workoutLogInfo: {
             workoutDate: "",
@@ -107,7 +126,7 @@ const NewWorkout = () => {
     <form id="workoutForm" onSubmit={handleSubmit}>
     <label>Workout Date</label>
     <DatePicker selected={startDate}
-     onChange={handleDateChange} 
+     onChange={(date) => setStartDate(date)} 
      name="workoutDate" 
      value={workoutInfo.workoutLogInfo.workoutDate}
      dateFormat="yyyy/MM/dd" />
@@ -117,7 +136,7 @@ const NewWorkout = () => {
             type="text" 
             name="workoutName"
             value={workoutInfo.workoutLogInfo.workoutName}
-            onChange={(date) => handleChange(date)}
+            onChange={handleChange}
             placeholder="Bench Press"
             required>
         </input>
@@ -141,7 +160,7 @@ const NewWorkout = () => {
         <button onClick={handleForm}>Create workout!</button>
     </form>
     </div>
-    {workout.map((workout1) => workout1)}
+    {/*workout.map((workout1) => workout1)*/}
     </>
 }
 

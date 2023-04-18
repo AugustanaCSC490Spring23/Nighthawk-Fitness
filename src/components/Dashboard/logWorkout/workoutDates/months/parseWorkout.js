@@ -1,5 +1,5 @@
 import "./parseWorkout.css"
-export default function ParseWorkout({userData}){
+export default function ParseWorkout({userData}, {datePick}){
 
     function workoutSomethinglol(){
         
@@ -9,7 +9,6 @@ export default function ParseWorkout({userData}){
 
     return (
         <div>
-            <button>THIS COMPONNENT IS WORKING</button>
             <h1>Workout:</h1>
             <h2>{userData.workoutLogInfo.workoutName}</h2>
             <h1>Weight:</h1>
@@ -17,7 +16,7 @@ export default function ParseWorkout({userData}){
             <h1>Reps:</h1>
             <h2>{userData.workoutLogInfo.reps}</h2>
             <h1>Date:</h1>
-            <h3>{userData.workoutLogInfo.workoutDate}</h3>
+            <h3>{stringDate1}</h3>
             
         </div>
     )

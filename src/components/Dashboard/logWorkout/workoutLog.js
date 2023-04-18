@@ -4,10 +4,16 @@ import NewWorkout from './workoutDates/months/newWorkout';
 import React, { useEffect, useState } from "react";
 import './workoutLog.css'
 import WorkoutMonth from './workoutDates/months/workoutMonth';
+import ParseWorkout from './workoutDates/months/parseWorkout';
 // import WorkoutMonth from './logCalendar/workoutMonth';
 // import WorkoutWeek from "./logCalendar/workoutWeek"
 function WorkoutLog() {
+  const [userData, setUserData] = useState(() => {
+    const savedUserData = localStorage.getItem('userData');
+    return savedUserData ? JSON.parse(savedUserData) : null
+});
   const [added, addWorkout] = useState(false)
+  
     return( <>
     <div className='workoutLog-ctn'>
     <div className='containerGreeting'>
@@ -18,7 +24,8 @@ function WorkoutLog() {
         onClick={()=>addWorkout(!added)}>
           <MdAddCircle/>
         </IconButton>
-        {added && <WorkoutMonth />}
+        {added && <NewWorkout/>}
+        {userData.filled && <ParseWorkout userData={userData}/>}
       </div>
       </div>
       </div>
