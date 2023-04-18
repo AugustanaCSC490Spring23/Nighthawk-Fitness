@@ -163,7 +163,7 @@ const NewWorkout = () => {
     return <>
     <h1>Add a new Workout</h1>
     <div className="formWorkout">
-    <form id="workoutForm" onSubmit={handleSubmit}>
+    <form id="workoutForm" onSubmit={handleForm}>
     <label>Workout Date</label>
     <DatePicker selected={startDate}
      onChange={(date) => setStartDate(date)} 
