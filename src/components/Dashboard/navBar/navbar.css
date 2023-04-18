@@ -21,7 +21,7 @@
     margin: 0;
     top: 0;
     transition: var(--transition);
-    position: relative;
+    position: sticky;
     overflow: hidden;
   }
 
