@@ -3,15 +3,25 @@ import { useNavigate } from 'react-router-dom';
 import './MyBody.css'
 import {MdKeyboardArrowLeft} from 'react-icons/md'
 import {MdOutlineAddCircle} from 'react-icons/md'
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { db } from '../../../Firebase/firebase';
+import { updateDoc, doc, getDoc } from "firebase/firestore";
+import {BsCheck} from 'react-icons/bs'
 
 export default function MyBody() {
+
+    const [isClick, setIsClick] = useState(false)
 
     const navigate = useNavigate();
     const [userData, setUserData] = useState(() => {
         const savedUserData = localStorage.getItem('userData');
         return savedUserData ? JSON.parse(savedUserData) : null
     });
+    const [weightForm, setWeightForm] = useState(
+        {
+            w: '',
+            date: ''
+        }
+    )
 
     function goBack()  {
         navigate(-1)
@@ -20,59 +30,40 @@ export default function MyBody() {
     const today  = new  Date();
     const date = today.toDateString();
 
-    const data  = [
-        {
-            'date': date,
-            'value': userData.information.weight
-        },
-        {
-            'date': '3-31-2023',
-            'value': '190'
-        },
-        {
-            'date': '4-1-2023',
-            'value': '220'
-        },
-        {
-            'date': '4-2-2023',
-            'value': '160'
-        },
-        {
-            'date': '4-3-2023',
-            'value': '120'
-        },
-        {
-            'date': '4-4-2023',
-            'value': '190'
-        },
-        {
-            'date': '4-5-2023',
-            'value': '200'
-        },
-        {
-            'date': '4-6-2023',
-            'value': '170'
-        },
-        {
-            'date': '4-7-2023',
-            'value': '165'
-        }
-    ]
-
-    const formatTooltip = (value, name, props) => {
-        if (name === 'value') {
-          return [`${value} lbs`, 'Weight']
-        }
-    }
-
-    console.log(data[data.length-1].value);
-
     function openLog()  {
         document.getElementById('wLog').classList.add('log-active')
     }
 
     function closeAddFood() {
+        setIsClick(false)
         document.getElementById('wLog').classList.remove('log-active');
+    }
+    
+    async function addWeight() {
+        try {
+            const updateW = [...userData.information.weight, weightForm];
+            const currentDoc = doc(db, 'users', userData.docID);
+            await updateDoc(currentDoc, {
+                information: {
+                    ...userData.information,
+                    weight: updateW
+                }
+            })
+            setIsClick(true)
+    
+            const updateData = {
+                ...userData,
+                information: {
+                    ...userData.information,
+                    weight: updateW
+                }
+            };
+    
+            setUserData(updateData);
+            localStorage.setItem('userData', JSON.stringify(updateData))
+        }catch(e) {
+            console.log(e);
+        } 
     }
 
   return (
@@ -80,22 +71,6 @@ export default function MyBody() {
         <div className="container my-body">
 
             <div className="my-body-content">
-                <ResponsiveContainer height={750} width='100%' className='charts'>
-                    <AreaChart data={data}>
-                        <defs>
-                            <linearGradient  id='color' x1='0' y1='0' x2='0' y2='1'>
-                                <stop offset='10%' stopColor='#a4fba6'  stopOpacity={0.5}/>
-                                <stop offset='95%' stopColor='lightyellow'  stopOpacity={0.09}/>
-
-                            </linearGradient>
-                        </defs>
-                        <CartesianGrid opacity={.1} vertical={false}/>
-                        <XAxis dataKey="date" />
-                        <YAxis dataKey='value' axisLine={false} tickLine={false}/>
-                        <Tooltip formatter={formatTooltip} contentStyle={{backgroundColor: 'black'}} itemStyle={{ color: '#a4fba6' }}/>
-                        <Area dataKey="value" stroke="#a4fba6" fill='url(#color)' />
-                    </AreaChart>
-                </ResponsiveContainer>
                 <div className="my-body-container">
                     <div className="back-btn" onClick={goBack}>
                         <MdKeyboardArrowLeft />
@@ -120,7 +95,7 @@ export default function MyBody() {
                                 </div>
                                 <div className="user-detail">
                                     <div className="user-detail-title">weight</div>
-                                    <div className="user-detail-data">{userData.information.weight}lbs</div>
+                                    <div className="user-detail-data">{userData.information.weight[userData.information.weight.length-1].w} lbs</div>
                                 </div>
                             </div>
 
@@ -143,13 +118,18 @@ export default function MyBody() {
                 </div>
                 <div className="new-weight">
                     <h3>New Weight</h3>
-                    <input type="text" />
+                    <input type="text" onChange={(e) => {
+                        setWeightForm({ ...weightForm, w: e.target.value});
+                    }}/>
                 </div>
                 <div className="weight-date">
                     <h3>Date</h3>
-                    <input type="text" />
+                    <input type="text" placeholder='MM/DD/YY' onChange={(e) => {
+                        setWeightForm({ ...weightForm, date: e.target.value});
+                    }}/>
                 </div>
-                <button>Add</button>
+                {isClick && <div className="success"><BsCheck className='success-icon'/> Added new weight</div>}
+                <button onClick={addWeight}>Add</button>
             </div>
 
         </div>

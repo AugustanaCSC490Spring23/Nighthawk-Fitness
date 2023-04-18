@@ -42,8 +42,9 @@ export default function Attempt_calendar() {
                 </div>
                 </div>
             </div>
-            <div className="line"></div>
+            
             <div className="schedule">
+                <div className="line line_mobile"></div>
                 <h1>{selectDate.toDate().toDateString()}</h1>
                 <p>No workout for today.</p>
             </div>

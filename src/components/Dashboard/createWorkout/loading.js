@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate} from 'react-router-dom'
 import {BiDumbbell} from 'react-icons/bi'
-import beginner from './personalizedPlan/plans/Plans'
+import {beginner, intermediate} from './personalizedPlan/plans/Plans'
 import { db } from '../../Firebase/firebase'
 import { updateDoc, doc } from 'firebase/firestore'
 import './loading.css'
@@ -41,10 +41,10 @@ export default function Loading() {
     
     useEffect(() => {
       if (!userData.plan) {
-        if (userData.personal_preference.experience_level === 'beginner') {
+        if (userData.personal_preference.experience_level === 'intermediate') {
           if (userData.personal_preference.workout_time === '2-3') {
               // setPlanner()
-              addPlan(beginner.weight_loss.two_three.workout)
+              addPlan(intermediate.muscle_gain.two_three.workout)
           }else {
 
           }

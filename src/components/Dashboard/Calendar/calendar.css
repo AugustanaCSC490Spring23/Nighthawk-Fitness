@@ -4,7 +4,9 @@
     align-items: center;
     height: max-content;
     padding: 0 1rem;
+    width: 100%;
 }
+
 
 .calendar_workouts {
     display: flex;

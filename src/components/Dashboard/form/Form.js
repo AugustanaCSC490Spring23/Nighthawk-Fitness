@@ -24,7 +24,12 @@ function Form({onSubmit}) {
   const [page, setPage] = useState(0);
   const [formData, setFormData] = useState({
     age: "",
-    weight: "",
+    weight: [
+      {
+        w: '',
+        date: ''
+      }
+    ],
     height: {
       ft: '',
       inch: ''

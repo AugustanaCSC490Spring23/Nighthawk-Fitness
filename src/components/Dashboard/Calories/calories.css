@@ -1,7 +1,7 @@
 .calories {
     text-align: center;
     padding: 2rem 1rem;
-    
+    width: 100%;
 }
 
 .maintain,
@@ -35,6 +35,7 @@
     align-items: center;
     gap: 3rem;
     flex-direction: column;
+    text-align: center;
 }
 
 .request_form h4 {

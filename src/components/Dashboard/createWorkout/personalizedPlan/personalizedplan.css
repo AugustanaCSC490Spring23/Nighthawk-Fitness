@@ -1,18 +1,24 @@
 .personal-plan {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: var(--primary-text);
     width: 900px;
-    height: max-content;
+    height: 900px;
     background: var(--primary-dashboard);
     border-radius: 1rem;
     padding: 1rem;
 }
 
 .personal-plan h2 {
+    color: var(--primary-text);
     text-align: center;
     width: 100%;
+    margin-bottom: 1rem;
 }
+
+/* .personal-plan-title {
+    display: flex;
+} */
 
 .workout-day {
     background: var(--primary-box);
@@ -20,16 +26,16 @@
     padding: .75rem;
     overflow: hidden;
     height: 45px;
-    transition: height 400ms ease;
     margin: 1rem 0;
+    margin-top: 1rem;
 }
 
 .active-day {
-    height: max-content !important;
+    display: block !important;
 }
 
 .type-item {
-    height: 0px;
+    height: 0;
     overflow: hidden;
     margin-bottom: 1rem;
     display: flex;
@@ -37,6 +43,9 @@
     gap: .5rem;
 }
 
+.active-type-item {
+    height: max-content;
+}
 
 
 .week-day {
@@ -45,8 +54,15 @@
     font-weight: 900;
 }
 
+.pressed {
+    transition: all 800ms ease;
+    box-shadow: -1px 1px 59px -10px rgba(164,251,166,0.64);
+-webkit-box-shadow: -1px 1px 59px -10px rgba(164,251,166,0.64);
+-moz-box-shadow: -1px 1px 59px -10px rgba(164,251,166,0.64);
+}
+
 .type {
-    background: var(--primary-dashboard);
+    background: var(--bg);
     width: max-content;
     padding: .5rem;
     margin-bottom: 1rem;
@@ -58,7 +74,7 @@
 
 .exercise {
     background: var(--primary-dashboard);
-    padding: 2rem;
+    padding: 1rem .5rem;
     border-radius: 1rem;
 }
 
@@ -72,4 +88,26 @@
     border-radius: 1rem;
     text-transform: capitalize;
     color: var(--primary-variant);
+}
+
+
+.personal-plan .tabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.tabs-content {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    left: 0;
+    top: 6rem;
+    z-index: 2;
+    display: none;
+    background: var(--primary-box);
+    border-radius: 1rem;
+    padding: 1rem;
 }

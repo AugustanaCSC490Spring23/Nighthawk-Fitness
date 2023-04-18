@@ -4,56 +4,69 @@ import './personalizedplan.css'
 export default function PersonalizedPlan({userData}) {
   
   const schedule  =  userData.plan.schedule;  
-
+  const [activeTab, setActiveTab] = useState(0);
+  const [activeType, setActiveType] = useState(0);
   function openTab(index) {
-    document.getElementById(index).classList.toggle('active-day')
+    // document.getElementById(index).classList.toggle('active-day')
+    setActiveTab(index);
     
   }
+
+  function openType(index) {
+    setActiveType(index)
+  }
   
-  // console.log(plan);
+
   return (
     <div className="container">
       <div className='personal-plan'>
-        <h2>{userData.plan.name}</h2>
+        <div className="personal-plan-title">
+          <h2>{userData.plan.name}</h2>
+          <h3>Duration</h3>
+        </div>
+        
+        <div className="tabs">
         {
           schedule.map((item, index) => (
           <div>
             {typeof item === 'object'  ? 
-            <div className='workout-day' id={index}>
-              <h3 className='week-day' onClick={() => openTab(index)}>Day {item.session.day}</h3>
+            <div className={activeTab === index ? 'workout-day pressed' : 'workout-day'} onClick={() => openTab(index)}>
+              <h3 className='week-day'>Day {item.session.day}</h3>
+              <div className={activeTab === index ? 'tabs-content active-day' : 'tabs-content'} id={index}>
+                <h4 className='type' onClick={() => openType(index+10)}>warm up ({item.session.day})</h4>
+                <ul className={activeType === index+10 ? 'type-item active-type-item' : 'type-item'} id={index+10}>
 
-              <h4 className='type' onClick={() => openTab(index+10)}>warm up ({item.session.warm_up.length})</h4>
-              <ul className='type-item' id={index+10}>
+                  
+                  {
+                    item.session.warm_up.map((w) => (
+                      <li className='exercise'>{w.name}</li>
+                    ))
+                  }
+                </ul>
 
-                
-                {
-                  item.session.warm_up.map((w) => (
-                    <li className='exercise'>{w}</li>
-                  ))
-                }
-              </ul>
+                <h4 className='type' onClick={() => openType(index+20)}>main workout</h4>  
+                <ul className={activeType === index+20 ? 'type-item active-type-item' : 'type-item'} id={index+20}>
+                  
+                  
+                  {
+                    item.session.main_workout.map((w) => (
+                      <li className='exercise'>{w.name}</li>
+                    ))
+                  }
+                </ul>
 
-              <h4 className='type' onClick={() => openTab(index+20)}>main workout({item.session.main_workout.length})</h4>  
-              <ul className='type-item' id={index+20}>
-                
-                
-                {
-                  item.session.main_workout.map((w) => (
-                    <li className='exercise'>{w}</li>
-                  ))
-                }
-              </ul>
+                <h4 className='type' onClick={() => openType(index+30)}>cool down  </h4>  
+                <ul className={activeType === index+30 ? 'type-item last active-type-item' : 'type-item last'} id={index+30}>
 
-              <h4 className='type' onClick={() => openTab(index+30)}>cool down ({item.session.cool_down.length})</h4>  
-              <ul className='type-item last' id={index+30}>
-
-                
-                {
-                  item.session.cool_down.map((w) => (
-                    <li className='exercise'>{w}</li>
-                  ))
-                }
-              </ul>
+                  
+                  {
+                    item.session.cool_down.map((w) => (
+                      <li className='exercise'>{w.name}</li> 
+                    ))
+                  }
+                </ul>
+              </div>
+              
             </div>
             :
             <h3 className='rest'>{item}</h3> 
@@ -62,6 +75,7 @@ export default function PersonalizedPlan({userData}) {
           </div>
           ))
         }
+        </div>  
       </div>
     </div>
     

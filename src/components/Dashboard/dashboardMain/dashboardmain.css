@@ -2,7 +2,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    width: 1500px;
+    width: 90%;
+    max-width: 1500px;
     height: max-content;
     color: var(--primary-text);
     gap: 2rem;
@@ -18,7 +19,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-  
+    width: 100%;
 }
 
 
@@ -46,8 +47,8 @@
 
 .dashboard-main-second {
     display: grid;
-    grid-template-columns: 1fr max-content;
-    height: max-content;
+    grid-template-columns: 1fr 1fr max-content;
+    height: 100%;
     gap: 2rem;
 }
 
@@ -57,54 +58,100 @@
     align-items: center;
 }
 
-@media screen and (max-width: 1900px) {
+.graph {
+    width: 100%;
+}
 
-    .bmi-cal,
-    .calories-req {
-        grid-row-start: 2;
+@media screen and (max-width: 1900px) {
+    .dashboard-main-container {
+        width: 1400px;
     }
 
 
+}
+
+
+@media screen and (max-width: 1650px) {
+    
+
     .dashboard-main-container {
-        width: 1000px;
+        width: 900px;
     }
 
     .dashboard-main-first {
+        
         grid-template-columns: 1fr;
-        gap: 0;
     }
 
     .dashboard-main-second {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
-}
 
+    .weight-history {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none !important;
+    }
+
+    .history-item {
+        padding: 1rem 1rem !important;
+    }
+
+
+    
+}
 
 @media screen and (max-width: 1350px) {
     .dashboard-main-container {
         width: 700px;
-        height: max-content;
-    }
-
-    .dashboard-main-first {
-        gap: 2rem;
-    }
-
-    .dashboard-main-second {
-        grid-template-columns: 1fr;
     }
 
     .bmi-calories {
         grid-template-columns: 1fr;
     }
 
-    .bmi-cal {
-        grid-row-start: 1;
+    .graph {
+        width: 95%;
     }
+
+    .line {
+        height: 100% !important;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
     .dashboard-main-container {
         width: 70vw;
     }
+
+    .weight-history {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none !important;
+    }
+
+    .history-item {
+        padding: 1rem 3rem !important;
+    }
+}
+
+.current-plan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.current-title {
+    margin-bottom: 2rem;
+}
+
+.current-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-box);
+    padding: .5rem;
+    border-radius: 1rem;
 }
