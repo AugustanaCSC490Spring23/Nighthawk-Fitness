@@ -71,11 +71,15 @@ localStorage.setItem('links', JSON.stringify(myBlogs));
     const setObject = (workoutObj) => {
         const arrayOfWorkouts1 = [...arrayOfWorkouts, workoutObj]
         setArray(arrayOfWorkouts1)
-        console.log(arrayOfWorkouts)
-        console.log(arrayOfWorkouts1)
         return arrayOfWorkouts1
     }
 
+            {/*TODO: Currently local storage and firestore do not
+    have their data in sync. To fix, update localstorage
+based on a query to firestore to get the allWorkouts
+        Local storage and appending to a list contained locally
+    Local storage not updating/giving old entries*/}
+    
     const handleForm = async (event)=>{
         event.preventDefault()
         const workoutObj = {
@@ -85,30 +89,21 @@ localStorage.setItem('links', JSON.stringify(myBlogs));
             reps: workoutInfo.workoutLogInfo.reps
         }
         const currentDoc = doc(db, 'users', userData.docID)
-
-        {/*TODO: Currently local storage and firestore do not
-    have their data in sync. To fix, update localstorage
-based on a query to firestore to get the allWorkouts
-
-        Local storage and appending to a list contained locally
-    
-    Local storage not updating/giving old entries*/}
-
+        setObject(workoutObj)
         try{
+           const updatedWorkouts = [...userData.allWorkouts, arrayOfWorkouts]
            await updateDoc(currentDoc, {
-            allWorkouts: arrayUnion(workoutObj),
-            filled:true
-            }).then(docRef => {
-                const localWorkoutObj = setObject(workoutObj)
+                allWorkouts: updatedWorkouts,
+                filled:true
+            })
                 const allData = {
                     ...userData,
                     filled:true,
-                    arrayOfWorkouts: [...arrayOfWorkouts, workoutObj]
+                    allWorkouts: updatedWorkouts
                 }
                 setUserData(allData)
                 localStorage.setItem('userData', JSON.stringify(allData))
-            })
-        }
+            }
         catch (e) {
             console.error("Error adding document: ", e)
         }

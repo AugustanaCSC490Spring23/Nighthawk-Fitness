@@ -10,7 +10,7 @@ export default function ParseWorkout({userData}){
         <div>
             
             
-            <h2>{userData.arrayOfWorkouts?.map((workout, i) => (
+            <h2>{userData.allWorkouts?.map((workout, i) => (
             <div key={i}>
                 <h1>Workout:</h1>
                 <h1>{workout.name}</h1>
