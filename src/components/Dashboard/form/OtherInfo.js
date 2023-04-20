@@ -1,7 +1,7 @@
 import React from "react";
 
 function OtherInfo({ formData, setFormData }) {
-
+  
   return (
     <div className="other-info-container">
       <h4>You can choose up to 2 goals that match
@@ -10,49 +10,37 @@ function OtherInfo({ formData, setFormData }) {
       <label>
         <input value={formData.goal.weight_goal}
         onChange={(e) =>{
-          setFormData({...formData, goal: {
-            ...formData.goal,
-            weight_goal: 'Lose'
-          }})
+          setFormData({...formData, goal: 'weight_loss'})
         }}
-        name="weight-goal" type="radio" />
+        name="goal" type="radio" />
         <span>Lose Weight</span> 
       </label>
       
       <label>
         <input value={formData.goal.weight_goal}
         onChange={(e) =>{
-          setFormData({...formData, goal: {
-            ...formData.goal,
-            weight_goal: 'Maintain'
-          }})
+          setFormData({...formData, goal: 'muscle_gain'})
         }}
-        name="weight-goal" type="radio" />
-        <span>Maintain Weight</span> 
+        name="goal" type="radio" />
+        <span>Gain Muscle</span> 
       </label>
 
       <label>
         <input value={formData.goal.weight_goal}
         onChange={(e) =>{
-          setFormData({...formData, goal: {
-            ...formData.goal,
-            weight_goal: 'Gain'
-          }})
+          setFormData({...formData, goal: 'strength'})
         }}
-        name="weight-goal" type="radio" />
-        <span>Gain Weight</span> 
+        name="goal" type="radio" />
+        <span>Strength</span> 
       </label>
 
       <label>
         <input value={formData.goal.muscle_goal}
         onChange={(e) =>{
-          setFormData({...formData, goal: {
-            ...formData.goal,
-            muscle_goal: 'Muscle'
-          }})
+          setFormData({...formData, goal: 'overall_fitness'})
         }}
-        name="muscle-goal" type="radio" />
-        <span>Gain Muscle</span> 
+        name="goal" type="radio" />
+        <span>Overall Fitness</span> 
       </label>
     </div>
   );

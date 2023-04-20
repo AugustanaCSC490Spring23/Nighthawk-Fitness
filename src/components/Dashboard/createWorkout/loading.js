@@ -13,7 +13,7 @@ export default function Loading() {
       return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    const [planner, setPlanner] = useState({})
+
     const navigate = useNavigate();
 
     function addPlan(plan) {
@@ -43,10 +43,30 @@ export default function Loading() {
     useEffect(() => {
       if (!userData.plan) {
         if (userData.personal_preference.experience_level === 'intermediate') {
-          if (userData.personal_preference.workout_time === '2-3') {
+          if (userData.information.goal === 'muscle_gain') {
+            if (userData.personal_preference.workout_time === '2-3') {
               addPlan(intermediate.muscle_gain.two_three.workout)
+            }else {
+              addPlan(intermediate.muscle_gain.four_six.workout)
+            }
+          }else if (userData.information.goal === 'strength') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(intermediate.strength.two_three.workout)
+            }else {
+              addPlan(intermediate.strength.four_six.workout)
+            }
+          }else if (userData.information.goal === 'overall_fitness') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(intermediate.overall_fitness.two_three.workout)
+            }else {
+              addPlan(intermediate.overall_fitness.four_six.workout)
+            }
           }else {
-
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(intermediate.weight_loss.two_three.workout)
+            }else {
+              addPlan(intermediate.weight_loss.four_six.workout)
+            }
           }
         }
       }

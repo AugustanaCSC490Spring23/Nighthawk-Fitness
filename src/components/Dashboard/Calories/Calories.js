@@ -6,7 +6,7 @@ export default function Calories({userData}) {
   return (
     <div>
         <div className="calories">
-            <h3>Daily Calories</h3>
+            {/* <h3>Daily Calories</h3> */}
             {!userData.isFilled ? <RequestForm /> : <DailyCal userData={userData}/>}
             
             

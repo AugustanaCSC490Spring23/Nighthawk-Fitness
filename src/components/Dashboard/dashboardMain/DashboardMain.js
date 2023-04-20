@@ -47,7 +47,7 @@ function DashboardMain(){
                                 <BmiCal/>
                                 
                             </div>
-                            <div className="calories-req tabs">
+                            <div className="calories-req ">
                                 <Calories userData={userData} />
                             </div>
                         </div>
@@ -66,7 +66,7 @@ function DashboardMain(){
                                 <h4>{userData.plan.name}</h4>
                                 <small>Duration: 4 weeks</small>
                                 <ThemeProvider theme={theme}>
-                                    <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value='90'/>
+                                    <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={90}/>
                                 </ThemeProvider>
                             </div>
                             }

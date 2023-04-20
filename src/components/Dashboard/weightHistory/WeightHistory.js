@@ -23,7 +23,7 @@ export default function WeightHistory({userData}) {
                 <small>4/01/2023</small>
             </div>
             <div className="history-content">
-                <h3>{!userData.information ? 'No History': userData.information.weight[userData.information.weight.length - 1].w}</h3>
+                <h3>{!userData.information ? 'No History': userData.information.weight[userData.information.weight.length - 2].w}</h3>
                 <h4>Previous Weight</h4>
             </div>
         </div>

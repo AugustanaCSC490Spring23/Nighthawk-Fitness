@@ -21,7 +21,7 @@
     margin: 0;
     top: 0;
     transition: var(--transition);
-    position: relative;
+    position: sticky;
     overflow: hidden;
   }
 
@@ -106,6 +106,7 @@
     border-radius: 0px 74px 74px 0px;
   -webkit-border-radius: 0px 74px 74px 0px;
   -moz-border-radius: 0px 74px 74px 0px;
+    
   }
 
   .log-out-btn {

@@ -35,10 +35,7 @@ function Form({onSubmit}) {
       inch: ''
     },
     gender: '',
-    goal: {
-      weight_goal: '',
-      muscle_goal: ''
-    },
+    goal: '',
     activity_level:''
     
   });

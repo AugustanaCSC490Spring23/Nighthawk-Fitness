@@ -1,8 +1,7 @@
-.calories {
-    text-align: center;
-    padding: 2rem 1rem;
+/* .calories {
+    height: 420px;
     width: 100%;
-}
+} */
 
 .maintain,
 .lose,
@@ -16,17 +15,16 @@
     margin-top: 1rem;
 }
 
-.calories_content {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
 .calories_content h4 {
     background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-weight: 900;
+}
+
+.calories_content h5 {
+    font-weight: 300;
 }
 
 .request_form {
@@ -49,4 +47,25 @@
 .lock-icon {
     font-size: 3rem;
     color: var(--primary-variant);
+}
+
+.dailyCal-card {
+    height: 427px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.dailyCal-item.cal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.calories_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }

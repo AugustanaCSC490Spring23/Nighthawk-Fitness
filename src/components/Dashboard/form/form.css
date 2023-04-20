@@ -187,17 +187,36 @@
 
   .other-info-container label input {
     width: max-content;
-    visibility: hidden;
+    display: none;
+  }
+
+  .other-info-container label {
+    width: 100%;
   }
   
   .other-info-container label span {
     transition: var(--transition);
+    margin-left: 0;
+    color: var(--primary-text);
+    display: block;
+    padding: 1rem 0;
+    border: 1px solid var(--primary-text);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .other-info-container label:hover span {
+    border-color: var(--primary-variant);
+    /* color: var(--primary-variant); */
   }
 
   input:checked+span {
-    color: var(--primary-variant);
-    font-size: 17px;
+    background: var(--primary-variant);
+    border-color: transparent;
+    color: var(--bg);
   }
+
+  /* 
   .other-info-container label {
     cursor: pointer;
     color: var(--primary-text);
@@ -214,10 +233,7 @@
     transition: var(--transition);
   }
 
-  .other-info-container label:hover {
-    border-color: var(--primary-variant);
-    color: var(--primary-variant);
-  }
+   */
   
 
   .other-info-container .info-container .info {
