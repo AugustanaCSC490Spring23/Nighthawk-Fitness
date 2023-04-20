@@ -25,7 +25,6 @@ function WorkoutLog() {
           <MdAddCircle/>
         </IconButton>
         {added && <NewWorkout/>}
-        {userData.filled && <ParseWorkout userData={userData}/>}
       </div>
       </div>
       </div>

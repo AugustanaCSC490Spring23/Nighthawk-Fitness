@@ -5,12 +5,15 @@ import "react-datepicker/dist/react-datepicker.css";
 import { db } from "../../../../Firebase/firebase";
 import { setDoc, addDoc, collection } from "../../../../Firebase/firebase";
 import { async } from "@firebase/util";
-import { doc, updateDoc } from "firebase/firestore";
+import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 import ParseWorkout from "./parseWorkout";
 //import { useForm } from 'react-hook-form'
 
 const NewWorkout = () => {
+
+    const myBlogs = ["https://catalins.tech", "https://exampleblog.com"];
+localStorage.setItem('links', JSON.stringify(myBlogs));
 
     const [userData, setUserData] = useState(() => {
         const savedUserData = localStorage.getItem('userData');
@@ -70,6 +73,7 @@ const NewWorkout = () => {
         setArray(arrayOfWorkouts1)
         console.log(arrayOfWorkouts)
         console.log(arrayOfWorkouts1)
+        return arrayOfWorkouts1
     }
 
     const handleForm = async (event)=>{
@@ -80,22 +84,28 @@ const NewWorkout = () => {
             weight: workoutInfo.workoutLogInfo.weight,
             reps: workoutInfo.workoutLogInfo.reps
         }
-
-        console.log(workoutObj)
-        setObject(workoutObj)
-
         const currentDoc = doc(db, 'users', userData.docID)
+
+        {/*TODO: Currently local storage and firestore do not
+    have their data in sync. To fix, update localstorage
+based on a query to firestore to get the allWorkouts
+
+        Local storage and appending to a list contained locally
+    
+    Local storage not updating/giving old entries*/}
+
         try{
            await updateDoc(currentDoc, {
-            filled:true,
-            ...arrayOfWorkouts
+            allWorkouts: arrayUnion(workoutObj),
+            filled:true
             }).then(docRef => {
-                setUserData({...workoutInfo, filled:true})
+                const localWorkoutObj = setObject(workoutObj)
                 const allData = {
                     ...userData,
-                    ...arrayOfWorkouts,
-                    filled:true
+                    filled:true,
+                    arrayOfWorkouts: [...arrayOfWorkouts, workoutObj]
                 }
+                setUserData(allData)
                 localStorage.setItem('userData', JSON.stringify(allData))
             })
         }
@@ -154,10 +164,6 @@ const NewWorkout = () => {
         reps: ""}})
 }*/}
 
-    const handleSubmit = (event) =>{
-        event.preventDefault()
-    }
-
     const [startDate, setStartDate] = useState(new Date());
 
     return <>
@@ -200,6 +206,7 @@ const NewWorkout = () => {
         <button onClick={handleForm}>Create workout!</button>
     </form>
     </div>
+    {userData.filled && <ParseWorkout userData={userData}/>}
     {/*workout.map((workout1) => workout1)*/}
     </>
 }
