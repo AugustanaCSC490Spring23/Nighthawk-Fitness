@@ -65,7 +65,6 @@ localStorage.setItem('links', JSON.stringify(myBlogs));
              workoutLogInfo: 
              {...workoutInfo.workoutLogInfo,
                  workoutDate:startDate}})
-        console.log(startDate)
     }
 
     const setObject = (workoutObj) => {
@@ -91,7 +90,7 @@ based on a query to firestore to get the allWorkouts
         const currentDoc = doc(db, 'users', userData.docID)
         setObject(workoutObj)
         try{
-           const updatedWorkouts = [...userData.allWorkouts, arrayOfWorkouts]
+           const updatedWorkouts = [...userData.allWorkouts, workoutObj]
            await updateDoc(currentDoc, {
                 allWorkouts: updatedWorkouts,
                 filled:true

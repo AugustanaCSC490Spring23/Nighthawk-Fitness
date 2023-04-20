@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -8,6 +8,11 @@ import { Link } from 'react-router-dom';
 import './workout.css'
 
 export default function Workout() {
+
+    const [userData, setUserData] = useState(() => {
+        const savedUserData = localStorage.getItem('userData');
+        return savedUserData ? JSON.parse(savedUserData) : null
+    });
 
     // const [muscle, setMuscle] = useState('')
     // const [diff, setDiff] = useState('')
@@ -32,7 +37,24 @@ export default function Workout() {
     // }
 
     // console.log(workout);
-
+    
+    useEffect(() => {
+        if (userData.allWorkouts != null){
+            const allData = {
+                ...userData,
+                allWorkouts: [...userData.allWorkouts]    
+            }
+            setUserData(allData)
+            localStorage.setItem('userData', JSON.stringify(allData))
+        } else {
+            const allData = {
+                ...userData,
+                allWorkouts: []
+            }
+            setUserData(allData)
+            localStorage.setItem('userData', JSON.stringify(allData))
+        }
+    }, [])
 
     return (
         <div className='container'>
