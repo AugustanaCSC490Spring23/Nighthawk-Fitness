@@ -20,24 +20,15 @@ function WorkoutLog() {
       <div className='workoutLog-Greeting'>
       <div className="notebook"></div><h1 id="welcome">Welcome to your workout log</h1>
       <div className='month'>
+      </div>
+      </div>
       <IconButton id="add-btn" aria-label="Log a workout" 
         onClick={()=>addWorkout(!added)}>
           <MdAddCircle/>
         </IconButton>
         {added && <NewWorkout/>}
       </div>
-      </div>
-      </div>
-    <div className="add-btns">
-        
-    </div>
-        <div className='log-container'>
-        <IconButton id="add-btn" aria-label="Log a workout" 
-        onClick={()=>addWorkout(!added)}>
-          <MdAddCircle/>
-        </IconButton>
-        {added && <WorkoutMonth />}
-        </div>
+      {userData.filled && <ParseWorkout userData={userData}/>}
         </div>
         </>
     )

@@ -112,56 +112,13 @@ based on a query to firestore to get the allWorkouts
             workoutName: "",
             weight: "",
             reps: ""}})
+            
     }
-
-{/* const handleForm = async (event)=>{
-    event.preventDefault()
-    const workout = new Workouts(workoutInfo.workoutLogInfo.workoutDate, 
-        workoutInfo.workoutLogInfo.workoutName,
-        workoutInfo.workoutLogInfo.weight,
-        workoutInfo.workoutLogInfo.reps)
-    console.log(workout.toString())
-    setWorkoutInfo({...workoutInfo,
-        workoutLogInfo:
-        {...workoutInfo.workoutLogInfo,
-            workoutArray:workout}})
-    const currentDoc = doc(db, 'users', userData.docID)
-    try{
-       await updateDoc(currentDoc, {
-        filled:true,
-            ...workoutInfo 
-        }).then(docRef => {
-            setUserData({...workoutInfo, filled:true})
-            const allData = {
-                ...userData,
-                ...workoutInfo,
-                filled:true
-            }
-            localStorage.setItem('userData', JSON.stringify(allData))
-            const savedWorkout = <ParseWorkout key={workout.length} userData={userData}/>
-            saveYourWorkouts()
-        })
-        console.log("Success")
-    }
-    catch (e) {
-        console.error("Error adding document: ", e)
-    }
-    
-    console.log("info added")
-    console.log(workoutInfo)
-    
-    setWorkoutInfo({
-        workoutLogInfo: {
-        workoutDate: "",
-        workoutName: "",
-        weight: "",
-        reps: ""}})
-}*/}
 
     const [startDate, setStartDate] = useState(new Date());
 
     return <>
-    <h1>Add a new Workout</h1>
+    <h1 id="add-text">Add a new Workout</h1>
     <div className="formWorkout">
     <form id="workoutForm" onSubmit={handleForm}>
     <label>Workout Date</label>
@@ -171,8 +128,9 @@ based on a query to firestore to get the allWorkouts
      value={workoutInfo.workoutLogInfo.workoutDate}
      dateFormat="yyyy/MM/dd" />
      <button onClick={handleDate}>Sumbit Date</button>
-        <label>Workout</label>
-        <input 
+        <label class="label1">Workout</label>
+        <input
+            id="input1" 
             type="text" 
             name="workoutName"
             value={workoutInfo.workoutLogInfo.workoutName}
@@ -189,7 +147,7 @@ based on a query to firestore to get the allWorkouts
             placeholder="220"
             required>
         </input>
-        <label>How many Rep</label>
+        <label>How many Reps</label>
         <input type="number" 
             name="reps"
             value={workoutInfo.workoutLogInfo.reps}
@@ -200,8 +158,6 @@ based on a query to firestore to get the allWorkouts
         <button onClick={handleForm}>Create workout!</button>
     </form>
     </div>
-    {userData.filled && <ParseWorkout userData={userData}/>}
-    {/*workout.map((workout1) => workout1)*/}
     </>
 }
 

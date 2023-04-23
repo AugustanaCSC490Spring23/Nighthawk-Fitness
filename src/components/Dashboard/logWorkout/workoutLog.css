@@ -1,41 +1,18 @@
 .log-container{
     display:flex;
-    flex-direction:column;
 }
 
 .workoutLog-Greeting{
-    display:grid;
-    grid-template-columns:repeat(10, 1fr);
-    grid-template-rows:repeat(10, 10%);
-    grid-column-gap: 3px;
+    display: flex;
     padding: 2rem;
     padding-top:3rem;
     justify-content: center;
-    margin: 2rem;
+    margin: 1rem;
     justify-content: space-evenly;
     align-items: center;
-    gap: 1rem;
-}
-
-.month{
-    grid-row-start: 3;
-    grid-column: 4;
-}
-
-.notebook{
-    outline: 1px solid #a4fba6;
-    height:40rem;
-    width: 2.5rem;
-    border-radius:8% 90% 3% 90%;
-    grid-column-start: 3;
-    grid-row-start: 5;
 }
 
 #welcome{
-    grid-column-start: 4;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 3;
     animation: fadeIn 5s; 
     color:#a4fba6;
     outline: 1px solid #a4fba6;
@@ -50,7 +27,7 @@
   }
 
 #add-btn{
-    color: #CBFD03;
+    color: var(--primary-variant);
 }
 
 #add-btn:hover {
@@ -67,10 +44,3 @@ button{
     flex: 0 1 auto;
 }
 
-#workoutForm label {
-    color: var(--primary-text);
-}
-
-#workoutForm input {
-    color: var(--primary-text);
-}

@@ -1,3 +1,18 @@
 h1{
     color:aliceblue
 }
+
+h4{
+    padding:1rem
+}
+
+.coolWorkoutThing{
+    color:#a4fba6;
+    background: #6161616d;
+    padding: 2rem;
+    margin: 2rem;
+    font-size: large;
+    justify-content: center;
+    border-radius:4rem;
+    width:fit-content
+}

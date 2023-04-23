@@ -1,3 +1,40 @@
 h1{
     color:white
 }
+
+input{
+    color: var(--primary-variant);
+    padding:2rem;
+}
+
+
+textarea{
+    color:white
+}
+
+#workoutForm{
+    color: var(--primary-variant);
+}
+
+.formWorkout{
+    padding: 2rem;
+    margin:2rem;
+    background-color: #6161616d;
+    border-radius:4rem;
+    
+}
+
+#add-text{
+    background-color: #6161616d;
+    width:25rem;
+    padding:1rem;
+    margin-top: 1rem;
+    margin: auto;
+    border-radius:4rem;
+    color: var(--primary-variant);
+}
+
+#add-text:hover{
+    box-shadow: 0px 0px 86px -15px #a4fba6;
+}
+
