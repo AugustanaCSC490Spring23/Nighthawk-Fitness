@@ -8,13 +8,13 @@ import { async } from "@firebase/util";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 import WorkoutLog from "../../workoutLog";
+import StyledWorkout from "./styledWorkout";
+import {MdAddCircle} from 'react-icons/md'
+import { Button, Icon, IconButton } from '@mui/material';
 //import { useForm } from 'react-hook-form'
 
-const NewWorkout = ({returner, userData, setUserData}) => {
-   
-    const myBlogs = ["https://catalins.tech", "https://exampleblog.com"];
-localStorage.setItem('links', JSON.stringify(myBlogs));
-    
+const NewWorkout = ({returner, setUserData, userData}) => {
+
     const[workoutInfo, setWorkoutInfo] = useState({
         workoutLogInfo: {
             workoutDate: "",
@@ -83,14 +83,13 @@ based on a query to firestore to get the allWorkouts
             workoutName: "",
             weight: "",
             reps: ""}})
-            returner(userData)
             
+         
     }
     
     const [startDate, setStartDate] = useState(new Date());
 
-    return <>
-    
+    return <> 
     <h1 id="add-text">Add a new Workout</h1>
     <div className="formWorkout">
     <form id="workoutForm" onSubmit={handleForm}>
@@ -131,10 +130,9 @@ based on a query to firestore to get the allWorkouts
         <button onClick={handleForm}>Create workout!</button>
     </form>
     </div>
+    <div className="workoutObj">
+       </div>
     
     </>
 }
-
-
-
 export default NewWorkout

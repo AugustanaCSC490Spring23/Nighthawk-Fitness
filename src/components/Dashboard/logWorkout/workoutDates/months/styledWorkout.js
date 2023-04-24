@@ -1,11 +1,13 @@
 import "./styledWorkout.css"
-import { useEffect, useState } from "react"
-const StyledWorkout = ({date, name, reps, weight, setData}) => {
+const StyledWorkout = ({date, name, reps, weight}) => {
 
     function slicer(nameToSlice){
-        return nameToSlice.slice(0, 10)
+        var name1 = JSON.stringify(nameToSlice)
+        name1.slice(0, 10)
+        console.log("Name", name1)
+        return name1
     }
- 
+
     return (
         <div className="coolWorkoutThing">
                 <h4>Date:</h4>
@@ -16,7 +18,6 @@ const StyledWorkout = ({date, name, reps, weight, setData}) => {
                 <h5>{reps}</h5>
                 <h4>Weight:</h4>
                 <h5>{weight}</h5>
-           
             </div>
     )
 }
