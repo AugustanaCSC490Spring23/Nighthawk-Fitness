@@ -1,10 +1,10 @@
 import {MdAddCircle} from 'react-icons/md'
 import { Button, Icon, IconButton } from '@mui/material';
 import NewWorkout from './workoutDates/months/newWorkout';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext, createContext } from "react";
 import './workoutLog.css'
-import WorkoutMonth from './workoutDates/months/workoutMonth';
-import ParseWorkout from './workoutDates/months/parseWorkout';
+import StyledWorkout from './workoutDates/months/styledWorkout';
+
 // import WorkoutMonth from './logCalendar/workoutMonth';
 // import WorkoutWeek from "./logCalendar/workoutWeek"
 function WorkoutLog() {
@@ -12,9 +12,15 @@ function WorkoutLog() {
     const savedUserData = localStorage.getItem('userData');
     return savedUserData ? JSON.parse(savedUserData) : null
 });
+
+const returner = (data) => {
+  console.log("Changed")
+  setUserData(data)
+}
+
   const [added, addWorkout] = useState(false)
-  
-    return( <>
+
+    return( 
     <div className='workoutLog-ctn'>
     <div className='containerGreeting'>
       <div className='workoutLog-Greeting'>
@@ -26,11 +32,26 @@ function WorkoutLog() {
         onClick={()=>addWorkout(!added)}>
           <MdAddCircle/>
         </IconButton>
-        {added && <NewWorkout/>}
+        {added && <NewWorkout returner={returner}
+        userData={userData}
+        setUserData={setUserData}/>}
       </div>
-      {userData.filled && <ParseWorkout userData={userData}/>}
+      <div className="workoutObj">
+           
+           <>{userData.allWorkouts?.map((workout, index) => {
+               return(
+           <div key={index} className="coolWorkoutThing">
+               <StyledWorkout
+                   date={workout.date}
+                   name={workout.name}
+                   reps={workout.reps}
+                   weight={workout.weight}/>
+           </div>
+           
+               );})}
+           </>
+       </div>
         </div>
-        </>
     )
 }
 

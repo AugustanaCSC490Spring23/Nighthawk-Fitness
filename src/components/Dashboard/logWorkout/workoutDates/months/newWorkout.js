@@ -1,5 +1,5 @@
 import "./newWorkout.css"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { db } from "../../../../Firebase/firebase";
@@ -7,47 +7,20 @@ import { setDoc, addDoc, collection } from "../../../../Firebase/firebase";
 import { async } from "@firebase/util";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
-import ParseWorkout from "./parseWorkout";
+import WorkoutLog from "../../workoutLog";
 //import { useForm } from 'react-hook-form'
 
-const NewWorkout = () => {
-
+const NewWorkout = ({returner, userData, setUserData}) => {
+   
     const myBlogs = ["https://catalins.tech", "https://exampleblog.com"];
 localStorage.setItem('links', JSON.stringify(myBlogs));
-
-    const [userData, setUserData] = useState(() => {
-        const savedUserData = localStorage.getItem('userData');
-        return savedUserData ? JSON.parse(savedUserData) : null
-    });
-
-    function saveYourWorkouts(){
-        console.log("Saving workout....") 
-    }
-
- {/*   class Workouts{
-        constructor(workoutDate,workoutName, weight,
-            reps){
-                this.workoutDate = workoutDate
-                this.workoutName = workoutName
-                this.weight = weight
-                this.reps = reps
-            }
-
-            toString(){
-                return 'Workout Date: ' + this.workoutDate +
-                ', Workout Name: ' + this.workoutName + 
-                ', weight: ' + this.weight +
-                ', reps: ' + this.reps
-            }
-    } */}
-    
     
     const[workoutInfo, setWorkoutInfo] = useState({
         workoutLogInfo: {
             workoutDate: "",
             workoutName: "",
             weight: "",
-            reps: ""}
+            reps: "",}
     })
 
     const [arrayOfWorkouts, setArray] = useState([])
@@ -55,9 +28,7 @@ localStorage.setItem('links', JSON.stringify(myBlogs));
     const handleChange = (event) =>{
         setWorkoutInfo({...workoutInfo, 
             workoutLogInfo: {...workoutInfo.workoutLogInfo, 
-            [event.target.name]: event.target.value}})
-
-            
+            [event.target.name]: event.target.value}}) 
     }
 
     const handleDate = e =>{
@@ -78,7 +49,7 @@ localStorage.setItem('links', JSON.stringify(myBlogs));
 based on a query to firestore to get the allWorkouts
         Local storage and appending to a list contained locally
     Local storage not updating/giving old entries*/}
-    
+
     const handleForm = async (event)=>{
         event.preventDefault()
         const workoutObj = {
@@ -112,8 +83,10 @@ based on a query to firestore to get the allWorkouts
             workoutName: "",
             weight: "",
             reps: ""}})
+            returner(userData)
+            
     }
-
+    
     const [startDate, setStartDate] = useState(new Date());
 
     return <>
@@ -158,6 +131,7 @@ based on a query to firestore to get the allWorkouts
         <button onClick={handleForm}>Create workout!</button>
     </form>
     </div>
+    
     </>
 }
 
