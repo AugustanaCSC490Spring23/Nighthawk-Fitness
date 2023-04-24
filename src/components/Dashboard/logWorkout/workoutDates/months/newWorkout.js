@@ -112,12 +112,12 @@ based on a query to firestore to get the allWorkouts
             workoutName: "",
             weight: "",
             reps: ""}})
-            
     }
 
     const [startDate, setStartDate] = useState(new Date());
 
     return <>
+    
     <h1 id="add-text">Add a new Workout</h1>
     <div className="formWorkout">
     <form id="workoutForm" onSubmit={handleForm}>
@@ -128,7 +128,7 @@ based on a query to firestore to get the allWorkouts
      value={workoutInfo.workoutLogInfo.workoutDate}
      dateFormat="yyyy/MM/dd" />
      <button onClick={handleDate}>Sumbit Date</button>
-        <label class="label1">Workout</label>
+        <label>Workout</label>
         <input
             id="input1" 
             type="text" 

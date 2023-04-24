@@ -1,25 +1,50 @@
 import { db } from "../../../../Firebase/firebase";
 import "./parseWorkout.css"
 import { collection, query, where, getDocs } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import StyledWorkout from "./styledWorkout";
+
 export default function ParseWorkout({userData}){
 
+    function slicer(nameToSlice){
+        return nameToSlice.slice(0, 10)
+    }
+
+    var counter = 0
+    const [indexer, setIndex] = useState(0)
+
+
+
+
+
+    const [render, reRender] = useState(true)
+
+    const [arrayToRender, reRenderArr] = useState([])
+
+    function addCount(){
+        counter = counter + 1
+        console.log("Function: ", counter)
+    }
+
+    useEffect(() => {
+        reRender(!render)
+        console.log(counter)
+    }, [])
+
     return (
-        <div>
-            
-            
-            <h2>{userData.allWorkouts?.map((workout, i) => (
-            <div key={i} className="coolWorkoutThing">
-                <h4>Date:</h4>
-                <h5>{workout.date}</h5>
-                <h4>Workout:</h4>
-                <h5>{workout.name}</h5>
-                <h4>Reps:</h4>
-                <h5>{workout.reps}</h5>
-                <h4>Weight:</h4>
-                <h5>{workout.weight}</h5>
+        <div className="workoutObj">
+            <>{userData.allWorkouts?.map((workout, index) => {
+                return(
+            <div key={index *2} className="coolWorkoutThing">
+                {console.log(index)}
+                <StyledWorkout
+                    date={workout.date}
+                    name={workout.name}
+                    reps={workout.reps}
+                    weight={workout.weight}/>
             </div>
-            ))}</h2>
- 
+                );})}
+            </>
         </div>
     )
 }

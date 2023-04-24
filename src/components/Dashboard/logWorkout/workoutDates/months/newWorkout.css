@@ -38,3 +38,6 @@ textarea{
     box-shadow: 0px 0px 86px -15px #a4fba6;
 }
 
+#workoutForm:hover{
+    box-shadow: 0px 0px 150px -15px #a4fba6;
+}
