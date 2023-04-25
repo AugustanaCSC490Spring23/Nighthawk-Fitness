@@ -15,6 +15,14 @@ function WorkoutLog() {
     return savedUserData ? JSON.parse(savedUserData) : null
 });
 
+ var date1 = ""
+
+ const [dateObj, setDateObj] = useState("")
+
+ function handleDate(){
+  date1 = ""
+ }
+
 
   const [added, addWorkout] = useState(false)
 
@@ -45,6 +53,8 @@ function WorkoutLog() {
                    name={workout.name}
                    reps={workout.reps}
                    weight={workout.weight}/>
+                   {date1 = workout.date}
+                   {handleDate()}
            </div>
                );})}
            </>

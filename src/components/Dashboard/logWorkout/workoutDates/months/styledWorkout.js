@@ -14,7 +14,9 @@ const StyledWorkout = ({date, name, reps, weight}) => {
 
     function checkDate(date1){
         if (workoutDate != date1){
+
         setDate(date1)
+  
         }
     }
 
