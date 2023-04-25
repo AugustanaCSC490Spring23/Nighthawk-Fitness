@@ -15,7 +15,7 @@ export default function NutritionCheck() {
     <div>
         {!userData.isFilled ? (<div className='container nutrition-check'>
             <RequestForm />
-        </div>) : <Nutrition userData={userData} />}
+        </div>) : <Nutrition />}
     </div>
   )
 }

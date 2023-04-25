@@ -3,10 +3,10 @@
     flex-direction: column;
     color: var(--primary-text);
     width: 900px;
-    height: 900px;
-    background: var(--primary-dashboard);
+    height: 120vh;
+    /* background: var(--primary-dashboard); */
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 3rem 1rem;
 }
 
 .personal-plan h2 {
@@ -14,6 +14,10 @@
     text-align: center;
     width: 100%;
     margin-bottom: 1rem;
+}
+
+.personal-plan h3 {
+    text-align: center;
 }
 
 /* .personal-plan-title {
@@ -70,12 +74,69 @@
     cursor: pointer;
     text-transform: capitalize;
     font-weight: 300;
+    transition: var(--transition);
+}
+
+.type:hover {
+    font-weight: 900;
 }
 
 .exercise {
     background: var(--primary-dashboard);
-    padding: 1rem .5rem;
+    padding: 1rem 1rem;
     border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.exercise:hover {
+    background: var(--primary-box);
+}
+
+.exercise-img {
+    width: 100px;
+    height: 120px;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exercise-img img {
+    transform: scale(1.2);
+}
+
+.exercise-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.exercise-instruction {
+    width: 50%;
+    line-height: 1.7;
+}
+
+.exercise-instruction span {
+    margin: 0;
+    margin-right: .2rem;
+    font-weight: 600;
+    border: 1px solid var(--primary-text);
+    color: var(--primary-text);
+    padding: .25rem .5rem;
+    border-radius: 1rem;
+    
+}
+
+
+.exercise-details  .rep-set {
+    color: var(--primary);
 }
 
 .last {
@@ -110,4 +171,10 @@
     background: var(--primary-box);
     border-radius: 1rem;
     padding: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .personal-plan  {
+        width: 90vw;
+    }
 }

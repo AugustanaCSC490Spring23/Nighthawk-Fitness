@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import './workout.css'
 
@@ -9,6 +9,24 @@ export default function Workout() {
         const savedUserData = localStorage.getItem('userData');
         return savedUserData ? JSON.parse(savedUserData) : null
     });
+
+    useEffect(() => {
+        if (userData.allWorkouts != null){
+            const allData = {
+                ...userData,
+                allWorkouts: [...userData.allWorkouts]    
+            }
+            setUserData(allData)
+            localStorage.setItem('userData', JSON.stringify(allData))
+        } else {
+            const allData = {
+                ...userData,
+                allWorkouts: []
+            }
+            setUserData(allData)
+            localStorage.setItem('userData', JSON.stringify(allData))
+        }
+    }, [])
     // const [muscle, setMuscle] = useState('')
     // const [diff, setDiff] = useState('')
     // const [type, setType] = useState('')
@@ -40,7 +58,7 @@ export default function Workout() {
             <div className="workout-card">
                 
                 <div className="workout-features">
-                    {userData.isCreated ? <h3>Let's keep working on your goal</h3>:<h3>Create a personalized workout plan tailored to your fitness goals and preferences.</h3>}
+                    {userData.isCreated ? <h3>We're on the right track to achieve your goal, let's stay focused.</h3>:<h3>Create a personalized workout plan tailored to your fitness goals and preferences.</h3>}
                     
                     {userData.isCreated ? <Link className='workout-link' to='workoutplan'>View Plan</Link>:<Link className='workout-link' to='workoutplan'>Create Plan</Link>}
                 </div>

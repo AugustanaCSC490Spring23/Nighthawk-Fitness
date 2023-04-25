@@ -13,7 +13,6 @@ import About from "./components/HomePage/about/About";
 import WorkoutLog from "./components/Dashboard/logWorkout/workoutLog";
 import MyBody from "./components/Dashboard/user/myBody/MyBody";
 import ProtectedRoutes from "./ProtectedRoute";
-import PersonalizedPlan from "./components/Dashboard/createWorkout/personalizedPlan/PersonalizedPlan";
 import Loading from "./components/Dashboard/createWorkout/loading";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'

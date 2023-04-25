@@ -4,11 +4,18 @@ import RequestForm from "../Calories/calories-content/requestForm";
 import Unit from "./Unit";
 import NutritionDisplay from "./nutritionDisplay/NutritionDisplay";
 import LogItem from "./LogItem";
+import { db } from '../../Firebase/firebase';
+import { updateDoc, doc, getDoc } from "firebase/firestore";
 
-function Nutrition({userData}) {
+function Nutrition() {
+  const [userData, setUserData] = useState(() => {
+    const savedUserData = localStorage.getItem('userData');
+    return savedUserData ? JSON.parse(savedUserData) : null
+  });
   const [protein, setProtein] = useState(0)
   const [carb, setCarb] = useState(0)
   const [fat, setFat] = useState(0)
+
   const [query, setQuery] = useState("");
 
   const [food, setFood] = useState('')
@@ -23,6 +30,7 @@ function Nutrition({userData}) {
   const [consumed, setConsumed] = useState(0);
 
   const [section, setSection] = useState('')
+
   const [bf, setBf]  = useState([])
   const [lunch, setLunch]  = useState([])
   const [dinner, setDinner]  = useState([])
@@ -96,6 +104,57 @@ function Nutrition({userData}) {
     
   },[qty, unit, selectedItem, setFood, setUnit, setQty])
 
+  useEffect(() => {
+    if (!userData.nutrition) {
+      const currentDoc = doc(db, 'users', userData.docID);
+      updateDoc(currentDoc, {
+        nutrition: {
+            cal: {
+              remaining: remain,
+              consuming: consumed
+            },
+            food_nutrition: {
+              p: protein,
+              c: carb,
+              f: fat
+            },
+            food_array: {
+              breakfast: bf,
+              lunch: lunch,
+              dinner: dinner,
+              snack: snack
+            }
+        }
+      })
+
+      const updateData = {
+        ...userData,
+        nutrition: {
+          cal: {
+            remaining: remain,
+            consuming: consumed
+          },
+          food_nutrition: {
+            p: protein,
+            c: carb,
+            f: fat
+          },
+          food_array: {
+            breakfast: bf,
+            lunch: lunch,
+            dinner: dinner,
+            snack: snack
+          }
+        }
+      };
+
+      setUserData(updateData);
+      localStorage.setItem('userData', JSON.stringify(updateData))
+    }
+  }, [userData])
+
+ 
+
   async function logItem() {
     try {
 
@@ -104,16 +163,21 @@ function Nutrition({userData}) {
       setQty('')
       
       await fetchNutrients(food).then((data) => {
+
         // console.log(data);
         setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
         setRemain(Math.round(remain - Math.round(data.foods[0].nf_calories)) * 100 / 100);
         setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
         setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
         setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
+
+
         if (section ===  'breakfast'){
           setBf(prev => {
             return [...prev, data.foods[0]]
           })
+          
+
 
         }else if (section === 'lunch') {
           setLunch(prev => {
@@ -155,6 +219,7 @@ function Nutrition({userData}) {
           return index !== id;
         })
       })
+
 
     }else if (sectionID === 'lunch') {
       setLunch(prev => {

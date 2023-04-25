@@ -68,6 +68,32 @@ export default function Loading() {
               addPlan(intermediate.weight_loss.four_six.workout)
             }
           }
+        }else if (userData.personal_preference.experience_level === 'beginner') {
+          if (userData.information.goal === 'muscle_gain') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(beginner.muscle_gain.two_three.workout)
+            }else {
+              addPlan(beginner.muscle_gain.four_six.workout)
+            }
+          }else if (userData.information.goal === 'strength') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(beginner.strength.two_three.workout)
+            }else {
+              addPlan(beginner.strength.four_six.workout)
+            }
+          }else if (userData.information.goal === 'overall_fitness') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(beginner.overall_fitness.two_three.workout)
+            }else {
+              addPlan(beginner.overall_fitness.four_six.workout)
+            }
+          }else {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(beginner.weight_loss.two_three.workout)
+            }else {
+              addPlan(beginner.weight_loss.four_six.workout)
+            }
+          }
         }
       }
     }, [userData])
