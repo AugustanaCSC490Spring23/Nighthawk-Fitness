@@ -39,7 +39,7 @@ function WorkoutLog() {
 
       <>{userData.allWorkouts.map((workout, index) => {
                return(
-           <div key={index} className="coolWorkoutThing">
+           <div key={index}>
                <StyledWorkout
                    date={workout.date}
                    name={workout.name}
