@@ -5,6 +5,7 @@ import { getDate, months } from './dates'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 
 export default function Attempt_calendar() {
+    // console.log(getDate());
     const days = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
     const currentDate = dayjs();
     const [today, setToday] = useState(currentDate);
@@ -44,7 +45,7 @@ export default function Attempt_calendar() {
             </div>
             
             <div className="schedule">
-                <div className="line"></div>
+                <div className="line line_mobile"></div>
                 <h1>{selectDate.toDate().toDateString()}</h1>
                 <p>No workout for today.</p>
             </div>

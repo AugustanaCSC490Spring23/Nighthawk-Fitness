@@ -1,9 +1,9 @@
 import React from 'react'
 import './Team.css'
-import Minh from './placeholder-image.png'
-import Ryan from './placeholder-image.png'
-import Donny from './placeholder-image.png'
-import Ezana from './placeholder-image.png'
+import Minh from './Minh.jpeg'
+import Ryan from './Ryan.jpeg'
+import Donny from './Donny.jpeg'
+import Ezana from './Ezana.jpeg'
 
 export default function Team() {
     return (
