@@ -1,0 +1,53 @@
+        <div className="coolWorkoutThing">
+            {checkDate(date.slice(0, 10))}
+                <h4>Date:</h4>
+                <h5>{slicer(date)}</h5>
+                <h4>Workout:</h4>
+                <h5>{name}</h5>
+                <h4>Reps:</h4>
+                <h5>{reps}</h5>
+                <h4>Weight:</h4>
+                <h5>{weight}</h5>
+            </div>
+
+            Workout Log:
+
+                           <StyledWorkout
+                   date={workout.date}
+                   name={workout.name}
+                   reps={workout.reps}
+                   weight={workout.weight}/>
+                   {date1 = workout.date}
+                   {handleDate()}
+           </div>
+
+           userData.allWorkouts : An Array of every wrkout object. 
+
+           1. Go through allWorkouts arrayOfWorkouts
+
+           2. Set condition: Log date of first workout entry
+
+           3. Contine to traverse the array until the workout date changes
+
+           4. Append all of the workouts with the same date to an array
+
+           5. Map through these workouts and put them into a "day" css container that will hold all workouts for that day
+
+           6. After looping through this array, clear it. Then, continue through the all workouts array. You stop every time the date changes
+           and then empty the array into a new day catagory that contains all of the workouts for that day
+
+    const [dateState, setDate] = useState()
+
+    const [arrDates, setArr] = useState([])
+
+    allWorkouts.map (workout) = >
+        if (workout.date == dateState){
+            setArr(...arrDates, workout.date)
+        } else{
+            arrDates.map{
+                (logic to put all these workouts into a day css container)}
+                setArr[workout.date]
+                setDate[workout.date]
+            }
+        }
+
