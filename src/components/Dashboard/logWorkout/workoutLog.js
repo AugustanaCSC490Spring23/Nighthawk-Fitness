@@ -15,17 +15,21 @@ function WorkoutLog() {
     return savedUserData ? JSON.parse(savedUserData) : null
 });
 
- var date1 = ""
+const [changeCheck, setChange] = useState("")
 
- const [dateObj, setDateObj] = useState("")
+const [arrayMap, setArray] = useState([])
 
- function handleDate(){
-  date1 = ""
- }
+useEffect(() =>{
+  setArray([])
+   userData.allWorkouts.map((workout, index) => {
+    setArray([...arrayMap, workout])})
+    console.log(arrayMap)
+}, [userData.allWorkouts.length])
 
+
+var workoutCheck = null
 
   const [added, addWorkout] = useState(false)
-
     return( 
     <div className='workoutLog-ctn'>
     <div className='containerGreeting'>
@@ -44,7 +48,6 @@ function WorkoutLog() {
         />}
       </div>
       <div className='workoutObj'>
-
       <>{userData.allWorkouts.map((workout, index) => {
                return(
            <div key={index}>
@@ -53,8 +56,6 @@ function WorkoutLog() {
                    name={workout.name}
                    reps={workout.reps}
                    weight={workout.weight}/>
-                   {date1 = workout.date}
-                   {handleDate()}
            </div>
                );})}
            </>

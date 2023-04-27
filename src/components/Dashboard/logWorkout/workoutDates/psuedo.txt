@@ -51,3 +51,5 @@
             }
         }
 
+
+    -State not saving in lower level - try to raise the state up to workoutLog instead of styledWorkout

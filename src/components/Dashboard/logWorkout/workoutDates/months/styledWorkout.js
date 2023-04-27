@@ -13,16 +13,16 @@ const StyledWorkout = ({date, name, reps, weight}) => {
     }
 
     function checkDate(date1){
-        if (workoutDate != date1){
-
-        setDate(date1)
-  
+        var name2 = JSON.stringify(date1)
+        name2 = name2.slice(1, 11)
+        if (workoutDate === name2){
+            setDate(date1)
         }
     }
 
     return (
         <div className="coolWorkoutThing">
-            {checkDate(date.slice(0, 10))}
+            {checkDate(date)}
                 <h4>Date:</h4>
                 <h5>{slicer(date)}</h5>
                 <h4>Workout:</h4>
