@@ -5,16 +5,13 @@ import Unit from "./Unit";
 import NutritionDisplay from "./nutritionDisplay/NutritionDisplay";
 import LogItem from "./LogItem";
 import { db } from '../../Firebase/firebase';
-import { updateDoc, doc, getDoc } from "firebase/firestore";
+import { updateDoc, doc } from "firebase/firestore";
 
 function Nutrition() {
   const [userData, setUserData] = useState(() => {
     const savedUserData = localStorage.getItem('userData');
     return savedUserData ? JSON.parse(savedUserData) : null
   });
-  const [protein, setProtein] = useState(0)
-  const [carb, setCarb] = useState(0)
-  const [fat, setFat] = useState(0)
 
   const [query, setQuery] = useState("");
 
@@ -26,15 +23,8 @@ function Nutrition() {
 
   const [selectedItem,  setSelectedItem] = useState(null)
 
-  const [remain, setRemain] = useState(Math.round(userData.dailyCal.maintain_cal * 100 / 100));
-  const [consumed, setConsumed] = useState(0);
-
   const [section, setSection] = useState('')
 
-  const [bf, setBf]  = useState([])
-  const [lunch, setLunch]  = useState([])
-  const [dinner, setDinner]  = useState([])
-  const [snack, setSnack]  = useState([])
 
   async function fetchResults(query) {
     const url = `https://trackapi.nutritionix.com/v2/search/instant?query=${query}`;
@@ -76,7 +66,6 @@ function Nutrition() {
     setSection(sectionID);
   }
 
-
   function handleInputChange(event) {
     setQuery(event.target.value);
     if (event.target.value) {
@@ -104,190 +93,183 @@ function Nutrition() {
     
   },[qty, unit, selectedItem, setFood, setUnit, setQty])
 
-  useEffect(() => {
-    if (!userData.nutrition) {
-      const currentDoc = doc(db, 'users', userData.docID);
-      updateDoc(currentDoc, {
-        nutrition: {
-            cal: {
-              remaining: remain,
-              consuming: consumed
-            },
-            food_nutrition: {
-              p: protein,
-              c: carb,
-              f: fat
-            },
-            food_array: {
-              breakfast: bf,
-              lunch: lunch,
-              dinner: dinner,
-              snack: snack
-            }
-        }
-      })
-
-      const updateData = {
-        ...userData,
-        nutrition: {
+  function updateNutrition(remainingCal, consumingCal, data, protein, carb, fat, sectionID) {
+    const currentDoc = doc(db, 'users', userData.docID);
+    updateDoc(currentDoc, {
+      nutrition: {
+          ...userData.nutrition,
+          food_array: {
+            ...userData.nutrition.food_array,
+            [sectionID]: [...userData.nutrition.food_array[sectionID], data]
+          },
           cal: {
-            remaining: remain,
-            consuming: consumed
+            remaining: remainingCal,
+            consuming: consumingCal
           },
           food_nutrition: {
             p: protein,
             c: carb,
             f: fat
-          },
-          food_array: {
-            breakfast: bf,
-            lunch: lunch,
-            dinner: dinner,
-            snack: snack
           }
+      }
+    })
+    
+    const updateData = {
+      ...userData,
+      nutrition: {
+        ...userData.nutrition,
+        food_array: {
+          ...userData.nutrition.food_array,
+          [sectionID]: [...userData.nutrition.food_array[sectionID], data]
+        },
+        cal: {
+          remaining: remainingCal,
+          consuming: consumingCal
+        },
+        food_nutrition: {
+          p: protein,
+          c: carb,
+          f: fat
         }
-      };
+      }
+    };
+    
 
-      setUserData(updateData);
-      localStorage.setItem('userData', JSON.stringify(updateData))
-    }
-  }, [userData])
+    setUserData(updateData);
+    localStorage.setItem('userData', JSON.stringify(updateData))
+  }
 
- 
+  function handleDeletion(remainingCal, consumingCal, protein, carb, fat, sectionID, updateArray) {
+    const currentDoc = doc(db, 'users', userData.docID);
+    updateDoc(currentDoc, {
+      nutrition: {
+          ...userData.nutrition,
+          food_array: {
+            ...userData.nutrition.food_array,
+            [sectionID]: updateArray
+          },
+          cal: {
+            remaining: remainingCal,
+            consuming: consumingCal
+          },
+          food_nutrition: {
+            p: protein,
+            c: carb,
+            f: fat
+          }
+      }
+    })
+    
+    const updateData = {
+      ...userData,
+      nutrition: {
+        ...userData.nutrition,
+        food_array: {
+          ...userData.nutrition.food_array,
+          [sectionID]: updateArray
+        },
+        cal: {
+          remaining: remainingCal,
+          consuming: consumingCal
+        },
+        food_nutrition: {
+          p: protein,
+          c: carb,
+          f: fat
+        }
+      }
+    };
+
+    setUserData(updateData);
+    localStorage.setItem('userData', JSON.stringify(updateData))
+  }
 
   async function logItem() {
     try {
 
-      console.log(food);
       setUnit('')
       setQty('')
       
       await fetchNutrients(food).then((data) => {
 
-        // console.log(data);
-        setConsumed(Math.round(consumed + Math.round(data.foods[0].nf_calories)) * 100 / 100);
-        setRemain(Math.round(remain - Math.round(data.foods[0].nf_calories)) * 100 / 100);
-        setProtein(Math.round(protein  + data.foods[0].nf_protein) * 100/100)
-        setCarb(Math.round(carb  + data.foods[0].nf_total_carbohydrate) *  100/100)
-        setFat(Math.round(fat  + data.foods[0].nf_total_fat) * 100/100)
-
-
+        const remainingCal = Math.round(userData.nutrition.cal.remaining - Math.round(data.foods[0].nf_calories)) * 100 / 100;
+        const consumingCal = Math.round(userData.nutrition.cal.consuming + Math.round(data.foods[0].nf_calories)) * 100 / 100;
+        const protein = Math.round(userData.nutrition.food_nutrition.p  + data.foods[0].nf_protein) * 100/100;
+        const carb = Math.round(userData.nutrition.food_nutrition.c  + data.foods[0].nf_total_carbohydrate) *  100/100;
+        const fat = Math.round(userData.nutrition.food_nutrition.f  + data.foods[0].nf_total_fat) * 100/100;  
+        
         if (section ===  'breakfast'){
-          setBf(prev => {
-            return [...prev, data.foods[0]]
-          })
-          
-
+          updateNutrition(remainingCal, consumingCal, data.foods[0], protein, carb, fat, section)
 
         }else if (section === 'lunch') {
-          setLunch(prev => {
-            return [...prev, data.foods[0]]
-          })
+          updateNutrition(remainingCal, consumingCal, data.foods[0], protein, carb, fat, section)
 
         }else if  (section === 'dinner') {
-          setDinner(prev => {
-            return [...prev, data.foods[0]]
-          })
+          updateNutrition(remainingCal, consumingCal, data.foods[0], protein, carb, fat, section)
 
         }else {
-          setSnack(prev => {
-            return [...prev, data.foods[0]]
-          })
+          updateNutrition(remainingCal, consumingCal, data.foods[0], protein, carb, fat, section)
 
         }
         
       })
+      
     }catch(e) {
       console.log(e);
     }
   }
 
-  function deleteItem(id, sectionID) {
-    if (sectionID ===  'breakfast'){
-      setBf(prev => {
-        return prev.filter((item, index) => {
-          if (index === id) {
-            const del = item;
-            
-            setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
-            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
-            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
-          }
+  async function deleteItem(id, sectionID) {
+    let remainingCal = 0;
+    let consumingCal = 0;
+    let protein = 0;
+    let carb = 0;
+    let fat = 0;
+    try {
+      const updateArray = await userData.nutrition.food_array[sectionID].filter((item, index) => {
+        
+        if (index === id) {
+          const del = item;
   
-          return index !== id;
-        })
+          remainingCal = Math.round(userData.nutrition.cal.remaining + Math.round(del.nf_calories)) * 100 / 100;
+          consumingCal = Math.round(userData.nutrition.cal.consuming - Math.round(del.nf_calories)) * 100 / 100;
+          protein = Math.round(userData.nutrition.food_nutrition.p  - Math.round(del.nf_protein)*100/100)*100/100;
+          carb = Math.round(userData.nutrition.food_nutrition.c  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100;
+          fat = Math.round(userData.nutrition.food_nutrition.f  - Math.round(del.nf_total_fat)*100/100) * 100 / 100
+          
+        }
+        return index !== id
       })
 
+      if (sectionID === 'breakfast') {
+        handleDeletion(remainingCal, consumingCal, protein, carb, fat, sectionID, updateArray)
+      }else if (sectionID === 'lunch') {
+        handleDeletion(remainingCal, consumingCal, protein, carb, fat, sectionID, updateArray)
+      }else if (sectionID === 'dinner') {
+        handleDeletion(remainingCal, consumingCal, protein, carb, fat, sectionID, updateArray)
+      }else {
+        handleDeletion(remainingCal, consumingCal, protein, carb, fat, sectionID, updateArray)
+      }
 
-    }else if (sectionID === 'lunch') {
-      setLunch(prev => {
-        return prev.filter((item, index) => {
-          if (index === id) {
-            const del = item;
-            
-            setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
-            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
-            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
-          }
-  
-          return index !== id;
-        })
-      })
-
-    }else if  (sectionID === 'dinner') {
-      setDinner(prev => {
-        return prev.filter((item, index) => {
-          if (index === id) {
-            const del = item;
-            
-            setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
-            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
-            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
-          }
-  
-          return index !== id;
-        })
-      })
-
-    }else {
-      setSnack(prev => {
-        return prev.filter((item, index) => {
-          if (index === id) {
-            const del = item;
-            
-            setConsumed(Math.round(consumed - Math.round(del.nf_calories)) * 100 / 100)
-            setRemain(Math.round(remain + Math.round(del.nf_calories)*100/100) * 100 / 100)
-            setProtein(Math.round(protein  - Math.round(del.nf_protein)*100/100)*100/100)
-            setCarb(Math.round(carb  - Math.round(del.nf_total_carbohydrate)*100/100) * 100/100)
-            setFat(Math.round(fat  - Math.round(del.nf_total_fat)*100/100) * 100 / 100)
-          }
-  
-          return index !== id;
-        })
-      })
-
+    }catch(e) {
+      console.log(e);
     }
+    
   }
-  
+  console.log(userData.nutrition.cal);
   return (
     <div className="container nutrition">
       <div className="nutrition-container">
         <h1>daily nutrition</h1>
         {!userData.isFilled ? <RequestForm /> : ''}
         <div className="nutrition-content"  style={userData.isFilled ? {display: 'block'}:{display:'none'}} >
-          <NutritionDisplay userData={userData} consumed={consumed} remain={remain} protein={protein} carb={carb} fat={fat}/>
+          <NutritionDisplay userData={userData} consumed={userData.nutrition.cal.consuming} remain={userData.nutrition.cal.remaining} protein={userData.nutrition.food_nutrition.p} carb={userData.nutrition.food_nutrition.c} fat={userData.nutrition.food_nutrition.f}/>
           <div className="nutrition-log">
 
-            <LogItem title='Breakfast' onDelete={(id) => deleteItem(id, 'breakfast')} onPress={(event) => openAddFood(event, 'breakfast')} array={bf}/>
-            <LogItem title='Lunch'  onDelete={(id) => deleteItem(id, 'lunch')} onPress={(event) => openAddFood(event, 'lunch')} array={lunch}/>
-            <LogItem title='Dinner'  onDelete={(id) => deleteItem(id, 'dinner')} onPress={(event) => openAddFood(event, 'dinner')} array={dinner}/>
-            <LogItem title='Snack'  onDelete={(id) => deleteItem(id, 'snack')} onPress={(event) => openAddFood(event, 'snack')} array={snack}/>
+            <LogItem title='Breakfast' onDelete={(id) => deleteItem(id, 'breakfast')} onPress={(event) => openAddFood(event, 'breakfast')} array={userData.nutrition.food_array.breakfast}/>
+            <LogItem title='Lunch'  onDelete={(id) => deleteItem(id, 'lunch')} onPress={(event) => openAddFood(event, 'lunch')} array={userData.nutrition.food_array.lunch}/>
+            <LogItem title='Dinner'  onDelete={(id) => deleteItem(id, 'dinner')} onPress={(event) => openAddFood(event, 'dinner')} array={userData.nutrition.food_array.dinner}/>
+            <LogItem title='Snack'  onDelete={(id) => deleteItem(id, 'snack')} onPress={(event) => openAddFood(event, 'snack')} array={userData.nutrition.food_array.snack}/>
            
             
           </div>

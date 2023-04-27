@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './user.css'
 import { Avatar } from '@mui/material'
 import {GiPerson} from 'react-icons/gi'
@@ -7,7 +7,58 @@ import {FiTarget} from 'react-icons/fi'
 import {AiFillSetting} from 'react-icons/ai'
 import {MdEmail} from 'react-icons/md'
 import { Link } from 'react-router-dom'
-export default function User({userData}) {
+import { db } from '../../Firebase/firebase';
+import { updateDoc, doc } from "firebase/firestore";
+export default function User({userData, setUserData}) {
+
+  useEffect(() => {
+    if (!userData.nutrition && userData.dailyCal) {
+      const currentDoc = doc(db, 'users', userData.docID);
+      updateDoc(currentDoc, {
+        nutrition: {
+            cal: {
+              remaining: Math.round(userData.dailyCal.maintain_cal * 100 / 100),
+              consuming: 0
+            },
+            food_nutrition: {
+              p: 0,
+              c: 0,
+              f: 0
+            },
+            food_array: {
+              breakfast: [],
+              lunch: [],
+              dinner: [],
+              snack: []
+            }
+        }
+      })
+
+      const updateData = {
+        ...userData,
+        nutrition: {
+            cal: {
+              remaining: Math.round(userData.dailyCal.maintain_cal * 100 / 100),
+              consuming: 0
+            },
+            food_nutrition: {
+              p: 0,
+              c: 0,
+              f: 0
+            },
+            food_array: {
+              breakfast: [],
+              lunch: [],
+              dinner: [],
+              snack: []
+            }
+        }
+      };
+
+      setUserData(updateData);
+      localStorage.setItem('userData', JSON.stringify(updateData))
+    }
+  }, [userData])
   
   return (
     

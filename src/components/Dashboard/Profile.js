@@ -82,7 +82,7 @@ function Profile() {
     return (
         <div className="container">
             <div className="title">profile</div>
-            {userData.isFilled ? <User userData={userData}/> : <Form onSubmit={handleSubmit}/>}
+            {userData.isFilled ? <User setUserData={setUserData} userData={userData}/> : <Form onSubmit={handleSubmit}/>}
             
         </div>
             
