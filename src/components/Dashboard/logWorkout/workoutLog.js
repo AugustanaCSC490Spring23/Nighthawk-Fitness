@@ -15,17 +15,20 @@ function WorkoutLog() {
     return savedUserData ? JSON.parse(savedUserData) : null
 });
 
-const [changeCheck, setChange] = useState("")
+const [changeCheck, setChange] = useState(0)
 
 const [arrayMap, setArray] = useState([])
 
 useEffect(() =>{
-  setArray([])
+  let temp = []
+  var workoutDate = ""
    userData.allWorkouts.map((workout, index) => {
-    setArray([...arrayMap, workout])})
-    console.log(arrayMap)
-}, [userData.allWorkouts.length])
+    temp.push(workout)})
+  setArray(...temp)
+  console.log(temp)
+console.log(arrayMap)}, [userData.allWorkouts.length])
 
+var count = 0
 
 var workoutCheck = null
 
