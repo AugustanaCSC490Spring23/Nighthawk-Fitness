@@ -4,13 +4,20 @@ import { useNavigate } from 'react-router-dom';
 import {MdKeyboardArrowLeft} from 'react-icons/md'
 import {IoMdArrowDropup} from 'react-icons/io'
 import {RiEditCircleFill} from 'react-icons/ri'
+import { db } from '../../../Firebase/firebase';
+import { updateDoc, doc } from "firebase/firestore";
+import {BiReset} from 'react-icons/bi';
 
-export default function PersonalizedPlan({userData}) {
-  
+export default function PersonalizedPlan() {
+  const [userData, setUserData] = useState(() => {
+    const savedUserData = localStorage.getItem('userData');
+    return savedUserData ? JSON.parse(savedUserData) : null
+  });
   const schedule  =  userData.plan.schedule;  
   const [activeTab, setActiveTab] = useState(0);
   const [activeType, setActiveType] = useState(0);
   const navigate = useNavigate();
+  
   function openTab(index) {
     // document.getElementById(index).classList.toggle('active-day')
     setActiveTab(index);
@@ -34,6 +41,42 @@ export default function PersonalizedPlan({userData}) {
     document.getElementById('manage-tab').classList.add('active-manage')
   }
 
+  async function startPlan() {
+    const date = new Date()
+    const todayDate = date.toDateString();
+    const currentDoc = doc(db, 'users', userData.docID);
+    try {
+      await updateDoc(currentDoc, {
+        start_date: todayDate
+      })
+
+      const updateData = {
+          ...userData,
+          start_date: todayDate
+      };
+
+      setUserData(updateData);
+      localStorage.setItem('userData', JSON.stringify(updateData))
+    }catch(e) {
+      console.log(e);
+    }
+      
+  }
+
+  function removePlan() {
+    const currentDoc = doc(db, 'users', userData.docID);
+    updateDoc(currentDoc, {
+      start_date: ''
+    })
+
+    const updateData = {
+        ...userData,
+        start_date: ''
+    };
+
+    setUserData(updateData);
+    localStorage.setItem('userData', JSON.stringify(updateData))
+  }
   return (
     <div className="container">
       <div className="manage-plan-tab" id='manage-tab'>
@@ -49,6 +92,9 @@ export default function PersonalizedPlan({userData}) {
             <h3> <span className='item-title'>Sessions per week</span> <span className='item-details'>{userData.personal_preference.workout_time}</span><RiEditCircleFill className='edit-icon'/></h3>
           </div>
           <div className="manage-plan-item">
+            <h3> <span className='item-title'>Goal</span> <span className='item-details'>{userData.information.goal}</span><RiEditCircleFill className='edit-icon'/></h3>
+          </div>
+          <div className="manage-plan-item">
             <h3> <span className='item-title'>Duration</span> <span className='item-details'>4 weeks</span></h3>
           </div>
         </div>
@@ -62,6 +108,8 @@ export default function PersonalizedPlan({userData}) {
           <div className="personal-plan-manage">
             
             <div className="manage-btn" onClick={openManage}>Manage Plan</div>
+            {!userData.start_date ? <div className="start-btn" onClick={startPlan}>Start Plan</div> : 
+            <div  className='start'> <div className="start-date">Start Date</div>{userData.start_date} <BiReset className='start-reset-icon' onClick={removePlan}/></div>}
           </div>
           
         </div>
