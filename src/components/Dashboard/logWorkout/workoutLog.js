@@ -3,7 +3,8 @@ import { Button, Icon, IconButton } from '@mui/material';
 import NewWorkout from './workoutDates/months/newWorkout';
 import React, { useEffect, useState, useContext, createContext } from "react";
 import './workoutLog.css'
-import StyledWorkout from './workoutDates/months/styledWorkout';
+import StyledWorkout from './workoutDates/months/oldStyleWorkout/styledWorkout';
+import NewStyleWorkout from './workoutDates/months/newStyleWorkout';
 import { set } from 'date-fns';
 
 // import WorkoutMonth from './logCalendar/workoutMonth';
@@ -15,22 +16,27 @@ function WorkoutLog() {
     return savedUserData ? JSON.parse(savedUserData) : null
 });
 
-const [changeCheck, setChange] = useState(0)
-
 const [arrayMap, setArray] = useState([])
+
+const [currDate, setCurrDate] = useState("")
 
 useEffect(() =>{
   let temp = []
-  var workoutDate = ""
-   userData.allWorkouts.map((workout, index) => {
-    temp.push(workout)})
-  setArray(...temp)
-  console.log(temp)
-console.log(arrayMap)}, [userData.allWorkouts.length])
+  let temp2 = []
+  let tempDate = ""
 
-var count = 0
-
-var workoutCheck = null
+  userData.allWorkouts.map((date2, index) => {
+    if (date2.date === currDate){
+      temp2.push(date2.date)
+    } else{
+      temp2 = []
+      temp2.push(date2.date)
+    }
+    setArray([...temp2])
+    setCurrDate(date2.date)
+  }) 
+  console.log(temp2)
+}, [userData.allWorkouts.length])
 
   const [added, addWorkout] = useState(false)
     return( 
@@ -51,7 +57,7 @@ var workoutCheck = null
         />}
       </div>
       <div className='workoutObj'>
-      <>{userData.allWorkouts.map((workout, index) => {
+     <>{userData.allWorkouts.map((workout, index) => {
                return(
            <div key={index}>
                <StyledWorkout
@@ -61,7 +67,8 @@ var workoutCheck = null
                    weight={workout.weight}/>
            </div>
                );})}
-           </>
+               </>  
+
            </div>
         </div>
     )

@@ -53,3 +53,20 @@
 
 
     -State not saving in lower level - try to raise the state up to workoutLog instead of styledWorkout
+
+    -Add a hook to update the value inside the map
+    of workoutLog to properly store an array.
+
+
+Updating state in an array
+const [labels, setLabels] = useState([])
+
+let temp = [...labels];   //Get Any pre-stored items
+array.map(x => {
+  console.log(date,"THIS IS DATE IN HANDLE")
+  temp.push(labels);
+})
+
+setLabels(temp);
+
+react developer tools

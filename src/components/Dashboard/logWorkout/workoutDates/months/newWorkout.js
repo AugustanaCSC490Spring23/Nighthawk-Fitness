@@ -8,7 +8,7 @@ import { async } from "@firebase/util";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import { getDocs } from "firebase/firestore";
 import WorkoutLog from "../../workoutLog";
-import StyledWorkout from "./styledWorkout";
+import StyledWorkout from "./oldStyleWorkout/styledWorkout";
 import {MdAddCircle} from 'react-icons/md'
 import { Button, Icon, IconButton } from '@mui/material';
 //import { useForm } from 'react-hook-form'
@@ -52,8 +52,10 @@ based on a query to firestore to get the allWorkouts
 
     const handleForm = async (event)=>{
         event.preventDefault()
+        let newDate = JSON.stringify(workoutInfo.workoutLogInfo.workoutDate)
+        newDate = newDate.slice(1, 11)
         const workoutObj = {
-            date: workoutInfo.workoutLogInfo.workoutDate,
+            date: newDate,
             name: workoutInfo.workoutLogInfo.workoutName,
             weight: workoutInfo.workoutLogInfo.weight,
             reps: workoutInfo.workoutLogInfo.reps
@@ -83,8 +85,7 @@ based on a query to firestore to get the allWorkouts
             workoutName: "",
             weight: "",
             reps: ""}})
-            
-         
+
     }
     
     const [startDate, setStartDate] = useState(new Date());

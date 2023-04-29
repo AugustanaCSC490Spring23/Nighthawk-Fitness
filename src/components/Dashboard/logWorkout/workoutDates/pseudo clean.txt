@@ -1,0 +1,36 @@
+workout log
+
+allworkouts.map(workout) {
+    if (workout.date == currDate){
+        setArr[...arr, workout]
+    } else{
+        arr.map{
+            <StyleWorkout workout={workout}
+        }
+        currDate = workout.date
+        setArr[workout]
+    }
+}
+
+        <>{arrayMap.map((workout, index) => {
+          let temp = []
+          let currentDate = ""
+              if (workout.date == currentDate){
+                temp.push(workout)
+              } else{
+                temp.map((workout, index2) => {
+                  <NewStyleWorkout workouts={temp}/>
+              }
+              )
+              temp = []
+              temp.push(workout)
+              currentDate = workout.date
+            }
+               return(
+                <h1></h1>
+                )})}
+               </> 
+               
+return 
+
+
