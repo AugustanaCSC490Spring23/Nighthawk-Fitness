@@ -70,3 +70,21 @@ array.map(x => {
 setLabels(temp);
 
 react developer tools
+
+
+
+var currDate
+
+const [arr, setArr] useState ([])
+
+allworkouts.map(workout) {
+    if (workout.date == currDate){
+        setArr[...arr, workout]
+    } else{
+        arr.map{
+            <StyleWorkout workout={workout}
+        }
+        currDate = workout.date
+        setArr[workout]
+    }
+}
