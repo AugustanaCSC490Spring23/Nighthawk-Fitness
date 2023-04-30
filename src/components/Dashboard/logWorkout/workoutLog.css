@@ -1,42 +1,245 @@
-.log-container{
-    display:flex;
+.workout-log-container {
+    height: 900px;
+    width: 1200px;
+    color: var(--primary-text);
+    
 }
 
-.workoutLog-Greeting{
+.workout-log-card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.workout-log-item.left {
+    background: var(--primary-box);
+    border-radius: 1rem;
+}
+
+.workout-insert,
+.workout-display {
+    background: var(--primary-dashboard);
+    border-radius: 1rem;
+}
+
+.workout-log-item.right {
+    display: grid; 
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.workout-insert-content {
     display: flex;
-    padding: 2rem;
-    padding-top:3rem;
     justify-content: center;
-    margin: 1rem;
-    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.workout-insert-content input {
+    width: 50%;
+    border: 1px solid var(--primary-text);
+    color: var(--primary-text);
+    margin: 0;
+}
+
+.workout-name,
+.workout-date {
+    display: flex;
     align-items: center;
+    justify-content: space-between !important;
 }
 
-.workoutObj{
-    display:flex;
-    flex-direction: row;
-    flex-direction: left;
-    flex-wrap: wrap;
+
+.workout-insert-content h3 {
+    background: var(--primary-box);
+    padding: .5rem .75rem;
+    border-radius: 1rem;
+    font-weight: 900;
 }
 
-#welcome{
-    animation: fadeIn 5s; 
-    color:#a4fba6;
-    outline: 1px solid #a4fba6;
-    padding: .5rem;
-    width: 80%;
-    border-radius: 90px;
+.create-workout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-#add-btn{
-    color: var(--primary-variant);
+.create-workout-btn span {
+    background: var(--primary-variant);
+    font-weight: 900;
+    color: var(--bg);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
-#add-btn:hover {
-    background-color:rgba(255,255,255,0.3) ;
+.workout-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--primary-box);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.workout-details-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+
+.workout-display-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem;
+}
+
+.workout-display-title {
+    border-radius: 1rem;
+    overflow: hidden;
+    text-transform: capitalize;
+}
+
+.workout-display-title {
+    padding: 1rem 0;
+    background: var(--primary-box);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.workout-display-title h3  {
+    font-size: 2rem;
+}
+
+.workout-display-item  {
+    height: 200px;
+    /* background: var(--primary-box); */
+    border-radius: 1rem;
+}
+
+.item-holder {
+    height: 100%;
+    /* overflow: hidden; */
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-holder li {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--primary-box);
+    position: relative;
+}
+
+.item-holder .name {
+    text-transform: capitalize;
+}
+
+.down-icon {
+    font-size: 2rem;
+}
+
+.deleteItem  {
+    position: absolute;
+    right: 1rem;
+    top: 35%;
+}
+
+.no-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.save-btn  {
+    background: var(--primary-variant);
+    width: max-content;
+    margin: auto;
+    color: var(--bg);
+    font-weight: 900;
+    padding: .5rem .75rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+/*======== Database Display ========*/
+
+.workout-log-item.left  {
+    padding: 2rem;
+    overflow: scroll;
+}
+
+.day-log,
+.item-log {
+    list-style-type: none;
+}
+
+.day-log li {
+    margin-bottom: 1rem;
+}
+
+.item-log {
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.item-log li {
+    background: var(--bg);
+    padding: 1rem;
+    margin: 0;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.day-title  {
+    background: var(--primary-dashboard);
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.active-log-item {
+    height: max-content;
+}
+
+.active-log-icon  {
+    transform: rotate(180deg);
+}
+
+.open-log-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.open-log-icon:hover {
+    opacity: .6;
+}
+
+.back-btn  {
+    margin-bottom: 1rem;
 }
