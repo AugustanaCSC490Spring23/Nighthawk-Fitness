@@ -33,7 +33,7 @@ export default function Loading() {
     useEffect(() => {
         const timeOut = setTimeout(() => {
             navigate(-1)
-        }, 20000)
+        }, 6000)
 
         return () => {
           clearTimeout(timeOut)
@@ -41,7 +41,7 @@ export default function Loading() {
     },[navigate])
     
     useEffect(() => {
-      if (!userData.plan) {
+      if (!userData.plan ||  userData.plan === '') {
         if (userData.personal_preference.experience_level === 'intermediate') {
           if (userData.information.goal === 'muscle_gain') {
             if (userData.personal_preference.workout_time === '2-3') {

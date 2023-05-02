@@ -211,7 +211,7 @@ h2 {
     display: none;
 }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1200px) {
     .container .title {
         display: block;
         margin-bottom: 2rem;

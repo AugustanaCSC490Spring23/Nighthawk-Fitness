@@ -55,6 +55,7 @@ export default function WorkoutLog() {
 
   function deleteDay() {
     setIsCreate(false)
+    setIsAdd(false)
   }
 
   function addWorkout() {

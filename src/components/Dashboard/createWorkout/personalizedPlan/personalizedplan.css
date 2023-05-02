@@ -260,7 +260,7 @@
 }
 
 .manage-plan-tab {
-    width: 400px;
+    width: 500px;
     height: max-content;
     position: fixed;
     background: var(--primary-dropdown);
@@ -303,6 +303,24 @@
     border-radius: 1rem;
 }
 
+.manage-plan-btn {
+    width: 100%;
+    padding: 0 2rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cancel-btn {
+    background: #FC2947;
+}
+
+.cancel-btn:hover {
+    border-color: #FC2947;
+    color: #FC2947;
+}
+
 .active-manage {
     display: block;
 }
@@ -310,6 +328,17 @@
 .edit-icon {
     color: var(--primary-variant);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .personal-plan {
+        width: 700px;
+    }
+
+    .week-day {
+        font-size: 14px;
+    }
+    
 }
 
 @media screen and (max-width: 1000px) {

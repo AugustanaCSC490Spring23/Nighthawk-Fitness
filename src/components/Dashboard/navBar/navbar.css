@@ -199,7 +199,7 @@
     border-right: 1px solid var(--bg);
   }
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
 
     span.items,
     .log-out-btn,
