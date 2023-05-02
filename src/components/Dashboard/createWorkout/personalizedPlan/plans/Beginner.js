@@ -671,7 +671,7 @@ const beginner = {
                                     {
                                         name: 'Shoulder Press',
                                         instruction: 'Place a barbell with the desired weight on a rack, making sure that it’s at shoulder height. Dip under the bar and place yourself underneath the barbell, picking it up as you slowly straighten yourself up. If this is done correctly, the barbell should then rest at the top of your shoulders. Grab the bar with your palms facing upwards — your elbows should point straight ahead. Make sure that your back is straight to secure proper form. Gently step back from the rack, keeping your back tall — then, simply press the barbell overhead. Once you can’t extend your arms any further, slowly return the barbell to your shoulders and repeat as many times as you need to. After the final repetition, step into the rack and leave the barbell at shoulder height once again. Finally, dip under the bar and step away from the rack without the bar.',
-                                        weight: '15',
+                                        weight: '45',
                                         Reps: '6',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Shoulder_Press.jpg'
@@ -746,7 +746,7 @@ const beginner = {
                                     {
                                         name: 'Calf Raises',
                                         instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
-                                        Weight: '20',
+                                        Weight: '30',
                                         Reps: '10',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
@@ -801,14 +801,13 @@ const beginner = {
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Bicep_Curls.jpg'
                                     },
-
                                     {
                                         name: 'Cable Tricep Pulldown',
                                         instruction: 'Firstly, attach the EZ-curl bar on the cable machine hook and then adjust the machine level to shoulder height. Kneel down and hold the EZ-curl bar. Make sure that the bar is behind your neck and keep your palms facing your feet. Lower your upper body until the elbows reach the knees. Repeat the moves until you reach the number of your preferred reps.',
                                         weight: '40',
                                         Reps: '6',
                                         Sets: '3',
-                                        photoURL: ''
+                                        photoURL: process.env.PUBLIC_URL + '/img/Cable_Tricep_Pulldown.jpg'
                                     },
                                     {
                                         name: 'Lat Pulldown',
@@ -879,7 +878,7 @@ const beginner = {
                                     {
                                         name: 'Shoulder Press',
                                         instruction: 'Place a barbell with the desired weight on a rack, making sure that it’s at shoulder height. Dip under the bar and place yourself underneath the barbell, picking it up as you slowly straighten yourself up. If this is done correctly, the barbell should then rest at the top of your shoulders. Grab the bar with your palms facing upwards — your elbows should point straight ahead. Make sure that your back is straight to secure proper form. Gently step back from the rack, keeping your back tall — then, simply press the barbell overhead. Once you can’t extend your arms any further, slowly return the barbell to your shoulders and repeat as many times as you need to. After the final repetition, step into the rack and leave the barbell at shoulder height once again. Finally, dip under the bar and step away from the rack without the bar.',
-                                        weight: '15',
+                                        weight: '45',
                                         Reps: '6',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Shoulder_Press.jpg'
@@ -953,7 +952,7 @@ const beginner = {
                                     {
                                         name: 'Calf Raises',
                                         instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
-                                        Weight: '20',
+                                        Weight: '30',
                                         Reps: '10',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
@@ -1078,7 +1077,7 @@ const beginner = {
                                     {
                                         name: 'Shoulder Press',
                                         instruction: 'Place a barbell with the desired weight on a rack, making sure that it’s at shoulder height. Dip under the bar and place yourself underneath the barbell, picking it up as you slowly straighten yourself up. If this is done correctly, the barbell should then rest at the top of your shoulders. Grab the bar with your palms facing upwards — your elbows should point straight ahead. Make sure that your back is straight to secure proper form. Gently step back from the rack, keeping your back tall — then, simply press the barbell overhead. Once you can’t extend your arms any further, slowly return the barbell to your shoulders and repeat as many times as you need to. After the final repetition, step into the rack and leave the barbell at shoulder height once again. Finally, dip under the bar and step away from the rack without the bar.',
-                                        weight: '15',
+                                        weight: '45',
                                         Reps: '6',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Shoulder_Press.jpg'
@@ -1097,7 +1096,7 @@ const beginner = {
                                         Weight: '10',
                                         Reps: '8',
                                         Sets: '3',
-                                        photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Skull_Crushers'
+                                        photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Skull_Crushers.jpg'
                                     },
                                 ]
                                 ,
@@ -1142,7 +1141,7 @@ const beginner = {
                                     {
                                         name: 'Dumbell Row',
                                         instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                        Weight: '20',
+                                        Weight: '25',
                                         Reps: '12',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
@@ -1162,7 +1161,7 @@ const beginner = {
                                         Reps: '6',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Hammer_Curls.jpg'
-                                    },
+                                    }
                                 ]
                                 ,
 
@@ -1215,7 +1214,7 @@ const beginner = {
                                     {
                                         name: 'Calf Raises',
                                         instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
-                                        Weight: '20',
+                                        Weight: '30',
                                         Reps: '10',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
@@ -1939,13 +1938,13 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name: 'Hanging Leg Raises',
                                             instruction: 'Exhale as you lift your feet off the ground, raising your straight legs outward in front of you. Tilt your pelvis slightly back and engage your abdominals and hip flexors to assist with the movement. Raise your legs to a level that feels challenging but still enables you to keep good form. Strive to get them parallel to the ground (so that your hips are bent at 90 degrees), or a little higher if you can. Lower your legs back down slowly until they return to the starting position, inhaling during this portion of the exercise. Maintain your posterior pelvic tilt, even at the bottom of the movement.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Hanging_Leg_Raises.jpg'
                                         },
                                         {
@@ -2032,7 +2031,7 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
@@ -2095,7 +2094,7 @@ const beginner = {
                                         {
                                             name: 'Lunges',
                                             instruction: 'Stand with your feet hip-width apart. Step forward and bend both knees, lowering until your knees are bent at a 90-degree angle. Shift forward onto the lead leg. Push off on both legs and step through, lifting your back leg and bringing it forward so your rear foot lands ahead of you in a lunge position.',
-                                            Reps: '30',
+                                            Reps: '20',
                                             Sets: '2',
                                             photoURL: process.env.PUBLIC_URL + '/img/Lunges.jpg'
                                         },
@@ -2137,7 +2136,7 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
@@ -2225,13 +2224,13 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name: 'Hanging Leg Raises',
                                             instruction: 'Exhale as you lift your feet off the ground, raising your straight legs outward in front of you. Tilt your pelvis slightly back and engage your abdominals and hip flexors to assist with the movement. Raise your legs to a level that feels challenging but still enables you to keep good form. Strive to get them parallel to the ground (so that your hips are bent at 90 degrees), or a little higher if you can. Lower your legs back down slowly until they return to the starting position, inhaling during this portion of the exercise. Maintain your posterior pelvic tilt, even at the bottom of the movement.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Hanging_Leg_Raises.jpg'
                                         },
                                         {
@@ -2316,7 +2315,7 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
@@ -2379,7 +2378,7 @@ const beginner = {
                                         {
                                             name: 'Lunges',
                                             instruction: 'Stand with your feet hip-width apart. Step forward and bend both knees, lowering until your knees are bent at a 90-degree angle. Shift forward onto the lead leg. Push off on both legs and step through, lifting your back leg and bringing it forward so your rear foot lands ahead of you in a lunge position.',
-                                            Reps: '30',
+                                            Reps: '20',
                                             Sets: '2',
                                             photoURL: process.env.PUBLIC_URL + '/img/Lunges.jpg'
                                         },
@@ -2421,7 +2420,7 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
@@ -2471,7 +2470,7 @@ const beginner = {
                                     {
                                         name: 'Lunges',
                                         instruction: 'Stand with your feet hip-width apart. Step forward and bend both knees, lowering until your knees are bent at a 90-degree angle. Shift forward onto the lead leg. Push off on both legs and step through, lifting your back leg and bringing it forward so your rear foot lands ahead of you in a lunge position.',
-                                        Reps: '30',
+                                        Reps: '20',
                                         Sets: '2',
                                         photoURL: process.env.PUBLIC_URL + '/img/Lunges.jpg'
                                     },
@@ -2571,7 +2570,7 @@ const beginner = {
                                     {
                                         name: 'Lunges',
                                         instruction: 'Stand with your feet hip-width apart. Step forward and bend both knees, lowering until your knees are bent at a 90-degree angle. Shift forward onto the lead leg. Push off on both legs and step through, lifting your back leg and bringing it forward so your rear foot lands ahead of you in a lunge position.',
-                                        Reps: '30',
+                                        Reps: '20',
                                         Sets: '2',
                                         photoURL: process.env.PUBLIC_URL + '/img/Lunges.jpg'
                                     },
@@ -2619,7 +2618,7 @@ const beginner = {
                                         {
                                             name:'Pullups',
                                             instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
+                                            Reps: '8',
                                             photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
@@ -2695,7 +2694,7 @@ const beginner = {
                                             instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                             Reps: '45 seconds',
                                             Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -2710,7 +2709,7 @@ const beginner = {
                                         {
                                             name: 'Dumbell Row',
                                             instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
+                                            Weight: '25',
                                             Reps: '12',
                                             Sets: '3',
                                             photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
@@ -2877,6 +2876,11 @@ const beginner = {
                                     [
                                         {
                                             name: 'Lateral Raise',
+                                            instruction: 'Stand tall, a dumbbell in each hand. Arms are at your sides, palms facing in. Position your feet roughly hip-distance apart. Check your posture—roll your shoulders back, engage your core, and look straight ahead. Raise your arms simultaneously just a couple inches out to each side and pause. This momentary pause should help ensure you disengage your trapezius muscle from the movement, targeting the deltoids as intended. Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a "T" shape. Breathe in as you lift. Pause and hold for a second at the top of the movement. Lower the weights slowly (take about twice as long to lower the weights as you took to lift them), bringing your arms back to your sides. Breathe out as you lower the dumbbells.',
+                                            Weight: '20',
+                                            Reps: '8',
+                                            Sets: '3',
+                                            photoURL: process.env.PUBLIC_URL + '/img/Lateral_Raise.jpg'
                                         },
                                         {
                                             name: 'Bench Press',
@@ -2897,19 +2901,28 @@ const beginner = {
                                         {
                                             name: 'Dumbell Row',
                                             instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
+                                            Weight: '25',
                                             Reps: '12',
                                             Sets: '3',
                                             photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
                                         },
                                         {
-                                            name: 'Dumbell Walking Lunges'
+                                            name: 'Dumbell Walking Lunges',
+                                            instruction: 'Set up with your feet shoulder width apart and a dumbbell in each hand. Step forward with one leg and allow both knees to bend simultaneously. Descend until the back knee touches the floor. Drive through the front foot and extend the knee as you stand up fully and return to the starting position. Repeat on the opposite leg.', 
+                                            Weight: '20',
+                                            Reps: '12',
+                                            Sets: '2',
+                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Walking_Lunges.jpg'
                                         }
                                     ],
                                 cool_down:
                                     [
                                         {
                                             name: 'Overhead Shoulder Stretch',
+                                            instruction: 'Stand straight with your feet shoulders width apart. Reach your arms straight overhead and interlace your fingers with the palms facing upward. Raise your arms upward as you press your shoulders down. Hold for the rep count',
+                                            Reps: '15 seconds',
+                                            Sets: '4',
+                                            photoURL: process.env.PUBLIC_URL + '/img/Overhead_Shoulder_Stretch.jpg'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -2923,7 +2936,7 @@ const beginner = {
                                             instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                             Reps: '45 seconds',
                                             Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                         }
                                     ]
                             }
@@ -2947,7 +2960,7 @@ const beginner = {
                                     instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                     Reps: '45 seconds',
                                     Sets: '3',
-                                    photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                    photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                 },
                                 {
                                     name:'Butterfly Stretch',
@@ -3008,7 +3021,7 @@ const beginner = {
                                         instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                         Reps: '45 seconds',
                                         Sets: '3',
-                                        photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                        photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                     },
                                     {
                                         name:'Butterfly Stretch',
@@ -3023,7 +3036,7 @@ const beginner = {
                                     {
                                         name: 'Dumbell Row',
                                         instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                        Weight: '20',
+                                        Weight: '25',
                                         Reps: '12',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
@@ -3186,7 +3199,7 @@ const beginner = {
                                             instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                             Reps: '45 seconds',
                                             Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3201,7 +3214,7 @@ const beginner = {
                                         {
                                             name: 'Dumbell Row',
                                             instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
+                                            Weight: '25',
                                             Reps: '12',
                                             Sets: '3',
                                             photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
@@ -3268,7 +3281,7 @@ const beginner = {
                                             instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                             Reps: '45 seconds',
                                             Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3418,7 +3431,7 @@ const beginner = {
                                             instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                             Reps: '45 seconds',
                                             Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3493,6 +3506,11 @@ const beginner = {
                                     [
                                         {
                                             name: 'Lateral Raise',
+                                            instruction: 'Stand tall, a dumbbell in each hand. Arms are at your sides, palms facing in. Position your feet roughly hip-distance apart. Check your posture—roll your shoulders back, engage your core, and look straight ahead. Raise your arms simultaneously just a couple inches out to each side and pause. This momentary pause should help ensure you disengage your trapezius muscle from the movement, targeting the deltoids as intended. Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a "T" shape. Breathe in as you lift. Pause and hold for a second at the top of the movement. Lower the weights slowly (take about twice as long to lower the weights as you took to lift them), bringing your arms back to your sides. Breathe out as you lower the dumbbells.',
+                                            Weight: '20',
+                                            Reps: '8',
+                                            Sets: '3',
+                                            photoURL: process.env.PUBLIC_URL + '/img/Lateral_Raise.jpg'
                                         },
                                         {
                                             name: 'Bench Press',
@@ -3513,19 +3531,28 @@ const beginner = {
                                         {
                                             name: 'Dumbell Row',
                                             instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
+                                            Weight: '25',
                                             Reps: '12',
                                             Sets: '3',
                                             photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
                                         },
                                         {
-                                            name: 'Dumbell Walking Lunges'
+                                            name: 'Dumbell Walking Lunges',
+                                            instruction: 'Set up with your feet shoulder width apart and a dumbbell in each hand. Step forward with one leg and allow both knees to bend simultaneously. Descend until the back knee touches the floor. Drive through the front foot and extend the knee as you stand up fully and return to the starting position. Repeat on the opposite leg.', 
+                                            Weight: '20',
+                                            Reps: '12',
+                                            Sets: '2',
+                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Walking_Lunges.jpg'
                                         }
                                     ],
                                 cool_down:
                                     [
                                         {
                                             name: 'Overhead Shoulder Stretch',
+                                            instruction: 'Stand straight with your feet shoulders width apart. Reach your arms straight overhead and interlace your fingers with the palms facing upward. Raise your arms upward as you press your shoulders down. Hold for the rep count',
+                                            Reps: '15 seconds',
+                                            Sets: '4',
+                                            photoURL: process.env.PUBLIC_URL + '/img/Overhead_Shoulder_Stretch.jpg'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3539,7 +3566,7 @@ const beginner = {
                                             instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
                                             Reps: '45 seconds',
                                             Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
                                         }
                                     ]
                             }
@@ -3548,6 +3575,750 @@ const beginner = {
                     ]
                 }
         }
+    },
+    muscle_gain: {
+        four_six: {
+            workout: {
+                name: 'Push/Pull/Legs',
+                schedule:
+                    [
+                        {
+                            session: 
+                                {
+                                    day: 1,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name: 'Overhead Shoulder Stretch',
+                                                    instruction: 'Stand straight with your feet shoulders width apart. Reach your arms straight overhead and interlace your fingers with the palms facing upward. Raise your arms upward as you press your shoulders down. Hold for the rep count',
+                                                    Reps: '15 seconds',
+                                                    Sets: '4',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Overhead_Shoulder_Stretch.jpg'
+                                                },
+                                                {
+                                                    name: 'Arm Circles',
+                                                    instruction: 'Stand upright with a shoulder-wide stance. Extend your arms to your sides. They should be parallel to the floor. Push your shoulders back and down to get in position. Rotate your arms clockwise at your shoulders. Arm circles are usually performed until you feel a burn in your shoulders or if you can’t hold your arms parallel to the floor.',
+                                                    Reps: '1 minute',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Arm_Circles.jpg'
+                                                }
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Bench Press',
+                                                instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Bench_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Shoulder Press',
+                                                instruction: 'Place a barbell with the desired weight on a rack, making sure that it’s at shoulder height. Dip under the bar and place yourself underneath the barbell, picking it up as you slowly straighten yourself up. If this is done correctly, the barbell should then rest at the top of your shoulders. Grab the bar with your palms facing upwards — your elbows should point straight ahead. Make sure that your back is straight to secure proper form. Gently step back from the rack, keeping your back tall — then, simply press the barbell overhead. Once you can’t extend your arms any further, slowly return the barbell to your shoulders and repeat as many times as you need to. After the final repetition, step into the rack and leave the barbell at shoulder height once again. Finally, dip under the bar and step away from the rack without the bar.',
+                                                weight: '45',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Shoulder_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Incline Dumbbell Press',
+                                                instruction: 'Sit on a bench, and lift a pair of dumbbells up to the starting position. Press the dumbbells up to straight arms, while exhaling. Inhale at the top, or while lowering the dumbbells with control back to your shoulders.',
+                                                Weight: '30',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Incline_Dumbell_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Lateral Raise',
+                                                instruction: 'Stand tall, a dumbbell in each hand. Arms are at your sides, palms facing in. Position your feet roughly hip-distance apart. Check your posture—roll your shoulders back, engage your core, and look straight ahead. Raise your arms simultaneously just a couple inches out to each side and pause. This momentary pause should help ensure you disengage your trapezius muscle from the movement, targeting the deltoids as intended. Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a "T" shape. Breathe in as you lift. Pause and hold for a second at the top of the movement. Lower the weights slowly (take about twice as long to lower the weights as you took to lift them), bringing your arms back to your sides. Breathe out as you lower the dumbbells.',
+                                                Weight: '20',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Lateral_Raise.jpg'
+                                            },
+                                            {
+                                                name: 'Tricep Pushdowns',
+                                                instruction: 'Start by bracing your abdominals. Tuck your elbows in at your sides and position your feet slightly apart. Inhale. Push down until your elbows are fully extended but not yet in the straight, locked position. Keep your elbows close to your body and bend your knees slightly on the pushdown. Resist bending forward. Try to keep your back as straight as possible as you push down. As you exhale, return to the starting point using a controlled movement. Try not to crash the weights.',
+                                                Weight: '40',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                            },
+                                            {
+                                                name: 'Overhead Triceps Extension',
+                                                instruction: 'Lift the dumbbell directly overhead. Ensure the head stays aligned over the chest, the core remains engaged, and the shoulders are relaxed. Extend both arms fully, then exhale and slowly lower the weight, bringing the weight behind the head by bending at the elbows. Be sure the chest stays aligned over the hips and the back does not arch. Inhale and reverse the movement once you reach a 90-degree bend at the elbow or slightly further, lifting the weight back to the starting position. The weight should not touch the back of the head when it is in its lowest position.',
+                                                Weight: '25',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Tricep_Extention.jpg'
+                                            }
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name:'Reach For The Sky',
+                                                instruction: 'Start in the seated position. Place the left hand in your lap and stretch the right hand towards. the sky. Bend slightly to your left side, feeling a light stretch along your. right side. Count to 10 while breathing slowly. Switch to the left hand and repeat.',
+                                                Reps: '15 seconds',
+                                                Sets: '4',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Reach_For_The_Sky.jpg'
+                                            },
+                                        ]
+                                }
+                        },
+                        {
+                            session: 
+                                {
+                                    day: 2,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name:'Back Scratch',
+                                                    instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
+                                                    Reps: '45 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
+                                                },
+                                                {
+                                                    name: 'Jumping Jacks',
+                                                    instruction: 'To do them, start in a standing position with your feet together, a slight bend in your knees, and your hands at your sides. Then, jump your feet out to the sides greater than hip-width apart while simultaneously sweeping your hands overhead',
+                                                    Reps: '1 minute',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Jumping_Jacks.jpg'
+                                                }
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Dumbell Row',
+                                                instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
+                                                Weight: '25',
+                                                Reps: '12',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                            },
+                                            {
+                                                name:'Pullups',
+                                                instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
+                                            },
+                                            {
+                                                name: 'Barbell Shrug',
+                                                instruction: 'Use an alternated grip, one hand pronated (overhand) and one hand supinated (underhand), about shoulder-width apart. Place feet hip-width apart, brace the core and stand tall with the bar Now shrug up, visualizing touching your traps to your ears. Do NOT ‘roll’ the shoulders. Shrug straight up and down. Control the weight back down to the starting position and repeat.',
+                                                Weight: '65',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Barbell_Shrug.jpg'
+                                            },
+                                            {
+                                                name: 'Face Pulls',
+                                                instruction: 'Set up a cable pulley machine so the pulley system is positioned slightly above your head. Use the rope attachment that features two hand-holds for this exercise. Reach up and grasp the handles with both hands with your palms facing in. Step back until your arms are fully extended, then engage your core and lean back slightly, positioning your body at a roughly 20-degree angle. Pull the rope toward you just enough to start lifting the weight from the stack, then engage your shoulders, rolling them back to create good posture—you do not want your shoulders hunching or rolling forward. This is your starting position. Pull the handles of the attachment straight toward your forehead. Keep your palms facing in as your elbows flare outward toward the sides, engaging the rear delts. Reverse the movement and slowly extend your arms without allowing your shoulders or chest to roll forward as you extend. You want to maintain good posture throughout the exercise.',
+                                                Weight: '30',
+                                                Reps: '20',
+                                                Sets: '2',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Face_Pulls.jpg'
+                                            },
+                                            {
+                                                name: 'Barbell Curl',
+                                                instruction: 'Stand erect with the shoulder blades down the back, chest up, and shoulder pulled back. The grip should be slightly wider than hip-width (can vary), with the palms facing away from the body. This is something so few lifters do, and as a result, they flare their elbows out and leave a rep (or two) in the tank. the chest collapsing, and the biceps lacking width and fullness. Squeezing the bar will activate all of the muscles in your forearms and upper arm, which will generally activate the target muscles more. Also, you’ll be tight and less prone to flaring your arms out or performing generally sloppy reps. Instead of dragging the bar up the body, think about keeping the elbows slightly in front of the body at all times. Imagine yourself curling from a side view — your elbows should travel slightly in front of your torso. Continue to curl up, focusing on not letting the shoulders come forwards. Your shoulders will slightly — slightly! — come into to play when your elbows drift forward. Remember to primarily curl with your biceps. The point of letting your elbows come forward a bit is to further isolate the biceps. Curl the bar until it’s about an inch or two from the front of your shoulders. This is just a suggestion. Really, curl until you feel your biceps contract the most. Find that spot, hold the weight there for a beat, and then find that spot again on your next rep. The goal here is about gaining a contraction.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Barbell_Curl.jpg'
+                                            },
+                                            {
+                                                name: 'Hammer Curls',
+                                                instruction: 'Stand up, grab two dumbbells with a neutral grip and then hold them by your sides. Brace your core and then curl the weights to your shoulders by flexing your elbows. Squeeze your biceps at the top of the rep and then lower the dumbbells under control until your elbows are fully extended.',
+                                                weight: '20',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Hammer_Curls.jpg'
+                                            }
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name:'Reach For The Sky',
+                                                instruction: 'Start in the seated position. Place the left hand in your lap and stretch the right hand towards. the sky. Bend slightly to your left side, feeling a light stretch along your. right side. Count to 10 while breathing slowly. Switch to the left hand and repeat.',
+                                                Reps: '15 seconds',
+                                                Sets: '4',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Reach_For_The_Sky.jpg'
+                                            },
+                                        ]
+                                }
+                        },  
+                        {
+                            session: 
+                                {
+                                    day: 3,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name: 'Seated Toe Touches',
+                                                    instruction: 'Sit on the ground with your legs stretched out, feet flexed and your back straight. Breathe in deep and engage the muscles of your abdomen, taking care to keep your head aligned with your spine as you slowly bend forward. Reach forward with your arms as you bend into the stretch, aiming for the toes. Do not bounce as you stretch, this causes small tears in the muscle fibers, which can end up making your muscles even tighter',
+                                                    Reps: '30 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Seated_Toe_Touches.jpg'
+                                                },
+                                                {
+                                                    name:'Butterfly Stretch',
+                                                    instruction:'Sit down on the floor or ground with your legs in front of you. Reach forward and grab your right foot. It is OK to bend your knee to help your hand and foot connect. Gently pull your right foot up towards your groin bending until it is at a comfortable spot and the sole of the foot is facing your left thigh. Bend your left knee to bring your left foot toward your groin so that its sole touches the sole of your right foot. Hold your feet with your hands and rest your elbows on your knees. While keeping your back straight (no slouching), allow your knees to fall towards the ground. You can apply gentle pressure on the inner thigh by pressing gently on the knees with the elbows. You should feel gentle pulling and tension in the groin.',
+                                                    Reps: '30 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Butterfly_Stretch.jpg'
+                                                }
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Squats',
+                                                instruction: 'Stand with feet a little wider than hip width, toes facing front. Drive your hips back—bending at the knees and ankles and pressing your knees slightly open. Sit into a squat position while still keeping your heels and toes on the ground, chest up and shoulders back. Strive to eventually reach parallel, meaning knees are bent to a 90-degree angle. Press into your heels and straighten legs to return to a standing upright position.',
+                                                Reps: '20',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Squats.jpg'
+                                            },
+                                            {
+                                                name:'Romanian Deadlift',
+                                                instruction: 'Hold your weight (dumbbells or a barbell) in front of your thighs, and lower to the ground by pushing your hips back. As you lower the weight, keep your shoulder blades drawn towards each other and your chest open and wide. When the weight is below your knees, thrust your hips forward and return to the starting position.',
+                                                Weight: '100',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Romanian_Deadlift.jpg'
+                                            },
+                                            {
+                                                name: 'Leg Press',
+                                                instruction: 'Sit on the leg press and slide your butt down and into the bottom of the seat. Extend your legs and press the weight up. Bend your knees and descend as far as your flexibility and knee health allows. Without bouncing, drive the weight back up, stopping just short of full knee extension.',
+                                                Weight: '50',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Leg_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Leg Curls',
+                                                instruction: 'Exhale and flex your knees, pulling your ankles as close to your buttocks as possible. Keep your hips firmly on the bench. Hold briefly. Inhale as you return your feet to the starting position in a slow and controlled movement.',
+                                                Weight: '30',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Leg_Curls.jpg'
+                                            },
+                                            {
+                                                name: 'Calf Raises',
+                                                instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
+                                                Weight: '30',
+                                                Reps: '10',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
+                                            },
+                                            {
+                                                name: 'Hanging Leg Raises',
+                                                instruction: 'Exhale as you lift your feet off the ground, raising your straight legs outward in front of you. Tilt your pelvis slightly back and engage your abdominals and hip flexors to assist with the movement. Raise your legs to a level that feels challenging but still enables you to keep good form. Strive to get them parallel to the ground (so that your hips are bent at 90 degrees), or a little higher if you can. Lower your legs back down slowly until they return to the starting position, inhaling during this portion of the exercise. Maintain your posterior pelvic tilt, even at the bottom of the movement.',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Hanging_Leg_Raises.jpg'
+                                            } 
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name: 'Cross Body Glute Pull',
+                                                instruction: 'Start on your back with your legs extended and your feet flexed upward. Bend and lift your right knee and place your hands around your knee. Pull your right knee up toward your left shoulder. Hold for 20–30 seconds. Return your right leg to the starting position. Straighten your right leg and repeat with your left leg.',
+                                                Reps: '30 seconds',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Cross_Body_Glute_Pull.jpg'
+                                            },
+                                            {
+                                                name: 'Childs Pose',
+                                                instruction: 'Begin on your yoga mat on all fours supported by your hands and knees. Make sure your hands are directly beneath your shoulders, knees directly beneath your hips, and your feet directly behind your knees. Sit back onto your feet, keeping your feet and knees hip’s width apart. The soles of the feet will be facing the sky in the pose. Gently lower your upper body forward, resting your forehead on the floor. Allow your arms to rest loosely by your sides, hands by your feet, with palms facing the sky. Inhale, lengthening your spine. Exhale, relaxing your shoulders.',
+                                                Reps: '1 minute',
+                                                Sets: '1',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Childs_Pose.jpg'
+                                            }
+                                        ]
+                                }
+                        },
+                        {
+                            session: 
+                                {
+                                    day: 4,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name: 'Elliptical Machine',
+                                                    instruction: 'Step onto the machine facing the monitor. Be careful stepping onto the machine. The pedals may start to move as you do and it can be easy to lose your balance. Grab the handlebars as you step on to help you stay balanced. Begin pedaling to turn it on. Taking a few steps forward on the machine should power up the display. If not, look for a start button. Start pedaling at an even pace. Your arms should be swinging with the handles. When your left foot goes down, straightening your leg, the right handle should be pulled toward your body. Same for when your right leg goes down.',
+                                                    Reps: '15 minutes',
+                                                    Sets: '1',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Elliptical_Machine.jpg'
+                                                },
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Bench Press',
+                                                instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Bench_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Shoulder Press',
+                                                instruction: 'Place a barbell with the desired weight on a rack, making sure that it’s at shoulder height. Dip under the bar and place yourself underneath the barbell, picking it up as you slowly straighten yourself up. If this is done correctly, the barbell should then rest at the top of your shoulders. Grab the bar with your palms facing upwards — your elbows should point straight ahead. Make sure that your back is straight to secure proper form. Gently step back from the rack, keeping your back tall — then, simply press the barbell overhead. Once you can’t extend your arms any further, slowly return the barbell to your shoulders and repeat as many times as you need to. After the final repetition, step into the rack and leave the barbell at shoulder height once again. Finally, dip under the bar and step away from the rack without the bar.',
+                                                weight: '45',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Shoulder_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Incline Dumbbell Press',
+                                                instruction: 'Sit on a bench, and lift a pair of dumbbells up to the starting position. Press the dumbbells up to straight arms, while exhaling. Inhale at the top, or while lowering the dumbbells with control back to your shoulders.',
+                                                Weight: '30',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Incline_Dumbell_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Lateral Raise',
+                                                instruction: 'Stand tall, a dumbbell in each hand. Arms are at your sides, palms facing in. Position your feet roughly hip-distance apart. Check your posture—roll your shoulders back, engage your core, and look straight ahead. Raise your arms simultaneously just a couple inches out to each side and pause. This momentary pause should help ensure you disengage your trapezius muscle from the movement, targeting the deltoids as intended. Lift the dumbbells up and out to each side, keeping your arms almost completely straight, stopping when your elbows reach shoulder-height and your body is forming a "T" shape. Breathe in as you lift. Pause and hold for a second at the top of the movement. Lower the weights slowly (take about twice as long to lower the weights as you took to lift them), bringing your arms back to your sides. Breathe out as you lower the dumbbells.',
+                                                Weight: '20',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Lateral_Raise.jpg'
+                                            },
+                                            {
+                                                name: 'Tricep Pushdowns',
+                                                instruction: 'Start by bracing your abdominals. Tuck your elbows in at your sides and position your feet slightly apart. Inhale. Push down until your elbows are fully extended but not yet in the straight, locked position. Keep your elbows close to your body and bend your knees slightly on the pushdown. Resist bending forward. Try to keep your back as straight as possible as you push down. As you exhale, return to the starting point using a controlled movement. Try not to crash the weights.',
+                                                Weight: '40',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                            },
+                                            {
+                                                name: 'Overhead Triceps Extension',
+                                                instruction: 'Lift the dumbbell directly overhead. Ensure the head stays aligned over the chest, the core remains engaged, and the shoulders are relaxed. Extend both arms fully, then exhale and slowly lower the weight, bringing the weight behind the head by bending at the elbows. Be sure the chest stays aligned over the hips and the back does not arch. Inhale and reverse the movement once you reach a 90-degree bend at the elbow or slightly further, lifting the weight back to the starting position. The weight should not touch the back of the head when it is in its lowest position.',
+                                                Weight: '25',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Tricep_Extention.jpg'
+                                            } 
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name: 'Overhead Shoulder Stretch',
+                                                instruction: 'Stand straight with your feet shoulders width apart. Reach your arms straight overhead and interlace your fingers with the palms facing upward. Raise your arms upward as you press your shoulders down. Hold for the rep count',
+                                                Reps: '15 seconds',
+                                                Sets: '4',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Shoulder_Stretch.jpg'
+                                            },
+                                            {
+                                                name:'Reach For The Sky',
+                                                instruction: 'Start in the seated position. Place the left hand in your lap and stretch the right hand towards. the sky. Bend slightly to your left side, feeling a light stretch along your. right side. Count to 10 while breathing slowly. Switch to the left hand and repeat.',
+                                                Reps: '15 seconds',
+                                                Sets: '4',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Reach_For_The_Sky.jpg'
+                                            }
+                                        ]
+                                }
+                        },
+                        {
+                            session: 
+                                {
+                                    day: 5,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name:'Back Scratch',
+                                                    instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
+                                                    Reps: '45 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
+                                                },
+                                                {
+                                                    name:'Reach For The Sky',
+                                                    instruction: 'Start in the seated position. Place the left hand in your lap and stretch the right hand towards. the sky. Bend slightly to your left side, feeling a light stretch along your. right side. Count to 10 while breathing slowly. Switch to the left hand and repeat.',
+                                                    Reps: '15 seconds',
+                                                    Sets: '4',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Reach_For_The_Sky.jpg'
+                                                }
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Dumbell Row',
+                                                instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
+                                                Weight: '25',
+                                                Reps: '12',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                            },
+                                            {
+                                                name:'Pullups',
+                                                instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
+                                            },
+                                            {
+                                                name: 'Barbell Shrug',
+                                                instruction: 'Use an alternated grip, one hand pronated (overhand) and one hand supinated (underhand), about shoulder-width apart. Place feet hip-width apart, brace the core and stand tall with the bar Now shrug up, visualizing touching your traps to your ears. Do NOT ‘roll’ the shoulders. Shrug straight up and down. Control the weight back down to the starting position and repeat.',
+                                                Weight: '65',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Barbell_Shrug.jpg'
+                                            },
+                                            {
+                                                name: 'Face Pulls',
+                                                instruction: 'Set up a cable pulley machine so the pulley system is positioned slightly above your head. Use the rope attachment that features two hand-holds for this exercise. Reach up and grasp the handles with both hands with your palms facing in. Step back until your arms are fully extended, then engage your core and lean back slightly, positioning your body at a roughly 20-degree angle. Pull the rope toward you just enough to start lifting the weight from the stack, then engage your shoulders, rolling them back to create good posture—you do not want your shoulders hunching or rolling forward. This is your starting position. Pull the handles of the attachment straight toward your forehead. Keep your palms facing in as your elbows flare outward toward the sides, engaging the rear delts. Reverse the movement and slowly extend your arms without allowing your shoulders or chest to roll forward as you extend. You want to maintain good posture throughout the exercise.',
+                                                Weight: '30',
+                                                Reps: '20',
+                                                Sets: '2',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Face_Pulls.jpg'
+                                            },
+                                            {
+                                                name: 'Barbell Curl',
+                                                instruction: 'Stand erect with the shoulder blades down the back, chest up, and shoulder pulled back. The grip should be slightly wider than hip-width (can vary), with the palms facing away from the body. This is something so few lifters do, and as a result, they flare their elbows out and leave a rep (or two) in the tank. the chest collapsing, and the biceps lacking width and fullness. Squeezing the bar will activate all of the muscles in your forearms and upper arm, which will generally activate the target muscles more. Also, you’ll be tight and less prone to flaring your arms out or performing generally sloppy reps. Instead of dragging the bar up the body, think about keeping the elbows slightly in front of the body at all times. Imagine yourself curling from a side view — your elbows should travel slightly in front of your torso. Continue to curl up, focusing on not letting the shoulders come forwards. Your shoulders will slightly — slightly! — come into to play when your elbows drift forward. Remember to primarily curl with your biceps. The point of letting your elbows come forward a bit is to further isolate the biceps. Curl the bar until it’s about an inch or two from the front of your shoulders. This is just a suggestion. Really, curl until you feel your biceps contract the most. Find that spot, hold the weight there for a beat, and then find that spot again on your next rep. The goal here is about gaining a contraction.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Barbell_Curl.jpg'
+                                            },
+                                            {
+                                                name: 'Hammer Curls',
+                                                instruction: 'Stand up, grab two dumbbells with a neutral grip and then hold them by your sides. Brace your core and then curl the weights to your shoulders by flexing your elbows. Squeeze your biceps at the top of the rep and then lower the dumbbells under control until your elbows are fully extended.',
+                                                weight: '20',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Hammer_Curls.jpg'
+                                            }
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name: 'Arm Circles',
+                                                instruction: 'Stand upright with a shoulder-wide stance. Extend your arms to your sides. They should be parallel to the floor. Push your shoulders back and down to get in position. Rotate your arms clockwise at your shoulders. Arm circles are usually performed until you feel a burn in your shoulders or if you can’t hold your arms parallel to the floor.',
+                                                Reps: '1 minute',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Arm_Circles.jpg'
+                                            }
+                                        ]
+                                }
+                        },
+                        'rest',
+                        'rest'
+                   ]
+            }
+        },
+        two_three: {
+            workout: {
+                name: 'Upper/Lower/Full Body',
+                
+                schedule:
+                    [
+                        {
+                            session: 
+                                {
+                                    day: 1,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name:'Back Scratch',
+                                                    instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
+                                                    Reps: '45 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch.jpg'
+                                                },
+                                                {
+                                                    name:'Butterfly Stretch',
+                                                    instruction:'Sit down on the floor or ground with your legs in front of you. Reach forward and grab your right foot. It is OK to bend your knee to help your hand and foot connect. Gently pull your right foot up towards your groin bending until it is at a comfortable spot and the sole of the foot is facing your left thigh. Bend your left knee to bring your left foot toward your groin so that its sole touches the sole of your right foot. Hold your feet with your hands and rest your elbows on your knees. While keeping your back straight (no slouching), allow your knees to fall towards the ground. You can apply gentle pressure on the inner thigh by pressing gently on the knees with the elbows. You should feel gentle pulling and tension in the groin.',
+                                                    Reps: '30 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Butterfly_Stretch.jpg'
+                                                }
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Front Squat',
+                                                instruction: 'Grip the bar slightly wider than shoulder-width. Inhale and brace your core slightly, and unrack the bar. Take two steps back, and adjust your foot position. Squat as deep as possible with good technique. With control, stop and reverse the movement, extending your hips and legs again. Exhale on the way up or exchange air in the top position. Breathe in and repeat for reps.',
+                                                weight: '65',
+                                                Reps: '5',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Front_Squat.jpg'
+                                            },
+                                            {
+                                                name:'Romanian Deadlift',
+                                                instruction: 'Hold your weight (dumbbells or a barbell) in front of your thighs, and lower to the ground by pushing your hips back. As you lower the weight, keep your shoulder blades drawn towards each other and your chest open and wide. When the weight is below your knees, thrust your hips forward and return to the starting position.',
+                                                Weight: '100',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Romanian_Deadlift.jpg'
+                                            },
+                                            {
+                                                name: 'Bench Press',
+                                                instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Bench_Press.jpg'
+                                            },
+                                            {
+                                                name:'Pullups',
+                                                instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
+                                            },
+                                            {
+                                                name: 'Barbell Row',
+                                                instruction: 'Stand with your mid-foot under the bar (medium stance) Bend over and grab the bar (palms down, medium-grip). Unlock your knees while keeping your hips high. Lift your chest and straighten your back. Pull the bar against your lower chest',
+                                                Weight: '65',
+                                                Reps: '6',
+                                                Sets: '4',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Barbell_Row.jpg'
+                                            },
+                                            {
+                                                name: 'Barbell Curl',
+                                                instruction: 'Stand erect with the shoulder blades down the back, chest up, and shoulder pulled back. The grip should be slightly wider than hip-width (can vary), with the palms facing away from the body. This is something so few lifters do, and as a result, they flare their elbows out and leave a rep (or two) in the tank. the chest collapsing, and the biceps lacking width and fullness. Squeezing the bar will activate all of the muscles in your forearms and upper arm, which will generally activate the target muscles more. Also, you’ll be tight and less prone to flaring your arms out or performing generally sloppy reps. Instead of dragging the bar up the body, think about keeping the elbows slightly in front of the body at all times. Imagine yourself curling from a side view — your elbows should travel slightly in front of your torso. Continue to curl up, focusing on not letting the shoulders come forwards. Your shoulders will slightly — slightly! — come into to play when your elbows drift forward. Remember to primarily curl with your biceps. The point of letting your elbows come forward a bit is to further isolate the biceps. Curl the bar until it’s about an inch or two from the front of your shoulders. This is just a suggestion. Really, curl until you feel your biceps contract the most. Find that spot, hold the weight there for a beat, and then find that spot again on your next rep. The goal here is about gaining a contraction.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Barbell_Curl.jpg'
+                                            },
+                                            {
+                                                name: 'Tricep Pushdowns',
+                                                instruction: 'Start by bracing your abdominals. Tuck your elbows in at your sides and position your feet slightly apart. Inhale. Push down until your elbows are fully extended but not yet in the straight, locked position. Keep your elbows close to your body and bend your knees slightly on the pushdown. Resist bending forward. Try to keep your back as straight as possible as you push down. As you exhale, return to the starting point using a controlled movement. Try not to crash the weights.',
+                                                Weight: '40',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                            } 
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name: 'Cross Body Glute Pull',
+                                                instruction: 'Start on your back with your legs extended and your feet flexed upward. Bend and lift your right knee and place your hands around your knee. Pull your right knee up toward your left shoulder. Hold for 20–30 seconds. Return your right leg to the starting position. Straighten your right leg and repeat with your left leg.',
+                                                Reps: '30 seconds',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Cross_Body_Glute_Pull.jpg'
+                                            },
+                                            {
+                                                name: 'Childs Pose',
+                                                instruction: 'Begin on your yoga mat on all fours supported by your hands and knees. Make sure your hands are directly beneath your shoulders, knees directly beneath your hips, and your feet directly behind your knees. Sit back onto your feet, keeping your feet and knees hip’s width apart. The soles of the feet will be facing the sky in the pose. Gently lower your upper body forward, resting your forehead on the floor. Allow your arms to rest loosely by your sides, hands by your feet, with palms facing the sky. Inhale, lengthening your spine. Exhale, relaxing your shoulders.',
+                                                Reps: '1 minute',
+                                                Sets: '1',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Childs_Pose.jpg'
+                                            }
+                                        ]
+                                }
+                        },
+                        'rest',
+                        {
+                            session: 
+                                {
+                                    day: 3,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name: 'Elliptical Machine',
+                                                    instruction: 'Step onto the machine facing the monitor. Be careful stepping onto the machine. The pedals may start to move as you do and it can be easy to lose your balance. Grab the handlebars as you step on to help you stay balanced. Begin pedaling to turn it on. Taking a few steps forward on the machine should power up the display. If not, look for a start button. Start pedaling at an even pace. Your arms should be swinging with the handles. When your left foot goes down, straightening your leg, the right handle should be pulled toward your body. Same for when your right leg goes down.',
+                                                    Reps: '15 minutes',
+                                                    Sets: '1',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Elliptical_Machine.jpg'
+                                                },
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name:'Deadlift',
+                                                instruction: 'Position the feet shoulder-width apart (or not much more) with toes under the bar. The feet point straight ahead, or they can angle out slightly. Heels should stay flat on the surface. When you lift, the bar will travel close to the shins and may even graze them. Maintain a neutral spine position. Stabilize the abdominal muscles by bracing them. Squat down, bending at the knees. The form for descending to the bar is similar (but not identical) to the squat, with your back straight or arched slightly and not rounded at the shoulders or spine. Grasp the bar just outside the line of the knees with an overhand or mixed grip. Lift the bar by pushing upward with the legs from the knees. Breathe out on exertion. Be careful not to raise the hips first so the trunk moves forward and the back becomes rounded. Don’t try to haul the bar up with your arms. The arms stay extended under tension while gripping the bar as the legs push up. Think of the legs and shoulders moving upward in unison with the hips, the balancing point. The bar should almost graze the shins and rest around thigh level as you reach full height. Pull the shoulders back as much as possible without bending backward. Lower the bar to the floor with a reverse motion ensuring a straight back.',
+                                                weight: '120',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Deadlift.jpg'
+                                            },
+                                            {
+                                                name: 'Leg Press',
+                                                instruction: 'Sit on the leg press and slide your butt down and into the bottom of the seat. Extend your legs and press the weight up. Bend your knees and descend as far as your flexibility and knee health allows. Without bouncing, drive the weight back up, stopping just short of full knee extension.',
+                                                Weight: '50',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Leg_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Bench Press',
+                                                instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                                Weight: '45',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Bench_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Seated Cable Row',
+                                                instruction: 'Pull the handle and weight back toward the lower abdomen while trying not to use the momentum of the row too much by moving the torso backward with the arms. Target the middle to upper back by keeping your back straight and squeezing your shoulder blades together as you row, keeping your chest out. Return the handle forward under tension to full stretch, remembering to keep that back straight even though flexed at the hips.',
+                                                Weight: '60',
+                                                Reps: '10',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Seated_Cable_Row.jpg'
+                                            },
+                                            {
+                                                name: 'Shoulder Press',
+                                                instruction: 'Place a barbell with the desired weight on a rack, making sure that it’s at shoulder height. Dip under the bar and place yourself underneath the barbell, picking it up as you slowly straighten yourself up. If this is done correctly, the barbell should then rest at the top of your shoulders. Grab the bar with your palms facing upwards — your elbows should point straight ahead. Make sure that your back is straight to secure proper form. Gently step back from the rack, keeping your back tall — then, simply press the barbell overhead. Once you can’t extend your arms any further, slowly return the barbell to your shoulders and repeat as many times as you need to. After the final repetition, step into the rack and leave the barbell at shoulder height once again. Finally, dip under the bar and step away from the rack without the bar.',
+                                                weight: '45',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Shoulder_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Hammer Curls',
+                                                instruction: 'Stand up, grab two dumbbells with a neutral grip and then hold them by your sides. Brace your core and then curl the weights to your shoulders by flexing your elbows. Squeeze your biceps at the top of the rep and then lower the dumbbells under control until your elbows are fully extended.',
+                                                weight: '20',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Hammer_Curls.jpg'
+                                            },
+                                            {
+                                                name: 'Overhead Triceps Extension',
+                                                instruction: 'Lift the dumbbell directly overhead. Ensure the head stays aligned over the chest, the core remains engaged, and the shoulders are relaxed. Extend both arms fully, then exhale and slowly lower the weight, bringing the weight behind the head by bending at the elbows. Be sure the chest stays aligned over the hips and the back does not arch. Inhale and reverse the movement once you reach a 90-degree bend at the elbow or slightly further, lifting the weight back to the starting position. The weight should not touch the back of the head when it is in its lowest position.',
+                                                Weight: '25',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Tricep_Extention.jpg'
+                                            } 
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name:'Reach For The Sky',
+                                                instruction: 'Start in the seated position. Place the left hand in your lap and stretch the right hand towards. the sky. Bend slightly to your left side, feeling a light stretch along your. right side. Count to 10 while breathing slowly. Switch to the left hand and repeat.',
+                                                Reps: '15 seconds',
+                                                Sets: '4',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Reach_For_The_Sky.jpg'
+                                            },
+                                            {
+                                                name:'Butterfly Stretch',
+                                                instruction:'Sit down on the floor or ground with your legs in front of you. Reach forward and grab your right foot. It is OK to bend your knee to help your hand and foot connect. Gently pull your right foot up towards your groin bending until it is at a comfortable spot and the sole of the foot is facing your left thigh. Bend your left knee to bring your left foot toward your groin so that its sole touches the sole of your right foot. Hold your feet with your hands and rest your elbows on your knees. While keeping your back straight (no slouching), allow your knees to fall towards the ground. You can apply gentle pressure on the inner thigh by pressing gently on the knees with the elbows. You should feel gentle pulling and tension in the groin.',
+                                                Reps: '30 seconds',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Butterfly_Stretch.jpg'
+                                            }
+                                        ]
+                                },
+                                
+                        },
+                        'rest',
+                        {
+                            session: 
+                                {
+                                    day: 5,
+                                        warm_up: 
+                                            [
+                                                {
+                                                    name: 'Seated Toe Touches',
+                                                    instruction: 'Sit on the ground with your legs stretched out, feet flexed and your back straight. Breathe in deep and engage the muscles of your abdomen, taking care to keep your head aligned with your spine as you slowly bend forward. Reach forward with your arms as you bend into the stretch, aiming for the toes. Do not bounce as you stretch, this causes small tears in the muscle fibers, which can end up making your muscles even tighter',
+                                                    Reps: '30 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Seated_Toe_Touches.jpg'
+                                                },
+                                                {
+                                                    name:'Butterfly Stretch',
+                                                    instruction:'Sit down on the floor or ground with your legs in front of you. Reach forward and grab your right foot. It is OK to bend your knee to help your hand and foot connect. Gently pull your right foot up towards your groin bending until it is at a comfortable spot and the sole of the foot is facing your left thigh. Bend your left knee to bring your left foot toward your groin so that its sole touches the sole of your right foot. Hold your feet with your hands and rest your elbows on your knees. While keeping your back straight (no slouching), allow your knees to fall towards the ground. You can apply gentle pressure on the inner thigh by pressing gently on the knees with the elbows. You should feel gentle pulling and tension in the groin.',
+                                                    Reps: '30 seconds',
+                                                    Sets: '3',
+                                                    photoURL: process.env.PUBLIC_URL + '/img/Butterfly_Stretch.jpg'
+                                                }
+                                            ]
+                                    ,
+                                    
+                                        main_workout: [
+                                            {
+                                                name: 'Squats',
+                                                instruction: 'Stand with feet a little wider than hip width, toes facing front. Drive your hips back—bending at the knees and ankles and pressing your knees slightly open. Sit into a squat position while still keeping your heels and toes on the ground, chest up and shoulders back. Strive to eventually reach parallel, meaning knees are bent to a 90-degree angle. Press into your heels and straighten legs to return to a standing upright position.',
+                                                Reps: '20',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Squats.jpg'
+                                            },
+                                            {
+                                                name:'Romanian Deadlift',
+                                                instruction: 'Hold your weight (dumbbells or a barbell) in front of your thighs, and lower to the ground by pushing your hips back. As you lower the weight, keep your shoulder blades drawn towards each other and your chest open and wide. When the weight is below your knees, thrust your hips forward and return to the starting position.',
+                                                Weight: '100',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Romanian_Deadlift.jpg'
+                                            },
+                                            {
+                                                name: 'Leg Press',
+                                                instruction: 'Sit on the leg press and slide your butt down and into the bottom of the seat. Extend your legs and press the weight up. Bend your knees and descend as far as your flexibility and knee health allows. Without bouncing, drive the weight back up, stopping just short of full knee extension.',
+                                                Weight: '50',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Leg_Press.jpg'
+                                            },
+                                            {
+                                                name: 'Leg Curls',
+                                                instruction: 'Exhale and flex your knees, pulling your ankles as close to your buttocks as possible. Keep your hips firmly on the bench. Hold briefly. Inhale as you return your feet to the starting position in a slow and controlled movement.',
+                                                Weight: '30',
+                                                Reps: '6',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Leg_Curls.jpg'
+                                            },
+                                            {
+                                                name: 'Calf Raises',
+                                                instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
+                                                Weight: '30',
+                                                Reps: '10',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
+                                            },
+                                            {
+                                                name: 'Hanging Leg Raises',
+                                                instruction: 'Exhale as you lift your feet off the ground, raising your straight legs outward in front of you. Tilt your pelvis slightly back and engage your abdominals and hip flexors to assist with the movement. Raise your legs to a level that feels challenging but still enables you to keep good form. Strive to get them parallel to the ground (so that your hips are bent at 90 degrees), or a little higher if you can. Lower your legs back down slowly until they return to the starting position, inhaling during this portion of the exercise. Maintain your posterior pelvic tilt, even at the bottom of the movement.',
+                                                Reps: '8',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Hanging_Leg_Raises.jpg'
+                                            } 
+                                        ] 
+                                    ,
+                                    
+                                        cool_down:[
+                                            {
+                                                name: 'Cross Body Glute Pull',
+                                                instruction: 'Start on your back with your legs extended and your feet flexed upward. Bend and lift your right knee and place your hands around your knee. Pull your right knee up toward your left shoulder. Hold for 20–30 seconds. Return your right leg to the starting position. Straighten your right leg and repeat with your left leg.',
+                                                Reps: '30 seconds',
+                                                Sets: '3',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Cross_Body_Glute_Pull.jpg'
+                                            },
+                                            {
+                                                name: 'Childs Pose',
+                                                instruction: 'Begin on your yoga mat on all fours supported by your hands and knees. Make sure your hands are directly beneath your shoulders, knees directly beneath your hips, and your feet directly behind your knees. Sit back onto your feet, keeping your feet and knees hip’s width apart. The soles of the feet will be facing the sky in the pose. Gently lower your upper body forward, resting your forehead on the floor. Allow your arms to rest loosely by your sides, hands by your feet, with palms facing the sky. Inhale, lengthening your spine. Exhale, relaxing your shoulders.',
+                                                Reps: '1 minute',
+                                                Sets: '1',
+                                                photoURL: process.env.PUBLIC_URL + '/img/Childs_Pose.jpg'
+                                            }
+                                        ]
+                                }
+                        },
+                        'rest',
+                        'rest',
+                ]
+            }   
+        }   
     }
 
 }

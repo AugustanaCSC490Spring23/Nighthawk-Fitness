@@ -1,0 +1,29 @@
+.remain-consumed {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.bar {
+    width: 80%;
+    height: 20px;
+    border: 1px solid var(--primary-box);
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.remain-progress,
+.consume-progress {
+    height: 100%;
+    background: var(--primary-variant);
+}
+
+.remain-consumed-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: .5rem;
+}
+
