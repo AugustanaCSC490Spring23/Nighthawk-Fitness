@@ -179,7 +179,7 @@ const beginner = {
                                     {
                                         name: 'Stationary Bike',
                                         instruction: 'If you stand next to an upright bike, the seat should be level with the top of your hips. You should have a slight bend in the knees at the bottom of the pedal stroke. Adjust the seat, handles, and pedals to match your height and reach. Learn how to adjust the resistance during the workout as you will be changing it during different intervals.',
-                                        Reps: '600',
+                                        Reps: '10 minutes',
                                         Sets: '1',
                                         photoURL: process.env.PUBLIC_URL + '/img/Stationary_Bike.jpg'
                                     },
@@ -395,7 +395,7 @@ const beginner = {
                                     {
                                         name: 'Stationary Bike',
                                         instruction: 'If you stand next to an upright bike, the seat should be level with the top of your hips. You should have a slight bend in the knees at the bottom of the pedal stroke. Adjust the seat, handles, and pedals to match your height and reach. Learn how to adjust the resistance during the workout as you will be changing it during different intervals.',
-                                        Reps: '600',
+                                        Reps: '10 minutes',
                                         Sets: '1',
                                         photoURL: process.env.PUBLIC_URL + '/img/Stationary_Bike.jpg'
                                     },
@@ -1462,6 +1462,8 @@ const beginner = {
                             }
 
                         },
+                        'rest',
+                        'rest'
                     ]
             }
         },
@@ -1893,7 +1895,7 @@ const beginner = {
             }
         }
     },
-    calisthenics: {
+    overall_Fitness: {
         two_three: {
             workout: {
                 name: 'Beginner Calisthenics',
@@ -1962,7 +1964,7 @@ const beginner = {
                                         },
                                         {
                                             name: 'Rest',
-                                            instructions:'Rest 1 minute, then repeat 6 times'
+                                            instruction:'Rest 1 minute, then repeat 6 times'
                                         }
                                     ],
                                 cool_down:
@@ -2247,7 +2249,7 @@ const beginner = {
                                         },
                                         {
                                             name: 'Rest',
-                                            instructions: 'Rest 1 minute, then repeat 6 times'
+                                            instruction: 'Rest 1 minute, then repeat 6 times'
                                         }
                                     ],
                                 cool_down:
