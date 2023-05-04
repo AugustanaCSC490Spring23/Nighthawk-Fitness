@@ -7,7 +7,7 @@
     gap: 2.5rem;
     height: max-content;
     padding: 20px 0;
-    width: 100%;
+    width: 600px;
 }
 
 .main-container h1 {
@@ -162,6 +162,28 @@
     font-size: large;
     text-align: left !important;
     color: var(--primary-text);
+}
+
+.calendar-plan-display {
+    margin-top: 1rem;
+}
+
+.calendar-plan-display ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.calendar-plan-display ul li {
+    list-style-type: none;
+    font-size: 14px;
+}
+
+.calendar-plan-display ul h4 {
+    background: var(--primary-box);
+    width: max-content;
+    padding: .25rem .75rem;
+    border-radius: 1rem;
 }
 
 @media (max-width: 1350px) { 

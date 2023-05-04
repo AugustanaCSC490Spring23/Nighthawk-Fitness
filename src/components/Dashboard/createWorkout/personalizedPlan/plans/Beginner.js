@@ -1,5 +1,3 @@
- 
-
 const beginner = {
     weight_loss: {
         two_three: {

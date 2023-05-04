@@ -17,7 +17,14 @@ export default function PersonalizedPlan() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeType, setActiveType] = useState(0);
   const navigate = useNavigate();
-  
+  const [isEdit, setIsEdit] = useState(false)
+
+  const [personal, setPersonal] = useState({
+    goal: userData.information.goal,
+    experience_level: userData.personal_preference.experience_level,
+    workout_time: userData.personal_preference.workout_time
+  })
+
   function openTab(index) {
     // document.getElementById(index).classList.toggle('active-day')
     setActiveTab(index);
@@ -77,6 +84,57 @@ export default function PersonalizedPlan() {
     setUserData(updateData);
     localStorage.setItem('userData', JSON.stringify(updateData))
   }
+
+  function openEdit() {
+    setIsEdit(true)
+  }
+
+  function closeEdit() {
+    setIsEdit(false)
+  }
+
+  async function changePlan() {
+    
+    const currentDoc = doc(db, 'users', userData.docID);
+    try {
+      await updateDoc(currentDoc, {
+        ...userData,
+        information: {
+          ...userData.information,
+          goal: personal.goal
+        },
+        personal_preference: {
+          experience_level: personal.experience_level,
+          workout_time: personal.workout_time
+        },
+        plan: '',
+        start_date: ''
+      })
+
+      const updateData = {
+          ...userData,
+          information: {
+            ...userData.information,
+            goal: personal.goal
+          },
+          personal_preference: {
+            experience_level: personal.experience_level,
+            workout_time: personal.workout_time
+          },
+          plan:'',
+          start_date: ''
+      };
+
+      setUserData(updateData);
+      localStorage.setItem('userData', JSON.stringify(updateData))
+
+      navigate('loading')
+    }catch(e) {
+      console.log(e);
+    }
+  }
+
+  
   return (
     <div className="container">
       <div className="manage-plan-tab" id='manage-tab'>
@@ -84,20 +142,85 @@ export default function PersonalizedPlan() {
           <div></div>
           <div></div>
         </div>
-        <div className="manage-plan-content">
-          <div className="manage-plan-item">
-            <h3> <span className='item-title'>Experience Level</span> <span className='item-details'>{userData.personal_preference.experience_level}</span><RiEditCircleFill className='edit-icon'/></h3>
+        {!isEdit ?
+          <div className="manage-plan-content">
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Experience Level</span> <span className='item-details'>{userData.personal_preference.experience_level}</span><RiEditCircleFill className='edit-icon'/></h3>
+            </div>
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Sessions per week</span> <span className='item-details'>{userData.personal_preference.workout_time}</span><RiEditCircleFill className='edit-icon'/></h3>
+            </div>
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Goal</span> <span className='item-details'>{userData.information.goal}</span><RiEditCircleFill className='edit-icon'/></h3>
+            </div>
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Duration</span> <span className='item-details'>4 weeks</span></h3>
+            </div>
+            <div className="manage-plan-btn">
+              <button onClick={openEdit}>Edit</button>
+            </div>
           </div>
-          <div className="manage-plan-item">
-            <h3> <span className='item-title'>Sessions per week</span> <span className='item-details'>{userData.personal_preference.workout_time}</span><RiEditCircleFill className='edit-icon'/></h3>
+          :
+          <div className="manage-plan-content">
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Experience Level</span> <span className='item-details'> 
+              <select onChange={(e) => {
+                setPersonal({
+                      ...personal,
+                      experience_level: e.target.value
+                  });
+                }}>
+                  <option value={userData.personal_preference.experience_level} selected>{userData.personal_preference.experience_level}</option>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="advance">Advance</option>
+                </select>
+              </span></h3>
+            </div>
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Sessions per week</span> <span className='item-details'>
+              <select onChange={(e) => {
+                setPersonal({
+                      ...personal,
+                      workout_time: e.target.value
+                  });
+                }}>
+                  <option value={userData.personal_preference.workout_time} selected>{userData.personal_preference.workout_time}</option>
+                  <option value="2-3">2-3</option>
+                  <option value="4-6">4-6</option>
+                  
+                </select>
+              </span></h3>
+            </div>
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Goal</span> <span className='item-details'>
+              <select onChange={(e) => {
+                setPersonal({
+                      ...personal,
+                      goal: e.target.value
+                  });
+                }}>
+                  <option value={userData.information.goal} selected>{userData.information.goal}</option>
+                  <option value="weight_loss">Lose Weight</option>
+                  <option value="strength">Strength</option>
+                  <option value="muscle_gain">Gain Muscle</option>
+                  <option value="overall_fitness">Overall Fitness</option>
+                  
+                </select>
+              </span></h3>
+            </div>
+            <div className="manage-plan-item">
+              <h3> <span className='item-title'>Duration</span> <span className='item-details'>4 weeks</span></h3>
+            </div>
+            <div className="manage-plan-btn">
+              <button onClick={changePlan}>Save</button>
+              <button onClick={closeEdit} className='cancel-btn'>Cancel</button>
+            </div>
+            
           </div>
-          <div className="manage-plan-item">
-            <h3> <span className='item-title'>Goal</span> <span className='item-details'>{userData.information.goal}</span><RiEditCircleFill className='edit-icon'/></h3>
-          </div>
-          <div className="manage-plan-item">
-            <h3> <span className='item-title'>Duration</span> <span className='item-details'>4 weeks</span></h3>
-          </div>
-        </div>
+        }
+        
+        
       </div>
       <div className='personal-plan'>
         <div className="back-btn" onClick={goBack}>
@@ -119,11 +242,11 @@ export default function PersonalizedPlan() {
           schedule.map((item, index) => (
           <div>
             {typeof item === 'object'  ? 
-            <div className={activeTab === index ? 'workout-day pressed' : 'workout-day'} onClick={() => openTab(index)}>
-              <h3 className='week-day'>Day {item.session.day}</h3>
+            <div className='week-day-container'>
+              <h3 className={activeTab === index ? 'week-day pressed' : 'week-day'} onClick={() => openTab(index)}>Day {item.session.day}</h3>
               <div className={activeTab === index ? 'tabs-content active-day' : 'tabs-content'} id={index}>
-                <h4 className='type' onClick={() => openType(index+10, index+11)}>warm up <IoMdArrowDropup id={index+11} className='type-icon'/></h4>
-                <ul className='type-item' id={index+10}>
+                <h4 className='type' onClick={() => openType(index+100*100, index+100*200)}>warm up <IoMdArrowDropup id={index+100*200} className='type-icon'/></h4>
+                <ul className='type-item' id={index+100*100}>
 
                   
                   {
@@ -144,8 +267,8 @@ export default function PersonalizedPlan() {
                   }
                 </ul>
 
-                <h4 className='type' onClick={() => openType(index+20, index+21)}>main workout <IoMdArrowDropup id={index+21} className='type-icon'/></h4>  
-                <ul className='type-item' id={index+20}>
+                <h4 className='type' onClick={() => openType(index+100*300, index+100*400)}>main workout <IoMdArrowDropup id={index+100*400} className='type-icon'/></h4>  
+                <ul className='type-item' id={index+100*300}>
                   
                   
                   {
@@ -166,8 +289,8 @@ export default function PersonalizedPlan() {
                   }
                 </ul>
 
-                <h4 className='type' onClick={() => openType(index+30, index+31)}>cool down <IoMdArrowDropup id={index+31} className='type-icon'/></h4>  
-                <ul className='type-item' id={index+30}>
+                <h4 className='type' onClick={() => openType(index+100*500, index+100*600)}>cool down <IoMdArrowDropup id={index+100*600} className='type-icon'/></h4>  
+                <ul className='type-item' id={index+100*500}>
 
                   
                   {

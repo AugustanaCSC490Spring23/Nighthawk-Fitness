@@ -83,6 +83,7 @@
     background: var(--primary-box);
     padding: 1rem;
     border-radius: 1rem;
+    transition: var(--transition);
 }
 
 .workout-details-item {
@@ -214,9 +215,12 @@
 .day-title  {
     background: var(--primary-dashboard);
     text-transform: capitalize;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
+    /* display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
     padding: 1rem 0;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -242,4 +246,53 @@
 
 .back-btn  {
     margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1500px) {
+    .workout-log-container {
+        width: 900px;
+        
+    }
+    
+    .workout-log-card {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .workout-log-item.right {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+        height: 100%;
+        grid-row: 1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .workout-log-container {
+        width: 800px;
+    }
+
+    .workout-name h3,
+    .workout-date h3 {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 1000px) {
+    .workout-log-container {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .workout-log-container {
+        width: 90vw;
+        height: max-content;
+    }
+
+    .workout-log-item.right {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
 }
