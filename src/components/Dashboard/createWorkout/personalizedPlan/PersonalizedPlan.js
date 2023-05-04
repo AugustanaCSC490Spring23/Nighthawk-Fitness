@@ -242,8 +242,8 @@ export default function PersonalizedPlan() {
           schedule.map((item, index) => (
           <div>
             {typeof item === 'object'  ? 
-            <div className={activeTab === index ? 'workout-day pressed' : 'workout-day'} onClick={() => openTab(index)}>
-              <h3 className='week-day'>Day {item.session.day}</h3>
+            <div className='week-day-container'>
+              <h3 className={activeTab === index ? 'week-day pressed' : 'week-day'} onClick={() => openTab(index)}>Day {item.session.day}</h3>
               <div className={activeTab === index ? 'tabs-content active-day' : 'tabs-content'} id={index}>
                 <h4 className='type' onClick={() => openType(index+100*100, index+100*200)}>warm up <IoMdArrowDropup id={index+100*200} className='type-icon'/></h4>
                 <ul className='type-item' id={index+100*100}>

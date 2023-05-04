@@ -3,7 +3,7 @@
     flex-direction: column;
     color: var(--primary-text);
     width: 900px;
-    height: 180vh;
+    height: 300vh;
     /* background: var(--primary-dashboard); */
     border-radius: 1rem;
     padding: 3rem 1rem;
@@ -96,15 +96,6 @@
     margin-bottom: 2rem;
 }
 
-.workout-day {
-    background: var(--primary-box);
-    border-radius: 1rem;
-    padding: .75rem;
-    overflow: hidden;
-    height: 45px;
-    margin: 1rem 0;
-    margin-top: 1rem;
-}
 
 .active-day {
     display: block !important;
@@ -132,15 +123,22 @@
     margin-bottom: 1rem;
     cursor: pointer;
     font-weight: 900;
+    padding: .5rem;
+    border-radius: 1rem;
+    background: var(--primary-box);
+}
+
+.week-day-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
 }
 
 .pressed {
     transition: all 1000ms ease;
-    /* box-shadow: -1px 1px 59px -10px rgba(164,251,166,0.64);
-    -webkit-box-shadow: -1px 1px 59px -10px rgba(164,251,166,0.64);
-    -moz-box-shadow: -1px 1px 59px -10px rgba(164,251,166,0.64); */
     border-bottom: 1px solid var(--primary-variant);
-    /* border-top: 1px solid var(--primary-variant); */
+    
 }
 
 .type {

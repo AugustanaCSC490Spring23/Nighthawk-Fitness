@@ -1962,7 +1962,7 @@ const beginner = {
                                         },
                                         {
                                             name: 'Rest',
-                                            instructions:'Rest 1 minute, then repeat 6 times'
+                                            instruction:'Rest 1 minute, then repeat 6 times'
                                         }
                                     ],
                                 cool_down:
@@ -2247,7 +2247,7 @@ const beginner = {
                                         },
                                         {
                                             name: 'Rest',
-                                            instructions: 'Rest 1 minute, then repeat 6 times'
+                                            instruction: 'Rest 1 minute, then repeat 6 times'
                                         }
                                     ],
                                 cool_down:

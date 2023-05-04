@@ -304,3 +304,9 @@
       top: -100%;
     }
   }
+
+  @media screen and (max-height: 920px) {
+    .toggle {
+      top: 55%;
+    }
+  }
