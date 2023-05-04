@@ -746,7 +746,7 @@ const beginner = {
                                     {
                                         name: 'Calf Raises',
                                         instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
-                                        Weight: '20',
+                                        Weight: '30',
                                         Reps: '10',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
@@ -952,7 +952,7 @@ const beginner = {
                                     {
                                         name: 'Calf Raises',
                                         instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
-                                        Weight: '20',
+                                        Weight: '30',
                                         Reps: '10',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
@@ -1096,7 +1096,7 @@ const beginner = {
                                         Weight: '10',
                                         Reps: '8',
                                         Sets: '3',
-                                        photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Skull_Crushers'
+                                        photoURL: ''
                                     },
                                 ]
                                 ,
@@ -1141,7 +1141,7 @@ const beginner = {
                                     {
                                         name: 'Dumbell Row',
                                         instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                        Weight: '20',
+                                        Weight: '25',
                                         Reps: '12',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
@@ -1214,7 +1214,7 @@ const beginner = {
                                     {
                                         name: 'Calf Raises',
                                         instruction: 'Place your feet on the ground or elevated surface, about hip-distance apart, with the toes and knees straight ahead. Your foot should be in line with your ankle and your bodyweight be pressing evenly on the ball of your foot. Extend the ankle and rise up on the toes, flexing your calf muscle. Lower down with control and return to the initial position.',
-                                        Weight: '20',
+                                        Weight: '30',
                                         Reps: '10',
                                         Sets: '3',
                                         photoURL: process.env.PUBLIC_URL + '/img/Calf_Raises.jpg'
@@ -1937,9 +1937,7 @@ const beginner = {
                                         },
                                         {
                                             name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
                                             Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name: 'Hanging Leg Raises',
@@ -2029,10 +2027,8 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Diamond_Pushups.jpg'
                                         },
                                         {
-                                            name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
+                                            name: 'Bicep Pullups',
                                             Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name:'Inverted Rows',
@@ -2134,10 +2130,8 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Clap_Pushups.jpg'
                                         },
                                         {
-                                            name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
+                                            name: 'Narrow Grip Pullups',
+                                            Reps: '5',
                                         },
                                         {
                                             name: 'Burpees',
@@ -2223,9 +2217,7 @@ const beginner = {
                                         },
                                         {
                                             name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
                                             Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name: 'Hanging Leg Raises',
@@ -2247,7 +2239,7 @@ const beginner = {
                                         },
                                         {
                                             name: 'Rest',
-                                            instruction: 'Rest 1 minute, then repeat 6 times'
+                                            instructions:'Rest 1 minute, then repeat 6 times'
                                         }
                                     ],
                                 cool_down:
@@ -2313,10 +2305,8 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Diamond_Pushups.jpg'
                                         },
                                         {
-                                            name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
+                                            name: 'Bicep Pullups',
                                             Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name:'Inverted Rows',
@@ -2418,10 +2408,8 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Clap_Pushups.jpg'
                                         },
                                         {
-                                            name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
+                                            name: 'Narrow Grip Pullups',
+                                            Reps: '5',
                                         },
                                         {
                                             name: 'Burpees',
@@ -2617,9 +2605,7 @@ const beginner = {
                                         },
                                         {
                                             name:'Pullups',
-                                            instruction: 'Start by standing directly below a pull-up bar. Place your hands in an overhand grip (palms facing away from your body) with your hands slightly further than shoulder-width apart. If you can’t reach the bar from standing on the floor, you can place a box beneath you and stand on that. Once your hands are holding onto the bar, you’re in your starting position. Inhale, then exhale. Lift your feet up from the floor or box so that you’re hanging from the bar, and engage your core by pulling your belly button in toward your spine. Pull your shoulders back and down. Engaging the muscles in your arms and back, bend your elbows and raise your upper body up toward the bar until your chin is over the bar. You can imagine bringing your elbows toward your hips if that makes the movement easier. As you move, avoid swinging your legs around or shrugging your shoulders up. You want to make sure your shoulder blades remain back and down throughout the exercise. At the top of the movement, inhale. Then extend your elbows and lower your body back down to the starting position.',
-                                            Reps: '10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
+                                            Reps:'10',
                                         },
                                         {
                                             name: 'Leg Raises',
@@ -2690,11 +2676,7 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Seated_Toe_Touches.jpg'
                                         },
                                         {
-                                            name:'Back Scratch',
-                                            instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                            Reps: '45 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            name:'Back Scratch'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -2707,12 +2689,7 @@ const beginner = {
                                 main_workout:
                                     [
                                         {
-                                            name: 'Dumbell Row',
-                                            instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
-                                            Reps: '12',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                            name: 'Bent Over Rows',
                                         },
                                         {
                                             name:'Deadlift',
@@ -2899,12 +2876,7 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Romanian_Deadlift.jpg'
                                         },
                                         {
-                                            name: 'Dumbell Row',
-                                            instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
-                                            Reps: '12',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                            name:'Dumbell Row'
                                         },
                                         {
                                             name: 'Dumbell Walking Lunges',
@@ -2932,11 +2904,7 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Butterfly_Stretch.jpg'
                                         },
                                         {
-                                            name:'Back Scratch',
-                                            instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                            Reps: '45 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            name:'Back Scratch'
                                         }
                                     ]
                             }
@@ -2956,11 +2924,7 @@ const beginner = {
                             main_workout: 
                             [
                                 {
-                                    name:'Back Scratch',
-                                    instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                    Reps: '45 seconds',
-                                    Sets: '3',
-                                    photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                    name: 'Back Scratch'
                                 },
                                 {
                                     name:'Butterfly Stretch',
@@ -3017,11 +2981,7 @@ const beginner = {
                                         photoURL: process.env.PUBLIC_URL + '/img/Seated_Toe_Touches.jpg'
                                     },
                                     {
-                                        name:'Back Scratch',
-                                        instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                        Reps: '45 seconds',
-                                        Sets: '3',
-                                        photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                        name:'Back Scratch'
                                     },
                                     {
                                         name:'Butterfly Stretch',
@@ -3034,12 +2994,7 @@ const beginner = {
                                 main_workout:
                                 [
                                     {
-                                        name: 'Dumbell Row',
-                                        instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                        Weight: '20',
-                                        Reps: '12',
-                                        Sets: '3',
-                                        photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                        name: 'Bent Over Rows',
                                     },
                                     {
                                         name:'Deadlift',
@@ -3195,11 +3150,7 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Seated_Toe_Touches.jpg'
                                         },
                                         {
-                                            name:'Back Scratch',
-                                            instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                            Reps: '45 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            name:'Back Scratch'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3212,12 +3163,7 @@ const beginner = {
                                 main_workout:
                                     [
                                         {
-                                            name: 'Dumbell Row',
-                                            instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
-                                            Reps: '12',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                            name: 'Bent Over Rows',
                                         },
                                         {
                                             name:'Deadlift',
@@ -3277,11 +3223,7 @@ const beginner = {
                                     main_workout: 
                                     [
                                         {
-                                            name:'Back Scratch',
-                                            instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                            Reps: '45 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            name: 'Back Scratch'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3427,11 +3369,7 @@ const beginner = {
                                     main_workout: 
                                     [
                                         {
-                                            name:'Back Scratch',
-                                            instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                            Reps: '45 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            name: 'Back Scratch'
                                         },
                                         {
                                             name:'Butterfly Stretch',
@@ -3513,60 +3451,28 @@ const beginner = {
                                             photoURL: process.env.PUBLIC_URL + '/img/Lateral_Raise.jpg'
                                         },
                                         {
-                                            name: 'Bench Press',
-                                            instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
-                                            Weight: '45',
-                                            Reps: '8',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Bench_Press.jpg'
+                                            name:'Bench Press'
                                         },
                                         {
-                                            name:'Romanian Deadlift',
-                                            instruction: 'Hold your weight (dumbbells or a barbell) in front of your thighs, and lower to the ground by pushing your hips back. As you lower the weight, keep your shoulder blades drawn towards each other and your chest open and wide. When the weight is below your knees, thrust your hips forward and return to the starting position.',
-                                            Weight: '100',
-                                            Reps: '8',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Romanian_Deadlift.jpg'
+                                            name:'Roman Deadlift'
                                         },
                                         {
-                                            name: 'Dumbell Row',
-                                            instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
-                                            Weight: '20',
-                                            Reps: '12',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Row.jpg'
+                                            name:'Dumbell Row'
                                         },
                                         {
-                                            name: 'Dumbell Walking Lunges',
-                                            instruction: 'Set up with your feet shoulder width apart and a dumbbell in each hand. Step forward with one leg and allow both knees to bend simultaneously. Descend until the back knee touches the floor. Drive through the front foot and extend the knee as you stand up fully and return to the starting position. Repeat on the opposite leg.', 
-                                            Weight: '20',
-                                            Reps: '12',
-                                            Sets: '2',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Dumbell_Walking_Lunges.jpg'
+                                            name: 'Dumbell Walking Lunges'
                                         }
                                     ],
                                 cool_down:
                                     [
                                         {
                                             name: 'Overhead Shoulder Stretch',
-                                            instruction: 'Stand straight with your feet shoulders width apart. Reach your arms straight overhead and interlace your fingers with the palms facing upward. Raise your arms upward as you press your shoulders down. Hold for the rep count',
-                                            Reps: '15 seconds',
-                                            Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Overhead_Shoulder_Stretch.jpg'
                                         },
                                         {
-                                            name:'Butterfly Stretch',
-                                            instruction:'Sit down on the floor or ground with your legs in front of you. Reach forward and grab your right foot. It is OK to bend your knee to help your hand and foot connect. Gently pull your right foot up towards your groin bending until it is at a comfortable spot and the sole of the foot is facing your left thigh. Bend your left knee to bring your left foot toward your groin so that its sole touches the sole of your right foot. Hold your feet with your hands and rest your elbows on your knees. While keeping your back straight (no slouching), allow your knees to fall towards the ground. You can apply gentle pressure on the inner thigh by pressing gently on the knees with the elbows. You should feel gentle pulling and tension in the groin.',
-                                            Reps: '30 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Butterfly_Stretch.jpg'
+                                            name:'Butterfly Stretch'
                                         },
                                         {
-                                            name:'Back Scratch',
-                                            instruction: 'Stand straight, placing the back of your hand on the side you want to stretch flat against your lower back. Throw one end of a towel over your shoulder. Grab it behind your back with your other hand. Pull down gently on the towel with your front arm. Let your back arm slide up as high as is comfortable. You’ll feel a stretch in your shoulder. Hold the stretch for a few seconds.',
-                                            Reps: '45 seconds',
-                                            Sets: '3',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Back_Scratch'
+                                            name:'Back Scratch'
                                         }
                                     ]
                             }
@@ -3577,6 +3483,1348 @@ const beginner = {
         }
     }
 
+}
+
+
+
+
+
+
+
+
+const intermediate = {
+    muscle_gain: {
+        four_six: {
+            workout: {
+                name: 'Push/Pull/Legs',
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Seated Dumbbell Shoulder Press',
+                                        instruction: 'Sit down on a bench with a raised backrest. Grab a pair of dumbbells and lift them up to the starting position at your shoulders. Inhale and lightly brace your core. Press the dumbbells up to straight arms, while exhaling. Inhale at the top, or while lowering the dumbbells with control back to your shoulders.',
+                                        Weight: '50',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Incline Dumbbell Press',
+                                        instruction: 'Sit on a bench, and lift a pair of dumbbells up to the starting position. Press the dumbbells up to straight arms, while exhaling. Inhale at the top, or while lowering the dumbbells with control back to your shoulders.',
+                                        Weight: '40',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Side Lateral Raises',
+                                        instruction: 'Grab a pair of dumbbells with equal weights. Start with light weights. Stand erect while holding one dumbbell in each hand with your palms facing your sides. Keep your feet hip-width apart with your toes pointed slightly outward. Keep your back straight. Pull your shoulder blades back and keep your chest proud. Bend your elbows somewhat without locking them. You should feel the weight in your forearms and not your wrists. Engage your core and keep your upper body still. Exhale and lift your arms to shoulder height until they are parallel to the ground. Hold this position for a second. Inhale and slowly lower your arms to your sides.',
+                                        Weight: '20',
+                                        Reps: '10',
+                                        Sets: '2',
+                                        photoURL: ''
+
+                                    },
+                                    {
+                                        name: 'Cabel Tricep Pulldown',
+                                        instruction: 'Firstly, attach the EZ-curl bar on the cable machine hook and then adjust the machine level to shoulder height. Kneel down and hold the EZ-curl bar. Make sure that the bar is behind your neck and keep your palms facing your feet. Lower your upper body until the elbows reach the knees. Repeat the moves until you reach the number of your preferred reps.',
+                                        Weight: '80',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Overhead Triceps Extension',
+                                        instruction: 'Sit on a chair, bench, ball, or stand; keep back straight. Hold a weight in both hands, extending it up overhead. Keep your biceps close to your ears and elbows pointing forward as you lower the weight behind your head until the elbows are at about 90-degree angles. Straighten the arms, contracting the triceps, and then repeat for 1 to 3 sets of 8 to 16 reps. Keep the abs engaged throughout the exercise and avoid arching the back.',
+                                        Weight: '60',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: 'Overhead Shoulder Stretch',
+                                        instruction: 'Stand with legs shoulder-width apart. Let arms hang down at each side. Interlock fingers with palms facing down. Keeping fingers interlocked, raise arms up and stretch them over the head with the palms facing toward the ceiling.',
+                                        Reps: '45',
+                                        Sets: '2',
+                                        photoURL: ''
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 2,
+                                warm_up:
+                                    [
+                                        {
+                                            name: 'Ellipical Machine',
+                                            instruction: 'Step onto the machine facing the monitor. Be careful stepping onto the machine. The pedals may start to move as you do and it can be easy to lose your balance. Grab the handlebars as you step on to help you stay balanced. Begin pedaling to turn it on. Taking a few steps forward on the machine should power up the display. If not, look for a start button. Start pedaling at an even pace. Your arms should be swinging with the handles. When your left foot goes down, straightening your leg, the right handle should be pulled toward your body. Same for when your right leg goes down.',
+                                            Reps: '900',
+                                            Sets: '1',
+                                            photoURL: ''
+                                        },
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Dumbell Row',
+                                        instruction: 'Grab a dumbbell in each hand. If it is your first time, grab a light weight that feels doable. Stagger your legs. Place one leg in front of the other, and then bow down. “You want to [imagine] a straight line from the top of your head all the way to your bottom almost as if you had a quarter and you place it on the top of your head it would gently roll all the way down your back and then from there, place the weights in front of your toes,” explains Jones. Slide your elbows along your side and squeeze your shoulder blades together as you lift the weights. Make sure that your shoulders are held down your back and your neck is long. Hold for a second and then gently extend your arms while placing the weight back to the start position. When returning to the starting position, the dumbbells will be in line with your feet.',
+                                        Weight: '45',
+                                        Reps: '12',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Pull Ups',
+                                        instruction: 'Exhale while pulling yourself up so your chin is level with the bar. Pause at the top. Lower yourself (inhaling as you go down) until your elbows are straight. Repeat the movement without touching the floor.',
+                                        Reps: '10',
+                                        Sets: '2',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Shoulder Shrugs',
+                                        instruction: 'Stand straight with your feet shoulder-width apart and hold a dumbbell in each hand with both palms facing the body. Bend your knees only slightly, and while keeping your arms straight, lift your shoulders up towards your ears. Reach the top of the movement and pause for a second or two, and lower the shoulders down to their original position. This is one rep.',
+                                        Weight: '60',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Face Pulls',
+                                        instruction: 'Reach up and grasp the handles with both hands with your palms facing in. Step back until your arms are fully extended, then engage your core and lean back slightly, positioning your body at a roughly 20-degree angle. Pull the rope toward you just enough to start lifting the weight from the stack, then engage your shoulders, rolling them back to create good posture—you do not want your shoulders hunching or rolling forward. This is your starting position. Pull the handles of the attachment straight toward your forehead. Keep your palms facing in as your elbows flare outward toward the sides, engaging the rear delts. Reverse the movement and slowly extend your arms without allowing your shoulders or chest to roll forward as you extend. You want to maintain good posture throughout the exercise.',
+                                        Weight: '30',
+                                        Reps: '20',
+                                        Sets: '2',
+                                        photoURL: ''
+
+                                    },
+                                    {
+                                        name: 'Barbell Curl',
+                                        instruction: 'Load the barbell with the appropriate weight. Grab the bar with a supinated grip at shoulder width. Stand upright with arms fully extended, chest up, and shoulder blades retracted. Keeping the elbows close to the torso. This should be your starting position. Exhale and curl the barbell up until it reaches shoulder level. Hold the contraction for a movement. Inhale and slowly lower the barbell to the starting position. ',
+                                        Weight: '80',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Dumbbell Hammer Curl'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: 'Childs Pose',
+                                        instruction: 'Begin on your yoga mat on all fours supported by your hands and knees. Make sure your hands are directly beneath your shoulders, knees directly beneath your hips, and your feet directly behind your knees. Sit back onto your feet, keeping your feet and knees hip’s width apart. The soles of the feet will be facing the sky in the pose. Gently lower your upper body forward, resting your forehead on the floor. Allow your arms to rest loosely by your sides, hands by your feet, with palms facing the sky. Inhale, lengthening your spine. Exhale, relaxing your shoulders.',
+                                        Reps: '60',
+                                        Sets: '1',
+                                        photoURL: ''
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 3,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Romanian Deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg Press'
+                                    },
+                                    {
+                                        name: 'Leg Curl'
+                                    },
+                                    {
+                                        name: 'Calf Raise'
+                                    },
+                                    {
+                                        name: 'Hanging Leg Raise'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 4,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Seated Dumbbell Shoulder Press'
+                                    },
+                                    {
+                                        name: 'Incline Dumbbell Press'
+                                    },
+                                    {
+                                        name: 'Side Lateral Raises'
+                                    },
+                                    {
+                                        name: 'Triceps Pressdowns'
+                                    },
+                                    {
+                                        name: 'Overhead Triceps Extension'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 5,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Bent-over Row'
+                                    },
+                                    {
+                                        name: 'Pull Ups'
+                                    },
+                                    {
+                                        name: 'Barbell Shrugs'
+                                    },
+                                    {
+                                        name: 'Face Pulls'
+                                    },
+                                    {
+                                        name: 'Barbell Curl'
+                                    },
+                                    {
+                                        name: 'Dumbbell Hammer Curl'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest'
+                    ]
+            }
+        },
+        two_three: {
+            workout: {
+                name: 'Upper/Lower/Full Body',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Barbell squats'
+                                    },
+                                    {
+                                        name: 'Romanian deadlifts'
+                                    },
+                                    {
+                                        name: 'Barbell bench press'
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Barbell rows'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Tricep pushdowns'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 3,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg press'
+                                    },
+                                    {
+                                        name: 'Dumbbell bench press'
+                                    },
+                                    {
+                                        name: 'Seated cable rows'
+                                    },
+                                    {
+                                        name: 'Shoulder press'
+                                    },
+                                    {
+                                        name: 'Hammer curls'
+                                    },
+                                    {
+                                        name: 'Overhead tricep extensions'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest',
+                        'rest',
+                        'rest'
+                    ]
+            }
+        }
+    },
+    strength: {
+        four_six: {
+            workout: {
+                name: 'Lower Body/Bro Split',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Barbell squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg press'
+                                    },
+                                    {
+                                        name: 'Leg curls'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 2,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Barbell bench press'
+                                    },
+                                    {
+                                        name: 'Incline dumbbell press'
+                                    },
+                                    {
+                                        name: 'Cable flyes'
+                                    },
+                                    {
+                                        name: 'Tricep pushdowns'
+                                    },
+                                    {
+                                        name: 'Overhead tricep extensions'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 4,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Barbell rows'
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lat pulldowns'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Hammer curls'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 5,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Overhead press'
+                                    },
+                                    {
+                                        name: 'Lateral raises'
+                                    },
+                                    {
+                                        name: 'Rear delt flyes'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest'
+                    ]
+            }
+        },
+        two_three: {
+            workout: {
+                name: 'Lower Body/Back/Upper Body',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Barbell squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Barbell rows'
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 3,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Barbell bench press'
+                                    },
+                                    {
+                                        name: 'Overhead press'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Tricep extensions'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest',
+                        'rest',
+                        'rest'
+                    ]
+            }
+        }
+    },
+    weight_loss: {
+        four_six: {
+            workout: {
+                name: 'Full body & Upper/Lower body',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lunges'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 2,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Dumbbell shoulder press'
+                                    },
+                                    {
+                                        name: 'Bent-over rows'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Tricep pushdowns'
+                                    },
+                                    {
+                                        name: 'Push-ups'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 4,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg press'
+                                    },
+                                    {
+                                        name: 'Incline bench press'
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lateral raises'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 5,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Romanian Deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg Extensions'
+                                    },
+                                    {
+                                        name: 'Leg Curls'
+                                    },
+                                    {
+                                        name: 'Calf Raises'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest'
+                    ]
+            }
+        },
+        two_three: {
+            workout: {
+                name: 'Full body/Upper body',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lunges'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 3,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Dumbbell shoulder press'
+                                    },
+                                    {
+                                        name: 'Bent-over rows'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Tricep pushdowns'
+                                    },
+                                    {
+                                        name: 'Push-ups'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest',
+                        'rest',
+                        'rest'
+                    ]
+            }
+        }
+    },
+    flexibility: {
+        four_six: {
+            workout: {
+                name: 'Full body & Upper/Lower body',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lunges'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 2,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Dumbbell shoulder press'
+                                    },
+                                    {
+                                        name: 'Bent-over rows'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Tricep pushdowns'
+                                    },
+                                    {
+                                        name: 'Push-ups'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 4,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg press'
+                                    },
+                                    {
+                                        name: 'Incline bench press'
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lateral raises'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 5,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Romanian deadlifts'
+                                    },
+                                    {
+                                        name: 'Leg extensions'
+                                    },
+                                    {
+                                        name: 'Leg curls'
+                                    },
+                                    {
+                                        name: 'Calf raises'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest'
+                    ]
+            }
+        },
+        two_three: {
+            workout: {
+                name: 'Full body/Upper body',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Lunges'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        {
+                            session:
+                            {
+                                day: 3,
+                                warm_up:
+                                    [
+
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Dumbbell shoulder press'
+                                    },
+                                    {
+                                        name: 'Bent-over rows'
+                                    },
+                                    {
+                                        name: 'Barbell curls'
+                                    },
+                                    {
+                                        name: 'Tricep pushdowns'
+                                    },
+                                    {
+                                        name: 'Push-ups'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+
+                                ]
+                            }
+                        },
+                        'rest',
+                        'rest',
+                        'rest',
+                        'rest'
+                    ]
+            }
+        }
+    },
+    overall_fitness: {
+        four_six: {
+            workout: {
+                name: 'Strength and Cardio',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+                                        {
+                                            name: '10 minutes of light cardio'
+                                        }
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Bench press'
+                                    },
+                                    {
+                                        name: 'Shoulder press'
+                                    },
+                                    {
+                                        name: 'Rows'
+                                    },
+                                    {
+                                        name: 'Bicep curls'
+                                    },
+                                    {
+                                        name: 'Tricep extensions'
+                                    }
+
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: '20-30 minutes on a bike, rower, or treadmill'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 2,
+                                warm_up:
+                                    [
+                                        {
+                                            name: '10 minutes of light cardio'
+                                        }
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Lunges'
+                                    },
+                                    {
+                                        name: 'Calf raises'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: '20-30 minutes on a bike, rower, or treadmill'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 3,
+                                warm_up:
+                                    [
+                                        {
+                                            name: '10 minutes of light cardio'
+                                        }
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Pull-ups'
+                                    },
+                                    {
+                                        name: 'Push-ups'
+                                    },
+                                    {
+                                        name: 'Dips'
+                                    },
+                                    {
+                                        name: 'Single-leg deadlifts'
+                                    },
+                                    {
+                                        name: 'Planks'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: '20-30 minutes on a bike, rower, or treadmill'
+                                    }
+                                ]
+                            }
+                        },
+                        'Active Recovery',
+                        'rest',
+                        'rest',
+                        'rest'
+                    ]
+            }
+        },
+        two_three: {
+            workout: {
+                name: 'Upper/Lower body with Cardio',
+
+                schedule:
+                    [
+                        {
+                            session:
+                            {
+                                day: 1,
+                                warm_up:
+                                    [
+                                        {
+                                            name: '10 minutes of light cardio'
+                                        }
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Bench Press',
+                                        instruction: 'To do a bench press, lie on a flat bench with your eyes under the bar and your feet on the ground12. Grab the bar with a medium grip-width and your thumbs around the bar1. Unrack the bar by straightening your arms and keep it over your shoulders123. Lower the bar to your mid-chest or just below your clavicle, while keeping your elbows slightly tucked in and your chest high134. Pause on your chest without bouncing the bar4. Press the bar back up until your arms are straight, while flaring your elbows out and exhaling.',
+                                        Weight: '135',
+                                        Reps: '8',
+                                        Sets: '3',
+                                        photoURL: ''
+                                    },
+                                    {
+                                        name: 'Shoulder press'
+                                    },
+                                    {
+                                        name: 'Rows'
+                                    },
+                                    {
+                                        name: 'Bicep curls'
+                                    },
+                                    {
+                                        name: 'Tricep extensions'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: '20-30 minutes on a bike, rower, or treadmill'
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            session:
+                            {
+                                day: 2,
+                                warm_up:
+                                    [
+                                        {
+                                            name: '10 minutes of light cardio'
+                                        }
+                                    ]
+                                ,
+
+                                main_workout: [
+                                    {
+                                        name: 'Squats'
+                                    },
+                                    {
+                                        name: 'Deadlifts'
+                                    },
+                                    {
+                                        name: 'Lunges'
+                                    },
+                                    {
+                                        name: 'Calf raises'
+                                    }
+                                ]
+                                ,
+
+                                cool_down: [
+                                    {
+                                        name: '20-30 minutes on a bike, rower, or treadmill'
+                                    }
+                                ]
+                            }
+                        },
+                        'Active Recovery',
+                        'rest',
+                        'rest',
+                        'rest',
+                        'rest'
+                    ]
+            }
+        }
+    }
 }
 
 export default beginner
