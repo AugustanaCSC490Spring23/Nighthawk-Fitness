@@ -8,6 +8,7 @@ import { db } from '../../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
 import {BiReset} from 'react-icons/bi';
 
+
 export default function PersonalizedPlan() {
   const [userData, setUserData] = useState(() => {
     const savedUserData = localStorage.getItem('userData');
@@ -24,6 +25,7 @@ export default function PersonalizedPlan() {
     experience_level: userData.personal_preference.experience_level,
     workout_time: userData.personal_preference.workout_time
   })
+
 
   function openTab(index) {
     // document.getElementById(index).classList.toggle('active-day')
@@ -49,17 +51,17 @@ export default function PersonalizedPlan() {
   }
 
   async function startPlan() {
-    const date = new Date()
-    const todayDate = date.toDateString();
+    
     const currentDoc = doc(db, 'users', userData.docID);
+    const workoutDate = new Date().getTime();
     try {
       await updateDoc(currentDoc, {
-        start_date: todayDate
+        start_date: workoutDate
       })
 
       const updateData = {
           ...userData,
-          start_date: todayDate
+          start_date: workoutDate
       };
 
       setUserData(updateData);
@@ -73,12 +75,16 @@ export default function PersonalizedPlan() {
   function removePlan() {
     const currentDoc = doc(db, 'users', userData.docID);
     updateDoc(currentDoc, {
-      start_date: ''
+      start_date: '',
+      week_plan: [],
+      calendarPlanned: false
     })
 
     const updateData = {
         ...userData,
-        start_date: ''
+        start_date: '',
+        week_plan: [],
+        calendarPlanned: false
     };
 
     setUserData(updateData);
@@ -232,7 +238,7 @@ export default function PersonalizedPlan() {
             
             <div className="manage-btn" onClick={openManage}>Manage Plan</div>
             {!userData.start_date ? <div className="start-btn" onClick={startPlan}>Start Plan</div> : 
-            <div  className='start'> <div className="start-date">Start Date</div>{userData.start_date} <BiReset className='start-reset-icon' onClick={removePlan}/></div>}
+            <div  className='start'> <div className="start-date">Started</div> <BiReset className='start-reset-icon' onClick={removePlan}/></div>}
           </div>
           
         </div>

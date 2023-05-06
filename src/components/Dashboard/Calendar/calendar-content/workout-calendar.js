@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import dayjs from "dayjs";
 import './workout-calendar.css'
 import { getDate, months } from './dates'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import { db } from '../../../Firebase/firebase';
+import { updateDoc, doc } from "firebase/firestore";
 
 export default function Attempt_calendar() {
     const [userData, setUserData] = useState(() => {
@@ -15,20 +17,39 @@ export default function Attempt_calendar() {
     const [today, setToday] = useState(currentDate);
     const [selectDate, setSelectDate] = useState(currentDate);
 
+
+   useEffect(() => {
+    const currentDoc = doc(db, 'users', userData.docID);
     const workout = []
-
-    // for (let i = 0; i < 7; i++) {
-    //     const day = {
-    //         date: currentDate.add(i, 'day').toDate().toDateString(),
-    //         workout: userData.plan.schedule[i]  
-    //     }
-
-    //     workout.push(day)
-    // }
-
-    //console.log(typeof(currentDate));
-
+    if (userData.start_date  && !userData.calendarPlanned) {
+        for (let i = 0; i < 7; i++) {
+            let day =  new Date(userData.start_date)
+            day.setDate(day.getDate()+i)
+                
+            const workoutDay = {
+                date: day.toDateString(),
+                workout: userData.plan.schedule[i]  
+            }
     
+            workout.push(workoutDay)
+        }
+
+        
+        updateDoc(currentDoc, {
+            week_plan: workout,
+            calendarPlanned: true
+        })
+
+        const updateData = {
+            ...userData,
+            week_plan: workout,
+            calendarPlanned: true
+        };
+
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))
+    }
+   }, [userData.start_date])
     
 
     return(
@@ -68,33 +89,39 @@ export default function Attempt_calendar() {
                 <div className="line line_mobile"></div>
                 <h1>{selectDate.toDate().toDateString()}</h1>
                 {/* <p>{typeof(workout[index].workout) === 'object' ? workout[index].workout.session.day : workout[index].workout}</p> */}
-                <p>{workout.find(w => w.date === selectDate.toDate().toDateString()) ?
-                typeof(workout[workout.findIndex(w => w.date === selectDate.toDate().toDateString())].workout)  === 'object' ? 
-                <div className="calendar-plan-display">
-                    <ul>
-                        <h4>Warm Up</h4>
-                        {workout[workout.findIndex(w => w.date === selectDate.toDate().toDateString())].workout.session.warm_up.map((item) => (
-                                <li>{item.name}</li>
-                            ))   
-                        }
-                        <h4>Main Workout</h4>
-                        {workout[workout.findIndex(w => w.date === selectDate.toDate().toDateString())].workout.session.main_workout.map((item) => (
-                                <li>{item.name}</li>
-                            ))   
-                        }
-                        <h4>Cool Down</h4>
-                        {workout[workout.findIndex(w => w.date === selectDate.toDate().toDateString())].workout.session.cool_down.map((item) => (
-                                <li>{item.name}</li>
-                            ))   
-                        }
-                    </ul>
+                {userData.week_plan ? 
+                    <div>{userData.week_plan.find(w => w.date === selectDate.toDate().toDateString()) ?
+                    typeof(userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].workout)  === 'object' ? 
+                        <div className="calendar-plan-display">
+                            <ul>
+                                <h4>Warm Up</h4>
+                                {userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].workout.session.warm_up.map((item) => (
+                                        <li>{item.name}</li>
+                                    ))   
+                                }
+                                <h4>Main Workout</h4>
+                                {userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].workout.session.main_workout.map((item) => (
+                                        <li>{item.name}</li>
+                                    ))   
+                                }
+                                <h4>Cool Down</h4>
+                                {userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].workout.session.cool_down.map((item) => (
+                                        <li>{item.name}</li>
+                                    ))   
+                                }
+                            </ul>
+                            
+                        </div>
                     
+                    :
+                    userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].workout 
+                    : 
+                    'not found'}
                 </div>
-                
                 :
-                workout[workout.findIndex(w => w.date === selectDate.toDate().toDateString())].workout 
-                : 
-                'not found'}</p>
+                ''
+                }
+                
             </div>
         </div>
     );
