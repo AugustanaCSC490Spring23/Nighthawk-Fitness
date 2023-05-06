@@ -1,12 +1,13 @@
 .bmi-cal {
     text-align: center;
-    padding: 2rem 2rem;
+    /* padding: 2rem 2rem; */
     
     /* height: 90%; */
+    height: 100%;
 }
 
 
-.weight,
+/* .weight,
 .height  {
     display: flex;
     flex-direction: column;
@@ -46,7 +47,7 @@
     -webkit-appearance: none;
     padding: 0;
     border: 0;
-}
+} */
 
 .result h2 {
     width: 100%;
@@ -76,3 +77,37 @@
     font-size: 3.5rem;
 }
 
+
+.bmi-container {
+    height: 100%;
+}
+
+.result {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+}
+
+.result-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.result-message {
+    padding: 0 1rem;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.result-message p {
+    margin: 0;
+}
+
+.result-message h4 {
+    font-weight: 900;
+}

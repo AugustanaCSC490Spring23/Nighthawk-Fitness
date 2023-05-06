@@ -1,0 +1,19 @@
+.weight-chart {
+    display: block;
+}
+
+.toggle-button {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding: 0 2rem;
+}
+
+.bmi-btn {
+    background: #FF55BB;
+}
+
+.bmi-btn:hover {
+    border-color: #FF55BB;
+    color: #FF55BB;
+}

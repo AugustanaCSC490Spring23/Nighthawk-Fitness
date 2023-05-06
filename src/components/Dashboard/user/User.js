@@ -12,12 +12,12 @@ import { updateDoc, doc } from "firebase/firestore";
 export default function User({userData, setUserData}) {
 
   useEffect(() => {
-    if (!userData.nutrition && userData.dailyCal) {
+    if ((!userData.nutrition && userData.dailyCal) || !userData.bmi) {
       const currentDoc = doc(db, 'users', userData.docID);
       updateDoc(currentDoc, {
         nutrition: {
             cal: {
-              remaining: Math.round(userData.dailyCal.maintain_cal * 100 / 100),
+              remaining: 0,
               consuming: 0
             },
             food_nutrition: {
@@ -31,14 +31,21 @@ export default function User({userData, setUserData}) {
               dinner: [],
               snack: []
             }
-        }
+        },
+        bmi: [
+          {
+            score: (703  * userData.information.weight[userData.information.weight.length-1].w / 
+            ((parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))*(parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch)))),
+            date: userData.information.weight[userData.information.weight.length-1].date
+          }
+        ]
       })
 
       const updateData = {
         ...userData,
         nutrition: {
             cal: {
-              remaining: Math.round(userData.dailyCal.maintain_cal * 100 / 100),
+              remaining: 0,
               consuming: 0
             },
             food_nutrition: {
@@ -52,7 +59,14 @@ export default function User({userData, setUserData}) {
               dinner: [],
               snack: []
             }
-        }
+        },
+        bmi: [
+          {
+            score: (703  * userData.information.weight[userData.information.weight.length-1].w / 
+            ((parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))*(parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch)))),
+            date: userData.information.weight[userData.information.weight.length-1].date
+          }
+        ]
       };
 
       setUserData(updateData);

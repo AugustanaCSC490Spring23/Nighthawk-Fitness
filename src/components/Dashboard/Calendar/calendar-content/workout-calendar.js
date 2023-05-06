@@ -17,14 +17,14 @@ export default function Attempt_calendar() {
 
     const workout = []
 
-    for (let i = 0; i < 7; i++) {
-        const day = {
-            date: currentDate.add(i, 'day').toDate().toDateString(),
-            workout: userData.plan.schedule[i]  
-        }
+    // for (let i = 0; i < 7; i++) {
+    //     const day = {
+    //         date: currentDate.add(i, 'day').toDate().toDateString(),
+    //         workout: userData.plan.schedule[i]  
+    //     }
 
-        workout.push(day)
-    }
+    //     workout.push(day)
+    // }
 
     //console.log(typeof(currentDate));
 

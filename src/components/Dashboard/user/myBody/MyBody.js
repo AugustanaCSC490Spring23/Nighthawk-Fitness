@@ -47,7 +47,11 @@ export default function MyBody() {
                 information: {
                     ...userData.information,
                     weight: updateW
-                }
+                },
+                bmi: [...userData.bmi, {
+                    score: (703 * weightForm.w / (((parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))*(parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))))),
+                    date: weightForm.date
+                }]
             })
             setIsClick(true)
     
@@ -56,7 +60,11 @@ export default function MyBody() {
                 information: {
                     ...userData.information,
                     weight: updateW
-                }
+                },
+                bmi: [...userData.bmi, {
+                    score: (703 * weightForm.w / (((parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))*(parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))))),
+                    date: weightForm.date
+                }]
             };
     
             setUserData(updateData);

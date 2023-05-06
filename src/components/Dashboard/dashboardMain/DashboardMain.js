@@ -42,9 +42,9 @@ function DashboardMain(){
                             {!userData.isFilled ? <RequestForm/> : <Graph/>}
                         </div>
                         <div className="bmi-calories">
-                            <div className="bmi-cal tabs">
+                            <div className="bmi-cal">
                                 
-                                <BmiCal/>
+                                <BmiCal userData={userData}/>
                                 
                             </div>
                             <div className="calories-req ">
