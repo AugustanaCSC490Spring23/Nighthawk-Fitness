@@ -46,7 +46,7 @@ export default function NutritionDisplay({userData, remain, consumed, protein, c
                 <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={percentage}/>
               </ThemeProvider>
               <div className="remaining">
-                <h3>{remain < 0 && remaining}{remain > 0 && remain}</h3>
+                <h3>{remain <= 0 && remaining}{remain > 0 && remain}</h3>
                 <h4>Remaining</h4>
               </div>
             </div>

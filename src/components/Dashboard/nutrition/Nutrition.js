@@ -25,6 +25,7 @@ function Nutrition() {
 
   const [section, setSection] = useState('')
 
+  const [caloriesGoal, setCaloriesGoal]  = useState(0)
 
   async function fetchResults(query) {
     const url = `https://trackapi.nutritionix.com/v2/search/instant?query=${query}`;
@@ -256,10 +257,53 @@ function Nutrition() {
     }
     
   }
-  console.log(userData.nutrition.cal);
+  console.log(caloriesGoal);
+
+  function saveGoal() {
+    const currentDoc = doc(db, 'users', userData.docID);
+    updateDoc(currentDoc, {
+      ...userData,
+      nutrition: {
+        ...userData.nutrition,
+        cal: {
+          ...userData.nutrition.cal,
+          remaining: caloriesGoal
+        }
+      }
+    })
+    
+    const updateData = {
+      ...userData,
+      nutrition: {
+        ...userData.nutrition,
+        cal: {
+          ...userData.nutrition.cal,
+          remaining: caloriesGoal
+        }
+      }
+    };
+
+    setUserData(updateData);
+    localStorage.setItem('userData', JSON.stringify(updateData))
+  }
+
   return (
     <div className="container nutrition">
       <div className="nutrition-container">
+        <div className="calories-option">
+          
+            <h3>Calories</h3>
+            <select onChange={(e) => {
+              setCaloriesGoal(e.target.value);
+              }}>
+                <option value='' selected>Select an option</option>
+                <option value={Math.round(userData.dailyCal.lose_cal*100/100)}>Lose Weight</option>
+                <option value={Math.round(userData.dailyCal.maintain_cal*100/100)}>Maintain Weight</option>
+                <option value={Math.round(userData.dailyCal.gain_cal*100/100)}>Gain Weight</option>
+              </select>
+          
+          <button onClick={saveGoal}>Save</button>
+        </div>
         <h1>daily nutrition</h1>
         {!userData.isFilled ? <RequestForm /> : ''}
         <div className="nutrition-content"  style={userData.isFilled ? {display: 'block'}:{display:'none'}} >

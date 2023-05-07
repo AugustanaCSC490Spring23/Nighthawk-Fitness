@@ -90,7 +90,7 @@
     background: var(--primary-dropdown);
     backdrop-filter: blur(30px);
     transition: var(--transition);
-    opacity: 0;
+    display: none;
     padding: 2rem;
     filter: none !important;
 }
@@ -127,7 +127,7 @@
 
 
 .openAddFood {
-    opacity: 1 !important;
+    display: block !important;
 }
 
 
@@ -152,6 +152,7 @@
     border-radius: 1rem;
     padding: 2rem 0;
     transition: var(--transition);
+    position: relative;
 }
 
 .nutrition-content {
@@ -181,6 +182,28 @@
 .log-item small {
     font-size: 10px;
     margin-left: .5rem;
+}
+
+.calories-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .2rem;     
+    color: var(--primary-text); 
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.calories-option h3 {
+    font-weight: 900;
+}
+
+.calories-option select {
+    padding: .2rem;
+    border-radius: 1rem;
+    color: var(--primary-text);
+    background: var(--primary-box);
 }
 
 

@@ -283,6 +283,13 @@
     margin-left: 2rem;
 }
 
+.manage-plan-item select {
+    padding: .2rem;
+    border-radius: 1rem;
+    color: var(--primary-text);
+    background: var(--primary-box);
+}
+
 .manage-plan-item h3 {
     display: flex;
     align-items: center;
