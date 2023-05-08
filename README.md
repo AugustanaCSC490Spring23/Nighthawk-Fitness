@@ -4,7 +4,7 @@ Our fitness app is designed to help users achieve their health and fitness goals
 
 Feel like keeping up with our project, here's our [weekly blog](https://sites.google.com/view/nighthawkfitness).
 
-Check out [Nighthawk Fitness](https://fitness-dev-a6a25.firebaseapp.com/).
+Check out [Nighthawk Fitness](https://fitness-dev-2.web.app/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
