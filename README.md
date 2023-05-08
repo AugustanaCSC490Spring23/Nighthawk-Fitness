@@ -1,5 +1,7 @@
 # Welcome to Nighthawk Fitness
 
+Our fitness app is designed to help users achieve their health and fitness goals by providing personalized workout plans, nutrition tracking, and a workout log. With a user-friendly interface, our app is perfect for beginners and intermediates looking to switch up their training with different programs. Users can create and track their workouts, set reminders, and monitor their progress in real-time. Our app also includes a nutrition tracking feature that allows users to log their meals and track their calorie intake.
+
 Feel like keeping up with our project, here's our [weekly blog](https://sites.google.com/view/nighthawkfitness).
 
 Check out [Nighthawk Fitness](https://fitness-dev-a6a25.firebaseapp.com/).
