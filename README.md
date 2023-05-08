@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Welcome to Nighthawk Fitness
 
 Feel like keeping up with our project, here's our [weekly blog](https://sites.google.com/view/nighthawkfitness).
 
