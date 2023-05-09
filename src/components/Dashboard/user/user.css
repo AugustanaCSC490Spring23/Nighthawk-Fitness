@@ -71,7 +71,8 @@
 
 .user-data .title,
 .user-contact .title,
-.biometric-data .title {
+.biometric-data .title,
+.my-goal-data .title {
     display: block !important;
     text-transform: capitalize !important;
     font-weight: 900;

@@ -114,9 +114,12 @@ export default function User({userData, setUserData}) {
                 
                 <h4>Goal</h4>
               </div>
+              <Link to='goal'>
               <div className="link-btn">
                 <IoMdArrowDropright className='link-to-item' />
               </div>
+              </Link>
+
             </div>
             <div className="link-item">
               <div className="underline setting"></div>

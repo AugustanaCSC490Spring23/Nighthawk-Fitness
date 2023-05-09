@@ -116,10 +116,10 @@ export default function Attempt_calendar() {
                     :
                     userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].workout 
                     : 
-                    'not found'}
+                    'No Workouts Today'}
                 </div>
                 :
-                ''
+                'No Workouts Today'
                 }
                 
             </div>

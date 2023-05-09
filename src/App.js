@@ -12,6 +12,7 @@ import Lobby from "./components/Dashboard/Lobby/Lobby";
 import About from "./components/HomePage/about/About";
 import WorkoutLog from "./components/Dashboard/logWorkout/workoutLog";
 import MyBody from "./components/Dashboard/user/myBody/MyBody";
+import Goal from "./components/Dashboard/user/goal/Goal";
 import ProtectedRoutes from "./ProtectedRoute";
 import Loading from "./components/Dashboard/createWorkout/loading";
 import { AuthProvider } from "./components/contexts/AuthContext";
@@ -36,6 +37,7 @@ function App() {
 
                 <Route path="profile" element={<Profile/>} />
                 <Route path="profile/mybody" element={<MyBody/>} />
+                <Route path="profile/goal" element={<Goal/>} />
 
                 <Route path="workout" element={<Workout/>} />
                 <Route path="workout/workoutplan" element={<CreatePlan/>} />
