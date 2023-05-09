@@ -262,7 +262,7 @@ function Nutrition() {
   function saveGoal() {
     const currentDoc = doc(db, 'users', userData.docID);
     updateDoc(currentDoc, {
-      ...userData,
+      
       nutrition: {
         ...userData.nutrition,
         cal: {

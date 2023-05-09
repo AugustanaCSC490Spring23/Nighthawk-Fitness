@@ -216,8 +216,9 @@
     background: var(--primary-dashboard);
     text-transform: capitalize;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 5rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    
     /* display: flex;
     align-items: center;
     justify-content: space-around; */
