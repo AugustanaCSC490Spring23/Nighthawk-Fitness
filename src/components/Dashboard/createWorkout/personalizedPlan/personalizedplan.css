@@ -191,6 +191,11 @@
     justify-content: center;
 }
 
+.large {
+    width: 200px;
+    height: 280px;
+}
+
 .exercise-img img {
     transform: scale(1.2);
 }
@@ -205,6 +210,16 @@
 .exercise-instruction {
     width: 50%;
     line-height: 1.7;
+}
+
+.exercise-instruction .read-more {
+    font-weight: 900;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.exercise-instruction .read-more:hover {
+    color: var(--primary-variant);
 }
 
 .exercise-instruction span {
@@ -255,6 +270,31 @@
     background: var(--primary-box);
     border-radius: 1rem;
     padding: 1rem;
+}
+
+.exercise-detail-tab  {
+    width: 900px;
+    height: max-content;
+    position: fixed;
+    background: var(--primary-dropdown);
+    backdrop-filter: blur(20px);
+    border-radius: 1rem;
+    top: 20rem;
+    z-index: 5;
+    display: none;
+    color: var(--primary-text);
+    
+}
+
+.detail-active {
+    display: block;
+}
+
+.exercise-detail-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem 0;
 }
 
 .manage-plan-tab {

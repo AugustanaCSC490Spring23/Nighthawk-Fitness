@@ -20,6 +20,8 @@ export default function PersonalizedPlan() {
   const navigate = useNavigate();
   const [isEdit, setIsEdit] = useState(false)
 
+  const [activeExercise, setActiveExercise] = useState({})
+
   const [personal, setPersonal] = useState({
     goal: userData.information.goal,
     experience_level: userData.personal_preference.experience_level,
@@ -140,6 +142,16 @@ export default function PersonalizedPlan() {
     }
   }
 
+  function closeExerciseDetail() {
+    document.getElementById('exercise-detail-window').classList.remove('detail-active')
+  }
+  
+  function exerciseDetail(item) {
+    setActiveExercise(item)
+    document.getElementById('exercise-detail-window').classList.add('detail-active')
+    {/* console.log(item.session.warm_up[i]) */}
+  }
+  
   
   return (
     <div className="container">
@@ -228,6 +240,21 @@ export default function PersonalizedPlan() {
         
         
       </div>
+
+      <div className="exercise-detail-tab" id='exercise-detail-window'>
+        <div className="exercise-detail-content">
+          <div className="close" onClick={closeExerciseDetail}>
+            <div></div>
+            <div></div>
+          </div>
+          <div className="exercise-img large">
+            <img src={activeExercise.photoURL} alt="" />
+          </div>
+          <div className="exercise-instruction">
+            <span>Instruction</span><small>{activeExercise.instruction}</small>
+          </div>
+        </div>
+      </div>
       <div className='personal-plan'>
         <div className="back-btn" onClick={goBack}>
             <MdKeyboardArrowLeft />
@@ -256,17 +283,19 @@ export default function PersonalizedPlan() {
 
                   
                   {
-                    item.session.warm_up.map((w) => {
+                    item.session.warm_up.map((w, i) => {
 
-                      const instruction = w.instruction.substring(0,100)  + '... read more'
+                      const instruction = w.instruction.substring(0,100)
+                      
+
                       return (
                         <li className='exercise'> <div className="exercise-img"><img src={w.photoURL} alt="" /></div> 
                         <div className="exercise-details">
                           <div className="name">{w.name}</div>
-                          <div className="rep-set">2 reps | 1 set</div>
+                          <div className="rep-set">{w.Reps} reps | {w.Sets} set</div>
                         </div>
                         <div className="exercise-instruction">
-                          <span>Instruction</span><small>{instruction}</small>
+                          <span>Instruction</span><small>{instruction} <small className='read-more' onClick={() => exerciseDetail(item.session.warm_up[i])}>...read more</small> </small>
                         </div> </li>
                       )
                     })
@@ -278,17 +307,18 @@ export default function PersonalizedPlan() {
                   
                   
                   {
-                    item.session.main_workout.map((w) => {
+                    item.session.main_workout.map((w, i) => {
 
-                      const instruction = w.instruction.substring(0,100)  + '... read more'
+                      const instruction = w.instruction.substring(0,100)
+                     
                       return (
                         <li className='exercise'> <div className="exercise-img"><img src={w.photoURL} alt="" /></div> 
                         <div className="exercise-details">
                           <div className="name">{w.name}</div>
-                          <div className="rep-set">2 reps | 1 set</div>
+                          <div className="rep-set">{w.Reps} reps | {w.Sets} set</div>
                         </div>
                         <div className="exercise-instruction">
-                          <span>Instruction</span><small>{instruction}</small>
+                          <span>Instruction</span><small>{instruction}<small className='read-more' onClick={() => exerciseDetail(item.session.main_workout[i])}>...read more</small></small>
                         </div> </li>
                       )
                     })
@@ -300,17 +330,18 @@ export default function PersonalizedPlan() {
 
                   
                   {
-                    item.session.cool_down.map((w) => {
+                    item.session.cool_down.map((w, i) => {
 
-                      const instruction = w.instruction.substring(0,100)  + '... read more'
+                      const instruction = w.instruction.substring(0,100)
+                      
                       return (
                         <li className='exercise'> <div className="exercise-img"><img src={w.photoURL} alt="" /></div> 
                         <div className="exercise-details">
                           <div className="name">{w.name}</div>
-                          <div className="rep-set">2 reps | 1 set</div>
+                          <div className="rep-set">{w.Reps} reps | {w.Sets} set</div>
                         </div>
                         <div className="exercise-instruction">
-                          <span>Instruction</span><small>{instruction}</small>
+                          <span>Instruction</span><small>{instruction}<small className='read-more' onClick={() => exerciseDetail(item.session.cool_down[i])}>...read more</small></small>
                         </div> </li>
                       )
                     })

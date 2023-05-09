@@ -114,6 +114,25 @@ export default function WorkoutLog() {
     navigate(-1)
   }
 
+  function deleteLogItem(index) {
+    const updatedArray = userData.workout_log.filter((item, i) => {
+      return index !== i
+    })
+
+    const currentDoc = doc(db, 'users', userData.docID);
+    updateDoc(currentDoc, {
+      workout_log: updatedArray
+    })
+
+    const updateData = {
+      ...userData,
+      workout_log: updatedArray
+    };
+
+    setUserData(updateData);
+    localStorage.setItem('userData', JSON.stringify(updateData))
+  }
+
   return (
     <div className='container'>
       <div className="workout-log-container">
@@ -130,6 +149,7 @@ export default function WorkoutLog() {
                       <span>{item.name}</span>
                       <span>{item.date}</span>
                       <IoIosArrowDropupCircle className='open-log-icon' id={index+100} onClick={() => openItem(index,index+100)}/>
+                      <BsFillTrashFill className='open-log-icon' onClick={() => deleteLogItem(index)}/>
                     </div>
                     
                     <ul id={index} className='item-log'>
