@@ -1,0 +1,225 @@
+.my-goal-container {
+    width: 600px;
+    height: 750px;
+    background: var(--primary-dashboard);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.backBtn {
+    width: max-content;
+    font-size: 2rem;
+    color: var(--primary-text);
+    padding: .5rem;
+    border-radius: 1rem;
+    background: var(--primary-box);
+    display: flex;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.backBtn:hover {
+    opacity: .7;
+}
+
+.my-goal-data {
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.my-goal-data .title {
+    margin-bottom: 3rem;
+}
+
+.user-content  {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.content-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.user-detail  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-text);
+    width: 40%;
+    padding: 1.2rem 0;
+    margin: auto;
+    gap: 1rem;
+    border-radius: 1rem;
+    background: var(--primary-box);
+    transition: all 500ms ease-out;
+}
+
+.user-detail:hover {
+    border-radius: 100%;
+    background: var(--primary-variant);
+    color: var(--bg);
+}
+
+.user-detail-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.quote-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary-text);
+    width: 100%;
+    padding: 1.2rem 0;
+    margin: auto;
+    gap: 1rem;
+    border-radius: 1rem;
+    background: var(--primary-box);
+    transition: all 500ms ease-out;
+}
+
+.daily-quote-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.daily-quote {
+    padding: 0 2rem; 
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .my-goal-container {
+        width: 100%;
+        height: max-content;
+    }    
+
+    .my-goal-content {
+        width: 90vw;
+    }
+
+    .content-group {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .user-content  {
+        gap: 1rem;
+    }
+
+    .user-detail  {
+        width: 100%;
+    }
+}
+
+@media screen and  (max-width: 1500px) {
+    .my-goal-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    /* .charts {
+        margin: 0;
+        height: 400px;
+    } */
+}
+
+/* .my-goal-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+} */
+
+
+
+
+/* .log-weight  {
+    width: 70%;
+    height: 60px;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: auto;
+    background: linear-gradient(92deg,var(--primary-variant), var(--primary-fade) );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transition: var(--transition);
+}
+
+.log-weight:hover {
+    height: 130px;
+}
+
+.log-weight div {
+    font-size: 1.5rem;
+    color: var(--bg);
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.log-weight-icon {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--bg);
+}
+
+.log-weight-container {
+    width: 500px;
+    height: max-content;
+    border-radius: 1rem;
+    background: var(--primary-dropdown);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    display: none;
+    padding: 2rem 4rem;
+    color: var(--primary-text);
+    transition: var(--transition);
+}
+
+.log-active {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.new-weight, .weight-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.log-weight-container input  {
+    width: 50%;
+    background: var(--primary-box);
+    border: 1px solid var(--primary-dashboard);
+    color: var(--primary-text);
+} */
+
+
+
+
+
+/* .success {
+    background: lightgreen;
+    padding: .5rem;
+    border-radius: 1rem;
+    color: var(--bg);
+    text-align: center;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.success-icon {
+    font-size: 3rem;
+} */
