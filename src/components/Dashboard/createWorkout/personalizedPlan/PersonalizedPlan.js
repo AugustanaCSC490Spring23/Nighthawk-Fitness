@@ -152,6 +152,8 @@ export default function PersonalizedPlan() {
     {/* console.log(item.session.warm_up[i]) */}
   }
   
+  const setsDef = "A collection of reps"
+  const repsDef = "A single execution of an exercise"
   
   return (
     <div className="container">
@@ -292,7 +294,15 @@ export default function PersonalizedPlan() {
                         <li className='exercise'> <div className="exercise-img"><img src={w.photoURL} alt="" /></div> 
                         <div className="exercise-details">
                           <div className="name">{w.name}</div>
-                          <div className="rep-set">{w.Reps} reps | {w.Sets} set</div>
+                          {/* <div className="rep-set">{w.Reps} reps | {w.Sets} set</div> */}
+                          <div className="rep-set">{w.Reps}
+                            <div className='rep'>reps
+                              <span className="tooltip-rep">{repsDef}</span>
+                            </div> | {w.Sets}
+                              <div className='set'>sets
+                                <span className="tooltip-set">{setsDef}</span>
+                              </div>
+                          </div>
                         </div>
                         <div className="exercise-instruction">
                           <span>Instruction</span><small>{instruction} <small className='read-more' onClick={() => exerciseDetail(item.session.warm_up[i])}>...read more</small> </small>
@@ -315,7 +325,15 @@ export default function PersonalizedPlan() {
                         <li className='exercise'> <div className="exercise-img"><img src={w.photoURL} alt="" /></div> 
                         <div className="exercise-details">
                           <div className="name">{w.name}</div>
-                          <div className="rep-set">{w.Reps} reps | {w.Sets} set</div>
+                          {/* <div className="rep-set">{w.Reps} reps | {w.Sets} set</div> */}
+                          <div className="rep-set">{w.Reps}
+                            <div className='rep'>reps
+                              <span className="tooltip-rep">{repsDef}</span>
+                            </div> | {w.Sets}
+                              <div className='set'>sets
+                                <span className="tooltip-set">{setsDef}</span>
+                              </div>
+                          </div>
                         </div>
                         <div className="exercise-instruction">
                           <span>Instruction</span><small>{instruction}<small className='read-more' onClick={() => exerciseDetail(item.session.main_workout[i])}>...read more</small></small>
@@ -338,7 +356,15 @@ export default function PersonalizedPlan() {
                         <li className='exercise'> <div className="exercise-img"><img src={w.photoURL} alt="" /></div> 
                         <div className="exercise-details">
                           <div className="name">{w.name}</div>
-                          <div className="rep-set">{w.Reps} reps | {w.Sets} set</div>
+                          {/* <div className="rep-set">{w.Reps} reps | {w.Sets} set</div> */}
+                          <div className="rep-set">{w.Reps}
+                            <div className='rep'>reps
+                              <span className="tooltip-rep">{repsDef}</span>
+                            </div> | {w.Sets}
+                              <div className='set'>sets
+                                <span className="tooltip-set">{setsDef}</span>
+                              </div>
+                          </div>
                         </div>
                         <div className="exercise-instruction">
                           <span>Instruction</span><small>{instruction}<small className='read-more' onClick={() => exerciseDetail(item.session.cool_down[i])}>...read more</small></small>
