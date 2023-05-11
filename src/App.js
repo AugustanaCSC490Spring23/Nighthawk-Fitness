@@ -46,6 +46,7 @@ function App() {
                 <Route path="workout/log" element={<WorkoutLog/>} />
 
                 <Route path="nutrition"  element={<NutritionCheck/>} />
+                
               </Route>
             </Route>  
           </Routes>

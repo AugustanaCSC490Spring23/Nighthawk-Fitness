@@ -231,7 +231,7 @@ export default function PersonalizedPlan() {
               <h3> <span className='item-title'>Duration</span> <span className='item-details'>4 weeks</span></h3>
             </div>
             <div className="manage-plan-btn">
-              <button onClick={changePlan}>Save</button>
+              <button disabled={userData.calendarPlanned === true} onClick={changePlan}>Save</button>
               <button onClick={closeEdit} className='cancel-btn'>Cancel</button>
             </div>
             

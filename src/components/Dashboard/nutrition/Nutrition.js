@@ -6,12 +6,15 @@ import NutritionDisplay from "./nutritionDisplay/NutritionDisplay";
 import LogItem from "./LogItem";
 import { db } from '../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
-function Nutrition() {
+function Nutrition({onSave}) {
   const [userData, setUserData] = useState(() => {
     const savedUserData = localStorage.getItem('userData');
     return savedUserData ? JSON.parse(savedUserData) : null
   });
+
+  const navigate = useNavigate()
 
   const [query, setQuery] = useState("");
 
@@ -262,45 +265,38 @@ function Nutrition() {
   function saveGoal() {
     const currentDoc = doc(db, 'users', userData.docID);
     updateDoc(currentDoc, {
-      
+      calories_goal_filled: false,
       nutrition: {
         ...userData.nutrition,
         cal: {
           ...userData.nutrition.cal,
-          remaining: caloriesGoal
+          remaining: 0
         }
-      }
+      },
+      goal_calories: 0
     })
     
     const updateData = {
       ...userData,
+      calories_goal_filled: false,
       nutrition: {
         ...userData.nutrition,
         cal: {
           ...userData.nutrition.cal,
-          remaining: caloriesGoal
+          remaining: 0
         }
-      }
+      },
+      goal_calories: 0
     };
 
-    setUserData(updateData);
-    localStorage.setItem('userData', JSON.stringify(updateData))
+    onSave(updateData)
   }
+
 
   return (
     <div className="container nutrition">
       <div className="nutrition-container">
         <div className="calories-option">
-          
-            <h3>Calories</h3>
-            <select onChange={(e) => {
-              setCaloriesGoal(e.target.value);
-              }}>
-                <option value='' selected>Select an option</option>
-                <option value={Math.round(userData.dailyCal.lose_cal*100/100)}>Lose Weight</option>
-                <option value={Math.round(userData.dailyCal.maintain_cal*100/100)}>Maintain Weight</option>
-                <option value={Math.round(userData.dailyCal.gain_cal*100/100)}>Gain Weight</option>
-              </select>
           
           <button onClick={saveGoal}>Save</button>
         </div>

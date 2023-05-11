@@ -1,12 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './dailyCal.css'
 import { width } from '@mui/system'
 
 export default function DailyCal({userData}) {
-    const total = Math.round((userData.dailyCal.maintain_cal/100)*100)
-    const remainPerc = Math.round((userData.nutrition.cal.remaining/total)*100);
-    const consumedPerc = Math.round((userData.nutrition.cal.consuming/total)*100);
+
+    const [remain, setRemain] = useState(userData.nutrition.cal.remaining)
     
+    const total = userData.goal_calories
+    
+    let remainPerc = Math.round((userData.nutrition.cal.remaining/total)*100)
+    if (remainPerc < 0) {
+        remainPerc  = 0
+    }
+    let consumedPerc = 100-remainPerc;
+
+    if (total === 0) {
+        remainPerc = 0
+        consumedPerc = 0
+    }
+    
+    useEffect(() => {
+        if (remain < 0) {
+            setRemain(0)
+        }else {
+            setRemain(userData.nutrition.cal.remaining)
+        }
+    },[userData.nutrition.cal.remaining])
+ 
   return (
     <div className='dailyCal-card'>
         <div className="dailyCal-item cal">
@@ -27,7 +47,7 @@ export default function DailyCal({userData}) {
             <div className="remain-consumed-container">
                 <div className="remain-consumed-header">
                     <h4>Remaining</h4>
-                    <small>{userData.nutrition.cal.remaining}</small>
+                    <small>{remain}</small>
                 </div>
                 <div className="bar">
                     <div className="remain-progress" style={{width: remainPerc + '%'}}></div>

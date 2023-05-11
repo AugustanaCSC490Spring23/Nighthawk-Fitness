@@ -47,8 +47,8 @@ export default function Graph() {
 
                     </linearGradient>
                 </defs>
-                <CartesianGrid opacity={.1} vertical={false}/>
-                <XAxis dataKey="date" />
+                <CartesianGrid opacity={.05} vertical={true}/>
+                <XAxis dataKey="date" axisLine={false} tickLine={false}/>
                 <YAxis dataKey='score' axisLine={false} tickLine={false}/>
                 <Tooltip formatter={formatTooltipBMI} contentStyle={{backgroundColor: 'black'}} itemStyle={{ color: '#FF55BB' }}/>
                 <Area dataKey="score" stroke="#FF55BB" fill='url(#color)' />
@@ -58,12 +58,12 @@ export default function Graph() {
                 <defs>
                     <linearGradient  id='color' x1='0' y1='0' x2='0' y2='1'>
                         <stop offset='10%' stopColor='#a4fba6'  stopOpacity={0.5}/>
-                        <stop offset='95%' stopColor='lightyellow'  stopOpacity={0.09}/>
+                        <stop offset='95%' stopColor='black'  stopOpacity={0.09}/>
 
                     </linearGradient>
                 </defs>
-                <CartesianGrid opacity={.1} vertical={false}/>
-                <XAxis dataKey="date" />
+                <CartesianGrid opacity={.05} vertical={true}/>
+                <XAxis dataKey="date" axisLine={false} tickLine={false}/>
                 <YAxis dataKey='w' axisLine={false} tickLine={false}/>
                 <Tooltip formatter={formatTooltipW} contentStyle={{backgroundColor: 'black'}} itemStyle={{ color: '#a4fba6' }}/>
                 <Area dataKey="w" stroke="#a4fba6" fill='url(#color)' />
