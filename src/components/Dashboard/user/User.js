@@ -4,7 +4,7 @@ import { Avatar } from '@mui/material'
 import {GiPerson} from 'react-icons/gi'
 import {IoMdArrowDropright} from 'react-icons/io'
 import {FiTarget} from 'react-icons/fi'
-import {AiFillSetting} from 'react-icons/ai'
+import {AiFillQuestionCircle} from 'react-icons/ai'
 import {MdEmail} from 'react-icons/md'
 import { Link } from 'react-router-dom'
 import { db } from '../../Firebase/firebase';
@@ -125,14 +125,16 @@ export default function User({userData, setUserData}) {
               <div className="underline setting"></div>
               <div className="link-title">
                 <div className="link-icon setting">
-                  <AiFillSetting />
+                  <AiFillQuestionCircle />
                 </div>
                 
-                <h4>Setting</h4>
+                <h4>Help</h4>
               </div>
-              <div className="link-btn">
-                <IoMdArrowDropright className='link-to-item' />
-              </div>
+              <Link to='help'>
+                <div className="link-btn">
+                  <IoMdArrowDropright className='link-to-item' />
+                </div>
+              </Link>
             </div>
           </div>
           
