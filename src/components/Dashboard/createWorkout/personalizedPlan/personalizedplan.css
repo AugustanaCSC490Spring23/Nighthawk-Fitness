@@ -240,6 +240,11 @@
     flex-wrap: wrap;
 }
 
+.rep,
+.set {
+    cursor: pointer;
+}
+
 .rep span,
 .set span {
   visibility: hidden;
