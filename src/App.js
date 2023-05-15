@@ -16,6 +16,7 @@ import Goal from "./components/Dashboard/user/goal/Goal";
 import Help from "./components/Dashboard/user/help/Help";
 import ProtectedRoutes from "./ProtectedRoute";
 import Loading from "./components/Dashboard/createWorkout/loading";
+import NutritionHistory from "./components/Dashboard/nutrition/history/NutritionHistory";
 import { AuthProvider } from "./components/contexts/AuthContext";
 import './app.css'
 import CreatePlan from "./components/Dashboard/createWorkout/CreatePlan";
@@ -48,6 +49,7 @@ function App() {
                 <Route path="workout/log" element={<WorkoutLog/>} />
 
                 <Route path="nutrition"  element={<NutritionCheck/>} />
+                <Route path="nutrition/history"  element={<NutritionHistory/>} />
                 
               </Route>
             </Route>  

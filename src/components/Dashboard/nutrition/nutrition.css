@@ -184,7 +184,7 @@
     margin-left: .5rem;
 }
 
-.calories-option {
+.manage-option {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,17 +195,41 @@
     top: 1rem;
 }
 
-.calories-option h3 {
-    font-weight: 900;
-}
 
-.calories-option select {
-    padding: .2rem;
+.confirm-tab {
+    width: 520px;
+    height: max-content;
+    position: absolute;
+    background: var(--primary-dropdown);
+    backdrop-filter: blur(20px);
+    z-index: 5;
     border-radius: 1rem;
+    padding: 3rem 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;    
     color: var(--primary-text);
-    background: var(--primary-box);
 }
 
+.confirm-btn {
+    display: flex;
+    gap: 2rem;
+}
+
+.confirm-btn .reset {
+    background: #FC2947;
+}
+
+.openConfirm {
+    display: flex;
+}
+
+.confirm-btn .reset:hover {
+    background: var(--bg);
+    color: #FC2947;
+    border-color: #FC2947;
+}
 
 @media screen and (max-width: 1500px) {
     .nutrition-container {

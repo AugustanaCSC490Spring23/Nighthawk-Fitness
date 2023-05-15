@@ -1,0 +1,43 @@
+
+
+.calories-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;     
+    color: var(--primary-text);
+    width: max-content;
+    
+}
+
+.calories-option h3 {
+    font-weight: 900;
+}
+
+.calories-option select {
+    padding: .2rem;
+    border-radius: 1rem;
+    color: var(--primary-text);
+    background: var(--primary-box);
+}
+
+.goal-container {
+    width: 400px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background: var(--primary-dashboard);
+    border-radius: 1rem;
+}
+
+.calories-option .history {
+    background: #FBF46D;
+}
+
+.calories-option .history:hover {
+    background: var(--bg);
+    border-color: #FBF46D;
+    color: #FBF46D;
+}

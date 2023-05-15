@@ -260,19 +260,29 @@ function Nutrition({onSave}) {
     }
     
   }
-  console.log(caloriesGoal);
 
-  function saveGoal() {
+
+  function reset() {
     const currentDoc = doc(db, 'users', userData.docID);
     updateDoc(currentDoc, {
       calories_goal_filled: false,
       nutrition: {
-        ...userData.nutrition,
         cal: {
-          ...userData.nutrition.cal,
-          remaining: 0
+          remaining: 0,
+          consuming: 0
+        },
+        food_nutrition: {
+          p: 0,
+          c: 0,
+          f: 0
+        },
+        food_array: {
+          breakfast: [],
+          lunch: [],
+          dinner: [],
+          snack: []
         }
-      },
+    },
       goal_calories: 0
     })
     
@@ -280,25 +290,117 @@ function Nutrition({onSave}) {
       ...userData,
       calories_goal_filled: false,
       nutrition: {
-        ...userData.nutrition,
         cal: {
-          ...userData.nutrition.cal,
-          remaining: 0
+          remaining: 0,
+          consuming: 0
+        },
+        food_nutrition: {
+          p: 0,
+          c: 0,
+          f: 0
+        },
+        food_array: {
+          breakfast: [],
+          lunch: [],
+          dinner: [],
+          snack: []
         }
-      },
+    },
       goal_calories: 0
     };
 
     onSave(updateData)
   }
 
+  async function save() {
+    const currentDoc = doc(db, 'users', userData.docID);
+    try {
+      const day = await new Date().toDateString()
+      updateDoc(currentDoc, {
+        calories_goal_filled: false,
+        nutrition_history: [...userData.nutrition_history, userData.nutrition],
+        nutrition: {
+          cal: {
+            remaining: 0,
+            consuming: 0
+          },
+          food_nutrition: {
+            p: 0,
+            c: 0,
+            f: 0
+          },
+          food_array: {
+            breakfast: [],
+            lunch: [],
+            dinner: [],
+            snack: []
+          },
+          date: day
+      },
+        goal_calories: 0
+      })
+
+      const updateData = {
+        ...userData,
+        calories_goal_filled: false,
+        nutrition_history: [...userData.nutrition_history, userData.nutrition],
+        nutrition: {
+          cal: {
+            remaining: 0,
+            consuming: 0
+          },
+          food_nutrition: {
+            p: 0,
+            c: 0,
+            f: 0
+          },
+          food_array: {
+            breakfast: [],
+            lunch: [],
+            dinner: [],
+            snack: []
+          },
+          date: day
+      },
+        goal_calories: 0
+      };
+  
+      onSave(updateData)
+    }catch(e) {
+      console.log(e);
+    }
+    
+    
+    
+  }
+
+  function openConfirm() {
+    document.getElementById('confirm').classList.add('openConfirm')
+  }
+
+  function closeConfirm() {
+    document.getElementById('confirm').classList.remove('openConfirm')
+  }
+
 
   return (
     <div className="container nutrition">
       <div className="nutrition-container">
-        <div className="calories-option">
+        <div className="manage-option">
           
-          <button onClick={saveGoal}>Save</button>
+          <button onClick={openConfirm}>Manage</button>
+        </div>
+        <div className="confirm-tab" id="confirm">
+          <div className="close" onClick={closeConfirm}>
+            <div></div>
+            <div></div>
+          </div>
+          <h3>Do you want to save this history before resetting</h3>
+          <div className="confirm-btn">
+            <button onClick={save}>Save & Reset</button>
+            <button className="reset" onClick={reset}>Reset</button>
+          </div>
+
         </div>
         <h1>daily nutrition</h1>
         {!userData.isFilled ? <RequestForm /> : ''}
@@ -315,7 +417,7 @@ function Nutrition({onSave}) {
           </div>
         </div>
 
-        <div id="addFood" className="add-food">
+          <div id="addFood" className="add-food">
           <div className="close" onClick={closeAddFood}>
             <div></div>
             <div></div>

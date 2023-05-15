@@ -154,6 +154,7 @@ export default function PersonalizedPlan() {
   
   const setsDef = "A collection of reps"
   const repsDef = "A single execution of an exercise"
+
   
   return (
     <div className="container">

@@ -1,8 +1,12 @@
 import React, {useState, useEffect} from 'react'
 import { db } from '../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
+import { useNavigate } from 'react-router-dom';
+import './goalsetting.css'
 
 export default function GoalSetting({onSave}) {
+
+    const navigate = useNavigate()
 
     const [caloriesGoal, setCaloriesGoal]  = useState(0)
 
@@ -48,8 +52,9 @@ export default function GoalSetting({onSave}) {
 
   return (
     <div className='container'>
+      <div className="goal-container">
         <div className="calories-option">     
-            <h3>Calories</h3>
+            <h3>CALORIES GOAL</h3>
             <select onChange={(e) => {
             setCaloriesGoal(e.target.value);
             }}>
@@ -60,7 +65,9 @@ export default function GoalSetting({onSave}) {
             </select>
         
             <button onClick={saveGoal}>Save</button>
+            <button className='history' onClick={() => navigate('history')}>History</button>
         </div>
+      </div>   
     </div>
   )
 }

@@ -30,7 +30,8 @@ export default function User({userData, setUserData}) {
               lunch: [],
               dinner: [],
               snack: []
-            }
+            },
+            date: ''
         },
         bmi: [
           {
@@ -38,7 +39,9 @@ export default function User({userData, setUserData}) {
             ((parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))*(parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch)))),
             date: userData.information.weight[userData.information.weight.length-1].date
           }
-        ]
+        ],
+        nutrition_history: [],
+        goal_calories: 0
       })
 
       const updateData = {
@@ -58,7 +61,8 @@ export default function User({userData, setUserData}) {
               lunch: [],
               dinner: [],
               snack: []
-            }
+            },
+            date: ''
         },
         bmi: [
           {
@@ -66,7 +70,9 @@ export default function User({userData, setUserData}) {
             ((parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch))*(parseInt(userData.information.height.ft * 12) + parseInt(userData.information.height.inch)))),
             date: userData.information.weight[userData.information.weight.length-1].date
           }
-        ]
+        ],
+        nutrition_history: [],
+        goal_calories: 0
       };
 
       setUserData(updateData);

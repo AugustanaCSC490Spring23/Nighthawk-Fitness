@@ -20,12 +20,10 @@ export default function NutritionDisplay({userData, remain, consumed, protein, c
         },
       });
 
+    
     useEffect(()  => {
-      if ((consumed/userData.dailyCal.maintain_cal)*100 <= 100){
-        setPercentage((consumed/userData.goal_calories)*100)
-      }else {
-        setPercentage(100)
-      }
+      const calculatedPercentage = (consumed / userData.goal_calories) * 100;
+      setPercentage(Math.min(calculatedPercentage, 100));
     }, [consumed, userData])
 
     useEffect(() => {
@@ -33,6 +31,8 @@ export default function NutritionDisplay({userData, remain, consumed, protein, c
         setRemaining(0)
       }
     }, [remain])
+
+   
   return (
     <div>
         <div className="target-cal">

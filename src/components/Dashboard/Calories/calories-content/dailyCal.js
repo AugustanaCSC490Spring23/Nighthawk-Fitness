@@ -26,6 +26,7 @@ export default function DailyCal({userData}) {
             setRemain(userData.nutrition.cal.remaining)
         }
     },[userData.nutrition.cal.remaining])
+
  
   return (
     <div className='dailyCal-card'>
