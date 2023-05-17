@@ -1134,7 +1134,7 @@ const beginner = {
                                         Weight: '30',
                                         Reps: '6',
                                         Sets: '3',
-                                        photoURL: ''
+                                        photoURL: process.env.PUBLIC_URL + '/img/Preacher_Curls.jpg'
                                     },
                                     {
                                         name: 'Dumbell Row',
@@ -3644,7 +3644,7 @@ const beginner = {
                                                 Weight: '40',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             },
                                             {
                                                 name: 'Overhead Triceps Extension',
@@ -3899,7 +3899,7 @@ const beginner = {
                                                 Weight: '40',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             },
                                             {
                                                 name: 'Overhead Triceps Extension',
@@ -4103,7 +4103,7 @@ const beginner = {
                                                 Weight: '40',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             } 
                                         ] 
                                     ,
