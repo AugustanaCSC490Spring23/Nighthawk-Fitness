@@ -3,6 +3,7 @@ import { useNavigate} from 'react-router-dom'
 import {BiDumbbell} from 'react-icons/bi'
 import beginner from './personalizedPlan/plans/Beginner'
 import intermediate from './personalizedPlan/plans/Intermediate'
+import strength from './personalizedPlan/goals/Strength'
 import { db } from '../../Firebase/firebase'
 import { updateDoc, doc } from 'firebase/firestore'
 import './loading.css'
@@ -16,15 +17,17 @@ export default function Loading() {
 
     const navigate = useNavigate();
 
-    function addPlan(plan) {
+    function addPlan(plan,goal) {
         const currentDoc = doc(db, 'users', userData.docID);
         updateDoc(currentDoc, {
-            plan: plan
+            plan: plan,
+            goal_detail: goal
         })
 
         const updateData = {
           ...userData,
-          plan: plan
+          plan: plan,
+          goal_detail: goal
         };
         setUserData(updateData);
         localStorage.setItem('userData', JSON.stringify(updateData))
@@ -51,9 +54,9 @@ export default function Loading() {
             }
           }else if (userData.information.goal === 'strength') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(intermediate.strength.two_three.workout)
+              addPlan(intermediate.strength.two_three.workout, strength)
             }else {
-              addPlan(intermediate.strength.four_six.workout)
+              addPlan(intermediate.strength.four_six.workout,strength)
             }
           }else if (userData.information.goal === 'overall_fitness') {
             if (userData.personal_preference.workout_time === '2-3') {
@@ -77,9 +80,9 @@ export default function Loading() {
             }
           }else if (userData.information.goal === 'strength') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(beginner.strength.two_three.workout)
+              addPlan(beginner.strength.two_three.workout,strength)
             }else {
-              addPlan(beginner.strength.four_six.workout)
+              addPlan(beginner.strength.four_six.workout,strength)
             }
           }else if (userData.information.goal === 'overall_fitness') {
             if (userData.personal_preference.workout_time === '2-3') {

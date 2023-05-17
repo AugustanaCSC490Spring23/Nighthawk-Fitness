@@ -43,24 +43,9 @@ export default function Goal() {
                         <div className='back-btn' onClick={backBtn}>
                             <MdKeyboardArrowLeft/>
                         </div>
-                        <div className='my-goal-data'>
-                            <div className='title'>My Goals</div>
-                            <div className='user-content'>
-                                <div className='content-group'>
-                                    <div className='user-detail'>
-                                        <div className='user-detail-title'>Goal</div>
-                                        <div className='user-detail-data'>{goal}</div>
-                                    </div>
-                                    <div className='user-detail'>
-                                        <div className='user-detail-title'>Calories</div>
-                                        <div className='user-detail-data'>{Math.round(cal)} cal</div>
-                                    </div>
-                                </div>
-                                <div className='quote-content'>
-                                    <div className='daily-quote-title'>Daily Quote</div>
-                                    <div className='daily-quote'>{quotes[randomNum()]}</div>
-                                </div>
-                            </div>
+                        <div className="goal-title">{userData.information.goal}</div>
+                        <div className="goal-item">
+                            
                         </div>
                     </div>
                 </div>
