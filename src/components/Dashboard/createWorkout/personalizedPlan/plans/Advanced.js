@@ -69,7 +69,7 @@ const advanced = {
                                                 Weight: '90',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             },
                                             {
                                                 name: 'Overhead Triceps Extension',
@@ -325,7 +325,7 @@ const advanced = {
                                                 Weight: '90',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             },
                                             {
                                                 name: 'Overhead Triceps Extension',
@@ -529,7 +529,7 @@ const advanced = {
                                                 Weight: '90',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             } 
                                         ] 
                                     ,
@@ -864,7 +864,7 @@ const advanced = {
                                                 Weight: '60',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             },
                                             {
                                                 name: 'Seated Arnold Press',
@@ -1256,7 +1256,7 @@ const advanced = {
                                                 Weight: '60',
                                                 Reps: '8',
                                                 Sets: '3',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_PushDowns.jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Tricep_Pushdowns.jpg'
                                             },
                                             {
                                                 name: 'Overhead Triceps Extension',

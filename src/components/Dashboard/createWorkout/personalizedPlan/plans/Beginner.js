@@ -838,7 +838,9 @@ const beginner = {
                                 ]
                             }
 
-                        }
+                        },
+                        'rest',
+                        'rest'
                     ]
             }
         },
@@ -2157,7 +2159,7 @@ const beginner = {
                                             name: 'Jumping Muscle Ups', 
                                             instruction: 'The first important tip is that you need to create a swing. Why? Because the goal is to go around the bar and to get on top of the bar. With a swing, you can create momentum and move diagonally. In comparison with a regular pull-up, you pull yourself straight up without swing. This makes it impossible to get over the bar because you can’t bring your elbows around the bar. The next important tip which you need to implement if you want to know how to do a muscle-up is to learn at which exact moment you need to pull yourself up. So, you create a swing as mentioned above. When you are as forward as possible during the swing you need to pull yourself up diagonally. Or, in other words, at the exact moment that your swing is going backward instead of forward, you need to pull yourself up diagonally. To make this technique a little bit easier for yourself, you can imagine that there is a trampoline in front of you. When you are approaching the pretended trampoline you have to imagine jumping into it to create momentum and pull yourself up directly. Another very helpful tip is to use your knees to create even more momentum to get over the bar. Kipping your knees will make it easier. We know that this is not a strict form muscle-up, but you can learn that later. This tutorial is about learning your first muscle-up. In this stadium, it is important that you learn how to get over the bar. Therefore your muscle-up doesn’t have to be perfect. This important tip is all about ‘How to pull’. Normally we see a lot of people performing a pull-up and then they won’t make it to get over the bar. This is because you should not bring your chest to the bar. The goal is to bring your hips to the bar. You can do this by doing a straight arm pull down movement. This will make it way easier to get over the bar. The last tip is about where you should stand if you start with the muscle-up. You should not start below the bar but behind the bar. Then you jump into the bar and swing yourself forward. The first time you get in front of the bar (during your swing), you should pull yourself up immediately. Why can’t you just hang on the bar and start swinging until you feel like it is the right moment for you? Because it takes way more energy which you can use to pull yourself up.',
                                             Reps: '5',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullup.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name: 'Childs Pose',
@@ -2177,6 +2179,8 @@ const beginner = {
                                     ]
                             }
                         },
+                        'rest',
+                        'rest'
                     ]
             }
         },
@@ -2441,7 +2445,7 @@ const beginner = {
                                             name: 'Jumping Muscle Ups', 
                                             instruction: 'The first important tip is that you need to create a swing. Why? Because the goal is to go around the bar and to get on top of the bar. With a swing, you can create momentum and move diagonally. In comparison with a regular pull-up, you pull yourself straight up without swing. This makes it impossible to get over the bar because you can’t bring your elbows around the bar. The next important tip which you need to implement if you want to know how to do a muscle-up is to learn at which exact moment you need to pull yourself up. So, you create a swing as mentioned above. When you are as forward as possible during the swing you need to pull yourself up diagonally. Or, in other words, at the exact moment that your swing is going backward instead of forward, you need to pull yourself up diagonally. To make this technique a little bit easier for yourself, you can imagine that there is a trampoline in front of you. When you are approaching the pretended trampoline you have to imagine jumping into it to create momentum and pull yourself up directly. Another very helpful tip is to use your knees to create even more momentum to get over the bar. Kipping your knees will make it easier. We know that this is not a strict form muscle-up, but you can learn that later. This tutorial is about learning your first muscle-up. In this stadium, it is important that you learn how to get over the bar. Therefore your muscle-up doesn’t have to be perfect. This important tip is all about ‘How to pull’. Normally we see a lot of people performing a pull-up and then they won’t make it to get over the bar. This is because you should not bring your chest to the bar. The goal is to bring your hips to the bar. You can do this by doing a straight arm pull down movement. This will make it way easier to get over the bar. The last tip is about where you should stand if you start with the muscle-up. You should not start below the bar but behind the bar. Then you jump into the bar and swing yourself forward. The first time you get in front of the bar (during your swing), you should pull yourself up immediately. Why can’t you just hang on the bar and start swinging until you feel like it is the right moment for you? Because it takes way more energy which you can use to pull yourself up.',
                                             Reps: '5',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Pullup.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Pullups.jpg'
                                         },
                                         {
                                             name: 'Childs Pose',
