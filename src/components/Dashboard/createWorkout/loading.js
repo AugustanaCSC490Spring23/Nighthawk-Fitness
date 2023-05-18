@@ -15,19 +15,21 @@ export default function Loading() {
       return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    // goal_detail: goal
+    
     const navigate = useNavigate();
 
     function addPlan(plan,goal) {
         const currentDoc = doc(db, 'users', userData.docID);
         updateDoc(currentDoc, {
-            plan: plan
+            plan: plan,
+            goal_detail: goal
             
         })
 
         const updateData = {
           ...userData,
-          plan: plan
+          plan: plan,
+          goal_detail: goal
         };
         setUserData(updateData);
         localStorage.setItem('userData', JSON.stringify(updateData))
@@ -48,9 +50,9 @@ export default function Loading() {
         if (userData.personal_preference.experience_level === 'intermediate') {
           if (userData.information.goal === 'muscle_gain') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(intermediate.muscle_gain.two_three.workout)
+              addPlan(intermediate.muscle_gain.two_three.workout,strength)
             }else {
-              addPlan(intermediate.muscle_gain.four_six.workout)
+              addPlan(intermediate.muscle_gain.four_six.workout,strength)
             }
           }else if (userData.information.goal === 'strength') {
             if (userData.personal_preference.workout_time === '2-3') {
@@ -60,23 +62,23 @@ export default function Loading() {
             }
           }else if (userData.information.goal === 'overall_fitness') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(intermediate.overall_fitness.two_three.workout)
+              addPlan(intermediate.overall_fitness.two_three.workout,strength)
             }else {
-              addPlan(intermediate.overall_fitness.four_six.workout)
+              addPlan(intermediate.overall_fitness.four_six.workout,strength)
             }
           }else {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(intermediate.weight_loss.two_three.workout)
+              addPlan(intermediate.weight_loss.two_three.workout,strength)
             }else {
-              addPlan(intermediate.weight_loss.four_six.workout)
+              addPlan(intermediate.weight_loss.four_six.workout,strength)
             }
           }
         }else if (userData.personal_preference.experience_level === 'beginner') {
           if (userData.information.goal === 'muscle_gain') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(beginner.muscle_gain.two_three.workout)
+              addPlan(beginner.muscle_gain.two_three.workout,strength)
             }else {
-              addPlan(beginner.muscle_gain.four_six.workout)
+              addPlan(beginner.muscle_gain.four_six.workout,strength)
             }
           }else if (userData.information.goal === 'strength') {
             if (userData.personal_preference.workout_time === '2-3') {
@@ -86,23 +88,23 @@ export default function Loading() {
             }
           }else if (userData.information.goal === 'overall_fitness') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(beginner.overall_fitness.two_three.workout)
+              addPlan(beginner.overall_fitness.two_three.workout,strength)
             }else {
-              addPlan(beginner.overall_fitness.four_six.workout)
+              addPlan(beginner.overall_fitness.four_six.workout,strength)
             }
           }else {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(beginner.weight_loss.two_three.workout)
+              addPlan(beginner.weight_loss.two_three.workout,strength)
             }else {
-              addPlan(beginner.weight_loss.four_six.workout)
+              addPlan(beginner.weight_loss.four_six.workout,strength)
             }
           }
         }else {
           if (userData.information.goal === 'muscle_gain') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(advanced.muscle_gain.two_three.workout)
+              addPlan(advanced.muscle_gain.two_three.workout,strength)
             }else {
-              addPlan(advanced.muscle_gain.four_six.workout)
+              addPlan(advanced.muscle_gain.four_six.workout,strength)
             }
           }else if (userData.information.goal === 'strength') {
             if (userData.personal_preference.workout_time === '2-3') {
@@ -112,15 +114,15 @@ export default function Loading() {
             }
           }else if (userData.information.goal === 'overall_fitness') {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(advanced.overall_fitness.two_three.workout)
+              addPlan(advanced.overall_fitness.two_three.workout,strength)
             }else {
-              addPlan(advanced.overall_fitness.four_six.workout)
+              addPlan(advanced.overall_fitness.four_six.workout,strength)
             }
           }else {
             if (userData.personal_preference.workout_time === '2-3') {
-              addPlan(advanced.weight_loss.two_three.workout)
+              addPlan(advanced.weight_loss.two_three.workout,strength)
             }else {
-              addPlan(advanced.weight_loss.four_six.workout)
+              addPlan(advanced.weight_loss.four_six.workout,strength)
             }
           }
         }
