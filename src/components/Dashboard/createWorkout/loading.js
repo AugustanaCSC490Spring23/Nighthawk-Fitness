@@ -3,6 +3,7 @@ import { useNavigate} from 'react-router-dom'
 import {BiDumbbell} from 'react-icons/bi'
 import beginner from './personalizedPlan/plans/Beginner'
 import intermediate from './personalizedPlan/plans/Intermediate'
+import advanced from './personalizedPlan/plans/Advanced'
 import strength from './personalizedPlan/goals/Strength'
 import { db } from '../../Firebase/firebase'
 import { updateDoc, doc } from 'firebase/firestore'
@@ -14,20 +15,19 @@ export default function Loading() {
       return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-
+    // goal_detail: goal
     const navigate = useNavigate();
 
     function addPlan(plan,goal) {
         const currentDoc = doc(db, 'users', userData.docID);
         updateDoc(currentDoc, {
-            plan: plan,
-            goal_detail: goal
+            plan: plan
+            
         })
 
         const updateData = {
           ...userData,
-          plan: plan,
-          goal_detail: goal
+          plan: plan
         };
         setUserData(updateData);
         localStorage.setItem('userData', JSON.stringify(updateData))
@@ -95,6 +95,32 @@ export default function Loading() {
               addPlan(beginner.weight_loss.two_three.workout)
             }else {
               addPlan(beginner.weight_loss.four_six.workout)
+            }
+          }
+        }else {
+          if (userData.information.goal === 'muscle_gain') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(advanced.muscle_gain.two_three.workout)
+            }else {
+              addPlan(advanced.muscle_gain.four_six.workout)
+            }
+          }else if (userData.information.goal === 'strength') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(advanced.strength.two_three.workout,strength)
+            }else {
+              addPlan(advanced.strength.four_six.workout,strength)
+            }
+          }else if (userData.information.goal === 'overall_fitness') {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(advanced.overall_fitness.two_three.workout)
+            }else {
+              addPlan(advanced.overall_fitness.four_six.workout)
+            }
+          }else {
+            if (userData.personal_preference.workout_time === '2-3') {
+              addPlan(advanced.weight_loss.two_three.workout)
+            }else {
+              addPlan(advanced.weight_loss.four_six.workout)
             }
           }
         }

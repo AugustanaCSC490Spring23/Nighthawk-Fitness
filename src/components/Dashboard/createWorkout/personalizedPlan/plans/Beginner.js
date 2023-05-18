@@ -1294,7 +1294,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name:'Glute Bridges',
@@ -1364,7 +1364,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name:'Glute Bridges',
@@ -1434,7 +1434,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name: 'Leg Raises',
@@ -1513,7 +1513,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name:'Glute Bridges',
@@ -1582,7 +1582,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name:'Glute Bridges',
@@ -1651,7 +1651,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name: 'Leg Raises',
@@ -1792,7 +1792,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name:'V-Ups',
@@ -1893,7 +1893,7 @@ const beginner = {
             }
         }
     },
-    overall_Fitness: {
+    overall_fitness: {
         two_three: {
             workout: {
                 name: 'Beginner Calisthenics',
@@ -2038,7 +2038,7 @@ const beginner = {
                                             name:'Inverted Rows',
                                             instruction: 'Set the bar around waist height. The lower the bar, the more difficult the movement becomes. Position yourself under the bar lying face up. Lie on the floor underneath the bar (which should be set just above where you can reach from the ground). Grab the bar with an overhand grip, slightly wider than shoulder-width (palms facing AWAY from you). Contract your abs and butt, and keep your body a completely straight line. Your ears, shoulders, hips legs, and feet should all be in a straight line. Pull yourself up to the bar until your chest touches the bar. Lower yourself back down.',
                                             Reps:'10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Inverted_Row.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Inverted_Rows.jpg'
                                         },
                                         {
                                             name: 'Jumping Lunges',
@@ -2125,7 +2125,7 @@ const beginner = {
                                             name:'Incline Push-ups',
                                             instruction: 'Stand facing the bench, table, or the edge of a bed. Place your hands on the edge of the bench just slightly wider than shoulder width. Your arms are straight but elbows are not locked. Align your feet so that your arms and body are completely straight. Bend your elbows to slowly lower your chest to the edge of the bench while inhaling. Keep your body straight and rigid throughout the movement. Push your body away from the bench until your elbows are extended, but not locked. Exhale as you push up.',
                                             Reps: '5',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Incline_Pushup.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Incline_Pushups.jpg'
                                         },
                                         {
                                             name: 'Clap Push-ups',
@@ -2322,7 +2322,7 @@ const beginner = {
                                             name:'Inverted Rows',
                                             instruction: 'Set the bar around waist height. The lower the bar, the more difficult the movement becomes. Position yourself under the bar lying face up. Lie on the floor underneath the bar (which should be set just above where you can reach from the ground). Grab the bar with an overhand grip, slightly wider than shoulder-width (palms facing AWAY from you). Contract your abs and butt, and keep your body a completely straight line. Your ears, shoulders, hips legs, and feet should all be in a straight line. Pull yourself up to the bar until your chest touches the bar. Lower yourself back down.',
                                             Reps:'10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Inverted_Row.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Inverted_Rows.jpg'
                                         },
                                         {
                                             name: 'Jumping Lunges',
@@ -2409,7 +2409,7 @@ const beginner = {
                                             name:'Incline Push-ups',
                                             instruction: 'Stand facing the bench, table, or the edge of a bed. Place your hands on the edge of the bench just slightly wider than shoulder width. Your arms are straight but elbows are not locked. Align your feet so that your arms and body are completely straight. Bend your elbows to slowly lower your chest to the edge of the bench while inhaling. Keep your body straight and rigid throughout the movement. Push your body away from the bench until your elbows are extended, but not locked. Exhale as you push up.',
                                             Reps: '5',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Incline_Pushup.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Incline_Pushups.jpg'
                                         },
                                         {
                                             name: 'Clap Push-ups',
@@ -2527,7 +2527,7 @@ const beginner = {
                                             instruction: 'Engage your abdominal muscles, drawing your navel toward your spine. Lift your hips and knees from the mat while exhaling. Your torso is straight in line with no sagging or bending. Hold the position. After several breaths, inhale and return to the starting position. The goal should be to hold for 60 seconds. Change sides and repeat.',
                                             Reps: '45 seconds',
                                             Sets: '4',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Planks.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Side_Plank.jpg'
                                         },
                                         {
                                             name: 'rest',
@@ -2613,7 +2613,7 @@ const beginner = {
                                             name:'Inverted Rows',
                                             instruction: 'Set the bar around waist height. The lower the bar, the more difficult the movement becomes. Position yourself under the bar lying face up. Lie on the floor underneath the bar (which should be set just above where you can reach from the ground). Grab the bar with an overhand grip, slightly wider than shoulder-width (palms facing AWAY from you). Contract your abs and butt, and keep your body a completely straight line. Your ears, shoulders, hips legs, and feet should all be in a straight line. Pull yourself up to the bar until your chest touches the bar. Lower yourself back down.',
                                             Reps:'10',
-                                            photoURL: process.env.PUBLIC_URL + '/img/Inverted_Row.jpg'
+                                            photoURL: process.env.PUBLIC_URL + '/img/Inverted_Rows.jpg'
                                         },
                                         {
                                             name:'Pullups',

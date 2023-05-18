@@ -980,7 +980,7 @@ const intermediate = {
                                                 Weight: '65',
                                                 Reps: '8',
                                                 Sets: '2',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Press/jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Press.jpg'
                                             },
                                             {
                                                 name: 'Lateral Raise',
@@ -1144,7 +1144,7 @@ const intermediate = {
                                                 Weight: '65',
                                                 Reps: '8',
                                                 Sets: '2',
-                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Press/jpg'
+                                                photoURL: process.env.PUBLIC_URL + '/img/Overhead_Press.jpg'
                                             },
                                             {
                                                 name: 'Barbell Curl',
