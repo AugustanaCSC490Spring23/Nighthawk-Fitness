@@ -158,6 +158,12 @@
     position: relative;
 }
 
+.schedule-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .schedule h1, p {
     font-size: large;
     text-align: left !important;
@@ -186,6 +192,44 @@
     padding: .25rem .75rem;
     border-radius: 1rem;
     
+}
+
+.check-btn {
+    margin-top: 1rem;
+}
+
+.check-btn button {
+    width: max-content;
+    background: #EA5455;
+}
+
+.check-btn button:hover {
+    color: #EA5455;
+    border-color: #EA5455;
+}
+
+.complete-btn {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--primary-variant);
+    display: block;
+    transition: var(--transition);
+}
+
+.complete-btn:hover {
+    opacity: .5;
+    
+}
+
+.completed {
+    background: var(--primary-variant) !important;
+
+}
+
+.completed:hover {
+    border-color: var(--primary-variant) !important;
+    color: var(--primary-variant) !important;
+    background: transparent !important;
 }
 
 @media (max-width: 1350px) { 

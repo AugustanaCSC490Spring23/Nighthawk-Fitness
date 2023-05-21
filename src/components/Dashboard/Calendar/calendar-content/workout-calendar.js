@@ -6,7 +6,7 @@ import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { db } from '../../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
 
-export default function Attempt_calendar() {
+export default function Attempt_calendar({setChanges}) {
     const [userData, setUserData] = useState(() => {
         const savedUserData = localStorage.getItem('userData');
         return savedUserData ? JSON.parse(savedUserData) : null
@@ -17,32 +17,44 @@ export default function Attempt_calendar() {
     const [today, setToday] = useState(currentDate);
     const [selectDate, setSelectDate] = useState(currentDate);
 
+    const [isComplete, setIsComplete] = useState(false);
 
    useEffect(() => {
     const currentDoc = doc(db, 'users', userData.docID);
     const workout = []
     if (userData.start_date  && !userData.calendarPlanned) {
-        for (let i = 0; i < 7; i++) {
+        let index = 0;
+        for (let i = 0; i < 14; i++) {
+            
             let day =  new Date(userData.start_date)
             day.setDate(day.getDate()+i)
                 
             const workoutDay = {
                 date: day.toDateString(),
-                workout: userData.plan.schedule[i]  
+                workout: userData.plan.schedule[index],
+                isComplete: false  
             }
     
             workout.push(workoutDay)
+            index++
+            if (index > 6) {
+                index = 0
+            }
         }
 
         
         updateDoc(currentDoc, {
             week_plan: workout,
+            completed: 0,
+            week_plan_length: 14,
             calendarPlanned: true
         })
 
         const updateData = {
             ...userData,
             week_plan: workout,
+            completed: 0,
+            week_plan_length: 14,
             calendarPlanned: true
         };
 
@@ -50,7 +62,59 @@ export default function Attempt_calendar() {
         localStorage.setItem('userData', JSON.stringify(updateData))
     }
    }, [userData.start_date])
-    
+
+
+    function completeWorkout(event) {
+        const updateCompleted = userData.completed+1
+        const updateCompletion = [...userData.week_plan]
+        updateCompletion[event.target.getAttribute('id')].isComplete = true
+        const currentDoc = doc(db, 'users', userData.docID);
+
+        setChanges(updateCompleted)
+
+        updateDoc(currentDoc, {
+            week_plan: updateCompletion,
+            completed: updateCompleted,
+            week_perc: Math.round((updateCompleted / userData.week_plan_length) * 100)
+        })
+
+        const updateData = {
+            ...userData,
+            week_plan: updateCompletion,
+            completed: updateCompleted,
+            week_perc: Math.round((updateCompleted / userData.week_plan_length) * 100)
+        };
+
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))
+
+   }
+
+    function resetComplete(event) {
+        const updateCompleted = userData.completed-1
+        const updateCompletion = [...userData.week_plan]
+        updateCompletion[event.target.getAttribute('id')].isComplete = false
+        
+        const currentDoc = doc(db, 'users', userData.docID);
+
+        setChanges(updateCompleted)
+
+        updateDoc(currentDoc, {
+            week_plan: updateCompletion,
+            completed: updateCompleted,
+            week_perc: Math.round((updateCompleted / userData.week_plan_length) * 100)
+        })
+
+        const updateData = {
+            ...userData,
+            week_plan: updateCompletion,
+            completed: updateCompleted,
+            week_perc: Math.round((updateCompleted / userData.week_plan_length) * 100)
+        };
+
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))    
+    }
 
     return(
         <div className="main-container">
@@ -87,7 +151,44 @@ export default function Attempt_calendar() {
             
             <div className="schedule">
                 <div className="line line_mobile"></div>
-                <h1>{selectDate.toDate().toDateString()}</h1>
+                
+                <div className="schedule-header">
+                    <h1>{selectDate.toDate().toDateString()}</h1>
+
+                    {userData.completed === userData.week_plan_length ? 
+                        <div className="check-btn">
+                    
+                            {userData.week_plan.find(w => w.date === selectDate.toDate().toDateString()) ? 
+                                userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].isComplete ? 
+
+                                    <div>
+                                        <button className="completed" onClick={resetComplete} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>You Did It !!!</button> 
+                                    </div> 
+                                    : 
+                                    <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Uncomplete</button> 
+                            : 
+                            ''}
+                            
+                        </div>
+                        :
+                        <div className="check-btn">
+                    
+                        {userData.week_plan.find(w => w.date === selectDate.toDate().toDateString()) ? 
+                            userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].isComplete ? 
+
+                                <div>
+                                    <button className="completed" onClick={resetComplete} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Completed</button> 
+                                </div> 
+                                : 
+                                <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Uncomplete</button> 
+                        : 
+                        ''}
+                        
+                    </div>
+                    }
+
+                    
+                </div>
                 {/* <p>{typeof(workout[index].workout) === 'object' ? workout[index].workout.session.day : workout[index].workout}</p> */}
                 {userData.week_plan ? 
                     <div>{userData.week_plan.find(w => w.date === selectDate.toDate().toDateString()) ?
@@ -110,7 +211,8 @@ export default function Attempt_calendar() {
                                     ))   
                                 }
                             </ul>
-                            
+
+                                
                         </div>
                     
                     :

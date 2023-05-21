@@ -19,6 +19,13 @@ function DashboardMain(){
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
+    const [changes, setChanges] = useState();
+
+    const [workoutPerc, setWorkoutPerc] = useState(userData.week_perc)
+
+    
+    console.log(workoutPerc);
+
     const theme = createTheme({
         palette: {
           primary: {
@@ -31,6 +38,15 @@ function DashboardMain(){
           },
         },
       });
+
+
+
+    useEffect(() => {
+        const completed = changes;
+        const Perc = Math.round((completed / userData.week_plan_length) * 100);
+        setWorkoutPerc(Perc);
+    }, [userData.completed, changes, userData]);
+
 
     return(
         <div className=" container">
@@ -66,7 +82,7 @@ function DashboardMain(){
                                 <h4>{userData.plan.name}</h4>
                                 <small>Duration: 4 weeks</small>
                                 <ThemeProvider theme={theme}>
-                                    <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={90}/>
+                                    <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={workoutPerc}/>
                                 </ThemeProvider>
                             </div>
                             }
@@ -75,7 +91,7 @@ function DashboardMain(){
                         <div>
                             <WeightHistory userData={userData}/>
                         </div>
-                        <div className="calendar tabs"><Calendar/></div>
+                        <div className="calendar tabs"><Calendar setChanges={setChanges}/></div>
                     </div>
                     
                 </div>
