@@ -5,6 +5,7 @@ import { getDate, months } from './dates'
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
 import { db } from '../../../Firebase/firebase';
 import { updateDoc, doc } from "firebase/firestore";
+import Confetti from 'react-confetti'
 
 export default function Attempt_calendar({setChanges}) {
     const [userData, setUserData] = useState(() => {
@@ -17,7 +18,8 @@ export default function Attempt_calendar({setChanges}) {
     const [today, setToday] = useState(currentDate);
     const [selectDate, setSelectDate] = useState(currentDate);
 
-    const [isComplete, setIsComplete] = useState(false);
+    const [isComplete, setIsComplete] = useState(true);
+
 
    useEffect(() => {
     const currentDoc = doc(db, 'users', userData.docID);
@@ -116,6 +118,27 @@ export default function Attempt_calendar({setChanges}) {
         localStorage.setItem('userData', JSON.stringify(updateData))    
     }
 
+    function removePlan() {
+        const currentDoc = doc(db, 'users', userData.docID);
+        updateDoc(currentDoc, {
+          start_date: '',
+          week_plan: [],
+          calendarPlanned: false,
+          week_perc:0
+        })
+    
+        const updateData = {
+            ...userData,
+            start_date: '',
+            week_plan: [],
+            calendarPlanned: false,
+            week_perc:0
+        };
+    
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))
+      }
+    
     return(
         <div className="main-container">
             <div className="contain">
@@ -163,6 +186,17 @@ export default function Attempt_calendar({setChanges}) {
 
                                     <div>
                                         <button className="completed" onClick={resetComplete} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>You Did It !!!</button> 
+                                        <button className="reset" onClick={removePlan}>Reset </button>
+                                        {isComplete ? 
+                                        <Confetti
+                                            width={290}
+                                            height={400}
+                                            wind={.02}
+                                        />
+                                        :
+                                        ''
+                                        }
+                                        
                                     </div> 
                                     : 
                                     <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Uncomplete</button> 

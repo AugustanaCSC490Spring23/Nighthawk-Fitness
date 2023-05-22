@@ -203,9 +203,15 @@
     background: #EA5455;
 }
 
+
 .check-btn button:hover {
     color: #EA5455;
     border-color: #EA5455;
+    background: transparent;
+}
+
+.check-btn  .reset {
+    width: max-content;
 }
 
 .complete-btn {
