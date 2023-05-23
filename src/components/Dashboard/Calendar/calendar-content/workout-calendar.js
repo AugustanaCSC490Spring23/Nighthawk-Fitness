@@ -188,8 +188,8 @@ export default function Attempt_calendar({setChanges}) {
                             {userData.week_plan.find(w => w.date === selectDate.toDate().toDateString()) ? 
                                 userData.week_plan[userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())].isComplete ? 
 
-                                    <div>
-                                        <button className="completed" onClick={resetComplete} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>You Did It !!!</button> 
+                                    <div className="completed-container" >
+                                        <button className="completed" onClick={resetComplete} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>YOU DID IT</button> 
                                         <button className="reset" onClick={removePlan}>Reset </button>
                                         {isComplete ? 
                                         <Confetti
@@ -206,7 +206,7 @@ export default function Attempt_calendar({setChanges}) {
                                         
                                     </div> 
                                     : 
-                                    <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Uncomplete</button> 
+                                    <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Incomplete</button> 
                             : 
                             ''}
                             
@@ -221,7 +221,7 @@ export default function Attempt_calendar({setChanges}) {
                                         <button className="completed" onClick={resetComplete} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Completed</button> 
                                     </div> 
                                     : 
-                                    <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Uncomplete</button> 
+                                    <button onClick={completeWorkout} id={userData.week_plan.findIndex(w => w.date === selectDate.toDate().toDateString())}>Incomplete</button> 
                                 : 
                             ''}
                             

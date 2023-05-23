@@ -4,10 +4,14 @@
     background: var(--primary-dashboard);
     border-radius: 1rem;
     padding: 1rem;
+    gap: 2rem;
+    overflow: scroll;
+}
+
+.goal-content-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    overflow: scroll;
 }
 
 .backBtn {

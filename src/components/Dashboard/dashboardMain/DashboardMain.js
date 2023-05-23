@@ -20,7 +20,7 @@ function DashboardMain(){
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    const [changes, setChanges] = useState();
+    const [changes, setChanges] = useState(userData.completed);
 
     const [workoutPerc, setWorkoutPerc] = useState(userData.week_perc)
 
@@ -81,7 +81,7 @@ function DashboardMain(){
                             {!userData.isCreated ? <UnlockPlan/> : 
                             <div className="current-content">
                                 <h4>{userData.plan.name}</h4>
-                                <small>Duration: 4 weeks</small>
+                                <small>Duration: 2 weeks</small>
                                 <ThemeProvider theme={theme}>
                                     <CircularProgress className="progress-circle" color='primary' size='12rem' thickness={7} variant="determinate" value={workoutPerc}/>
                                 </ThemeProvider>

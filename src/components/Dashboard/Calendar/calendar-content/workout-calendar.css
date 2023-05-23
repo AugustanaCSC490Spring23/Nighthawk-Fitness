@@ -162,6 +162,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
+}
+
+.completed-container {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
 }
 
 .schedule h1, p {

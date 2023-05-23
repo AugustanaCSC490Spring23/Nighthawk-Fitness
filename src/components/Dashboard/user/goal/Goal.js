@@ -40,76 +40,86 @@ export default function Goal() {
                         <div className='back-btn' onClick={backBtn}>
                             <MdKeyboardArrowLeft/>
                         </div>
-                        <div className="goal-title">{userData.information.goal}</div>
-                        <div className="goal-item">
-                            <div className="goal-item-header">
-                                <h3>Definition</h3>
-                            </div>
-                            <div className="goal-item-content def">
-                                <small>{userData.goal_detail.definition}</small>
-                            </div>
-                        </div>
 
-                        <div className="goal-item">
-                            <div className="goal-item-header">
-                                <h3>Benefits</h3>
-                            </div>
-                            <div className="goal-item-content">
-                                <ul>
-                                    {userData.goal_detail.benefit.map((item) =>  (
-                                        <small>{item}</small>
-                                    ))}
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div className="goal-item">
-                            <div className="goal-item-header">
-                                <h3>Training Principles</h3>
-                            </div>
-                            <div className="goal-item-content">
-                                {userData.goal_detail.training_principle.map((item) => (
-                                    <div className='goal-item-list'>
-                                        <h4>{item.name}</h4>
-                                        <div>
-                                            <small>{item.def}</small>
-                                        </div>
+                        {userData.goal_detail ? 
+                            <div className='goal-content-container'>
+                                <div className="goal-title">{userData.information.goal}</div>
+                                <div className="goal-item">
+                                    <div className="goal-item-header">
+                                        <h3>Definition</h3>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="goal-item">
-                            <div className="goal-item-header">
-                                <h3>Tracking Progress</h3>
-                            </div>
-                            <div className="goal-item-content">
-                                {userData.goal_detail.tracking_progress.map((item) => (
-                                    <div className='goal-item-list'>
-                                        <h4>{item.name}</h4>
-                                        <div>
-                                            <small>{item.def}</small>
-                                        </div>
+                                    <div className="goal-item-content def">
+                                        <small>{userData.goal_detail.definition}</small>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
+                                </div>
 
-                        <div className="goal-item">
-                            <div className="goal-item-header">
-                                <h3>Supplementation</h3>
-                            </div>
-                            <div className="goal-item-content">
-                                {userData.goal_detail.supplementation.map((item) => (
-                                    <div className='goal-item-list'>
-                                        <h4>{item.name}</h4>
-                                        <div>
-                                            <small>{item.def}</small>
-                                        </div>
+                                <div className="goal-item">
+                                    <div className="goal-item-header">
+                                        <h3>Benefits</h3>
                                     </div>
-                                ))}
+                                    <div className="goal-item-content">
+                                        <ul>
+                                            {userData.goal_detail.benefit.map((item) =>  (
+                                                <small>{item}</small>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div className="goal-item">
+                                    <div className="goal-item-header">
+                                        <h3>Training Principles</h3>
+                                    </div>
+                                    <div className="goal-item-content">
+                                        {userData.goal_detail.training_principle.map((item) => (
+                                            <div className='goal-item-list'>
+                                                <h4>{item.name}</h4>
+                                                <div>
+                                                    <small>{item.def}</small>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="goal-item">
+                                    <div className="goal-item-header">
+                                        <h3>Tracking Progress</h3>
+                                    </div>
+                                    <div className="goal-item-content">
+                                        {userData.goal_detail.tracking_progress.map((item) => (
+                                            <div className='goal-item-list'>
+                                                <h4>{item.name}</h4>
+                                                <div>
+                                                    <small>{item.def}</small>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="goal-item">
+                                    <div className="goal-item-header">
+                                        <h3>Supplementation</h3>
+                                    </div>
+                                    <div className="goal-item-content">
+                                        {userData.goal_detail.supplementation.map((item) => (
+                                            <div className='goal-item-list'>
+                                                <h4>{item.name}</h4>
+                                                <div>
+                                                    <small>{item.def}</small>
+                                                </div>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            :
+                            <h2>
+                                Create a workout plan to see this feature
+                            </h2>
+                        }
+                        
                     </div>
                 </div>
             </div>
