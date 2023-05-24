@@ -20,12 +20,9 @@ function DashboardMain(){
         return savedUserData ? JSON.parse(savedUserData) : null
     });
 
-    const [changes, setChanges] = useState(0);
+    const [changes, setChanges] = useState(userData.completed);
 
-    const [workoutPerc, setWorkoutPerc] = useState(0)
-
-    
-    
+    const [workoutPerc, setWorkoutPerc] = useState(userData.week_perc)
 
     const theme = createTheme({
         palette: {
@@ -45,7 +42,6 @@ function DashboardMain(){
     useEffect(() => {
         const completed = changes;
         const Perc = Math.round((completed / userData.week_plan_length) * 100);
-        console.log(userData.week_plan_length);
         setWorkoutPerc(Perc);
     }, [userData.completed, changes, userData]);
 

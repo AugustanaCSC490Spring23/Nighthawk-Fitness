@@ -98,21 +98,6 @@ export default function Goal() {
                                     </div>
                                 </div>
 
-                                <div className="goal-item">
-                                    <div className="goal-item-header">
-                                        <h3>Supplementation</h3>
-                                    </div>
-                                    <div className="goal-item-content">
-                                        {userData.goal_detail.supplementation.map((item) => (
-                                            <div className='goal-item-list'>
-                                                <h4>{item.name}</h4>
-                                                <div>
-                                                    <small>{item.def}</small>
-                                                </div>
-                                            </div>
-                                        ))}
-                                    </div>
-                                </div>
                             </div>
                             :
                             <h2>

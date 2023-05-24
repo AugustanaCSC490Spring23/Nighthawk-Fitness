@@ -26,20 +26,6 @@ const strength = {
             def:'Muscles need time to recover and repair after intense strength training, so make sure to give your body adequate time to rest and recover'
         }
     ],
-    supplementation:[
-        {
-            name:'Protein',
-            def:'Protein is essential for muscle growth and repair, and can help support strength training goals. Aim for 1-1.5 grams of protein per pound of bodyweight per day'
-        },
-        {
-            name:'Creatine',
-            def:'Creatine is a supplement that can help improve performance during high-intensity exercise, allowing you to lift heavier weights and perform more reps, which can in turn promote strength gains'
-        },
-        {
-            name:'Beta-Alanine',
-            def:'Beta-alanine is an amino acid that can help improve muscular endurance during high-intensity exercise, allowing you to perform more reps and increase strength gains'
-        }
-    ],
     tracking_progress:[
         {
             name:'Strength Tracking',
