@@ -1,4 +1,4 @@
-import React,  {useState} from 'react'
+import React,  {useState,useEffect} from 'react'
 import './personalizedplan.css'
 import { useNavigate } from 'react-router-dom';
 import {MdKeyboardArrowLeft} from 'react-icons/md'
@@ -28,6 +28,49 @@ export default function PersonalizedPlan() {
     workout_time: userData.personal_preference.workout_time
   })
 
+  useEffect(() => {
+    const currentDoc = doc(db, 'users', userData.docID);
+    const workout = []
+    if (userData.start_date  && !userData.calendarPlanned) {
+        let index = 0;
+        for (let i = 0; i < 14; i++) {
+            
+            let day =  new Date(userData.start_date)
+            day.setDate(day.getDate()+i)
+                
+            const workoutDay = {
+                date: day.toDateString(),
+                workout: userData.plan.schedule[index],
+                isComplete: false  
+            }
+    
+            workout.push(workoutDay)
+            index++
+            if (index > 6) {
+                index = 0
+            }
+        }
+
+        
+        updateDoc(currentDoc, {
+            week_plan: workout,
+            completed: 0,
+            week_plan_length: 14,
+            calendarPlanned: true
+        })
+
+        const updateData = {
+            ...userData,
+            week_plan: workout,
+            completed: 0,
+            week_plan_length: 14,
+            calendarPlanned: true
+        };
+
+        setUserData(updateData);
+        localStorage.setItem('userData', JSON.stringify(updateData))
+    }
+   }, [userData.start_date])
 
   function openTab(index) {
     // document.getElementById(index).classList.toggle('active-day')
