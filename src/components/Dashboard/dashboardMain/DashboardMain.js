@@ -37,7 +37,7 @@ function DashboardMain(){
         },
       });
 
-
+      console.log(workoutPerc);
 
     useEffect(() => {
         const completed = changes;

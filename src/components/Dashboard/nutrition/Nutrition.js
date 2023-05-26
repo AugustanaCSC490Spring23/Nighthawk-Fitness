@@ -315,7 +315,7 @@ function Nutrition({onSave}) {
   async function save() {
     const currentDoc = doc(db, 'users', userData.docID);
     try {
-      const day = await new Date().toDateString()
+      const day = new Date().toDateString()
       updateDoc(currentDoc, {
         calories_goal_filled: false,
         nutrition_history: [...userData.nutrition_history, userData.nutrition],

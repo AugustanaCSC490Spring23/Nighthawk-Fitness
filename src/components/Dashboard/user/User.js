@@ -127,7 +127,7 @@ export default function User({userData, setUserData}) {
               </Link>
 
             </div>
-            <div className="link-item">
+            {/* <div className="link-item">
               <div className="underline setting"></div>
               <div className="link-title">
                 <div className="link-icon setting">
@@ -141,7 +141,7 @@ export default function User({userData, setUserData}) {
                   <IoMdArrowDropright className='link-to-item' />
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
           
         </div>

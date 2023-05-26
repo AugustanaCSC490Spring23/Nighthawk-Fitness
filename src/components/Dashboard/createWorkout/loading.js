@@ -41,7 +41,7 @@ export default function Loading() {
     useEffect(() => {
         const timeOut = setTimeout(() => {
             navigate(-1)
-        }, 6000)
+        }, 3000)
 
         return () => {
           clearTimeout(timeOut)

@@ -32,7 +32,7 @@
 .loading-progress {
     background: var(--primary-variant);
     height: 100%;
-    animation: progress 20s 1;
+    animation: progress 3s 1;
     border-radius: 1rem;
 }
 

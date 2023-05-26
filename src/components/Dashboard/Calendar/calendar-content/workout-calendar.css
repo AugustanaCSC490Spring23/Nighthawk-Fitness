@@ -8,6 +8,7 @@
     height: max-content;
     padding: 20px 0;
     width: 600px;
+    overflow: scroll;
 }
 
 .main-container h1 {

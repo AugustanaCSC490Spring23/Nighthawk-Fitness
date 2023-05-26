@@ -79,7 +79,8 @@ export default function Attempt_calendar({setChanges}) {
           start_date: '',
           week_plan: [],
           calendarPlanned: false,
-          week_perc:0
+          week_perc:0,
+          completed:0
         })
     
         const updateData = {
@@ -87,7 +88,8 @@ export default function Attempt_calendar({setChanges}) {
             start_date: '',
             week_plan: [],
             calendarPlanned: false,
-            week_perc:0
+            week_perc:0,
+            completed:0
         };
     
         setUserData(updateData);

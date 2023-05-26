@@ -43,7 +43,7 @@ export default function Goal() {
 
                         {userData.goal_detail ? 
                             <div className='goal-content-container'>
-                                <div className="goal-title">{userData.information.goal}</div>
+                                <div className="goal-title">{goal}</div>
                                 <div className="goal-item">
                                     <div className="goal-item-header">
                                         <h3>Definition</h3>
